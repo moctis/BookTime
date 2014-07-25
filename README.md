@@ -14,11 +14,19 @@ BookTime
 
 
 ## Step by Step build
-- [ ] Install [wget-1.11.4-1-setup.exe](http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe)
-- [ ] Add path > "C:\Program Files (x86)\GnuWin32\bin"
-- [ ] Install node.js from [nodejs.org](http://nodejs.org/) (use default settings).
-- [ ] npm install -g ant
-- [ ] npm install -g phonegap
-- npm install –g cordova 
-- Add path ‘C:\Users\<yourusername>\AppData\Roaming\npm\node_modules\ant\ant\bin’
-- down
+1. Install [wget-1.11.4-1-setup.exe](http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe)
+ - [ ] setx path "%path%;%ProgramFiles(x86)%\GnuWin32\bin"
+2. Install node.js from [nodejs.org](http://nodejs.org/) (use default settings).
+ - [ ] wget http://nodejs.org/dist/v0.10.29/x64/node-v0.10.29-x64.msi
+ - [ ] start node-v0.10.29-x64.msi
+3. Install ant
+ - [ ] npm install -g ant
+ - [ ] setx path "%path%;%appdata%\npm\node_modules\ant\ant\bin"
+4. Install PhoneGap
+ - [ ] npm install -g phonegap
+5. Install Cordova
+ - [ ] npm install –g cordova 
+6. sdf
+7. dfd
+7. fefe
+7. sdfsd
