@@ -1,0 +1,16 @@
+#############
+# Dart
+#############
+packages
+build
+out
+pubspec.lock
+.project
+.children
+.buildlog
+*.js_
+*.js.deps
+*.js.map
+*.dart.js
+bower_components
+node_modules
