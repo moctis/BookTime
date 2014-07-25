@@ -18,13 +18,25 @@ BookTime
 0. Install node.js from [nodejs.org](http://nodejs.org/) (use default settings).
  - `wget http://nodejs.org/dist/v0.10.29/x64/node-v0.10.29-x64.msi`
  - `start node-v0.10.29-x64.msi`
+0. Install npm from [nodejs.org](http://nodejs.org/dist/npm)  .
+ - `wget http://nodejs.org/dist/npm/npm-1.4.12.zip`
+ - Extrace to node.js install path `%ProgramFiles(x86)%/nodejs`
+ - `setx path "%path%;%appdata%\npm"`
+ - `npm version`
 0. Install ant
  - `npm install -g ant`
  - `setx path "%path%;%appdata%\npm\node_modules\ant\ant\bin"`
+ - `ant -version`
 0. Install PhoneGap
  - `npm install -g phonegap`
+ - `phonegap --version` will show help
 0. Install Cordova
  - `npm install –g cordova`
-0. [Get the Android SDK](https://developer.android.com/sdk/index.html)
+ - `cordova --version` will show help
+0. Install Android SDK
+ - [Get the Android SDK](https://developer.android.com/sdk/index.html)
  - `setx ANDROID_HOME "<installation location>\android-sdk-windows"`
  - `setx PATH "%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools"`
+ - `android -h`
+0. Clone 'BookTime' from github
+ - 
