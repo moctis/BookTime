@@ -2,7 +2,7 @@ import 'dart:html';
 
 void main() {
   querySelector("#sample_text_id")
-      ..text = "Click me!"
+      ..text = "Click me! -- Moctis"
       ..onClick.listen(onClick)
       ..onTouchStart.listen(onTouchEnd);
   reverseText();
@@ -12,6 +12,7 @@ void main() {
 
 void onClick(MouseEvent event) {
   reverseText();
+
 }
 
 void onTouchEnd(TouchEvent event) {
