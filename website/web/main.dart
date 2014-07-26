@@ -1,29 +1,7 @@
-import 'dart:html';
+import 'package:logging/logging.dart';
 
 void main() {
-  querySelector("#sample_text_id")
-      ..text = "Click me! -- Moctis"
-      ..onClick.listen(onClick)
-      ..onTouchStart.listen(onTouchEnd);
-  reverseText();
+  Logger.root.level = Level.FINEST;
+  Logger.root.onRecord.listen((LogRecord r) { print(r.message); });
 
-  querySelector("#sample_test").text = "Dart Ready";
-}
-
-void onClick(MouseEvent event) {
-  reverseText();
-
-}
-
-void onTouchEnd(TouchEvent event) {
-  reverseText();
-}
-
-void reverseText() {
-  var text = querySelector("#sample_text_id").text;
-  var buffer = new StringBuffer();
-  for (int i = text.length - 1; i >= 0; i--) {
-    buffer.write(text[i]);
-  }
-  querySelector("#sample_text_id").text = buffer.toString();
 }

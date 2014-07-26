@@ -10,30 +10,10 @@ html, body{
 }
 
 body {
-  background-color: #F1CBCB;
+  background-color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.2em;
   margin: 15px;
-}
-
-h1, p {
-  color: #333;
-}
-
-#sample_container_id {
-  width: 100%;
-  position: relative;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  margin-bottom: 10;
-}
-
-#sample_text_id {
-  font-size: 24pt;
-  text-align: center;
-  margin-top: 140px;
-  -webkit-user-select: none;
-  user-select: none;
 }
