@@ -1,6 +1,8 @@
-name: BookTime
+name: booktime
 description: A sample web application
 dependencies:
   angular: any
+  angular_dart_ui_bootstrap: any
+  angular_ui: any
+  bootstrap_for_pub: any
   browser: any
-  rikulo_gap: any
