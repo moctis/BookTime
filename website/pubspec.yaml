@@ -1,0 +1,6 @@
+name: BookTime
+description: A sample web application
+dependencies:
+  angular: any
+  browser: any
+  rikulo_gap: any
