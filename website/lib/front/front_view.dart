@@ -1,13 +1,27 @@
-library front_view_controller;
-
-import 'package:angular/angular.dart';
+part of booktime;
 
 @Controller(
     selector: "[view-front]", publishAs:"it")
 class FrontViewController {
-  String message = "hello";
+  final Router _router;
+  String message = "Hello";
 
-  FrontViewController() {
+  FrontViewController(this._router) {
+  }
 
+  void connectFacebook() {
+    connectSuccess();
+  }
+
+  void connectGoogle() {
+    connectSuccess();
+  }
+
+  void connectEmail() {
+    connectSuccess();
+  }
+
+  void connectSuccess() {
+    _router.gotoUrl('/home');
   }
 }
