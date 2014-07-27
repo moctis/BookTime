@@ -4,6 +4,13 @@
 @import "../packages/bootstrap_for_pub/css/bootstrap.min.css";
 @import "../packages/bootstrap_for_pub/css/bootstrap-theme.min.css";
 
+body {
+  overflow:hidden;
+}
+
+.container-fluid {
+  padding:0px;
+}
 
 [view-front]{
   background:#fff;
@@ -20,6 +27,13 @@
   background:inherit;
 }
 
-.container-fluid {
-  padding:0px;
+
+[view-front] .row {
+margin-right: 0px;
+margin-left: 0px;
+}
+
+[view-front] .col-xs-12, [view-front] .col-sm-12, [view-front] .col-md-12, [view-front] .col-lg-12 {
+  padding-right: 0px;
+  padding-left: 0px;
 }
