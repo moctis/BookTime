@@ -3,7 +3,9 @@
 @import "../packages/angular_ui/carousel/slide.css";
 @import "../packages/bootstrap_for_pub/css/bootstrap.min.css";
 @import "../packages/bootstrap_for_pub/css/bootstrap-theme.min.css";
-@import "../css/taskbaricon.css"
-;
+@import "../css/taskbaricon.css";
+
 @import "../css/mainlayout.css";
 @import "../css/view-front.css";
+@import "../css/view-shop.css";
+@import "../css/view-chat.css";

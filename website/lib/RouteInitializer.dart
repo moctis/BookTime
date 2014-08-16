@@ -5,5 +5,6 @@ void RouteInitializer(Router router, RouteViewFactory views) {
     'front': ngRoute(path: "/front", view: 'views/viewFront.html', defaultRoute: true),
     'home': ngRoute(path: "/home", view: 'views/viewHome.html'),
     'shop': ngRoute(path: "/shop", view: 'views/viewShop.html'),
+    'chat': ngRoute(path: "/chat", view: 'views/viewChat.html'),
   });
 }
