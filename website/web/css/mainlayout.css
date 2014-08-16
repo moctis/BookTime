@@ -21,3 +21,8 @@ padding-bottom:150px; /* this needs to be bigger than footer height*/
 .container-fluid {
   padding:0px;
 }
+
+header {
+  position: fix;
+  top:0;
+}
