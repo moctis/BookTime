@@ -1,14 +1,11 @@
 part of booktime;
 
-@Controller(
-    selector: "[view-front]", publishAs:"it")
+@Controller(selector: "[view-front]", publishAs: "it")
 class FrontViewController {
   final Router _router;
   String message = "Hello";
 
-  FrontViewController(this._router) {
-  }
-
+  FrontViewController(this._router);
   void connectFacebook() {
     connectSuccess();
   }
