@@ -16,3 +16,4 @@ bower_components
 node_modules
 phonegap/www
 phonegap/platforms
+.idea
