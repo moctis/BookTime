@@ -6,3 +6,4 @@ dependencies:
   angular_ui: any
   bootstrap_for_pub: any
   browser: any
+  polymer: any

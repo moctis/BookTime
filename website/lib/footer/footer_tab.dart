@@ -1,7 +1,7 @@
 part of booktime;
 
 @Component(
-    selector: 'footertab',
+    selector: 'footertabx',
     templateUrl: 'packages/booktime/footer/footer_tab.html',
     cssUrl: 'packages/booktime/footer/footer_tab.css',
     publishAs: 'it'
