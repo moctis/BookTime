@@ -14,6 +14,23 @@
   background:inherit;
 }
 
+[view-front] .carousel-indicators {
+  top: 30px;
+}
+.carousel-indicators li {  
+  width: 10px;
+  height: 10px;
+  margin: 2px; /*spacing*/
+  cursor: pointer;  
+  border: none;  
+  background-color: #B6B1B1;
+}
+[view-front] .carousel-indicators .active {  
+  width: 10px;
+  height: 10px;
+  margin: 2px; /*spacing*/
+  background-color: #f00;  
+}
 
 [view-front] .row {
 margin-right: 0px;
