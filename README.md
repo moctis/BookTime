@@ -9,7 +9,7 @@ BookTime
 0. [Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 0. [onsenui.io](http://onsenui.io/)
 0. [Onsen UI and PhoneGap – Getting Started](http://thejackalofjavascript.com/onsen-ui-and-phonegap-getting-started/)
-0. [mean.io](http://mean.io);
+0. [MEAN.JS](http://meanjs.org/);
 0. [MEAN.io vs MEAN.JS](http://www.creativeworkline.com/2014/05/meanio-vs-meanjs-comparison/)
 0. [Mobile Apps with Phonegap and Yeoman](http://lucaspaulger.com/javascript/2013/09/25/Mobile-apps-Phonegap-Yeoman/)
 
@@ -42,5 +42,9 @@ BookTime
  - `setx ANDROID_HOME "<installation location>\android-sdk-windows"`
  - `setx PATH "%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools"`
  - `android -h`
+0. Instan MongoDB
+ - [Get from MongoDB - Downloads](http://www.mongodb.org/downloads)
 0. Clone 'BookTime' from github
- - 
+ - set Path to project directory
+ - rum `npm install`  at Booktime/MEAN
+ - run `bower install`  at Booktime/MEAN
