@@ -7,7 +7,7 @@ BookTime
 0. [Google Cloud - Mobile Backend](https://developers.google.com/cloud/samples/mbs/)
 0. [Setup PhoneGap on Windows](http://chrisbitting.com/2014/01/06/installing-starting-with-phonegap-on-windows-for-cross-platform-mobile-development/)
 0. [Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
+0. [Onsen UI and PhoneGap – Getting Started](http://thejackalofjavascript.com/onsen-ui-and-phonegap-getting-started/)
 
 
 ## Step by Step build
