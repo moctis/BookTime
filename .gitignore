@@ -79,4 +79,5 @@ phonegap/platforms
 # --------------------
 # Mongo Db
 # --------------------
-data/db
+/data/db
+!/data/db/README.md
