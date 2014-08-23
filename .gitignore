@@ -89,3 +89,5 @@ phonegap/platforms
 # --------------------
 .solution/BookTime.sln.DotSettings.user
 .solution/BookTime.v12.suo
+.solution/BookTime.v12.suo
+*.suo
