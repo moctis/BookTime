@@ -81,3 +81,11 @@ phonegap/platforms
 # Mongo Db
 # --------------------
 /Mongodb/data
+
+
+
+# --------------------
+# Other
+# --------------------
+.solution/BookTime.sln.DotSettings.user
+.solution/BookTime.v12.suo
