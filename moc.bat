@@ -74,6 +74,7 @@ goto :EOF
 
 
 :MONGO
-mongod --dbpath="%~dp0/data/db"
+if not exist "%~dp0/mongo/db" mkdir "%~dp0/mongo/db"
+mongod --dbpath="%~dp0/mongo/db"
 
 goto :EOF
