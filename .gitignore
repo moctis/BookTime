@@ -46,6 +46,7 @@ node_modules/
 .bower-*/
 bower_components
 /MEAN/public/lib/*
+!/MEAN/public/lib/onsenui/*
 
 # --------------------
 # App Files
@@ -87,7 +88,6 @@ phonegap/platforms
 # --------------------
 # Other
 # --------------------
-.solution/BookTime.sln.DotSettings.user
-.solution/BookTime.v12.suo
-.solution/BookTime.v12.suo
+.solution/BookTime.sln.DotSettings.user 
 *.suo
+.solution/BookTime.v12.suo
