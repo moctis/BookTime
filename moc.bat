@@ -5,6 +5,7 @@ if "%1%" == "help"      goto USAGE
 if "%1%" == "init"      goto INIT
 if "%1%" == "pub"       goto PUB
 if "%1%" == "phonegap"  goto PHONEGAP
+if "%1%" == "mongo"     goto MONGO
 goto HELP
 
 
@@ -68,6 +69,11 @@ call pub get
 echo : cordova platform add android
 cd /d %~dp0/phonegap
 call cordova platform add android
+goto :EOF
 
+
+
+:MONGO
+mongod --dbpath="%~dp0/data/db"
 
 goto :EOF
