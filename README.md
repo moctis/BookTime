@@ -15,7 +15,7 @@ BookTime
 
 
 ## Step by Step build
-`setx` command need to restart cmd.exe
+After run `setx` command, it need to restart cmd.exe
 
 0. Install [wget-1.11.4-1-setup.exe](http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe)
  - `setx path "%path%;%ProgramFiles(x86)%\GnuWin32\bin"`
