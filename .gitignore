@@ -45,7 +45,7 @@ node_modules/
 # --------------------
 .bower-*/
 bower_components
-
+/MEAN/public/lib/*
 
 # --------------------
 # App Files
@@ -53,8 +53,8 @@ bower_components
 test/coverage/
 modules/public/
 modules/views/
-/public/build/
-/public/lib/*
+/MEAN/public/build/
+
 
 # --------------------
 # Dart
