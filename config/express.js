@@ -3,101 +3,142 @@
 /**
  * Module dependencies.
  */
-var mean = require('meanio'),
-  compression = require('compression'),
-  morgan = require('morgan'),
-  consolidate = require('consolidate'),
-  cookieParser = require('cookie-parser'),
-  expressValidator = require('express-validator'),
-  bodyParser = require('body-parser'),
-  methodOverride = require('method-override'),
-  assetmanager = require('assetmanager'),
-  session = require('express-session'),
-  mongoStore = require('connect-mongo')(session),
-  helpers = require('view-helpers'),
-  flash = require('connect-flash'),
-  config = mean.loadConfig();
+var express = require('express'),
+	morgan = require('morgan'),
+	bodyParser = require('body-parser'),
+	session = require('express-session'),
+	compress = require('compression'),
+	methodOverride = require('method-override'),
+	cookieParser = require('cookie-parser'),
+	helmet = require('helmet'),
+	passport = require('passport'),
+	mongoStore = require('connect-mongo')({
+		session: session
+	}),
+	flash = require('connect-flash'),
+	config = require('./config'),
+	consolidate = require('consolidate'),
+	path = require('path');
 
-module.exports = function(app, passport, db) {
+module.exports = function(db) {
+	// Initialize express app
+	var app = express();
 
-  app.set('showStackError', true);
+	// Globbing model files
+	config.getGlobbedFiles('./app/models/**/*.js').forEach(function(modelPath) {
+		require(path.resolve(modelPath));
+	});
 
-  // Prettify HTML
-  app.locals.pretty = true;
+	// Setting application local variables
+	app.locals.title = config.app.title;
+	app.locals.description = config.app.description;
+	app.locals.keywords = config.app.keywords;
+	app.locals.facebookAppId = config.facebook.clientID;
+	app.locals.jsFiles = config.getJavaScriptAssets();
+	app.locals.cssFiles = config.getCSSAssets();
 
-  // cache=memory or swig dies in NODE_ENV=production
-  app.locals.cache = 'memory';
+	// Passing the request url to environment locals
+	app.use(function(req, res, next) {
+		res.locals.url = req.protocol + '://' + req.headers.host + req.url;
+		next();
+	});
 
-  // Should be placed before express.static
-  // To ensure that all assets and data are compressed (utilize bandwidth)
-  app.use(compression({
-    // Levels are specified in a range of 0 to 9, where-as 0 is
-    // no compression and 9 is best compression, but slowest
-    level: 9
-  }));
+	// Should be placed before express.static
+	app.use(compress({
+		filter: function(req, res) {
+			return (/json|text|javascript|css/).test(res.getHeader('Content-Type'));
+		},
+		level: 9
+	}));
 
-  // Only use logger for development environment
-  if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));
-  }
+	// Showing stack errors
+	app.set('showStackError', true);
 
-  // assign the template engine to .html files
-  app.engine('html', consolidate[config.templateEngine]);
+	// Set swig as the template engine
+	app.engine('server.view.html', consolidate[config.templateEngine]);
 
-  // set .html as the default extension
-  app.set('view engine', 'html');
+	// Set views path and view engine
+	app.set('view engine', 'server.view.html');
+	app.set('views', './app/views');
 
-  // The cookieParser should be above session
-  app.use(cookieParser());
+	// Environment dependent middleware
+	if (process.env.NODE_ENV === 'development') {
+		// Enable logger (morgan)
+		app.use(morgan('dev'));
 
-  // Request body parsing middleware should be above methodOverride
-  app.use(expressValidator());
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({
-    extended: true
-  }));
-  app.use(methodOverride());
+		// Disable views cache
+		app.set('view cache', false);
+	} else if (process.env.NODE_ENV === 'production') {
+		app.locals.cache = 'memory';
+	}
 
-  // Import the assets file and add to locals
-  var assets = assetmanager.process({
-    assets: require('./assets.json'),
-    debug: process.env.NODE_ENV !== 'production',
-    webroot: /public\/|packages\//g
-  });
+	// Request body parsing middleware should be above methodOverride
+	app.use(bodyParser.urlencoded({
+		extended: true
+	}));
+	app.use(bodyParser.json());
+	app.use(methodOverride());
 
-  // Add assets to local variables
-  app.use(function(req, res, next) {
-    res.locals.assets = assets;
+	// Enable jsonp
+	app.enable('jsonp callback');
 
-    mean.aggregated('js', 'header', function(data) {
-      res.locals.headerJs = data;
-      next();
-    });
-  });
+	// CookieParser should be above session
+	app.use(cookieParser());
 
-  // Express/Mongo session storage
-  app.use(session({
-    secret: config.sessionSecret,
-    store: new mongoStore({
-      db: db.connection.db,
-      collection: config.sessionCollection
-    }),
-    cookie: config.sessionCookie,
-    name: config.sessionName,
-    resave: true,
-    saveUninitialized: true
-  }));
+	// Express MongoDB session storage
+	app.use(session({
+		saveUninitialized: true,
+		resave: true,
+		secret: config.sessionSecret,
+		store: new mongoStore({
+			db: db.connection.db,
+			collection: config.sessionCollection
+		})
+	}));
 
-  // Dynamic helpers
-  app.use(helpers(config.app.name));
+	// use passport session
+	app.use(passport.initialize());
+	app.use(passport.session());
 
-  // Use passport session
-  app.use(passport.initialize());
-  app.use(passport.session());
+	// connect flash for flash messages
+	app.use(flash());
 
-  //mean middleware from modules before routes
-  app.use(mean.chainware.before);
+	// Use helmet to secure Express headers
+	app.use(helmet.xframe());
+	app.use(helmet.xssFilter());
+	app.use(helmet.nosniff());
+	app.use(helmet.ienoopen());
+	app.disable('x-powered-by');
 
-  // Connect flash for flash messages
-  app.use(flash());
+	// Setting the app router and static folder
+	app.use(express.static(path.resolve('./public')));
+
+	// Globbing routing files
+	config.getGlobbedFiles('./app/routes/**/*.js').forEach(function(routePath) {
+		require(path.resolve(routePath))(app);
+	});
+
+	// Assume 'not found' in the error msgs is a 404. this is somewhat silly, but valid, you can do whatever you like, set properties, use instanceof etc.
+	app.use(function(err, req, res, next) {
+		// If the error object doesn't exists
+		if (!err) return next();
+
+		// Log it
+		console.error(err.stack);
+
+		// Error page
+		res.status(500).render('500', {
+			error: err.stack
+		});
+	});
+
+	// Assume 404 since no middleware responded
+	app.use(function(req, res) {
+		res.status(404).render('404', {
+			url: req.originalUrl,
+			error: 'Not Found'
+		});
+	});
+
+	return app;
 };
