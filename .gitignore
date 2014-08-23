@@ -46,6 +46,7 @@ node_modules/
 .bower-*/
 bower_components
 
+
 # --------------------
 # App Files
 # --------------------
@@ -53,7 +54,7 @@ test/coverage/
 modules/public/
 modules/views/
 /public/build/
-
+/public/lib/*
 
 # --------------------
 # Dart
@@ -79,5 +80,4 @@ phonegap/platforms
 # --------------------
 # Mongo Db
 # --------------------
-/data/db
-!/data/db/README.md
+/mongo/db
