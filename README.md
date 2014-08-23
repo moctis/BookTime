@@ -9,6 +9,7 @@ BookTime
 0. [Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 0. [Onsen UI and PhoneGap – Getting Started](http://thejackalofjavascript.com/onsen-ui-and-phonegap-getting-started/)
 0. [mean.io](http://mean.io);
+0. [MEAN.io vs MEAN.JS](http://www.creativeworkline.com/2014/05/meanio-vs-meanjs-comparison/)
 
 
 ## Step by Step build
