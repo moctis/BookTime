@@ -10,6 +10,7 @@ BookTime
 0. [Onsen UI and PhoneGap – Getting Started](http://thejackalofjavascript.com/onsen-ui-and-phonegap-getting-started/)
 0. [mean.io](http://mean.io);
 0. [MEAN.io vs MEAN.JS](http://www.creativeworkline.com/2014/05/meanio-vs-meanjs-comparison/)
+0. [Mobile Apps with Phonegap and Yeoman](http://lucaspaulger.com/javascript/2013/09/25/Mobile-apps-Phonegap-Yeoman/)
 
 
 ## Step by Step build
