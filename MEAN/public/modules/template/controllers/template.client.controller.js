@@ -8,7 +8,7 @@ angular.module('template').controller('TemplateController', [
         //console.log('Users ', Users);
         //$scope.templateService = new TemplateService();
 
-        $scope.helloMessage = "Hello World";
+        $scope.helloMessage = 'Hello World';
         //$scope.data = $scope.templateService.getData(4);
     }
 ]);
