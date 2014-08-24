@@ -45,6 +45,7 @@ node_modules/
 # --------------------
 .bower-*/
 bower_components 
+MEAN/bower_components
 
 # --------------------
 # App Files
@@ -53,7 +54,8 @@ test/coverage/
 modules/public/
 modules/views/
 /MEAN/public/build/
-
+#phonegap/www
+phonegap/platforms
 
 # --------------------
 # Dart
@@ -69,11 +71,8 @@ pubspec.lock
 *.js.deps
 *.js.map
 *.dart.js
-bower_components
-node_modules
-phonegap/www
-phonegap/platforms
-.idea
+
+
 
 
 # --------------------
@@ -87,6 +86,7 @@ phonegap/platforms
 # Other
 # --------------------
 # User-specific files
-*.suo
+
+.solution/BookTime.v12.suo
 *.user
-*.sln.docstates
+*.sln.docstates 
