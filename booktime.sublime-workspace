@@ -7,14 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "MEAN/config/env/development.js",
-			"settings":
-			{
-				"buffer_size": 1366,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -23,11 +15,11 @@
 		"selected_items":
 		[
 			[
-				"Package Control: insa",
+				"Package Control: install package",
 				"Package Control: Install Package"
 			],
 			[
-				"Package Control: install package",
+				"Package Control: insa",
 				"Package Control: Install Package"
 			],
 			[
@@ -39,13 +31,18 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 400.0
+		"width": 472.0
 	},
 	"console":
 	{
 		"height": 240.0,
 		"history":
 		[
+			"list",
+			"sit",
+			"lsit",
+			"dir",
+			"ls"
 		]
 	},
 	"distraction_free":
@@ -59,16 +56,50 @@
 	},
 	"file_history":
 	[
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/template/config/template.client.routes.js",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/template/controllers/template.client.controller.js",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/template/services/template.client.service.js",
+		"/C/Users/moctis/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/moctis/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/template/views/list.client.view.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/template/views/header.client.view.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/template/views/page3.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/index2.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/core/core.client.module.js",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/core/views/navigator1.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/app/views/layout.server.view.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/core/css/core.css",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/core/views/home.client.view.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/index.html",
+		"/D/My Projects/github.com/moctis/PhoneGap/onsen5/www/navigator1.html",
+		"/D/My Projects/github.com/moctis/PhoneGap/onsen5/www/js/app.js",
+		"/D/My Projects/github.com/moctis/PhoneGap/onsen5/www/index.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/modules/core/views/header.client.view.html",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/config/env/all.js",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/config/env/production.js",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/config.js",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/bower.json",
+		"/D/My Projects/github.com/moctis/PhoneGap/onsen5/www/lib/onsen/css/topcoat-mobile-onsen-android4_4.css",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/lib/onsenui/.bower.json",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/public/lib/onsenui/bower.json",
+		"/D/MyProjects/github.com/moctis/BookTime/Dart/web/index.html",
+		"/D/My Projects/github.com/moctis/PhoneGap/onsen5/.editorconfig",
+		"/D/My Projects/github.com/moctis/PhoneGap/onsen5/www/config.xml",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/config/assets.json",
+		"/C/Users/moctis/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/D/MyProjects/github.com/moctis/BookTime/README.md",
+		"/D/MyProjects/github.com/moctis/BookTime/AUTHORS",
+		"/D/MyProjects/github.com/moctis/BookTime/MEAN/.jshintignore",
 		"/D/MyProjects/github.com/moctis/BookTime/booktime.sublime-project",
 		"/C/Users/moctis/Desktop/putty.exe"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 		]
@@ -78,6 +109,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"',\n",
+			"\"\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -95,50 +128,23 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "MEAN/config/env/development.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1366,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								899,
-								899
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 26.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -149,11 +155,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5976222108,
 			1.0
 		],
 		"rows":
@@ -170,7 +183,7 @@
 	"project": "booktime.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -201,10 +214,10 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 208.0,
+	"side_bar_width": 348.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
