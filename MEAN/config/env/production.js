@@ -19,7 +19,7 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/angular-ui-router.min.js',
 				'public/lib/angular-ui-utils/ui-utils.min.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+				'public/lib/angular-bootstrap/ui-bootstrap.min.js',
                 'public/lib/onsenui/js/onsenui.js'
 			]
 		},

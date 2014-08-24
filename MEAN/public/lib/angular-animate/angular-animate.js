@@ -281,7 +281,7 @@ angular.module('ngAnimate', ['ng'])
         });
       }
     };
-  })
+  }) 
 
   //this private service is only used within CSS-enabled animations
   //IE8 + IE9 do not support rAF natively, but that is fine since they
