@@ -44,9 +44,7 @@ node_modules/
 # Bower Files
 # --------------------
 .bower-*/
-bower_components
-/MEAN/public/lib/*
-!/MEAN/public/lib/onsenui/*
+bower_components 
 
 # --------------------
 # App Files
