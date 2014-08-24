@@ -5,10 +5,10 @@ module.exports = {
 	assets: {
 		lib: {
 			css: [
-				'public/lib/bootstrap/dist/css/bootstrap.min.css',
-				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
-				'public/lib2/onsen/css/onsenui.css',
-				'public/lib2/onsen/css/topcoat-mobile-onsen-ios7.css'			
+				'public/lib/bootstrap/css/bootstrap.min.css',
+				'public/lib/bootstrap/css/bootstrap-theme.min.css',
+				'public/lib/onsen/css/onsenui.css',
+				'public/lib/onsen/css/topcoat-mobile-onsen-ios7.css'			
 			],
 			js: [
 				'public/lib/angular/angular.min.js',
@@ -17,10 +17,10 @@ module.exports = {
 				'public/lib/angular-animate/angular-animate.js', 
 				'public/lib/angular-touch/angular-touch.js', 
 				'public/lib/angular-sanitize/angular-sanitize.js', 
-				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
+				'public/lib/angular-ui-router/angular-ui-router.min.js',
 				'public/lib/angular-ui-utils/ui-utils.min.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
-                'public/lib2/onsenui/js/onsenui.js'
+                'public/lib/onsenui/js/onsenui.js'
 			]
 		},
 		css: 'public/dist/application.min.css',

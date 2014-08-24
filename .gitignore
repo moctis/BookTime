@@ -86,6 +86,7 @@ phonegap/platforms
 # --------------------
 # Other
 # --------------------
-.solution/BookTime.sln.DotSettings.user 
+# User-specific files
 *.suo
-.solution/BookTime.v12.suo
+*.user
+*.sln.docstates
