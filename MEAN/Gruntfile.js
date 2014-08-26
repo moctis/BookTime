@@ -153,19 +153,19 @@ module.exports = function (grunt) {
                 ],
                 updateOnly: true
             }
+        },
+        copy: {
+            main: {
+                files: [
+		            {
+		                expand: true,
+		                cwd: 'public',
+		                src: ['**'],
+		                dest: '../phonegap/www' 
+		            }
+                ]
+            }
         }
-//        copy: {
-//            main: {
-//                files: [
-//		            {
-//		                expand: true,
-//		                cwd: 'public',
-//		                src: ['**'],
-//		                dest: '../phonegap/www' 
-//		            }
-//                ]
-//            }
-//        }
     });
 
     // Load NPM tasks 
@@ -194,6 +194,9 @@ module.exports = function (grunt) {
 
     // Build task(s).
     grunt.registerTask('build', ['lint', 'loadConfig', 'ngmin', 'uglify', 'cssmin']);
+
+    // Phonegap task(s).
+    grunt.registerTask('phonegap', ['copy']);
 
     // Test task.
     grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
