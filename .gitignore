@@ -54,7 +54,7 @@ test/coverage/
 modules/public/
 modules/views/
 /MEAN/public/build/
-#phonegap/www
+phonegap/www
 phonegap/platforms
 
 # --------------------
