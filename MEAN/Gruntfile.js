@@ -51,7 +51,7 @@ module.exports = function (grunt) {
             },
             publicAll: {
                 files:  watchFiles.publicAll,
-                tasks: ['copy']
+                tasks: ['sync']
             }
         },
         jshint: {
@@ -141,7 +141,7 @@ module.exports = function (grunt) {
                 configFile: 'karma.conf.js'
             }
         },
-        copy: {
+        sync: {
             main: {
                 files: [
 		            {
@@ -150,9 +150,22 @@ module.exports = function (grunt) {
 		                src: ['**'],
 		                dest: '../phonegap/www' 
 		            }
-                ]
+                ],
+                updateOnly: true
             }
         }
+//        copy: {
+//            main: {
+//                files: [
+//		            {
+//		                expand: true,
+//		                cwd: 'public',
+//		                src: ['**'],
+//		                dest: '../phonegap/www' 
+//		            }
+//                ]
+//            }
+//        }
     });
 
     // Load NPM tasks 
