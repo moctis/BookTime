@@ -1,0 +1,14 @@
+﻿[class^="booktime-"],
+[class*=" booktime-"] {
+  display: inline-block;
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+  vertical-align: text-top;
+  background-image: url(../booktime.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;   
+}
+
+.booktime-bars              { background-position: 0      0; }
+.booktime-search            { background-position: -72px  0; }
