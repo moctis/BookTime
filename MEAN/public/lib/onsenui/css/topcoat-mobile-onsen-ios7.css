@@ -1132,7 +1132,7 @@ input[type="checkbox"] {
   padding: 0;
   margin: 0;
   font: inherit;
-  color: inherit;
+  color: white;
   background: transparent;
   border: none;
   cursor: default;
@@ -1165,9 +1165,9 @@ input[type="checkbox"] {
 }
 
 .topcoat-list {
-  border-top: 1px solid #ddd;
+  /* border-top: 1px solid #ddd; */
   border-bottom: 1px solid #ddd;
-  background-color: #f0eff4;
+  /* background-color: #f0eff4; */
 }
 
 .topcoat-list--noborder {
@@ -1190,19 +1190,19 @@ input[type="checkbox"] {
 
 .topcoat-list__container {
   border-top: none;
-  color: #c6c8c8;
+  color: white;
   padding: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .topcoat-list__item {
-  padding: 0 0 0 10px;
+  padding: 4px 25px 0 18px;
   margin: 0 0 0 0;
   border-top: none;
   border-bottom: 1px solid #ddd;
   color: #1f1f21;
   background-color: #fff;
-  min-height: 44px;
+  min-height: 29px;
   position: relative;
 }
 
@@ -1248,7 +1248,7 @@ input[type="checkbox"] {
 }
 
 .topcoat-list__item:nth-child(2) {
-  border-top: 1px solid #ddd;
+  /* border-top: 3px solid #636363; */
 }
 
 /* topdoc
@@ -1449,7 +1449,7 @@ input[type="checkbox"] {
 */
 
 .page {
-  background-color: #efeff4;
+  /* background-color: #efeff4; */
   font-weight: 400;
   color: #1f1f21;
 }

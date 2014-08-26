@@ -1,0 +1,54 @@
+﻿.page-sideMenu {
+    width: 280px;
+    padding-top: 20px;
+}
+
+.pannel-profile {
+    height: 62px;
+    margin-top: 21px;
+    padding-left: 65px;
+    color: white;
+    /*background: #636363;*/
+}
+
+div.profile-name {
+    font-size: 13.5pt;
+    padding-top: 12px;
+    /* line-height: 18px; */
+    text-overflow: ellipsis;
+    padding-right: 20px;
+    overflow: hidden;
+    /* height: 20px; */
+    word-wrap: break-word;
+    white-space: nowrap;
+    background: #636363;
+    /* font-weight: bold; */
+    /* visibility: collapse; */
+    /* font-variant: normal; */
+}
+
+div.profile-info {
+    font-size: 11px;
+    background: #636363;
+}
+
+.topcoat-list__item {
+padding: 3px 25px 0 19px;
+margin: 0px 0 0 0;
+border-top: none;
+border-bottom: 2px solid #646464;
+color: white;
+background-color: #363636;
+min-height: 28px;
+position: relative;
+/* width: 100%; */
+left: 40%;
+}
+
+
+.topcoat-list__item:last-child {
+padding-left: 19px;
+margin: 0;
+border-top: none;
+border-bottom: none;
+}
