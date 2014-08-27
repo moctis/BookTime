@@ -1166,7 +1166,7 @@ input[type="checkbox"] {
 
 .topcoat-list {
   /* border-top: 1px solid #ddd; */
-  border-bottom: 1px solid #ddd;
+  /* border-bottom: 1px solid #ddd; */
   /* background-color: #f0eff4; */
 }
 
@@ -1243,7 +1243,7 @@ input[type="checkbox"] {
 .topcoat-list__item:last-child {
   padding-left: 10px;
   margin: 0;
-  border-top: none;
+  /* border-top: none; */
   border-bottom: none;
 }
 

@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('core').controller('MenuController', ['$scope', '$interval', 
+angular.module('core').controller('MenuController', ['$scope', '$interval',
 	function ($scope, $interval) {
 	    $scope.profile = [];
 	    $scope.profile.name = 'Pony Somrattanach';
@@ -9,19 +9,29 @@ angular.module('core').controller('MenuController', ['$scope', '$interval',
 	    $scope.profile.favorites = 245;
 
 	    $scope.menus = [
-	        { 'label': 'HOME', 'icon': 'fa-home', 'page' : 'modules/home/views/home.client.view.html' },
-	        { 'label': 'SEARCH', 'icon': 'fa-search', 'page': 'modules/home/views/home.client.view.html' },
-	        { 'label': 'MY BOOKING', 'icon': 'fa-search', 'page': 'modules/home/views/home.client.view.html' },
-	        { 'label': 'SCHEDULE', 'icon': 'fa-calendar', 'page': 'modules/home/views/home.client.view.html' },
-	        { 'label': 'CHAT', 'icon': 'fa-comments', 'page': 'modules/home/views/home.client.view.html' },
-	        { 'label': 'NOTIFICATIONS', 'icon': 'fa-exclamation-circle', 'page': 'modules/home/views/home.client.view.html' },
-	        { 'label': 'MY FAVORITES', 'icon': 'fa-exclamation-circle', 'page': 'modules/home/views/home.client.view.html' },
-	        { 'label': 'SETTINGS', 'icon': 'fa-gear', 'page': 'modules/home/views/home.client.view.html' },
+	        { label: 'HOME', icon: 'fa-home', page: 'modules/home/views/home.client.view.html' },
+	        { label: 'SEARCH', icon: 'fa-search', page: 'modules/home/views/home.client.view.html' },
+	        { label: 'MY BOOKING', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html' },
+	        { label: 'SCHEDULE', icon: 'fa-calendar', page: 'modules/home/views/home.client.view.html' },
+	        { label: 'CHAT', icon: 'fa-comments', page: 'modules/home/views/home.client.view.html' },
+	        { label: 'NOTIFICATIONS', icon: 'fa-exclamation-circle', page: 'modules/home/views/home.client.view.html' },
+	        { label: 'MY FAVORITES', icon: 'fa-exclamation-circle', page: 'modules/home/views/home.client.view.html' },
+	        { label: 'SETTINGS', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html' },
+	        { label: 'ABOUT BOOKTIME', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className:'menu-about'},
+	        { label: 'SIGN OUT', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-signout' }
 	    ];
 
-	    $scope.showDetail = function($index) {
+	    $scope.showDetail = function ($index) {
 	        var selectedMenu = $scope.menus[$index];
 	        alert(selectedMenu.label);
+	    };
+
+	    $scope.getClass = function($index) {
+	        var menu = $scope.menus[$index];
+	        if (menu.className) {
+	            return menu.className;
+	        }
+	        return '';
 	    };
 
 	    var i = 0;
