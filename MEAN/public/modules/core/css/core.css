@@ -1,29 +1,51 @@
 .content {
-	margin-top: 50px;
-}
-.undecorated-link:hover {
-	text-decoration: none;
-}
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-	display: none !important;
-}
-.ng-invalid.ng-dirty{
-    border-color:#FA787E;
-}
-.ng-valid.ng-dirty{
-    border-color:#78FA89;
+    margin-top: 50px;
 }
 
-section { 
-	height:100%;	
+.undecorated-link:hover {
+    text-decoration: none;
 }
- 
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+    border-color: #78FA89;
+}
+
+section {
+    height: 100%;
+}
+
 body {
     background: black;
 }
- 
-.full-screen { 
-   
+
+.full-screen {
 }
 
 @import url(menu.css);
+
+.mainToolbar {
+    display: block;
+    background: black;
+    height: 40px;
+    margin-top: 20px;
+}
+
+    .mainToolbar .booktime-bars {
+        margin-left: 11px;
+    }
+
+    .mainToolbar .booktime-search {
+        margin-left: 2px;
+    }
+
+    .mainToolbar .booktime-logo {
+        margin-right: 8px;
+    }
