@@ -165,6 +165,36 @@ module.exports = function (grunt) {
 		            }
                 ]
             }
+        },
+        bowercopy: {
+            options: {
+                srcPrefix: 'bower_components',
+                destPrefix: 'public/lib'
+            },
+            scripts: { 
+                files: {
+                    'angular': 'angular/angular.*',
+                    'angular-animate': 'angular-animate/angular-animate.*',
+                    'angular-bootstrap': 'angular-bootstrap/ui-bootstrap-tpls.*', 
+                    'angular-cookies': 'angular-cookies/angular-cookies.*',
+                    'angular-mocks': 'angular-mocks/angular-mocks.*',
+                    'angular-resource': 'angular-resource/angular-resource.*',
+                    'angular-sanitize': 'angular-sanitize/angular-sanitize.*',
+                    'angular-touch': 'angular-touch/angular-touch.*',
+                    'angular-ui-router': 'angular-ui-router/release/angular-ui-router*',
+                    'angular-ui-utils': 'angular-ui-utils/ui-utils*',
+                    'bootstrap': 'bootstrap/dist',
+                    'jquery': 'jquery/dist',
+                    'monaca-cordova-loader': 'monaca-cordova-loader/*.js',
+                    'monaca-core-utils': 'monaca-core-utils/*.js', 
+                    'monaca-onsenui/js': 'monaca-onsenui/js'
+                }
+            },             
+            css: { 
+                files: {                    
+                    'monaca-onsenui/css': 'monaca-onsenui/css' 
+                }
+            }, 
         }
     });
 

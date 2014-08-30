@@ -15,7 +15,8 @@ module.exports = {
 			css: [
 				'public/lib/bootstrap/css/bootstrap.css',
 				'public/lib/bootstrap/css/bootstrap-theme.css',
-				'public/lib/onsenui/css/onsenui.css',
+				'public/lib/monaca-onsenui/css/onsenui.css',
+				'public/lib/monaca-onsenui/css/onsen-css-components.css',
 				'public/lib/onsenui/css/topcoat-mobile-onsen-ios7.css'
 			], 
 			js: [
@@ -28,7 +29,9 @@ module.exports = {
 				'public/lib/angular-ui-router/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'public/lib/onsenui/js/onsenui.js'
+				'public/lib/monaca-onsenui/js/onsenui.js',
+				'public/lib/monaca-core-utils/js/monaca-core-utils.js',
+				'public/lib/monaca-cordova-loader/js/cordova-loader.js'
 			]
 		},
 		css: [
