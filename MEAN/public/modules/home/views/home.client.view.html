@@ -1,15 +1,22 @@
-﻿<ons-page class="center">
-
+﻿<ons-page class="center" data-ng-controller="HomeController">
     <header data-ng-include="'/modules/core/views/mainToolbar.client.view.html'"></header>
+    <ons-toolbar class="groupBar gradiant-white">
+        <ons-button class="groupBarButton groupBarButton-food active" data-ng-click="food()">FOOD</ons-button>
+        <ons-button class="groupBarButton groupBarButton-service" data-ng-click="service()">SERVICE</ons-button>
+        <ons-button class="groupBarButton groupBarButton-hilight" data-ng-click="hilight()">HILIGHT</ons-button>
+    </ons-toolbar>
     <!--<div style="position:relative;" class="full-height">-->
     <ons-screen>
         <ons-scroller>
-            <img src="res/screen/share/2x/02_mainpage_content1.jpg" style="width:100%;">
-            <img src="res/screen/share/2x/02_mainpage_content2.jpg" style="width:100%;"> 
-            <img src="res/screen/share/2x/02_mainpage_content1.jpg" style="width:100%;">
-            <img src="res/screen/share/2x/02_mainpage_content2.jpg" style="width:100%;"> 
-            <img src="res/screen/share/2x/02_mainpage_content1.jpg" style="width:100%;">
-            <img src="res/screen/share/2x/02_mainpage_content2.jpg" style="width:100%;"> 
+            <ons-list class="full-width">
+                <ons-list-item modifier="tappable" ng-repeat="it in items" ng-click="showDetail(it)" class="shop-list">
+                    <img src="{{it.src}}" style="width:100%;">
+                    <div class="shop shop-name">{{it.name}}</div>
+                    <div class="shop shop-rank">{{it.rank}}</div>
+                    <div class="shop shop-distance">{{it.distance}}</div>
+                    <div class="shop shop-booked">{{it.booked}}</div>
+                </ons-list-item>
+            </ons-list>
         </ons-scroller>
     </ons-screen>
     <!--</div>-->

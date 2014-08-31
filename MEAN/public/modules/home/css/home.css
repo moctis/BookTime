@@ -1,0 +1,67 @@
+﻿
+.gradiant-white {
+    background: #FFFFFF;
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #dadada 99%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(99%,#dadada));
+    background: -webkit-linear-gradient(top, #FFFFFF 0%,#dadada 99%);
+    background: -o-linear-gradient(top, #FFFFFF 0%,#dadada 99%);
+    background: -ms-linear-gradient(top, #FFFFFF 0%,#dadada 99%);
+    background: linear-gradient(to bottom, #FFFFFF 0%,#dadada 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#dadada',GradientType=0 );
+}
+
+.groupBar {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    height: 30px;
+}
+
+    .groupBar .groupBarButton {
+        font-size: 12px;
+        color: rgb(62, 62, 62);
+        background: inherit;
+        float: left;
+        position: relative;
+        line-height: 30px;
+        text-align: center;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        width: 33.3%;
+        display: block;
+    }
+
+    .groupBar .active {
+        color: rgb(242, 94, 22);
+    }
+
+    .groupBar .groupBarButton-food { 
+    }
+
+    .groupBar .groupBarButton-service {
+    }
+
+    .groupBar .groupBarButton-hilight {
+    }
+
+
+.shop-list {
+}
+
+.shop {
+    position: absolute;
+}
+
+.shop-name {
+}
+
+.shop-rank {
+}
+
+.shop-distance {
+}
+
+.shop-booked {
+}
