@@ -12,7 +12,9 @@ module.exports = {
 	sessionCollection: 'sessions',
 	assets: {
 		lib: {
-			css: [ 
+		    css: [
+                'public/lib/bootstrap/css/bootstrap.css',
+				'public/lib/bootstrap/css/bootstrap-theme.css',
 				'public/lib/onsenui/css/onsenui.css',
 				'public/lib/onsenui/css/topcoat-mobile-onsen-ios7.css',
 				'public/lib/others/others.css' 
