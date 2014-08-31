@@ -49,3 +49,23 @@ body {
     .mainToolbar .booktime-logo {
         margin-right: 8px;
     }
+
+
+.mock .mockup, .mock .mockup img{
+    width: 100%;
+    height: auto;
+}
+
+    .mock .mockup:before {
+        content: 'MOCKUP';
+        position: fixed;
+        -ms-opacity: 0.1;
+        opacity: 0.1;
+        font-size: 100px;
+        border: dotted 5px black;
+        -webkit-transform: rotate(70deg) translate(145px, 127px);
+        -moz-transform: rotate(70deg) translate(145px, 127px);
+        -ms-transform: rotate(70deg) translate(145px, 127px);
+        -o-transform: rotate(70deg) translate(145px, 127px);
+        transform: rotate(70deg) translate(145px, 127px);
+    }

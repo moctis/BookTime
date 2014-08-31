@@ -12,7 +12,8 @@ var ApplicationConfiguration = (function() {
         'ngSanitize', 
         'ui.router', 
         'ui.bootstrap', 
-        'ui.utils', 
+        'ui.utils',
+        'ratings',
         'onsen.directives'
 	];
 

@@ -1,0 +1,32 @@
+{
+  "images": [
+    {
+      "name": "/MEAN/public/res/icons/booktime-search.png",
+      "width": 72,
+      "height": 72,
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    {
+      "name": "/MEAN/public/res/icons/booktime-bars.png",
+      "width": 72,
+      "height": 72,
+      "offsetX": 72,
+      "offsetY": 0
+    },
+    {
+      "name": "/MEAN/public/res/icons/booktime-logo.png",
+      "width": 216,
+      "height": 72,
+      "offsetX": 144,
+      "offsetY": 0
+    },
+    {
+      "name": "/MEAN/public/res/icons/booktime-booked.png",
+      "width": 90,
+      "height": 76,
+      "offsetX": 360,
+      "offsetY": 0
+    }
+  ]
+}

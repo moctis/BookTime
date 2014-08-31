@@ -1,20 +1,32 @@
 'use strict';
 
 
-angular.module('core').controller('HomeController', ['$scope',
-	function($scope) {
+angular.module('core').controller('HomeController', ['$scope', '$rootScope',
+	function ($scope, $rootScope) {
+	    var ons = $rootScope.ons || {};
+	    
 	    $scope.items = [];
 
-	    $scope.getData = function() {
-	        var basepath = 'res/screen/share/2x/';
-	        var newItems = [
-	            { src: basepath + '02_mainpage_content1.jpg' },
-	            { src: basepath + '02_mainpage_content2.jpg' },
-	            { src: basepath + '02_mainpage_content1.jpg' },
-	            { src: basepath + '02_mainpage_content2.jpg' }
-	        ];
+	    $scope.showDetail = function(shop) {
+	        ons.navigator.pushPage('modules/home/views/shop.client.view.html');
+	    };
 
-	        angular.forEach(newItems, function(item) {
+	    $scope.getData = function () {
+	        var basepath = 'res/shops/';
+	        console.log(ons);
+	        var mock = function() {
+	            return {
+	                name: ['Bangkok Shokudo','Sushi Masa', 'Staw wery'].random(),
+	                rank:[3,4,5].random(),
+	                distance: ['2.4km away', '14km away', '0.4km away'].random(),
+	                booked: ['3.4k', '200', '15k'].random(),
+	                image: basepath + ['shop-1.jpg', 'shop-2.jpg'].random()
+	            };
+	        };
+
+	        var newItems = [mock(), mock(), mock(), mock()];
+	       
+	        angular.forEach(newItems, function (item) {
 	            $scope.items.push(item);
 	        });
 	    };
@@ -23,21 +35,24 @@ angular.module('core').controller('HomeController', ['$scope',
 	        //alert('food');
 	        $('.groupBarButton').removeClass('active');
 	        $('.groupBarButton-food').addClass('active');
-	       
+	        $scope.items = [];
+	        $scope.getData();
 	    };
 
 	    $scope.service = function () {
 	        //alert('service');
 	        $('.groupBarButton').removeClass('active');
 	        $('.groupBarButton-service').addClass('active');
-	        
+	        $scope.items = [];
+	        $scope.getData();
 	    };
 
 	    $scope.hilight = function () {
 	        //alert('hilight');
 	        $('.groupBarButton').removeClass('active');
 	        $('.groupBarButton-hilight').addClass('active');
-	        
+	        $scope.items = [];
+	        $scope.getData();
 	    };
 
 	    $scope.getData();

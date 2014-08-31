@@ -19,3 +19,6 @@ angular.element(document).ready(function() {
 	angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
 });
  
+Array.prototype.random = function () {
+    return this[Math.floor((Math.random() * this.length))];
+}
