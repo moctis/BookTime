@@ -36,7 +36,7 @@ module.exports = {
 		},
 		css: [
 			'public/modules/**/css/**.css',
-			'public/res/**/css/**.css'
+			'public/res/**/**.css'
 		],
 		js: [
 			'public/config.js',
