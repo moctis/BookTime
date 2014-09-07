@@ -5,7 +5,7 @@ angular.module('front').controller('FrontController', [
     '$scope', '$location',
     function($scope, $location) {
         $scope.login = function () { 
-            $location.path('/home');
+            $location.path('/main/tab/home');
         };         
     }
 ]);

@@ -23,7 +23,8 @@ section {
 }
 
 body {
-    background: black;
+    background: white;
+    color: black;
 }
 
 .full-screen {
@@ -69,3 +70,13 @@ body {
         -o-transform: rotate(70deg) translate(145px, 127px);
         transform: rotate(70deg) translate(145px, 127px);
     }
+
+
+     .fade-bar {
+        height: 20px;
+        width: 100%;
+        position: fixed;
+        z-index: 9999;
+        opacity: 0;
+        background-color: #000;
+      }

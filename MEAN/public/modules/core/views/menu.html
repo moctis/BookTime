@@ -1,0 +1,45 @@
+﻿<!--<ons-page class="page-sideMenu" data-ng-controller="MenuController">
+        <img src="res/screen/share/2x/10_sidemenus.jpg" class="full-width full-height" />
+        <ons-list class="full-width">
+            <ons-toolbar>
+                <div class="pannel-profile">
+                    <div class="profile-name">{{profile.name}}</div>
+                    <div class="profile-info">{{profile.booked}} booked | {{profile.favorites}} Favorites</div>
+                </div>
+            </ons-toolbar>
+            <ons-list-item modifier="tappable" ng-repeat="it in menus" ng-class="getClass($index)" data-ng-click="showDetail($index)">
+                <i class="fa fa-lg" ng-class="it.icon"></i> {{it.label}}
+            </ons-list-item>  
+        </ons-list>
+    </ons-page>-->
+<ion-side-menus>
+    <fade-bar></fade-bar>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title">Left</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close ng-click="login()">
+                    Login
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/search">
+                    Search
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/browse">
+                    Browse
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/playlists">
+                    Playlists
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

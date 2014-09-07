@@ -16,6 +16,7 @@ angular.module('core').controller('HomeController', ['$scope', '$rootScope',
 	        console.log(ons);
 	        var mock = function() {
 	            return {
+	                id: ['1', '2', '3'].random(),
 	                name: ['Bangkok Shokudo','Sushi Masa', 'Staw wery'].random(),
 	                rank:[3,4,5].random(),
 	                distance: ['2.4km away', '14km away', '0.4km away'].random(),

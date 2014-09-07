@@ -5,16 +5,16 @@ var ApplicationConfiguration = (function() {
 	// Init module configuration options
 	var applicationModuleName = 'booktime';
 	var applicationModuleVendorDependencies = [
-        'ngResource', 
-        'ngCookies', 
-        'ngAnimate', 
-        'ngTouch', 
-        'ngSanitize', 
-        'ui.router', 
-        'ui.bootstrap', 
-        'ui.utils',
-        'ratings',
-        'onsen.directives'
+//        'ngResource', 
+//        'ngCookies', 
+//        'ngAnimate', 
+//        'ngTouch', 
+//        'ngSanitize', 
+//        'ui.router', 
+//        'ui.bootstrap', 
+//        'ui.utils',
+//        'ratings',
+        'ionic'
 	];
 
 	// Add a new vertical module

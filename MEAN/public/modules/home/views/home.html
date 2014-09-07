@@ -1,0 +1,33 @@
+﻿<!---->
+<!--<div data-ng-controller="HomeController" class="full-height">-->
+<!--    <header data-ng-include="'/modules/core/views/mainToolbar.client.view.html'"></header>-->
+<!--    <ons-navigator var="myNavigator" page="modules/home/views/shoplist.client.view.html">-->
+<!--    </ons-navigator>-->
+<!---->
+<!--</div> -->
+<ion-view title="Home" left-buttons="leftButtons">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content has-header="true" padding="true">
+
+        <ion-list>
+            <ion-item ng-repeat="it in items" href="#!/main/tab/shop">
+                {{it.name}}<br />
+                {{it.rank}}<br/>
+                {{it.distance}} {{it.booked}}<br />
+            </ion-item>
+            <ion-item ng-repeat="it in items" href="#!/main/tab/shop">
+                {{it.name}}<br />
+                {{it.rank}}<br />
+                {{it.distance}} {{it.booked}}<br />
+            </ion-item>
+            <ion-item ng-repeat="it in items" href="#!/main/tab/shop">
+                {{it.name}}<br />
+                {{it.rank}}<br />
+                {{it.distance}} {{it.booked}}<br />
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

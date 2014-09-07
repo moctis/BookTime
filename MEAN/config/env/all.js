@@ -15,8 +15,7 @@ module.exports = {
 		    css: [
                 'public/lib/bootstrap/css/bootstrap.css',
 				'public/lib/bootstrap/css/bootstrap-theme.css',
-				'public/lib/onsenui/css/onsenui.css',
-				'public/lib/onsenui/css/topcoat-mobile-onsen-ios7.css',
+				'public/lib/ionic/css/ionic.css',
 				'public/lib/others/others.css' 
 			], 
 			js: [
@@ -30,7 +29,7 @@ module.exports = {
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/others/angular.ratings.js',
-				'public/lib/onsenui/js/onsenui.js',
+				'public/lib/ionic/js/ionic.bundle.js',
 				'public/lib/jquery/jquery.js'
 			]
 		},
