@@ -34,7 +34,7 @@ angular.module('core').config([
         link: function($scope, $element, $attr) {
             $timeout(function() {
                 $scope.$watch('sideMenuController.getOpenRatio()', function (ratio) {
-                    ratio = 1;
+                    //ratio = 1;
                     $element[0].style.opacity = Math.abs(ratio);
                 });
             });
