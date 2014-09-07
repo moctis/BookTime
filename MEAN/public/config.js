@@ -13,7 +13,7 @@ var ApplicationConfiguration = (function() {
 //        'ui.router', 
 //        'ui.bootstrap', 
 //        'ui.utils',
-//        'ratings',
+        'ratings',
         'ionic'
 	];
 

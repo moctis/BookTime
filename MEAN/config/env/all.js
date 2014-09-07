@@ -15,22 +15,25 @@ module.exports = {
 		    css: [
                 'public/lib/bootstrap/css/bootstrap.css',
 				'public/lib/bootstrap/css/bootstrap-theme.css',
-				'public/lib/ionic/css/ionic.css',
+				'public/lib/ionic/css/ionic.css', 
 				'public/lib/others/others.css' 
 			], 
-			js: [
-				'public/lib/angular/angular.js',
-				'public/lib/angular-resource/angular-resource.js', 
-				'public/lib/angular-cookies/angular-cookies.js', 
-				'public/lib/angular-animate/angular-animate.js', 
-				'public/lib/angular-touch/angular-touch.js', 
-				'public/lib/angular-sanitize/angular-sanitize.js', 
-				'public/lib/angular-ui-router/angular-ui-router.js',
-				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'public/lib/others/angular.ratings.js',
-				'public/lib/ionic/js/ionic.bundle.js',
-				'public/lib/jquery/jquery.js'
+		    js: [
+//                'public/lib/jquery/jquery.js',
+                'public/lib/ionic/js/ionic.bundle.js',
+//                'public/lib/ionic/js/ionic.js',
+//				'public/lib/angular/angular.js',
+//				'public/lib/angular-animate/angular-animate.js',
+//				'public/lib/angular-sanitize/angular-sanitize.js',
+//				'public/lib/angular-ui-router/angular-ui-router.js',
+//				'public/lib/ionic/js/ionic-angular.js',
+
+//				'public/lib/angular-resource/angular-resource.js',
+//				'public/lib/angular-cookies/angular-cookies.js', 
+//				'public/lib/angular-touch/angular-touch.js', 
+//				'public/lib/angular-ui-utils/ui-utils.js',
+//				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/others/angular.ratings.js'
 			]
 		},
 		css: [
@@ -40,7 +43,7 @@ module.exports = {
 		js: [
 			'public/config.js',
 			'public/application.js',
-			'public/modules/*/**.js',
+			'public/modules/*/*.js',
 			'public/modules/*/*[!tests]*/*.js'
 		],
 		tests: [

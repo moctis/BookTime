@@ -1,8 +1,8 @@
 'use strict';
 
 
-angular.module('template').controller('TemplateController', [
-    '$scope', 'TemplateService',
+angular.module('template').controller('templateController', [
+    '$scope', 'templateService',
 
     function($scope, TemplateService) {
         //console.log('Users ', Users);

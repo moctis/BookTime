@@ -89,6 +89,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www(3)", "http://localhost:
 		SlnRelativePath = "..\..\..\test\myApp4\www\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www(4)", "http://localhost:43542", "{C15406CF-C211-4B2A-A460-F86F61D8E191}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_43542"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\ionic\ionic-tutorial-status-fade\www\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_43542\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_43542"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\ionic\ionic-tutorial-status-fade\www\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_43542\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\..\ionic\ionic-tutorial-status-fade\www\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Android = Debug|Android
@@ -251,6 +272,39 @@ Global
 		{AAFF3B45-D8CE-4A47-A3A1-BAB9B734D379}.Release|Windows-ARM.ActiveCfg = Debug|Any CPU
 		{AAFF3B45-D8CE-4A47-A3A1-BAB9B734D379}.Release|Windows-x64.ActiveCfg = Debug|Any CPU
 		{AAFF3B45-D8CE-4A47-A3A1-BAB9B734D379}.Release|Windows-x86.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Windows Phone.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Android.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Any CPU.Build.0 = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|iOS.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Windows Phone.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Windows-x64.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Distribution|Windows-x86.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Android.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|iOS.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Windows Phone.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Windows-x64.ActiveCfg = Debug|Any CPU
+		{C15406CF-C211-4B2A-A460-F86F61D8E191}.Release|Windows-x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

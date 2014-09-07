@@ -2,10 +2,7 @@
 
 // Setting up route
 angular.module('template').config(['$stateProvider', '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
-        // Redirect to home view when route not found
-        $urlRouterProvider.otherwise('/');
-
+    function($stateProvider, $urlRouterProvider) { 
         // Home state routing
         $stateProvider.
         state('templateList', {

@@ -55,6 +55,7 @@ body {
 .mock .mockup, .mock .mockup img{
     width: 100%;
     height: auto;
+    position: fixed;
 }
 
     .mock .mockup:before {

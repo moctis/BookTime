@@ -1,7 +1,7 @@
 'use strict';
 
 //Menu service used for managing  menus
-angular.module('template').service('TemplateService', [
+angular.module('template').service('templateService', [
 
     function() {
         // A private function for rendering decision 

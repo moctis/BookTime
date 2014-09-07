@@ -9,7 +9,8 @@ angular.module('core').config([
             .state('main', {
                 url: "/main",
                 abstract: true,
-                templateUrl: "modules/core/views/menu.html"
+                templateUrl: "modules/core/views/menu.html",
+                controller: "MenuController"
             })
             .state('main.tab', {
                 url: "/tab",
@@ -21,30 +22,7 @@ angular.module('core').config([
                     }
                 }
             })
-            .state('main.tab.home', {
-                url: "/home",
-                views: {
-                    'home-tab': {
-                        templateUrl: "modules/home/views/home.html"
-                    }
-                }
-            })
-            .state('main.tab.chat', {
-                url: "/chat",
-                views: {
-                    'chat-tab': {
-                        templateUrl: "modules/chat/views/chat.html"
-                    }
-                }
-            })
-            .state('main.tab.shop', {
-                url: "/shop",
-                views: {
-                    'home-tab': {
-                        templateUrl: "modules/home/views/shop.html"
-                    }
-                }
-            });
+          ;
 
         $urlRouterProvider.otherwise("/main/tab/home");
     }
@@ -55,9 +33,9 @@ angular.module('core').config([
         replace: true,
         link: function($scope, $element, $attr) {
             $timeout(function() {
-                $scope.$watch('sideMenuController.getOpenRatio()', function(ratio) {
+                $scope.$watch('sideMenuController.getOpenRatio()', function (ratio) {
+                    ratio = 1;
                     $element[0].style.opacity = Math.abs(ratio);
-                    $element[0].style.opacity = 1;
                 });
             });
         }

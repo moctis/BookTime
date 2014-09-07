@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-<head ng-app="booktime">
+<head ng-app="booktime" class="fullscreen">
     <title>{{title}}</title>
     <!-- General META -->
     <meta charset="utf-8">
@@ -39,28 +39,28 @@
     <![endif]-->
 </head>
 
-<body class="ng-cloak mock">
-	<!-- <section class="content">
-		<section class="container">
-	 -->		{% block content %}{% endblock %}
-	<!-- 	</section>
-	</section>	 --> 
+<body class="ng-cloak mock" useragentdetect>
+    <!-- <section class="content">
+        <section class="container">
+     -->
+    {% block content %}{% endblock %}
+    <!-- 	</section>
+    </section>	 -->
+    <!--Embedding The User Object-->
+    <script type="text/javascript">
+        var user = {{ user | json | safe }};
+    </script>
 
-  
-	<!--Embedding The User Object-->
-	<script type="text/javascript">
-		var user = {{ user | json | safe }};
-	</script>
+    <!--Application JavaScript Files-->
+    {% for jsFile in jsFiles %}
+    <script type="text/javascript" src="{{jsFile}}"></script>
+    {% endfor %}
 
-	<!--Application JavaScript Files-->
-	{% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>
-	{% endfor %} 
+    {% if process.env.NODE_ENV === 'development' %}
+    <!--Livereload script rendered -->
+    <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
 
-	{% if process.env.NODE_ENV === 'development' %}
-	<!--Livereload script rendered -->
-	<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
-
-	{% endif %}
+    {% endif %}
 </body>
 
 </html>

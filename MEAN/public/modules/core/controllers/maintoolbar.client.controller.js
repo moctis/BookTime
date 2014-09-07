@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('core').controller('MainToolbarController', ['$scope', '$interval', '$rootScope',
+angular.module('core').controller('mainToolbarController', ['$scope', '$interval', '$rootScope',
 	function ($scope, $interval, $rootScope) {	    
 	    var ons = $rootScope.ons || {};
 

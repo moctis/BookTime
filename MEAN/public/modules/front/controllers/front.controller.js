@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('front').controller('FrontController', [
+angular.module('front').controller('frontController', [
     '$scope', '$location',
     function($scope, $location) {
         $scope.login = function () { 
