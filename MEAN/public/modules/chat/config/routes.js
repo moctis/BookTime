@@ -13,7 +13,6 @@ angular.module('core').config([
                     }
                 }
             });
-
-        $urlRouterProvider.otherwise("/main/tab/home");
+         
     }
 ]);

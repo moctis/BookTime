@@ -18,7 +18,8 @@ angular.module('home').config([
                 url: "/shop",
                 views: {
                     'home-tab': {
-                        templateUrl: "modules/home/views/shop.html"
+                        templateUrl: "modules/home/views/shop.html",
+                        controller: "ShopController"
                     }
                 }
             });
