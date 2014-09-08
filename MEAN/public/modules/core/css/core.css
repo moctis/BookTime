@@ -52,17 +52,22 @@ body {
     }
 
 
-.mock .mockup, .mock .mockup img{
+.mock .mockup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.mock .mockup img{
     width: 100%;
     height: auto;
-    position: fixed;
 }
 
     .mock .mockup:before {
         content: 'MOCKUP';
         position: fixed;
-        -ms-opacity: 0.2;
-        opacity: 0.2;
+        -ms-opacity: 0.1;
+        opacity: 0.1;
         font-size: 90px;
         border: dotted 5px black;
         -webkit-transform: rotate(70deg) translate(145px, 127px);
@@ -70,6 +75,7 @@ body {
         -ms-transform: rotate(70deg) translate(145px, 127px);
         -o-transform: rotate(70deg) translate(145px, 127px);
         transform: rotate(70deg) translate(145px, 127px);
+        padding: 32px 10px;
     }
 
 

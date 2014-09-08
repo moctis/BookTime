@@ -1,4 +1,15 @@
-﻿.tabs-booktime a:hover, .tabs-booktime a:focus {
+﻿.bar.bar-booktime {
+    border-color: #f4f1e8;
+    background: #f4f1e8; 
+    color: #f47822;
+}
+.bar.bar-booktime .title {
+    color: #f47822;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tabs-booktime a:hover, .tabs-booktime a:focus {
     color: white;
     text-decoration: none;
 }
@@ -8,6 +19,7 @@
     background: none;
     box-shadow: none;
     color: #f47822;
+    font-size: 15px;
 }
 
 
