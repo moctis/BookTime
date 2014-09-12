@@ -24,7 +24,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BookTime", "http://localhos
 		SlnRelativePath = "..\..\BookTime\"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CokeWeb", "http://localhost:13060", "{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BookTimeWeb", "http://localhost:13060", "{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
