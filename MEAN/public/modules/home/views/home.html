@@ -1,10 +1,12 @@
-﻿ 
-<ion-view title="Home" left-buttons="leftButtons">
-    
-    <ion-nav-buttons side="left" class="bar-positive">
-    </ion-nav-buttons>
-    <ion-content has-header="true" padding="false">
+﻿
+<ion-view title="">
+    <navthirdbuttons>
+        <button class="button button-clear button-third">FOOD</button>
+        <button class="button button-clear button-third">SERVICE</button>
+        <button class="button button-clear button-third">HILIGHT</button>
+    </navthirdbuttons>
 
+    <ion-content has-header="false" padding="false">
         <ion-list>
             <ion-item ng-repeat="it in items" href="#!/main/tab/shop">
                 {{it.name}}<br />
