@@ -1,7 +1,10 @@
 ﻿[class^="booktime-"],
-[class*=" booktime-"] { 
+[class*=" booktime-"] {
     display: inline-block;
     line-height: 36px;
     zoom: 0.5;
 }
- 
+
+.booktime-search.activated {
+    background: url('booktime.png') 0 0;
+}

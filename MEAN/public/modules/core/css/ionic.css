@@ -1,13 +1,18 @@
 ﻿.bar.bar-booktime {
     border-color: #f4f1e8;
-    background: #f4f1e8; 
+    background: #f4f1e8;
     color: #f47822;
 }
-.bar.bar-booktime .title {
-    color: #f47822;
-    font-weight: bold;
-    font-size: 18px;
-}
+
+    .bar.bar-booktime .title {
+        color: #f47822;
+        font-size: 18px;
+    }
+
+    .bar.bar-booktime .button-clear.button-clear {
+        color: #f47822;
+        font-size: 14px;
+    }
 
 .tabs-booktime a:hover, .tabs-booktime a:focus {
     color: white;
@@ -22,6 +27,27 @@
     font-size: 15px;
 }
 
+.bar {
+    padding: 0;
+}
+
+    .bar .title {
+        line-height: 30px;
+        height: 30px;
+    }
+
+
+    .bar .title + .button:last-child, .bar > .button + .button:last-child, .bar > .button.pull-right, .bar .buttons.pull-right, .bar .title + .buttons {
+top: 0;
+position: absolute;
+right: 5px;
+bottom: 0;
+        line-height: 30px;
+}
+
+.bar-header {
+    top: 60px;
+}
 
 .tabs-booktime > .tabs, .tabs.tabs-booktime {
     background: #F47822;
@@ -41,23 +67,23 @@
     }
 
 .platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) {
-    height: 64px;
+    height: 30px;
 }
 
     .platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-        margin-top: 19px !important;
+        margin-top: 60px !important;
     }
 
     .platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
-        margin-top: 20px;
+        margin-top: 0px;
     }
 
 .platform-ios.platform-browser:not(.fullscreen) .tabs-top > .tabs, .platform-ios.platform-browser:not(.fullscreen) .tabs.tabs-top {
-    top: 64px;
+    top: 90px;
 }
 
 .platform-ios.platform-browser:not(.fullscreen) .has-header, .platform-ios.platform-browser:not(.fullscreen) .bar-subheader {
-    top: 64px;
+    top: 90px;
 }
 
 .platform-ios.platform-browser:not(.fullscreen) .has-subheader {

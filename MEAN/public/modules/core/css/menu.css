@@ -44,20 +44,6 @@ div.profile-info {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f47822', endColorstr='#ef5323',GradientType=0 );
 }
 
-.topcoat-tab-bar {
-height: 49px;
-background: #F47822;
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-background: -moz-linear-gradient(top, #f47822 0%, #ef5323 99%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F47822), color-stop(99%,#EF5323));
-background: -webkit-linear-gradient(top, #F47822 0%,#EF5323 99%);
-background: -o-linear-gradient(top, #f47822 0%,#ef5323 99%);
-background: -ms-linear-gradient(top, #f47822 0%,#ef5323 99%);
-background: linear-gradient(to bottom, #F47822 0%,#EF5323 99%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f47822', endColorstr='#ef5323',GradientType=0 );
-border-top: 1px solid #DDD;
-width: 100%;
-}
 
 .topcoat-list__item {
     padding: 3px 25px 0 -5px;
@@ -90,8 +76,26 @@ width: 100%;
     background-color: #a0272c;
 }
 
-.topcoat-list__item span{
+.topcoat-list__item span {
     padding-left: 4px;
 }
 
- 
+
+.bar-mainheader {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: white;
+    top: 20px;
+    background: #F47822;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…IgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(top, #f47822 0%, #ef5323 99%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F47822), color-stop(99%,#EF5323));
+    background: -webkit-linear-gradient(top, #F47822 0%,#EF5323 99%);
+    background: -o-linear-gradient(top, #f47822 0%,#ef5323 99%);
+    background: -ms-linear-gradient(top, #f47822 0%,#ef5323 99%);
+    background: linear-gradient(to bottom, #F47822 0%,#EF5323 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f47822', endColorstr='#ef5323',GradientType=0 );
+}
