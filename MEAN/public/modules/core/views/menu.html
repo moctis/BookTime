@@ -5,10 +5,21 @@
     <ion-pane ion-side-menu-content>
 <!--        <div class="mainbar">-->
 <!--            <img src="res/screen/share/2x/02_mainpage_toolbar.jpg" style="height:auto;width: 100%;" />-->
-<!--        </div>        -->
+        <!--        </div>        --> 
+        <ion-header-bar class="bar bar-mainheader">
+            <div class="tabs">
+                <a class="tab-item" ui-sref="list">
+                    <p>Overall</p>
+                </a>
+                <a class="tab-item" ui-sref="secondlist">
+                    <p>Mine</p>
+                </a>
+            </div>
+        </ion-header-bar>
         <ion-nav-bar class="bar-stable bar-booktime">
             <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
         </ion-nav-bar>
+
         <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
     </ion-pane>
 
