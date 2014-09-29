@@ -11,7 +11,7 @@ angular.module('core').controller('MenuController', [
         $scope.profile.favorites = 245;
 
         $scope.menus = [
-            { label: 'HOME', icon: 'fa-home', state: 'main.tab.home' },
+            { label: 'HOME', icon: 'fa-home', state: 'main.tab.home.food' },
             { label: 'SEARCH', icon: 'fa-search', page: 'modules/home/views/home.client.view.html' },
             { label: 'MY BOOKING', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html' },
             { label: 'SCHEDULE', icon: 'fa-calendar', state: 'main.tab.schedule' },

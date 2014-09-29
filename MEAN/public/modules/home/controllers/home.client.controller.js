@@ -13,7 +13,6 @@ angular.module('home').controller('HomeController', ['$scope', '$rootScope',
 
 	    $scope.getData = function () {
 	        var basepath = 'res/shops/';
-	        console.log(ons);
 	        var mock = function() {
 	            return {
 	                id: ['1', '2', '3'].random(),

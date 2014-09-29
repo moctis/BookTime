@@ -1,29 +1,12 @@
-﻿
-<ion-view title="">
-    <navthirdbuttons>
-        <button class="button button-clear button-third">FOOD</button>
-        <button class="button button-clear button-third">SERVICE</button>
-        <button class="button button-clear button-third">HILIGHT</button>
-    </navthirdbuttons>
-
-    <ion-content has-header="false" padding="false">
-        <ion-list>
-            <ion-item ng-repeat="it in items" href="#!/main/tab/shop">
-                {{it.name}}<br />
-                {{it.rank}}<br />
-                {{it.distance}} {{it.booked}}<br />
-            </ion-item>
-            <ion-item ng-repeat="it in items" href="#!/main/tab/shop">
-                {{it.name}}<br />
-                {{it.rank}}<br />
-                {{it.distance}} {{it.booked}}<br />
-            </ion-item>
-            <ion-item ng-repeat="it in items" href="#!/main/tab/shop">
-                {{it.name}}<br />
-                {{it.rank}}<br />
-                {{it.distance}} {{it.booked}}<br />
-            </ion-item>
-        </ion-list>
-
-    </ion-content>
-</ion-view>
+﻿<ion-tabs class="tabs-top">
+    <ion-tab title="FOOD" href="#/main/tab/home/food">
+        <ion-nav-view name="food-tab"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="SERVICES" href="#/main/tab/home/services">
+        <ion-nav-view name="services-tab"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="RECOMMEND" href="#/main/tab/home/recommend">
+        <ion-nav-view name="recommend-tab"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>
+ 

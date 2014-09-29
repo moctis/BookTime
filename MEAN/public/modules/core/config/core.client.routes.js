@@ -21,10 +21,10 @@ angular.module('core').config([
                         controller: "HomeController"
                     }
                 }
-            })
-          ;
+            });
 
-        $urlRouterProvider.otherwise("/main/tab/home");
+        $urlRouterProvider.otherwise("/main").when('/main', '/main/tab');
+
     }
 ]).directive('fadeBar', function($timeout) {
     return {
