@@ -10,7 +10,7 @@ angular.module('notifications').config([
                 url: "/notifications",
                 views: {
                     'notifications-tab': {
-                        templateUrl: "modules/notifications/views/notifications.html"
+                        templateUrl: "modules/notifications/views/notifications.client.view.html"
                     }
                 }
             });

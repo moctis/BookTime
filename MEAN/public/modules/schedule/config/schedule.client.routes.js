@@ -10,7 +10,7 @@ angular.module('schedules').config([
                 url: "/schedule",
                 views: {
                     'schedule-tab': {
-                        templateUrl: "modules/schedule/views/schedule.html"
+                        templateUrl: "modules/schedule/views/schedule.client.view.html"
                     }
                 }
             });

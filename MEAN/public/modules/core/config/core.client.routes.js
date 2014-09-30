@@ -1,43 +1,24 @@
 'use strict';
 
-// Setting up route
-angular.module('core').config([
-    '$stateProvider', '$urlRouterProvider',
+//Setting up route
+angular.module('core').config(['$stateProvider','$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/main/tab/home/food");
 
-        $stateProvider
-            .state('main', {
-                url: "/main",
+        // Core state routing
+        $stateProvider.
+            state('main', {
+                url: '/main',
                 abstract: true,
-                templateUrl: "modules/core/views/menu.html",
-                controller: "MenuController"
-            })
-            .state('main.tab', {
+                templateUrl: 'modules/core/views/main.client.view.html'
+            }).state('main.tab', {
                 url: "/tab",
                 abstract: true,
                 views: {
                     'menuContent': {
-                        templateUrl: "modules/core/views/tabs.html",
-                        controller: "HomeController"
+                        templateUrl: "modules/core/views/tabs.client.view.html" 
                     }
                 }
             });
-
-        $urlRouterProvider.otherwise("/main").when('/main', '/main/tab');
-
     }
-]).directive('fadeBar', function($timeout) {
-    return {
-        restrict: 'E',
-        template: '<div class="fade-bar"></div>',
-        replace: true,
-        link: function($scope, $element, $attr) {
-            $timeout(function() {
-                $scope.$watch('sideMenuController.getOpenRatio()', function (ratio) {
-                    ratio = 1;
-                    $element[0].style.opacity = Math.abs(ratio);
-                });
-            });
-        }
-    };
-});
+]);

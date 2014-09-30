@@ -1,7 +1,6 @@
 'use strict';
 
-
-angular.module('schedules').controller('scheduleController', [
+angular.module('schedules').controller('ScheduleController', [
     '$scope', '$location',
     function($scope, $location) {
                

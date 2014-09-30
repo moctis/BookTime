@@ -1,11 +1,10 @@
 ﻿'use strict';
 
-
-angular.module('home').controller('ShopController', [
+angular.module('shop').controller('ShopController', [
     '$scope', '$ionicModal',
     function ($scope, $ionicModal) {
  
-        $ionicModal.fromTemplateUrl('modules/home/views/booking.html', function ($ionicModal) {
+        $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function ($ionicModal) {
             $scope.modal = $ionicModal;
         }, {
             // Use our scope for the scope of the modal to keep it simple

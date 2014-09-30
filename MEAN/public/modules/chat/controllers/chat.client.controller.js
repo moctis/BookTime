@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('chat').controller('chatController', [
+angular.module('chat').controller('ChatController', [
     '$scope', '$location',
     function($scope, $location) {
                

@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('settings').controller('settingController', [
+angular.module('settings').controller('SettingController', [
     '$scope', '$location',
     function($scope, $location) {
                

@@ -10,7 +10,7 @@ angular.module('settings').config([
                 url: "/settings",
                 views: {
                     'settings-tab': {
-                        templateUrl: "modules/settings/views/setting.html"
+                        templateUrl: "modules/settings/views/setting.client.view.html"
                     }
                 }
             });

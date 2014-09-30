@@ -1,9 +1,8 @@
 'use strict';
 
-
-angular.module('core').controller('MenuController', [
+angular.module('core').controller('SidemenuController', [
     '$scope', '$interval', '$state',
-    function($scope, $interval, $state) {
+    function ($scope, $interval, $state) {
 
         $scope.profile = [];
         $scope.profile.name = 'Pony Somrattanach';
@@ -23,7 +22,7 @@ angular.module('core').controller('MenuController', [
             { label: 'SIGN OUT', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-signout' }
         ];
 
-        $scope.showDetail = function($index) {
+        $scope.showDetail = function ($index) {
             var selectedMenu = $scope.menus[$index];
             if (selectedMenu.state != undefined)
                 $state.go(selectedMenu.state, null, { reload: true });
@@ -31,7 +30,7 @@ angular.module('core').controller('MenuController', [
                 alert(selectedMenu.label);
         };
 
-        $scope.getClass = function($index) {
+        $scope.getClass = function ($index) {
             var menu = $scope.menus[$index];
             if (menu.className) {
                 return menu.className;
@@ -40,14 +39,14 @@ angular.module('core').controller('MenuController', [
         };
 
         var i = 0;
-        var stop = $interval(function() {
+        var stop = $interval(function () {
             i = (i + 1) % 3;
             $scope.profile.booked = Math.round(Math.random() * 20);
             $scope.profile.name = ['Pony Somrattanach', 'Poony Soomrattanach', 'Pooony Sooomrattanach'][i];
             $scope.profile.favorites = Math.round(Math.random() * 5000);
         }, 5000);
 
-        $scope.$on('$destroy', function() {
+        $scope.$on('$destroy', function () {
             $interval.cancel(stop);
             stop = undefined;
         });

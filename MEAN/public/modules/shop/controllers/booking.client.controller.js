@@ -1,7 +1,6 @@
 ﻿'use strict';
 
-
-angular.module('home').factory('BookingController', [
+angular.module('shop').controller('BookingController', [
     '$scope', '$ionicModal',
     function ($scope, $ionicModal) {
 
