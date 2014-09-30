@@ -1,12 +1,11 @@
-﻿'use strict';
-
+'use strict';
 
 angular.module('core').directive('navthirdbuttons', ['$compile', '$animate', function ($compile, $animate) {
     return {
         require: '^ionNavBar',
         restrict: 'E',
         compile: function ($element, $attrs) {
-            
+
             var content = $element.contents().remove();
             return function ($scope, $element, $attrs, navBarCtrl) {
                 console.log('compile');
@@ -23,7 +22,7 @@ angular.module('core').directive('navthirdbuttons', ['$compile', '$animate', fun
                 //Compile buttons inside content so they have access to everything
                 //something inside content does (eg parent ionicScroll)
                 navBarCtrl.leftButtonsElement.css('width', '100%');
-                
+
                 $element.append(buttons);
                 $compile(buttons)($scope);
 
