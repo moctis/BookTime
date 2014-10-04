@@ -131,7 +131,7 @@ overflow: hidden;
 }
 
 .platform-ios.platform-browser:not(.fullscreen) .has-tabs-top {
-    top: 113px;
+    top: 90px;
 }
 
 .platform-ios.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
