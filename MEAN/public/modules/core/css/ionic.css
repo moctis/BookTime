@@ -119,7 +119,7 @@ overflow: hidden;
     }
 
 .platform-ios.platform-browser:not(.fullscreen) .tabs-top > .tabs, .platform-ios.platform-browser:not(.fullscreen) .tabs.tabs-top {
-    top: 74px;
+    top: 60px;
 }
 
 .platform-ios.platform-browser:not(.fullscreen) .has-header, .platform-ios.platform-browser:not(.fullscreen) .bar-subheader {
