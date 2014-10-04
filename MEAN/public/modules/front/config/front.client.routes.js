@@ -8,7 +8,7 @@ angular.module('front').config(['$stateProvider', '$urlRouterProvider',
         // Home state routing
         $stateProvider.
         state('front', {
-            url: '/',
+            url: '/front',
             templateUrl: 'modules/front/views/front.client.view.html' 
         });
 

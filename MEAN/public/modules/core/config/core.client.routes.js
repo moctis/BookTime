@@ -3,8 +3,7 @@
 //Setting up route
 angular.module('core').config(['$stateProvider','$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/main/tab/home/food");
-
+        $urlRouterProvider.otherwise("/main/tab/home/recommend");
         // Core state routing
         $stateProvider.
             state('main', {
