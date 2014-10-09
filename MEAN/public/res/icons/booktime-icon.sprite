@@ -24,11 +24,7 @@
   </settings>
   <!--The order of the <file> elements determines the order of the images in the sprite.-->
   <files>
-    <file>booktime-search.png</file>
-    <file>booktime-bars.png</file>
-    <file>booktime-logo.png</file>
-    <file>booktime-booked.png</file>
-    <file>booktime-bookmark-empty.png</file>
-    <file>booktime-button-bookme.png</file>
+    <file>booktime-icon-champion.png</file>
+    <file>booktime-icon-hot.png</file> 
   </files>
 </sprite>

@@ -25,3 +25,15 @@
 	height: 76px;
 	background: url('booktime.png') -360px 0;
 }
+@mixin sprite-booktime-bookmark-empty() {
+/* You may have to set 'display: block' */
+	width: 42px;
+	height: 42px;
+	background: url('booktime.png') -450px 0;
+}
+@mixin sprite-booktime-button-bookme() {
+/* You may have to set 'display: block' */
+	width: 130px;
+	height: 42px;
+	background: url('booktime.png') -492px 0;
+}
