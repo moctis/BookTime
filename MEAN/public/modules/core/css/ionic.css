@@ -141,3 +141,7 @@ overflow: hidden;
 .platform-ios.platform-browser.status-bar-hide {
     margin-bottom: 20px;
 }
+
+.scroll-content {
+    margin-bottom: 49px;
+}

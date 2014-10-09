@@ -1,4 +1,4 @@
-﻿.section-food {
+.section-food {
 }
 
     .section-food .shop, .section-food .shop .item-content {
@@ -42,9 +42,15 @@
             position: relative;
             float: right;
             top: 0;
+            
         }
 
-            .section-food .shop .booked span {
+            .section-food .shop .booked i {
+                height: 76px;
+            
+                width: 90px;
+}
+  .section-food .shop .booked span {
                 position: absolute;
                 top: 24px;
                 right: 0;
