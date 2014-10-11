@@ -13,3 +13,9 @@
 	height: 42px;
 	background: url('booktime-icon.png') -42px 0;
 }
+@mixin sprite-booktime-icon-operationtime() {
+/* You may have to set 'display: block' */
+	width: 24px;
+	height: 24px;
+	background: url('booktime-icon.png') -84px 0;
+}

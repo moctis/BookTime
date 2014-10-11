@@ -142,6 +142,11 @@ overflow: hidden;
     margin-bottom: 20px;
 }
 
-.scroll-content {
+.scroll-content .has-tabs-top{
     margin-bottom: 49px;
+}
+
+.row + .row {
+margin-top: 0;
+padding-top: 0;
 }

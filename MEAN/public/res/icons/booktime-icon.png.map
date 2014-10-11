@@ -13,6 +13,13 @@
       "height": 42,
       "offsetX": 42,
       "offsetY": 0
+    },
+    {
+      "name": "/res/icons/booktime-icon-operationtime.png",
+      "width": 24,
+      "height": 24,
+      "offsetX": 84,
+      "offsetY": 0
     }
   ]
 }

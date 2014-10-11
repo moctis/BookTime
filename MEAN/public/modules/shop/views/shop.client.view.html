@@ -1,16 +1,46 @@
-<section data-ng-controller="ShopController">
+<section data-ng-controller="ShopController" class="section-shop ">
     <ion-view title="Suan Kularb" left-buttons="leftButtons">
         <ion-nav-buttons side="right">
             <button class="button button-clear button-booktime">Share</button>
         </ion-nav-buttons>
         <ion-content has-header="false" padding="false">
 
-            <div class="mockup">
-                <img src="res/screen/share/2x/03_suankularb1.jpg">
-            </div>wwwwwwwwwww
-            <br /><br />
-            <button class="button" ng-click="modal.show()">BOOK ME! www</button><br />
-            <button class="button" ng-click="getDirection()">Get Direction</button><br />
+            <div class="row">
+                <img src="res/shops/1/main.jpg">
+            </div>
+            <div class="row row-photos">
+                <div class="col-70">
+                    <div class="photo-small col-25" ng-repeat="p in it.albums">
+                        <img src="{{p}}">
+                    </div>
+                </div>
+                <div class="col-30 photos-reviews">
+                    <div class="booktime-shop-bg-right"></div>
+                    <div class="row">127 Photos</div>
+                    <div class="row">143 Reviews</div>
+                </div>
+            </div>
+
+            <div class="row details">
+                <div class="col ">
+                    <span class="row name">{{it.name}}</span>
+                    <span class="row rank">{{it.rank}}</span>
+                    <span class="row address">{{it.address}}</span>
+                    <span class="row address">{{it.address2}}</span>
+                    <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
+                    <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
+
+                    <div class="row row-bottom commands">
+                        <button class="button button-icon button-small booktime-button-tofavorite" ng-click="modal.show()"></button>
+                        <button class="button button-icon button-small booktime-button-call" ng-click="getDirection()"></button>
+                        <button class="button button-icon button-small booktime-button-chat" ng-click="getDirection()"></button>
+                    </div>
+                </div>
+                <div class="col-40 main-commands">
+                    <button class="button button-icon button-small booktime-button-bookme2" ng-click="modal.show()"></button><br />
+                    <button class="button button-icon button-small booktime-button-getdirection" ng-click="getDirection()"></button><br />
+                </div>
+            </div>
         </ion-content>
     </ion-view>
 </section>
