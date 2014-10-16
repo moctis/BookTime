@@ -1,0 +1,181 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head ng-app="booktime" class="fullscreen">
+    <title>Booktime - Development Environment</title>
+    <!-- General META -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Semantic META -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- Facebook META -->
+    <meta property="fb:app_id" content="APP_ID">
+    <meta property="og:site_name" content="Booktime - Development Environment">
+    <meta property="og:title" content="Booktime - Development Environment">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://localhost:3003/">
+    <meta property="og:image" content="/img/brand/logo.png">
+    <meta property="og:type" content="website">
+    <!-- Twitter META -->
+    <meta name="twitter:title" content="Booktime - Development Environment">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="http://localhost:3003/">
+    <meta name="twitter:image" content="/img/brand/logo.png">
+    <!-- Fav Icon -->
+    <link href="/modules/core/img/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <!--Application CSS Files-->
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.css">
+
+    <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+
+    <link rel="stylesheet" href="lib/others/others.css">
+
+    <link rel="stylesheet" href="modules/chat/css/chat.css">
+
+    <link rel="stylesheet" href="modules/core/css/bootstrap-theme.css">
+
+    <link rel="stylesheet" href="modules/core/css/core.css">
+
+    <link rel="stylesheet" href="modules/core/css/ionic-theme.css">
+
+    <link rel="stylesheet" href="modules/core/css/menu.css">
+
+    <link rel="stylesheet" href="modules/front/css/front.css">
+
+    <link rel="stylesheet" href="modules/home/css/food.css">
+
+    <link rel="stylesheet" href="modules/home/css/home.css">
+
+    <link rel="stylesheet" href="modules/home/css/service.css">
+
+    <link rel="stylesheet" href="modules/shop/css/shop.css">
+
+    <link rel="stylesheet" href="modules/template/css/template.css">
+
+    <link rel="stylesheet" href="res/icons/booktime-icon.png.css">
+
+    <link rel="stylesheet" href="res/icons/booktime-others.png.css">
+
+    <link rel="stylesheet" href="res/icons/booktime.css">
+
+    <link rel="stylesheet" href="res/icons/booktime.png.css">
+
+
+    <!-- HTML5 Shim -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body class="ng-cloak mock" useragentdetect>
+    <!-- <section class="content">
+        <section class="container">
+     -->
+
+    <section data-ui-view></section>
+
+    <!-- 	</section>
+    </section>	 -->
+    <!--Embedding The User Object-->
+    <script type="text/javascript">
+        var user = "";
+    </script>
+
+    <!--Application JavaScript Files-->
+
+    <script type="text/javascript" src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script type="text/javascript" src="lib/others/angular.ratings.js"></script>
+
+    <script type="text/javascript" src="config.js"></script>
+
+    <script type="text/javascript" src="application.js"></script>
+
+    <script type="text/javascript" src="modules/chat/chat.module.js"></script>
+
+    <script type="text/javascript" src="modules/core/core.client.module.js"></script>
+
+    <script type="text/javascript" src="modules/front/front.module.js"></script>
+
+    <script type="text/javascript" src="modules/home/home.module.js"></script>
+
+    <script type="text/javascript" src="modules/notifications/notifications.module.js"></script>
+
+    <script type="text/javascript" src="modules/schedule/schedules.module.js"></script>
+
+    <script type="text/javascript" src="modules/settings/settings.module.js"></script>
+
+    <script type="text/javascript" src="modules/shop/shop.client.module.js"></script>
+
+    <script type="text/javascript" src="modules/template/template.module.js"></script>
+
+    <script type="text/javascript" src="modules/chat/config/chat.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/chat/controllers/chat.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/core/config/core.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/core/controllers/sidemenu.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/core/directives/fade-bar.client.directive.js"></script>
+
+    <script type="text/javascript" src="modules/core/directives/navthirdbuttons.client.directive.js"></script>
+
+    <script type="text/javascript" src="modules/core/services/menus.service.js"></script>
+
+    <script type="text/javascript" src="modules/front/config/front.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/front/controllers/front.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/home/config/home.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/home/controllers/food.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/home/controllers/home.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/home/controllers/recommend.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/home/controllers/services.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/notifications/config/notifications.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/notifications/controllers/notification.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/schedule/config/schedule.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/schedule/controllers/schedule.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/settings/config/settings.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/settings/controllers/setting.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/shop/config/shop.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/shop/controllers/booking.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/shop/controllers/shop.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/template/config/template.client.routes.js"></script>
+
+    <script type="text/javascript" src="modules/template/controllers/template.client.controller.js"></script>
+
+    <script type="text/javascript" src="modules/template/services/template.client.service.js"></script>
+
+
+
+    <!--Livereload script rendered -->
+     <script type="text/javascript" src="http://localhost:35729/livereload.js"></script> 
+
+
+</body>
+
+</html>

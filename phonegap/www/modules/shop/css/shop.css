@@ -1,0 +1,58 @@
+.section-shop {
+    
+}
+
+.section-shop img{
+    width: 320px;
+    height: 245px;
+}
+
+.row + .row-photos {
+    margin-top: -50px;
+}
+
+
+.photo-small {
+    display: inline-block;
+}
+
+.photo-small img{
+    width: 50px;
+    height: 50px;
+}
+
+
+.section-shop  .photos-reviews {
+    font-size: 15px;
+    color: #fff;
+}
+
+.section-shop  .details {
+    font-size: 10px;
+    background-color: #f8efe4;
+}
+.section-shop  .details .name{
+    font-size: 28px;
+}
+.section-shop  .details .lastBooked-distance{
+    font-size: 8px;
+}
+ 
+
+.section-shop .commands .button {
+    margin-left: 10px;
+}
+
+.section-shop .main-commands .button {
+    margin-top: 10px;
+}
+
+.section-shop .main-commands .button:first-child {
+    margin-top: 40px;
+} 
+
+.booktime-shop-bg-right {
+    position: absolute;
+    display: block;
+    z-index: 1;
+}

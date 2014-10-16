@@ -1,0 +1,14 @@
+﻿<ons-page class="page-sideMenu" data-ng-controller="MenuController">
+    <img src="res/screen/share/2x/10_sidemenus.jpg" class="full-width full-height" />
+    <ons-list class="full-width">
+        <ons-toolbar>
+            <div class="pannel-profile">
+                <div class="profile-name">{{profile.name}}</div>
+                <div class="profile-info">{{profile.booked}} booked | {{profile.favorites}} Favorites</div>
+            </div>
+        </ons-toolbar>
+        <ons-list-item modifier="tappable" ng-repeat="it in menus" ng-class="getClass($index)" data-ng-click="showDetail($index)">
+            <i class="fa fa-lg" ng-class="it.icon"></i> {{it.label}}
+        </ons-list-item>  
+    </ons-list>
+</ons-page>

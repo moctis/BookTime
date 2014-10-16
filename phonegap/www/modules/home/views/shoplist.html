@@ -1,0 +1,28 @@
+﻿
+<ons-toolbar class="groupBar gradiant-white">
+    <ons-button class="groupBarButton groupBarButton-food active" data-ng-click="food()">FOOD</ons-button>
+    <ons-button class="groupBarButton groupBarButton-service" data-ng-click="service()">SERVICE</ons-button>
+    <ons-button class="groupBarButton groupBarButton-hilight" data-ng-click="hilight()">HILIGHT</ons-button>
+</ons-toolbar>
+
+<ons-screen>
+    <ons-list class="full-width">
+        <ons-list-item modifier="tappable" ng-repeat="it in items" ng-click="showDetail(it)" class="shop-list">
+            <div class="shop shop-image">
+                <img src="{{it.image}}">
+            </div>
+
+            <div class="shop-details">
+                <div class="shop-left">
+                    <div class="shop-name">{{it.name}}</div>
+                    <div class="shop-rank"><angular-ratings ng-model="it.rank" /> </div>
+                    <div class="shop-distance"><i class="fa fa-location-arrow"></i> {{it.distance}}</div>
+                </div>
+                <div class="shop-right">
+                    <div class="shop-booked">{{it.booked}}</div>
+                    <i class="booktime-booked"></i>
+                </div>
+            </div>
+        </ons-list-item>
+    </ons-list>
+</ons-screen>
