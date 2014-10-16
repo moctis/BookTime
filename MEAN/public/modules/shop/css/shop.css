@@ -1,5 +1,5 @@
 .section-shop {
-    
+    background-color: #f8efe4;
 }
 
 .section-shop img{
@@ -29,7 +29,7 @@
 
 .section-shop  .details {
     font-size: 10px;
-    background-color: #f8efe4;
+    
 }
 .section-shop  .details .name{
     font-size: 28px;
@@ -55,4 +55,13 @@
     position: absolute;
     display: block;
     z-index: 1;
+}
+
+.card-shop-detail {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.card-shop-service > .item{
+    padding: 0;
 }

@@ -28,24 +28,72 @@
                     </div>
                 </div>
                 <div class="row">
-                <div class="col ">
-                    <span class="row rank">{{it.rank}}</span>
-                    <span class="row address">{{it.address}}</span>
-                    <span class="row address">{{it.address2}}</span>
-                    <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
-                    <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
+                    <div class="col ">
+                        <span class="row rank">{{it.rank}}</span>
+                        <span class="row address">{{it.address}}</span>
+                        <span class="row address">{{it.address2}}</span>
+                        <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
+                        <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
 
-                    <div class="row row-bottom commands">
-                        <button class="button button-icon button-small booktime-button-tofavorite" ng-click="modal.show()"></button>
-                        <button class="button button-icon button-small booktime-button-call" ng-click="getDirection()"></button>
-                        <button class="button button-icon button-small booktime-button-chat" ng-click="getDirection()"></button>
+                        <div class="row row-bottom commands">
+                            <button class="button button-icon button-small booktime-button-tofavorite" ng-click="modal.show()"></button>
+                            <button class="button button-icon button-small booktime-button-call" ng-click="getDirection()"></button>
+                            <button class="button button-icon button-small booktime-button-chat" ng-click="getDirection()"></button>
+                        </div>
+                    </div>
+                    <div class="col-40 main-commands">
+                        <button class="button button-icon button-small booktime-button-bookme2" ng-click="modal.show()"></button><br />
+                        <button class="button button-icon button-small booktime-button-getdirection" ng-click="getDirection()"></button><br />
                     </div>
                 </div>
-                <div class="col-40 main-commands">
-                    <button class="button button-icon button-small booktime-button-bookme2" ng-click="modal.show()"></button><br />
-                    <button class="button button-icon button-small booktime-button-getdirection" ng-click="getDirection()"></button><br />
-                </div>
+            </div> 
+            <div class="card card-shop-detail">
+              <div class="item item-text-wrap">
+                Recognisdf sdfasdlfkjasldfj;alsdkfj;
+                asdfjakl;sdjf;alsdkf
+                asdjfa;sldk fjsaldkfjads;lkfjsdlfjasldkflkasjdhfwehfweh  fwheu fiewuhfiwu fhiuf hiwuhfiuwe hfiuhfih fiwe hfiweu fh
+              </div>
             </div>
+            <div class="card card-shop-service">
+              <div class="item item-divider">
+                OUR SERVICES<br/>
+                Select form our services below
+              </div>
+              <div class="item item-text-wrap">
+                <div class="list">  
+
+        <a class="item item-thumbnail-left" href="#">
+          <img src="/img/docs/blue-album.jpg">
+          <h2>Weezer</h2>
+          <p>Blue Album</p>
+        </a>
+
+        <a class="item item-thumbnail-left" href="#">
+          <img src="/img/docs/siamese-dream.jpg">
+          <h2>Smashing Pumpkins</h2>
+          <p>Siamese Dream</p>
+        </a>
+
+        <a class="item item-thumbnail-left" href="#">
+          <img src="/img/docs/nevermind.jpg">
+          <h2>Nirvana</h2>
+          <p>Nevermind</p>
+        </a>
+
+        <a class="item item-thumbnail-left" href="#">
+          <img src="/img/docs/license-to-ill.jpg">
+          <h2>Beastie Boys</h2>
+          <p>License To Ill</p>
+        </a>
+
+        <a class="item item-thumbnail-left" href="#">
+          <img src="/img/docs/dookie.jpg">
+          <h2>Green Day</h2>
+          <p>Dookie</p>
+        </a>
+
+      </div>
+              </div> 
             </div>
         </ion-content>
     </ion-view>
