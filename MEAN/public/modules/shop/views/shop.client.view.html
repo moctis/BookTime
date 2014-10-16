@@ -21,9 +21,14 @@
                 </div>
             </div>
 
-            <div class="row details">
+            <div class="details">
+                <div class="row">
+                    <div class="col">
+                        <span class="row name">{{it.name}}xxxxx</span>
+                    </div>
+                </div>
+                <div class="row">
                 <div class="col ">
-                    <span class="row name">{{it.name}}</span>
                     <span class="row rank">{{it.rank}}</span>
                     <span class="row address">{{it.address}}</span>
                     <span class="row address">{{it.address2}}</span>
@@ -40,6 +45,7 @@
                     <button class="button button-icon button-small booktime-button-bookme2" ng-click="modal.show()"></button><br />
                     <button class="button button-icon button-small booktime-button-getdirection" ng-click="getDirection()"></button><br />
                 </div>
+            </div>
             </div>
         </ion-content>
     </ion-view>
