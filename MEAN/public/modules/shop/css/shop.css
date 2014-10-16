@@ -1,4 +1,4 @@
-.section-shop {
+.section-shop div{
     background-color: #f8efe4;
 }
 
@@ -57,11 +57,49 @@
     z-index: 1;
 }
 
-.card-shop-detail {
+.card-shop-detail, .card-shop-detail div{
     font-size: 12px;
-    line-height: 14px;
+    line-height: 16px;
+    background-color: #ececec;
+}
+
+.card-shop-detail .item{
+    border-bottom-width: 4px;
+    border-bottom-color: #9b968f;
 }
 
 .card-shop-service > .item{
     padding: 0;
+    background-color: white;
+}
+
+.card-shop-service > .item.item-divider{
+    padding: 8px;
+    background-color: #F47822;
+    color: white;
+}
+
+.card-shop-service img, .card-shop-service img:first-child{
+    width: 40px;
+    height: 40px;
+}
+
+.card-shop-service i {
+    position: absolute;
+    left: 20px;
+    top: 120px;
+}
+
+.card-shop-service > .item.item-divider{
+    padding: 8px;
+    background-color: #F47822;
+    color: white;
+}
+
+.card-shop-service h2 {
+    color: #F47822;
+}
+
+.card-shop-service .item-thumbnail-left, .card-shop-service .item-thumbnail-left .item-content {
+    padding-left: 60px;
 }
