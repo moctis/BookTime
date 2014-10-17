@@ -78,7 +78,7 @@ pubspec.lock
 # --------------------
 # Mongo Db
 # --------------------
-/Mongodb/data
+Mongodb/
 
 
 
