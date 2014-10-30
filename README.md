@@ -40,3 +40,10 @@ BookTime
  - `android -h`
 0. Clone 'BookTime' from github
  - 
+0. Install MongoDB
+- [Get MongoDB](http://www.mongodb.org/)
+0. Install Grunt 
+- `npm install -g grunt-cli`
+- http://localhost:3003/
+- คำสั่ง grunt copy จะ copy จาก MEAN\public ไป phonegap\web
+- ถ้ารัน host ด้วย grunt ไว้  ทันทีที่มีไฟล์ถูกแก้ไข ภายใต้ MEAN\public  มันก็จะรัน grunt copy ให้ อัตโนมัติ
