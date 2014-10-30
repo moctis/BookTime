@@ -1,5 +1,5 @@
 .section-shop div{
-    background-color: #f8efe4;
+ 
 }
 
 .section-shop img{
@@ -21,10 +21,14 @@
     height: 50px;
 }
 
-
-.section-shop  .photos-reviews {
-    font-size: 15px;
+.section-shop  .photos-albums { 
     color: #fff;
+    width: 226px; 
+}
+
+.section-shop  .photos-reviews { 
+    color: #fff;
+    width: 226px; 
 }
 
 .section-shop  .details {

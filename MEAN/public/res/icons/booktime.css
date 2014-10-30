@@ -1,4 +1,4 @@
-﻿[class^="booktime-"],
+[class^="booktime-"],
 [class*=" booktime-"] {
     display: inline-block;
     line-height: 36px;
@@ -7,4 +7,14 @@
 
 .booktime-search.activated {
     background: url('booktime.png') 0 0;
+}
+
+.photos-reviews-bg {
+    background: url('booktime-shop-bg-right.png') 0 0;
+    zoom: 0.5;
+    display: block;
+    height: 106px;
+    width: 216px;
+    position: absolute;
+    top: 0px;
 }
