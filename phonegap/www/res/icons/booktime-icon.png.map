@@ -20,6 +20,20 @@
       "height": 24,
       "offsetX": 84,
       "offsetY": 0
+    },
+    {
+      "name": "/res/icons/booktime-service-uncheck.png",
+      "width": 48,
+      "height": 48,
+      "offsetX": 108,
+      "offsetY": 0
+    },
+    {
+      "name": "/res/icons/booktime-service-check.png",
+      "width": 48,
+      "height": 48,
+      "offsetX": 156,
+      "offsetY": 0
     }
   ]
 }
