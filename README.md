@@ -52,3 +52,11 @@ BookTime
  - moc mongo
  - D:\GitHub\BookTime\MEAN>grunt
  - moc phonegap serve
+0. ระวังเข้า Git
+ - MongoDB
+ - node-module
+0. css ใช้ Ionic เป็นหลัก
+ - ng => angular
+ - แก้ ss ที่ mean/public/module/core/css
+ - ดู rount ทุกอัน /config เช่น ..modules/font/config
+ - ดู css  ทุกอัน /config เช่น ..modules/font/css
