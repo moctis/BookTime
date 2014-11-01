@@ -47,3 +47,8 @@ BookTime
  - run grunt => Drive:\GitHub\BookTime\MEAN>grunt แล้วเปิด http://localhost:3003/ ที่ browser
  - คำสั่ง grunt copy จะ copy จาก MEAN\public ไป phonegap\web
  - ถ้ารัน host ด้วย grunt ไว้  ทันทีที่มีไฟล์ถูกแก้ไข ภายใต้ MEAN\public  มันก็จะรัน grunt copy ให้ อัตโนมัติ
+
+0. Run
+ - moc mongo
+ - D:\GitHub\BookTime\MEAN>grunt
+ - moc phonegap serve
