@@ -1,5 +1,5 @@
 .section-shop div{
- 
+    background-color: #f8efe4;
 }
 
 .section-shop img{
@@ -26,7 +26,7 @@
     width: 226px; 
 }
 
-.section-shop  .photos-reviews { 
+.section-shop  .photos-reviews {
     color: #fff;
     width: 226px; 
 }
