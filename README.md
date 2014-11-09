@@ -60,3 +60,4 @@ BookTime
  - แก้ ss ที่ mean/public/module/core/css
  - ดู rount ทุกอัน /config เช่น ..modules/font/config
  - ดู css  ทุกอัน /config เช่น ..modules/font/css
+ - ไฟล์รูป D:\GitHub\BookTime\MEAN\public\res\screen\share\2x
