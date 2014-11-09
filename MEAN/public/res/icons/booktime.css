@@ -6,5 +6,12 @@
 }
 
 .booktime-search.activated {
-    background: url('booktime.png') 0 0;
+    background: url('booktime.png') -3px 0;    
+}
+
+@media only screen and (min-device-width: 720px) {
+    [class^="booktime-"],
+    [class*=" booktime-"] {
+        zoom: 2;
+    }
 }
