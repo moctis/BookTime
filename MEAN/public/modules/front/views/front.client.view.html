@@ -1,14 +1,28 @@
  <section data-ng-controller="frontController" class="view-front">
         <carousel interval="50000" disable-animation="true" >
             <slide>
-                <img src="res/screen/share/2x/01-4_login.jpg"/>
+                <img src="res/screen/share/2x/login.png"/>                
                 <div class="pannel-float">
-                    <button ng-click="login()" class="login">LOG IN</button>
-                </div>                    
+                    <div class="left-inner-addon text-left">                        
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        <input type="email" class="form-control" id="InputEmail" placeholder="EMAIL ADDRESS">
+                    </div>
+                    <div class="left-inner-addon text-left">
+                        <i class="glyphicon glyphicon-earphone"></i>
+                        <input type="tel" class="form-control" id="InputPhone" placeholder="PHONE NUMBER">
+                    </div>
+                    <div class="left-inner-addon text-left">
+                        <i class="glyphicon glyphicon-log-in"></i>
+                        <input type="password" class="form-control" id="InputPassword" placeholder="PASSWORD">
+                    </div>
+                    <button ng-click="login()" class="login">LOG IN</button>                                        
+                </div>    
+                
+                            
             </slide>
-            <slide><img src="res/screen/share/2x/01_intro.jpg" class="full-width full-height"/></slide>
-            <slide><img src="res/screen/share/2x/01-2_intro.jpg" class="full-width full-height"/></slide>
-            <slide><img src="res/screen/share/2x/01-3_intro.jpg" class="full-width full-height"/></slide>
+            <slide><img src="res/screen/share/2x/intro01.png" class="full-width full-height"/></slide>
+            <slide><img src="res/screen/share/2x/intro02.png" class="full-width full-height"/></slide>
+            <slide><img src="res/screen/share/2x/intro03.png" class="full-width full-height"/></slide>
 
         </carousel>
     </section> 

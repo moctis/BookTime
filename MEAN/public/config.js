@@ -7,11 +7,11 @@ var ApplicationConfiguration = (function() {
 	var applicationModuleVendorDependencies = [
 //        'ngResource', 
 //        'ngCookies', 
-//        'ngAnimate', 
-//        'ngTouch', 
-//        'ngSanitize', 
+        'ngAnimate', 
+        'ngTouch', 
+        'ngSanitize', 
 //        'ui.router', 
-//        'ui.bootstrap', 
+        'ui.bootstrap', 
 //        'ui.utils',
         'ratings',
         'ionic'
