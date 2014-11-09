@@ -19,3 +19,15 @@ This is an example of how to use the image sprite in your own CSS files
 	height: 24px;
 	background: url('booktime-icon.png') -84px 0;
 }
+.booktime-service-uncheck {
+/* You may have to set 'display: block' */
+	width: 48px;
+	height: 48px;
+	background: url('booktime-icon.png') -108px 0;
+}
+.booktime-service-check {
+/* You may have to set 'display: block' */
+	width: 48px;
+	height: 48px;
+	background: url('booktime-icon.png') -156px 0;
+}

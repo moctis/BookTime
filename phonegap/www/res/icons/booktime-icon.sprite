@@ -27,5 +27,7 @@
     <file>booktime-icon-champion.png</file>
     <file>booktime-icon-hot.png</file> 
     <file>booktime-icon-operationtime.png</file> 
+    <file>booktime-service-uncheck.png</file> 
+    <file>booktime-service-check.png</file> 
   </files>
 </sprite>
