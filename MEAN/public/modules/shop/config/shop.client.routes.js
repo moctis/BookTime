@@ -8,15 +8,22 @@ angular.module('shop').config(['$stateProvider',
 		state('booking', {
 			url: '/booking',
 			templateUrl: 'modules/shop/views/booking.client.view.html'
-		}).
-		state('main.tab.shop', {
+		}).state('main.tab.shop', {
 			url: '/shop', 
-		                    views: {
-		                        'home-tab': {
-		                            templateUrl: "modules/shop/views/shop.client.view.html",
-		                            controller: "ShopController"
-		                        }
-		                    }
+		    views: {
+		        'home-tab': {
+		            templateUrl: 'modules/shop/views/shop.client.view.html',
+		            controller: 'ShopController'
+		        }
+		    }
+		}).state('main.tab.album', {
+		    url: '/album',
+		    views: {
+		        'home-tab': {
+		            templateUrl: 'modules/shop/views/album.client.view.html',
+		             
+		        }
+		    }
 		});
 	}
 ]);

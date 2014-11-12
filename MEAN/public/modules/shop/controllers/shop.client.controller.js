@@ -34,7 +34,17 @@ angular.module('shop').controller('ShopController', [
                     comments: ['224', '5', '11', '35'].random(),
                     operationTime: ['TUE-SON 10am-11pm'].random(),
                     image: basepath + ['main.jpg'].random(),
-                    albums: [basepath + 'a1.jpg', basepath + 'a2.jpg',basepath + 'a3.jpg',basepath + 'a4.jpg']
+                    albums: [
+                        basepath + 'a1.jpg',
+                        basepath + 'a2.jpg',
+                        basepath + 'a3.jpg',
+                        basepath + 'a4.jpg',
+                        basepath + 'a5.jpg',
+                        basepath + 'a6.jpg',
+                        basepath + 'a7.jpg',
+                        basepath + 'a8.jpg',
+                        basepath + 'a9.jpg'
+                    ]
                 };
             };
 

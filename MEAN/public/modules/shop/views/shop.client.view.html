@@ -1,5 +1,5 @@
 <section data-ng-controller="ShopController" class="section-shop ">
-    <ion-view title="Suan Kularb" left-buttons="leftButtons">
+    <ion-view title="Suan Kularb">
         <ion-nav-buttons side="right">
             <button class="button button-clear button-booktime">Share</button>
         </ion-nav-buttons>
@@ -9,15 +9,20 @@
                 <img src="res/shops/1/main.jpg">
             </div>
             <div class="row row-photos relative">
+
                 <div class="photos-albums">
-                    <div class="photo-small col-25" ng-repeat="p in it.albums">
-                        <img src="{{p}}">
+                    <div class="photo-small col-25" ng-repeat="p in it.albums|limitTo:4">
+                        <a href="#!/main/tab/album">
+                            <img src="{{p}}">
+                        </a>
                     </div>
                 </div>
                 <div class="photos-reviews">
-                    <div class="photos-reviews-bg"></div>
-                    <div class="row"><div class="col">127 Photos</div></div>
-                    <div class="row"><div class="col">143 Reviews</div></div>
+                    <a href="#!/main/tab/album">
+                        <div class="photos-reviews-bg"></div>
+                        <div class="row"><div class="col">127 Photos</div></div>
+                        <div class="row"><div class="col">143 Reviews</div></div>
+                    </a>
                 </div>
             </div>
 
