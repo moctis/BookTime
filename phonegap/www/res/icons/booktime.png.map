@@ -1,77 +1,77 @@
 {
   "images": [
     {
-      "name": "/res/icons/booktime-search.png",
+      "name": "/../phonegap/www/res/icons/booktime-search.png",
       "width": 72,
       "height": 72,
       "offsetX": 0,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-bars.png",
+      "name": "/../phonegap/www/res/icons/booktime-bars.png",
       "width": 72,
       "height": 72,
       "offsetX": 72,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-logo.png",
+      "name": "/../phonegap/www/res/icons/booktime-logo.png",
       "width": 216,
       "height": 72,
       "offsetX": 144,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-booked.png",
+      "name": "/../phonegap/www/res/icons/booktime-booked.png",
       "width": 90,
       "height": 76,
       "offsetX": 360,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-bookmark-empty.png",
+      "name": "/../phonegap/www/res/icons/booktime-bookmark-empty.png",
       "width": 42,
       "height": 42,
       "offsetX": 450,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-button-bookme.png",
+      "name": "/../phonegap/www/res/icons/booktime-button-bookme.png",
       "width": 130,
       "height": 42,
       "offsetX": 492,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-button-bookme2.png",
+      "name": "/../phonegap/www/res/icons/booktime-button-bookme2.png",
       "width": 194,
       "height": 60,
       "offsetX": 622,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-button-getdirection.png",
+      "name": "/../phonegap/www/res/icons/booktime-button-getdirection.png",
       "width": 194,
       "height": 60,
       "offsetX": 816,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-button-tofavorite.png",
+      "name": "/../phonegap/www/res/icons/booktime-button-tofavorite.png",
       "width": 158,
       "height": 39,
       "offsetX": 1010,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-button-call.png",
+      "name": "/../phonegap/www/res/icons/booktime-button-call.png",
       "width": 54,
       "height": 24,
       "offsetX": 1168,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-button-chat.png",
+      "name": "/../phonegap/www/res/icons/booktime-button-chat.png",
       "width": 66,
       "height": 24,
       "offsetX": 1222,

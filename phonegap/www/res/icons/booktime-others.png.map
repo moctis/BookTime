@@ -1,14 +1,14 @@
 {
   "images": [
     {
-      "name": "/res/icons/booktime-shop-bg-left.png",
+      "name": "/../phonegap/www/res/icons/booktime-shop-bg-left.png",
       "width": 9,
       "height": 106,
       "offsetX": 0,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-shop-bg-right.png",
+      "name": "/../phonegap/www/res/icons/booktime-shop-bg-right.png",
       "width": 217,
       "height": 106,
       "offsetX": 9,

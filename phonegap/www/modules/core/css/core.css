@@ -91,3 +91,21 @@ body {
 .relative {
     position: relative;
 }
+
+
+.font-size-80per {
+    font-size: 0.8em;
+    line-height: 0.85em;
+}
+.font-size-90per {
+    font-size: 0.9em;
+    line-height: 0.95em;
+}
+.font-size-110per {
+    font-size: 1.1em;
+    line-height: 1.15em;
+}
+.font-size-120per {
+    font-size: 1.2em;
+    line-height: 1.25em;
+}

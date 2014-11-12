@@ -56,3 +56,11 @@
                 right: 0;
                 font-size: 10px;
             }
+
+@media only screen and (min-device-width: 720px) {
+    .section-food .shop img {
+            width: auto;
+            height: 600px;
+            display: block;
+    }
+}
