@@ -61,3 +61,7 @@ BookTime
  - ดู rount ทุกอัน /config เช่น ..modules/font/config
  - ดู css  ทุกอัน /config เช่น ..modules/font/css
  - ไฟล์รูป D:\GitHub\BookTime\MEAN\public\res\screen\share\2x
+ 
+0. etc
+ - http://www.dragsponsive.com/
+ - http://www.responsivewebmobile.com/app/webroot/rwm_slide_panel/#
