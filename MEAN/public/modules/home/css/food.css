@@ -2,7 +2,7 @@
 }
 
     .section-food .shop, .section-food .shop .item-content {
-        padding: 0;
+        padding: 0;        
     }
 
         .section-food .shop img {
@@ -14,7 +14,7 @@
     .section-food .details {
         height: 66px;
         display: block;
-        padding: 8px;
+        padding: 8px;        
     }
 
     .section-food .shop {
@@ -56,6 +56,14 @@
                 right: 0;
                 font-size: 10px;
             }
+
+@media only screen and (min-device-width: 640px) and (max-device-width: 719px) {
+    .section-food .shop img {
+            width: auto;
+            height: 500px;
+            display: block;
+    }
+}
 
 @media only screen and (min-device-width: 720px) {
     .section-food .shop img {

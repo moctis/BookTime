@@ -14,9 +14,9 @@
             <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
         </ion-pane>
 
-        <ion-side-menu side="left" data-ng-controller="SidemenuController">
-            <header class=" bar bar-header bar-stable ">
-                <h1 class=" title">
+        <ion-side-menu class="menu-booktime" side="left" width="275" data-ng-controller="SidemenuController">
+            <header class="bar bar-header bar-stable ">
+                <h1 class="title">
                     Left
                 </h1>
             </header>
@@ -26,7 +26,7 @@
                     <div class="xprofile-info">{{profile.booked}} booked | {{profile.favorites}} Favorites</div>
                 </div>
                 <ion-list>
-                    <ion-item nav-clear menu-close ng-repeat="it in menus" ng-click="showDetail($index)">
+                    <ion-item class="menu-item" nav-clear menu-close ng-repeat="it in menus" ng-click="showDetail($index)">
                         <i class="fa fa-lg" ng-class="it.icon"></i> {{it.label}}
                     </ion-item>
                 </ion-list>

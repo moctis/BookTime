@@ -154,3 +154,19 @@
     padding: 10px;
     margin: 4px;
 }
+
+@media only screen and (min-device-width: 640px) and (max-device-width: 719px) {
+    .section-shop .displayed-photo {
+            width: auto;
+            height: 500px;
+            display: block;
+    }
+}
+
+@media only screen and (min-device-width: 720px) {
+    .section-shop .displayed-photo {
+            width: auto;
+            height: 600px;
+            display: block;
+    }
+}
