@@ -16,6 +16,7 @@ module.exports = {
                 'public/lib/bootstrap/css/bootstrap.css',
 				'public/lib/bootstrap/css/bootstrap-theme.css',
 				'public/lib/ionic/css/ionic.css', 
+				'public/lib/Font-Awesome/css/font-awesome.css',
 				'public/lib/others/others.css' 
 			], 
 		    js: [

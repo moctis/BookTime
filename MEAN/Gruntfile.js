@@ -185,14 +185,16 @@ module.exports = function (grunt) {
                     'angular-ui-utils': 'angular-ui-utils/ui-utils*',
                     'bootstrap': 'bootstrap/dist',
                     'jquery': 'jquery/dist',
-                    'monaca-cordova-loader': 'monaca-cordova-loader/*.js',
-                    'monaca-core-utils': 'monaca-core-utils/*.js', 
-                    'monaca-onsenui/js': 'monaca-onsenui/js'
                 }
             },             
             css: { 
                 files: {                    
-                    'monaca-onsenui/css': 'monaca-onsenui/css' 
+                    'Font-Awesome/css': 'Font-Awesome/css'
+                }
+            },              
+            fonts: {
+                files: {                    
+                    'Font-Awesome/fonts': 'Font-Awesome/fonts'
                 }
             }, 
         }
