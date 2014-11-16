@@ -13,6 +13,19 @@ angular.module('shop').controller('ShopController', [
             animation: 'slide-in-up'
         });
 
+        /* $scope.comment = "test comment";
+        $scope.commantRemain = $scope.maxlen = 400; 
+
+        $scope.commentChanged = function() {
+
+            $scope.commantRemain =  $scope.maxlen - $scope.comment.length;
+            console.log($scope.comment, $scope.commantRemain );
+        }; */
+
+        $scope.closeModal = function() {
+            $scope.modal.hide();
+        };
+
  
         $scope.getDirection = function () {
             alert('Get Direction');

@@ -1,4 +1,4 @@
-<section data-ng-controller="ShopController" class="section-booking">
+<section data-ng-controller="BookingController" class="section-booking">
     <div class="modal ">
         <ion-header-bar class="background-orange">
             <h1 class="title">BOOKING</h1>
@@ -21,20 +21,6 @@
             </div>
             <div class="row booking">
                 <div class="col-90">
-                    <div class="row comment">
-                        <div class="col">
-                            <div class="row">
-                                <span>Please enter any additional requests or information that you wish to notify the place about:</span>
-                               {{commantRemain}}
-                            </div>
-                            <div class="row">
-                                <textarea cols="40" rows="8" ng-model="comment"></textarea>
-                            </div>
-                            <div class="row">
-                                <span>Remaining characters: {{commantRemain}}</span>
-                            </div>
-                        </div>
-                    </div>
                     <div class="list">
                         <label class="item item-input item-select">
                             <div class="input-label">&nbsp;</div>
@@ -66,7 +52,20 @@
                         </div>
                     </div>
                     
-
+                    <div class="row comment">
+                        <div class="col">
+                            <div class="row">
+                                <span>Please enter any additional requests or information that you wish to notify the place about:</span>
+                                {{commantRemain}}
+                            </div>
+                            <div class="row">
+                                <textarea cols="40" rows="8" ng-model="comment"></textarea>
+                            </div>
+                            <div class="row">
+                                <span>Remaining characters: {{commantRemain}}</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row command">
                         <button class="button button-icon button-small booktime-button-bookme2" ng-click="closeModal()"></button> 
                     </div>
