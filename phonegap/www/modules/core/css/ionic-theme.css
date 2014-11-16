@@ -150,3 +150,64 @@ overflow: hidden;
 margin-top: 0;
 padding-top: 0;
 }
+
+
+.background-orange {
+    background-color: #F47822;
+    color: white;
+}
+
+
+
+.menu.menu-booktime {
+    background-color: #222222;
+    width: 90px;
+}
+
+.menu-item {
+    color: #f4f1e8;
+    background-color: #222222;
+    display: block;
+    border-top: 1px solid #333333;
+}
+
+.menu.menu-booktime .bar-header {
+    z-index: 0; 
+}
+
+@media only screen and (min-device-width: 640px) and (max-device-width: 719px) {
+    .bar-header {
+        top: 140px;
+        height: 100px;
+    }
+    .bar.bar-booktime .title {
+        font-size: 50px;
+    }
+
+    .has-header {
+        top: 200px; 
+    }       
+
+    .menu-item.item{
+        font-size: 25px;        
+    }
+}
+
+@media only screen and (min-device-width: 720px) {
+    .bar-header {
+        top: 170px;
+        height: 120px;
+    }
+
+    .bar.bar-booktime .title {        
+        font-size: 50px;
+    }
+
+    .has-header {
+        top: 250px; 
+    }
+
+    .menu-item.item{
+        font-size: 28px;        
+    }    
+}

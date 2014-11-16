@@ -1,35 +1,35 @@
 {
   "images": [
     {
-      "name": "/../phonegap/www/res/icons/booktime-icon-champion.png",
+      "name": "/res/icons/booktime-icon-champion.png",
       "width": 42,
       "height": 42,
       "offsetX": 0,
       "offsetY": 0
     },
     {
-      "name": "/../phonegap/www/res/icons/booktime-icon-hot.png",
+      "name": "/res/icons/booktime-icon-hot.png",
       "width": 42,
       "height": 42,
       "offsetX": 42,
       "offsetY": 0
     },
     {
-      "name": "/../phonegap/www/res/icons/booktime-icon-operationtime.png",
+      "name": "/res/icons/booktime-icon-operationtime.png",
       "width": 24,
       "height": 24,
       "offsetX": 84,
       "offsetY": 0
     },
     {
-      "name": "/../phonegap/www/res/icons/booktime-service-uncheck.png",
+      "name": "/res/icons/booktime-service-uncheck.png",
       "width": 48,
       "height": 48,
       "offsetX": 108,
       "offsetY": 0
     },
     {
-      "name": "/../phonegap/www/res/icons/booktime-service-check.png",
+      "name": "/res/icons/booktime-service-check.png",
       "width": 48,
       "height": 48,
       "offsetX": 156,
