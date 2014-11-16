@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.2.23
+ * @license AngularJS v1.2.26
  * (c) 2010-2014 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -281,7 +281,7 @@ angular.module('ngAnimate', ['ng'])
         });
       }
     };
-  }) 
+  })
 
   //this private service is only used within CSS-enabled animations
   //IE8 + IE9 do not support rAF natively, but that is fine since they
