@@ -1,13 +1,9 @@
 ﻿'use strict';
 
 angular.module('shop').controller('BookingController', [
-    '$scope', '$ionicModal',
+    '$scope', '$ionicModal', 
     function ($scope, $ionicModal) {
-
-      
-        $scope.bookMe = function () {
-            alert('BOOK ME!');
-        };
- 
+    	$scope.modal = $ionicModal;
+    	
     }
 ]);

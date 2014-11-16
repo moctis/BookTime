@@ -54,8 +54,8 @@ test/coverage/
 modules/public/
 modules/views/
 /MEAN/public/build/
-phonegap/www
-phonegap/platforms
+phonegap/www/
+phonegap/platforms/
 
 # --------------------
 # Dart
