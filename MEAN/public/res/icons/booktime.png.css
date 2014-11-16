@@ -5,14 +5,13 @@ This is an example of how to use the image sprite in your own CSS files
 /* You may have to set 'display: block' */
 	width: 72px;
 	height: 72px;
-	background: url('booktime.png') -3px 0;    
+	background: url('booktime.png') 0 0;
 }
 .booktime-bars {
 /* You may have to set 'display: block' */
 	width: 72px;
 	height: 72px;
-	/*background: url('booktime.png') -72px 0;*/
-    background: url('button-togglemenu.png');
+	background: url('booktime.png') -72px 0;
 }
 .booktime-logo {
 /* You may have to set 'display: block' */

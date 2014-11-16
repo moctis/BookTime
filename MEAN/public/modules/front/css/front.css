@@ -100,7 +100,10 @@ slide > img {
 
 
 .view-front .item {
-  padding: 0px;  
+    padding: 0px;  
+    z-index: 0;
+    border: none;
+    margin: 0;
 }
 
 .view-front .item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated {  
@@ -143,10 +146,6 @@ slide > img {
   font-size: 14px;
   border-radius: 3px; 
  }
-
-.view-front .item {
-    z-index: 0;
-}
 
 @media only screen and (min-device-width: 640px) and (max-device-width: 719px){
     .view-front .carousel-indicators {
