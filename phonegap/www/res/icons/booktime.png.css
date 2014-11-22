@@ -67,3 +67,93 @@ This is an example of how to use the image sprite in your own CSS files
 	height: 24px;
 	background: url('booktime.png') -1222px 0;
 }
+.booktime-accept-active {
+/* You may have to set 'display: block' */
+	width: 181px;
+	height: 46px;
+	background: url('booktime.png') -1288px 0;
+}
+.booktime-accept {
+/* You may have to set 'display: block' */
+	width: 181px;
+	height: 46px;
+	background: url('booktime.png') -1469px 0;
+}
+.booktime-close {
+/* You may have to set 'display: block' */
+	width: 194px;
+	height: 56px;
+	background: url('booktime.png') -1650px 0;
+}
+.booktime-close-active {
+/* You may have to set 'display: block' */
+	width: 194px;
+	height: 56px;
+	background: url('booktime.png') -1844px 0;
+}
+.booktime-confirm {
+/* You may have to set 'display: block' */
+	width: 180px;
+	height: 46px;
+	background: url('booktime.png') -2038px 0;
+}
+.booktime-decline-active {
+/* You may have to set 'display: block' */
+	width: 181px;
+	height: 46px;
+	background: url('booktime.png') -2218px 0;
+}
+.booktime-decline {
+/* You may have to set 'display: block' */
+	width: 181px;
+	height: 46px;
+	background: url('booktime.png') -2399px 0;
+}
+.booktime-declined {
+/* You may have to set 'display: block' */
+	width: 180px;
+	height: 47px;
+	background: url('booktime.png') -2580px 0;
+}
+.booktime-sendmessage-active {
+/* You may have to set 'display: block' */
+	width: 136px;
+	height: 27px;
+	background: url('booktime.png') -2760px 0;
+}
+.booktime-sendmessage {
+/* You may have to set 'display: block' */
+	width: 136px;
+	height: 27px;
+	background: url('booktime.png') -2896px 0;
+}
+.booktime-viewcalendar-active {
+/* You may have to set 'display: block' */
+	width: 182px;
+	height: 47px;
+	background: url('booktime.png') -3032px 0;
+}
+.booktime-viewcalendar {
+/* You may have to set 'display: block' */
+	width: 182px;
+	height: 47px;
+	background: url('booktime.png') -3214px 0;
+}
+.booktime-waitingqueue-active {
+/* You may have to set 'display: block' */
+	width: 181px;
+	height: 46px;
+	background: url('booktime.png') -3396px 0;
+}
+.booktime-waitingqueue {
+/* You may have to set 'display: block' */
+	width: 181px;
+	height: 46px;
+	background: url('booktime.png') -3577px 0;
+}
+.booktime-pending {
+/* You may have to set 'display: block' */
+	width: 181px;
+	height: 47px;
+	background: url('booktime.png') -3758px 0;
+}

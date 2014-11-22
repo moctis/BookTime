@@ -34,6 +34,21 @@
     <file>booktime-button-getdirection.png</file> 
     <file>booktime-button-tofavorite.png</file> 
     <file>booktime-button-call.png</file> 
-    <file>booktime-button-chat.png</file> 
+    <file>booktime-button-chat.png</file>
+    <file>notifications/booktime-accept-active.png</file>
+    <file>notifications/booktime-accept.png</file>
+    <file>notifications/booktime-close.png</file>
+    <file>notifications/booktime-close-active.png</file>
+    <file>notifications/booktime-confirm.png</file>
+    <file>notifications/booktime-decline-active.png</file>
+    <file>notifications/booktime-decline.png</file>
+    <file>notifications/booktime-declined.png</file>
+    <file>notifications/booktime-sendmessage-active.png</file>
+    <file>notifications/booktime-sendmessage.png</file>
+    <file>notifications/booktime-viewcalendar-active.png</file>
+    <file>notifications/booktime-viewcalendar.png</file>
+    <file>notifications/booktime-waitingqueue-active.png</file>
+    <file>notifications/booktime-waitingqueue.png</file>
+    <file>notifications/booktime-pending.png</file>
   </files>
 </sprite>

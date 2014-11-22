@@ -1,4 +1,4 @@
-﻿ <section data-ng-controller="NotificationsController" class="section-notifications">
+﻿<section data-ng-controller="NotificationsController" class="section-notifications">
     <ion-view title="NOTIFICATIONS" left-buttons="leftButtons">
         <ion-nav-buttons side="left" class="bar-positive">
             <button class="button button-clear button-booktime">Edit</button>
@@ -6,16 +6,24 @@
         <ion-nav-buttons side="right" class="bar-positive">
             <button class="button button-clear button-booktime">Close</button>
         </ion-nav-buttons>
-        <ion-content has-header="true" padding="false">
-            <div class="mockup">
-                <img src="res/screen/share/2x/09_notifications_main.png" />
-            </div>
+        <ion-content has-header="true" class="has-tabs-top" padding="false"> 
             <div class="item item-text-wrap">
                 <div class="list">
-                    <div class="item item-thumbnail-left row" href="#" >
-                        <div class="col"><img src="/img/docs/siamese-dream.jpg" /></div>
-                        <div class="col">Vanilla Bake Shop message you. The shop will close on Monday"</div>
-                        <div class="col"><button class="button button-icon button-small booktime-button-bookme2" ng-click="modal.show()"></button></div>
+                    <div class="item item-thumbnail-left row" href="#" ng-repeat="it in items">
+                        <div class="col-25"><img src="{{it.image}}" /></div>
+                        <div class="col-75">
+                            <div class="row">
+                                <div class="col">
+                                    <strong>{{it.name}}</strong> message you. The shop will close on Monday"
+                                </div>
+                            </div>
+                            <div class="font-size-80per">
+                                Yesterday at 9.30am
+                                <button class="button button-icon button-small  pull-right"
+                                        ng-class="statusClass(it.status)"
+                                        ng-click="modal.show()"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
