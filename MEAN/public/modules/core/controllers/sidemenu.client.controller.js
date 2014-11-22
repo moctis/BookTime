@@ -6,6 +6,7 @@ angular.module('core').controller('SidemenuController', [
 
         $scope.profile = [];
         $scope.profile.name = 'Pony Somrattanach';
+        $scope.profile.img = 'res/screen/share/2x/profile.png';
         $scope.profile.booked = 15;
         $scope.profile.favorites = 245;
 
@@ -16,10 +17,10 @@ angular.module('core').controller('SidemenuController', [
             { label: 'SCHEDULE', icon: 'fa-calendar', state: 'main.tab.schedule' },
             { label: 'CHAT', icon: 'fa-comments', state: 'main.tab.chat' },
             { label: 'NOTIFICATIONS', icon: 'fa-exclamation-circle', state: 'main.tab.notifications' },
-            { label: 'MY FAVORITES', icon: 'fa-exclamation-circle', page: 'modules/home/views/home.client.view.html' },
+            { label: 'MY FAVORITES', icon: 'fa-star-o', page: 'modules/home/views/home.client.view.html' },
             { label: 'SETTINGS', icon: 'fa-gear', state: 'main.tab.settings' },
-            { label: 'ABOUT BOOKTIME', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-about' },
-            { label: 'SIGN OUT', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-signout' }
+            /*{ label: 'ABOUT BOOKTIME', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-about' },*/
+            { label: 'SIGN OUT', icon: 'fa-sign-out', page: 'modules/home/views/home.client.view.html', className: 'menu-signout' }
         ];
 
         $scope.showDetail = function ($index) {
@@ -40,9 +41,10 @@ angular.module('core').controller('SidemenuController', [
 
         var i = 0;
         var stop = $interval(function () {
-            i = (i + 1) % 3;
+            i = (i + 1) % 2;
             $scope.profile.booked = Math.round(Math.random() * 20);
-            $scope.profile.name = ['Pony Somrattanach', 'Poony Soomrattanach', 'Pooony Sooomrattanach'][i];
+            $scope.profile.img = ['res/screen/share/2x/profile.png', 'res/screen/share/2x/profile-pic.png'][i];
+            $scope.profile.name = ['Pony Somrattanach', 'Pooony Sooomrattanach'][i];
             $scope.profile.favorites = Math.round(Math.random() * 5000);
         }, 5000);
 

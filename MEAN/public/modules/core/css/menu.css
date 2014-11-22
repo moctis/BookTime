@@ -5,10 +5,10 @@
 }
 
 .pannel-profile {
-    height: 62px;
+    /*height: 62px;*/
     /* margin-top: 21px; */
-    padding-left: 65px;
-    color: white;
+    padding-left: 10px;
+    color: white;    
     /*background: #636363;*/
 }
 
@@ -31,6 +31,10 @@ div.profile-name {
 div.profile-info {
     font-size: 11px;
     background: #636363;
+}
+
+div.profile-image {
+   
 }
 
 .gradiant-orange {
@@ -72,7 +76,7 @@ div.profile-info {
 }
 
 .menu-signout {
-    border-top: 3px solid #646464;
+    border-top: 20px solid #646464;
     background-color: #a0272c;
 }
 

@@ -15,19 +15,20 @@
         </ion-pane>
 
         <ion-side-menu class="menu-booktime" side="left" width="275" data-ng-controller="SidemenuController">
-            <header class="bar bar-header bar-stable ">
+            <!--<header class="bar bar-header bar-stable ">
                 <h1 class="title">
                     Left
                 </h1>
-            </header>
-            <ion-content class="has-header">
-                <div class="xpannel-profile">
-                    <div class="xprofile-name">{{profile.name}}</div>
-                    <div class="xprofile-info">{{profile.booked}} booked | {{profile.favorites}} Favorites</div>
+            </header>-->
+            <ion-content class="has-header">            
+                <div class="pannel-profile">                    
+                    <div class="profile-image"><img src="{{profile.img}}"/></div>
+                    <div class="profile-name">{{profile.name}}</div>
+                    <div class="profile-info">{{profile.booked}} Booked | {{profile.favorites}} Favorites</div>
                 </div>
                 <ion-list>
-                    <ion-item class="menu-item" nav-clear menu-close ng-repeat="it in menus" ng-click="showDetail($index)">
-                        <i class="fa fa-lg" ng-class="it.icon"></i> {{it.label}}
+                    <ion-item class="menu-item" ng-class="it.className"nav-clear menu-close ng-repeat="it in menus" ng-click="showDetail($index)">
+                        <i class="fa fa-lg" ng-class="it.icon"></i> &nbsp;{{it.label}}
                     </ion-item>
                 </ion-list>
             </ion-content>

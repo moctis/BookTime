@@ -98,13 +98,13 @@
 }
 
 @media only screen and (min-device-width: 640px) and (max-device-width: 719px) {
-    /*.section-food .shop img {
-            width: auto;
-            height: 600px;
-            display: block;
-    }*/
+    .tabs-home .tabs{
+        top: 50px;
+    }
 }
 
 @media only screen and (min-device-width: 720px) {
-
+    .tabs-home .tabs{
+        top: 50px;
+    }
 }
