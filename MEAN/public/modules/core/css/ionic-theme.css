@@ -199,8 +199,9 @@ overflow: hidden;
 /*=======================================================*/
 
 .scroll-content .has-tabs-top{
-    margin-bottom: 49px;
+    margin-bottom: 49px;    
 }
+
 
 .row + .row {
 margin-top: 0;
@@ -216,8 +217,7 @@ padding-top: 0;
 
 
 .menu.menu-booktime {
-    background-color: #646464;
-    width: 90px;
+    background-color: #646464;    
 }
 
 .menu-item {
@@ -234,6 +234,9 @@ padding-top: 0;
     z-index: 0; 
 }
 
+.menu .scroll-content {
+    
+}
 
 @media only screen and (min-device-width: 640px) and (max-device-width: 719px) {
     /*.bar-header {
