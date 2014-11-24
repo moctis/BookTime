@@ -109,6 +109,14 @@ body {
     font-size: 1.2em;
     line-height: 1.25em;
 }
+.font-size-130per {
+    font-size: 1.3em;
+    line-height: 1.35em;
+}
+.font-size-140per {
+    font-size: 1.4em;
+    line-height: 1.45em;
+}
 
 @media only screen and (min-device-width: 680px) {
     body {

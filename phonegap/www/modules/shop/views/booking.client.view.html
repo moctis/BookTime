@@ -1,12 +1,12 @@
 <section data-ng-controller="BookingController" class="section-booking">
-    <div class="modal ">
+    <ion-modal-view>
         <ion-header-bar class="background-orange">
             <h1 class="title">BOOKING</h1>
             <div class="buttons">
                 <div class="button button-clear" ng-click="closeModal()"><span class="icon ion-close"></span></div>
             </div>
         </ion-header-bar>
-        <ion-content has-header="true" padding="true">
+        <ion-content has-header="false" padding="true">
             <div class="row ">
                 <div class="col-25">
                     <img src="res/shops/1/main.jpg">
@@ -66,13 +66,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row command">
-                        <button class="button button-icon button-small booktime-button-bookme2" ng-click="closeModal()"></button> 
+                    <div class="row">
+                        &nbsp;
                     </div>
                 </div>
             </div>
+            <div class="bar bar-footer">
+                <button class="button button-icon button-small booktime-button-bookme2" ng-click="closeModal()"></button>
+            </div>    
         </ion-content>
-    </div>
+    </ion-modal-view>
 
 </section>
 

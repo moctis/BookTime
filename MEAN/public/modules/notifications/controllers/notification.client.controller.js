@@ -2,8 +2,8 @@
 
 
 angular.module('notifications').controller('NotificationsController', [
-    '$scope', '$location',
-    function($scope, $location) {
+    '$scope', '$location', '$ionicModal',
+    function ($scope, $location, $ionicModal) {
         $scope.items = [];
 
         $scope.getData = function () {
@@ -31,6 +31,20 @@ angular.module('notifications').controller('NotificationsController', [
 
         $scope.statusClass = function(status) {
             return 'booktime-' + status;
+        };
+
+        $ionicModal.fromTemplateUrl('modules/notifications/views/booking.client.view.html', function ($ionicModal) {
+            $scope.modal = $ionicModal;
+        }, {
+            // Use our scope for the scope of the modal to keep it simple
+            scope: $scope,
+            // The animation we want to use for the modal entrance
+            animation: 'slide-in-up'
+        });
+
+        $scope.viewBooking = function () {
+            console.log($scope.modal);
+            $scope.modal.show();
         };
 
         $scope.getData();
