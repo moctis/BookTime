@@ -1,13 +1,11 @@
 .section-booking .modal {
     background: none;
     width: 90%; 
-     margin: auto;
+    margin: auto;
 }
 
 .section-booking .scroll-content {
-    background-color: white;
-    
-   
+    background-color: white;       
 }
 
 .section-booking img {
@@ -68,4 +66,12 @@
 
     .section-booking  .comment textarea{
         border: solid 1px black;
+    }
+
+    @media only screen and (min-device-width: 680px) {
+        .section-booking .modal {                                
+            margin-top: -100px;
+            margin-left: -100px;
+        }        
+        
     }

@@ -97,14 +97,14 @@
     width: 45px;
 }
 
-@media only screen and (min-device-width: 640px) and (max-device-width: 719px) {
-    .tabs-home .tabs{
-        top: 50px;
+@media only screen and (min-device-width: 680px) {
+    .tabs-home .tabs{        
+        height: 80px;
+        vertical-align: middle;
     }
+
+    .tabs-home .tabs .tab-title{        
+        vertical-align: bottom;
+     }     
 }
 
-@media only screen and (min-device-width: 720px) {
-    .tabs-home .tabs{
-        top: 50px;
-    }
-}
