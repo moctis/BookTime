@@ -5,10 +5,10 @@
 }
 
 .pannel-profile {
-    height: 62px;
-    /* margin-top: 21px; */
-    padding-left: 65px;
-    color: white;
+    /*height: 62px;*/
+    margin-top: 50px;
+    padding-left: 10px;
+    color: white;    
     /*background: #636363;*/
 }
 
@@ -31,6 +31,10 @@ div.profile-name {
 div.profile-info {
     font-size: 11px;
     background: #636363;
+}
+
+div.profile-image {
+   
 }
 
 .gradiant-orange {
@@ -72,7 +76,7 @@ div.profile-info {
 }
 
 .menu-signout {
-    border-top: 3px solid #646464;
+    border-top: 20px solid #646464;
     background-color: #a0272c;
 }
 
@@ -100,14 +104,8 @@ div.profile-info {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f47822', endColorstr='#ef5323',GradientType=0 );
 }
 
-@media only screen and (min-device-width: 640px) and (max-device-width: 719px) {
+@media only screen and (min-device-width: 680px) {
     .bar-mainheader {
-        height: 120px;  
-    }
-}
-
-@media only screen and (min-device-width: 720px) {
-    .bar-mainheader {
-        height: 150px;  
+        height: 110px;  
     }
 }

@@ -118,14 +118,9 @@ body {
     line-height: 1.45em;
 }
 
-@media only screen and (min-device-width: 640px) and (max-device-width: 719px) {
+@media only screen and (min-device-width: 680px) {
     body {
-        /*font-size: 25px;*/
+        font-size: 25px;
     }
 }
 
-@media only screen and (min-device-width: 720px) {
-    body {
-        /*font-size: 30px;*/
-    }
-}
