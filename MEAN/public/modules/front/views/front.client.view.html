@@ -1,3 +1,4 @@
+  <!--
     <section data-ng-controller="frontController" class="view-front">
         <carousel interval="50000" disable-animation="true" >
             <slide>
@@ -23,11 +24,12 @@
             <slide><img src="res/screen/share/2x/intro03.png" class="full-width full-height"/></slide>
         </carousel>
     </section> 
-<!-- This is for angular-carousel
-    <section data-ng-controller="frontController" class="view-front">
-        <ul rn-carousel rn-carousel-buffered rn-carousel-index>
-            <li>
-                <img src="res/screen/share/2x/login.png"/>                
+    -->
+
+      <section data-ng-controller="frontController" class="view-front">      
+        <ul rn-carousel rn-carousel-buffered rn-carousel-index="carouselIndex" class="carousel1" >
+            <li ng-class="id-1">
+                <img src="res/screen/share/2x/login.png" class="full-width full-height"/>                
                 <div class="pannel-float">
                     <div class="left-inner-addon text-left">                        
                         <i class="glyphicon glyphicon-envelope"></i>
@@ -44,10 +46,9 @@
                     <button ng-click="login()" class="login">LOG IN</button>                                        
                 </div>                                                
             </li>
-            <li><img src="res/screen/share/2x/intro01.png" /></li>
-            <li><img src="res/screen/share/2x/intro02.png" /></li>
-            <li><img src="res/screen/share/2x/intro03.png" /></li>
-        </ul>
+            <li ng-class="id-2"><img src="res/screen/share/2x/intro01.png" class="full-width full-height"/></li>
+            <li ng-class="id-3"><img src="res/screen/share/2x/intro02.png" class="full-width full-height"/></li>
+            <li ng-class="id-4"><img src="res/screen/share/2x/intro03.png" class="full-width full-height"/></li>
+        </ul>        
+        <div rn-carousel-indicators ng-if="slides.length > 1" slides="slides" rn-carousel-index="carouselIndex" class="carousel-indicators"></div>
     </section> 
--->
-
