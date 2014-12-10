@@ -17,6 +17,7 @@ module.exports = {
 				'public/lib/bootstrap/css/bootstrap-theme.css',
 				'public/lib/ionic/css/ionic.css', 
 				'public/lib/Font-Awesome/css/font-awesome.css',
+				'public/lib/angular-carousel/angular-carousel.css', //woody
 				'public/lib/others/others.css' 
 			], 
 		    js: [
@@ -34,7 +35,8 @@ module.exports = {
 				'public/lib/angular-touch/angular-touch.js', 
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'public/lib/others/angular.ratings.js'
+				'public/lib/angular-carousel/angular-carousel.js' //woody
+				//'public/lib/others/angular.ratings.js'
 			]
 		},
 		css: [
