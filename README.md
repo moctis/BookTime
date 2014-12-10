@@ -62,6 +62,11 @@ BookTime
  - ดู css  ทุกอัน /config เช่น ..modules/font/css
  - ไฟล์รูป D:\GitHub\BookTime\MEAN\public\res\screen\share\2x
  
+0. Angular-carousel
+ - เนื่องจากคำนวณ 3DTransform ระหว่าง slide ซึ่งต่างจากของ angular-boostrap ทำให้การแสดงผลดู continous
+ - [on git] (https://github.com/revolunet/angular-carousel)
+ - [demo] (http://blog.revolunet.com/angular-carousel/)
+ - [code of demo] (https://github.com/revolunet/angular-carousel/blob/master/index.html)
 0. etc
  - http://www.dragsponsive.com/
  - http://www.responsivewebmobile.com/app/webroot/rwm_slide_panel/#
