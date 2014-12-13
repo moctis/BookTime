@@ -2,9 +2,9 @@
     <section data-ng-controller="frontController" class="view-front">
         <carousel interval="50000" disable-animation="true" >
             <slide>
-                <img src="res/screen/share/2x/login.png"/>                
+                <img src="res/screen/share/2x/login.png"/>
                 <div class="pannel-float">
-                    <div class="left-inner-addon text-left">                        
+                    <div class="left-inner-addon text-left">
                         <i class="glyphicon glyphicon-envelope"></i>
                         <input type="email" class="form-control" id="InputEmail" placeholder="EMAIL ADDRESS">
                     </div>
@@ -16,22 +16,22 @@
                         <i class="glyphicon glyphicon-log-in"></i>
                         <input type="password" class="form-control" id="InputPassword" placeholder="PASSWORD">
                     </div>
-                    <button ng-click="login()" class="login">LOG IN</button>                                        
-                </div>                                            
+                    <button ng-click="login()" class="login">LOG IN</button>
+                </div>
             </slide>
             <slide><img src="res/screen/share/2x/intro01.png" class="full-width full-height"/></slide>
             <slide><img src="res/screen/share/2x/intro02.png" class="full-width full-height"/></slide>
             <slide><img src="res/screen/share/2x/intro03.png" class="full-width full-height"/></slide>
         </carousel>
-    </section> 
+    </section>
     -->
 
-      <section data-ng-controller="frontController" class="view-front">      
+      <section data-ng-controller="frontController" class="view-front">
         <ul rn-carousel rn-carousel-buffered rn-carousel-index="carouselIndex" class="carousel1" >
             <li ng-class="id-1">
-                <img src="res/screen/share/2x/login.png" class="full-width full-height"/>                
+                <img src="res/screen/share/2x/login.png" class="full-width full-height"/>
                 <div class="pannel-float">
-                    <div class="left-inner-addon text-left">                        
+                    <div class="left-inner-addon text-left">
                         <i class="glyphicon glyphicon-envelope"></i>
                         <input type="email" class="form-control" id="InputEmail" placeholder="EMAIL ADDRESS">
                     </div>
@@ -43,12 +43,12 @@
                         <i class="glyphicon glyphicon-log-in"></i>
                         <input type="password" class="form-control" id="InputPassword" placeholder="PASSWORD">
                     </div>
-                    <button ng-click="login()" class="login">LOG IN</button>                                        
-                </div>                                                
+                    <button ng-click="login()" class="login">LOG IN</button>
+                </div>
             </li>
             <li ng-class="id-2"><img src="res/screen/share/2x/intro01.png" class="full-width full-height"/></li>
             <li ng-class="id-3"><img src="res/screen/share/2x/intro02.png" class="full-width full-height"/></li>
             <li ng-class="id-4"><img src="res/screen/share/2x/intro03.png" class="full-width full-height"/></li>
-        </ul>        
+        </ul>
         <div rn-carousel-indicators ng-if="slides.length > 1" slides="slides" rn-carousel-index="carouselIndex" class="carousel-indicators"></div>
-    </section> 
+    </section>
