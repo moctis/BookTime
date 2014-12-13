@@ -6,8 +6,8 @@
     }
 
         .section-food .shop img {
-            width: auto;
-            height: 164px;
+            width: 100%;
+            height: auto;
             display: block;
         }
 
