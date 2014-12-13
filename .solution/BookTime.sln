@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "public", "http://localhost:13060", "{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_13060"
+		Debug.AspNetCompiler.PhysicalPath = "..\MEAN\public\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_13060\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_13060"
+		Release.AspNetCompiler.PhysicalPath = "..\MEAN\public\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_13060\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\MEAN\public\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C30A9F6E-1CC3-4EBC-B61E-EBBEB0DC587B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Android = Debug|Android
+		Debug|Any CPU = Debug|Any CPU
+		Debug|iOS = Debug|iOS
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Windows Phone = Debug|Windows Phone
+		Debug|Windows-AnyCPU = Debug|Windows-AnyCPU
+		Debug|Windows-ARM = Debug|Windows-ARM
+		Debug|Windows-x64 = Debug|Windows-x64
+		Debug|Windows-x86 = Debug|Windows-x86
+		Distribution|Android = Distribution|Android
+		Distribution|Any CPU = Distribution|Any CPU
+		Distribution|iOS = Distribution|iOS
+		Distribution|Mixed Platforms = Distribution|Mixed Platforms
+		Distribution|Windows Phone = Distribution|Windows Phone
+		Distribution|Windows-AnyCPU = Distribution|Windows-AnyCPU
+		Distribution|Windows-ARM = Distribution|Windows-ARM
+		Distribution|Windows-x64 = Distribution|Windows-x64
+		Distribution|Windows-x86 = Distribution|Windows-x86
+		Release|Android = Release|Android
+		Release|Any CPU = Release|Any CPU
+		Release|iOS = Release|iOS
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Windows Phone = Release|Windows Phone
+		Release|Windows-AnyCPU = Release|Windows-AnyCPU
+		Release|Windows-ARM = Release|Windows-ARM
+		Release|Windows-x64 = Release|Windows-x64
+		Release|Windows-x86 = Release|Windows-x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Android.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|iOS.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Windows Phone.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Windows-x64.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Debug|Windows-x86.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Android.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Any CPU.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Any CPU.Build.0 = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|iOS.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Windows Phone.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Windows-x64.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Distribution|Windows-x86.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Android.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|iOS.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Windows Phone.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Windows-AnyCPU.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Windows-ARM.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Windows-x64.ActiveCfg = Debug|Any CPU
+		{B248C4E2-6FFB-46A7-9A18-D8193AD388A4}.Release|Windows-x86.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

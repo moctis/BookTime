@@ -1,0 +1,320 @@
+.section-shop div {
+}
+
+.section-shop img {
+    width: 320px;
+    height: 245px;
+}
+
+.row + .row-photos {
+    margin-top: -50px;
+}
+
+
+.photo-small {
+    display: inline-block;
+}
+
+    .photo-small img {
+        width: 50px;
+        height: 50px;
+    }
+
+.section-shop .photos-albums {
+    color: #fff;
+    width: 226px;
+}
+
+.section-shop .photos-reviews {
+    color: #fff;
+    width: 226px;
+}
+
+.section-shop .details {
+    font-size: 10px;
+}
+
+    .section-shop .details .name {
+        font-size: 28px;
+    }
+
+    .section-shop .details .lastBooked-distance {
+        font-size: 8px;
+    }
+
+
+.section-shop .commands .button {
+    margin-left: 10px;
+}
+
+.section-shop .main-commands .button {
+    margin-top: 10px;
+}
+
+    .section-shop .main-commands .button:first-child {
+        margin-top: 40px;
+    }
+
+.booktime-shop-bg-right {
+    position: absolute;
+    display: block;
+    z-index: 1;
+}
+
+.card-shop-detail, .card-shop-detail div {
+    font-size: 0.8em;
+    line-height: 16px;
+    background-color: #ececec;
+}
+
+    .card-shop-detail .item {
+        border-bottom-width: 4px;
+        border-bottom-color: #9b968f;
+    }
+
+.card-shop-service > .item {
+    padding: 0;
+    background-color: white;
+}
+
+    .card-shop-service > .item.item-divider {
+        padding: 8px;
+        background-color: #F47822;
+        color: white;
+    }
+
+.card-shop-service img, .card-shop-service img:first-child {
+    width: 40px;
+    height: 40px;
+}
+
+.card-shop-service i {
+    position: absolute;
+    left: 20px;
+    top: 120px;
+}
+
+.card-shop-service > .item.item-divider,
+.card-review > .item.item-divider {
+    padding: 8px;
+    background-color: #F47822;
+    color: white;
+}
+
+.card-shop-service h2 {
+    color: #F47822;
+}
+
+.card-shop-service .item-thumbnail-left, .card-shop-service .item-thumbnail-left .item-content {
+    padding-left: 60px;
+}
+
+
+.section-shop .albums .albums-thumbnail {
+    display: block;
+}
+
+    .section-shop .albums .albums-thumbnail .thumbnail {
+        display: inline-block;
+        margin-bottom: 0;
+        line-height: 0;
+        border: none;
+        padding: 4px;
+    }
+
+.section-shop .card-review {
+        margin: 0px;
+    }
+.section-shop .card-review .item-text-wrap {
+    padding: 0;
+}
+
+.section-shop .card-comment .user-info img {
+    width: 50px;
+    height: 50px;
+}
+
+.section-shop .card-comment .user-info img {
+    width: fill-available;
+    height: fill-available;
+}
+
+.section-shop .card-comment .user-info .name {
+}
+
+
+.section-shop .card-comment {
+    margin: 0;
+    background: whitesmoke;
+    margin-bottom: 16px;
+}
+.section-shop .card-comment .message{ 
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 4px;
+}
+
+@media only screen and (min-device-width: 680px) {
+    .section-shop .displayed-photo {
+            width: 100%;
+            display: block;
+    }
+
+    /*below is just copy*/
+    .section-shop img {
+        width: 320px;
+        height: 245px;
+    }
+
+    .row + .row-photos {
+        margin-top: -50px;
+    }
+
+
+    .photo-small {
+        display: inline-block;
+    }
+
+        .photo-small img {
+            width: 50px;
+            height: 50px;
+        }
+
+    .section-shop .photos-albums {
+        color: #fff;
+        width: 226px;
+    }
+
+    .section-shop .photos-reviews {
+        color: #fff;
+        width: 226px;
+    }
+
+    .section-shop .details {
+        font-size: 25px;
+        line-height: 36px;
+    }
+
+        .section-shop .details .name {
+            font-size: 48px;
+        }
+
+        .section-shop .details .lastBooked-distance {
+            font-size: 28px;
+        }
+
+
+    .section-shop .commands .button {
+        margin-left: 0;
+    }
+
+    .section-shop .main-commands .button {
+        margin-top: 10px;
+    }
+
+        .section-shop .main-commands .button:first-child {
+            margin-top: 40px;
+        }
+
+    .booktime-shop-bg-right {
+        position: absolute;
+        display: block;
+        z-index: 1;
+    }
+
+    .card-shop-detail, .card-shop-detail div {
+        font-size: 1em;
+        line-height: 36px;
+        background-color: #ececec;
+    }
+
+        .card-shop-detail .item {
+            border-bottom-width: 4px;
+            border-bottom-color: #9b968f;
+        }
+
+    .card-shop-service > .item {
+        padding: 0;
+        background-color: white;
+    }
+
+        .card-shop-service > .item.item-divider {
+            padding: 8px;
+            background-color: #F47822;
+            color: white;
+        }
+
+    .card-shop-service img, .card-shop-service img:first-child {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-shop-service i {
+        position: absolute;
+        left: 20px;
+        top: 120px;
+    }
+
+    .card-shop-service > .item.item-divider,
+    .card-review > .item.item-divider {
+        padding: 8px;
+        background-color: #F47822;
+        color: white;
+    }
+
+    .card-shop-service h2 {
+        color: #F47822;
+    }
+
+    .card-shop-service .item-thumbnail-left, .card-shop-service .item-thumbnail-left .item-content {
+        padding-left: 60px;
+    }
+
+
+    .section-shop .albums .albums-thumbnail {
+        display: block;
+    }
+
+        .section-shop .albums .albums-thumbnail .thumbnail {
+            display: inline-block;
+            margin-bottom: 0;
+            line-height: 0;
+            border: none;
+            padding: 4px;
+        }
+
+    .section-shop .card-review {
+            margin: 0px;
+        }
+    .section-shop .card-review .item-text-wrap {
+        padding: 0;
+    }
+
+    .section-shop .card-comment .user-info img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .section-shop .card-comment .user-info img {
+        width: fill-available;
+        height: fill-available;
+    }
+
+    .section-shop .card-comment .user-info .name {
+    }
+
+
+    .section-shop .card-comment {
+        margin: 0;
+        background: whitesmoke;
+        margin-bottom: 16px;
+    }
+    .section-shop .card-comment .message{ 
+        background: white;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 4px;
+    }    
+}
+

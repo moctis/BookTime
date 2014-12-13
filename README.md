@@ -7,11 +7,15 @@ BookTime
 0. [Google Cloud - Mobile Backend](https://developers.google.com/cloud/samples/mbs/)
 0. [Setup PhoneGap on Windows](http://chrisbitting.com/2014/01/06/installing-starting-with-phonegap-on-windows-for-cross-platform-mobile-development/)
 0. [Github Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
+0. [onsenui.io](http://onsenui.io/)
+0. [Onsen UI and PhoneGap – Getting Started](http://thejackalofjavascript.com/onsen-ui-and-phonegap-getting-started/)
+0. [MEAN.JS](http://meanjs.org/);
+0. [MEAN.io vs MEAN.JS](http://www.creativeworkline.com/2014/05/meanio-vs-meanjs-comparison/)
+0. [Mobile Apps with Phonegap and Yeoman](http://lucaspaulger.com/javascript/2013/09/25/Mobile-apps-Phonegap-Yeoman/)
 
 
 ## Step by Step build
-`setx` command need to restart cmd.exe
+After run `setx` command, it need to restart cmd.exe
 
 0. Install [wget-1.11.4-1-setup.exe](http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-setup.exe)
  - `setx path "%path%;%ProgramFiles(x86)%\GnuWin32\bin"`
@@ -38,6 +42,8 @@ BookTime
  - `setx ANDROID_HOME "<installation location>\android-sdk-windows"`
  - `setx PATH "%PATH%;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools"`
  - `android -h`
+0. Instan MongoDB
+ - [Get from MongoDB - Downloads](http://www.mongodb.org/downloads)
 0. Clone 'BookTime' from github
  - 
 0. Install MongoDB

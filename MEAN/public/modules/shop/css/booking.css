@@ -1,0 +1,77 @@
+.section-booking .modal {
+    background: none;
+    width: 90%; 
+    margin: auto;
+}
+
+.section-booking .scroll-content {
+    background-color: white;       
+}
+
+.section-booking img {
+    width: 64px;
+    height: 58px;
+    display: block;
+    margin: 12px;
+    float: left;
+}
+
+.section-booking .details {
+    /* font-size: 10px; */
+    padding-top: 1em;
+    padding-left: 1em;
+}
+
+    .section-booking .details .name {
+        font-size: 28px;
+    }
+
+    .section-booking .details .lastBooked-distance {
+        font-size: 8px;
+    }
+
+
+.section-booking .booking {
+}
+    .section-booking .booking> div {
+        margin: auto; /* make it center */
+    }
+
+    .section-booking .booking .list {
+        margin-bottom: 0px;
+    }
+
+    .section-booking .booking .item-input {
+        border-radius: 10px;
+        margin: 10px 17px;
+    }
+
+    .section-booking .booking .input-label {
+        width: 0px;
+    }
+
+    .section-booking .booking .item-select select {
+        width: 100%;
+        max-width: 100%;
+        direction: inherit;
+        text-align: center;
+    }
+
+
+    .section-booking  .card-deal .item-divider{
+        white-space: inherit;
+        text-overflow: none;
+        overflow: inherit;
+    }
+
+    .section-booking  .comment textarea{
+        border: solid 1px black;
+    }
+
+    @media only screen and (min-device-width: 680px) {
+        .section-booking .modal {                                
+            margin-top: -100px;
+            margin-left: -100px;
+        }        
+        
+    }

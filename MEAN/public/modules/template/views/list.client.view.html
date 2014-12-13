@@ -1,0 +1,10 @@
+<section data-ng-controller="TemplateController">   
+  <h1>Template</h1>
+  {{helloMessage}}
+  {{data}} {{data.length}}
+  <ul>
+    <li ng-repeat="it in data">
+        {{it.id}} : {{it.value}}
+    </li>
+  </ul>
+</section>
