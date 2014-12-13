@@ -2,33 +2,41 @@
 
 
 angular.module('front').controller('frontController', [
-    '$scope', '$location',
-    function($scope, $location) {
-        $scope.login = function () { 
-            $location.path('/main/tab/home/food');
-        };       
+    '$scope', '$location', '$http', 'Authentication',
+    function($scope, $location, $http, Authentication) {
+      $scope.credentials = {
+        username:'',
+        password:''
+      };
+      
+      $scope.authentication = Authentication;
 
-		/*function getSlide(target) {
-            var i = target.length;
-            return {
-                id: (i + 1),
-                label: 'slide #' + (i + 1),
-                img: 'res/screen/share/2x/intro0' + (i + 1) + '.png' ,             
-                odd: (i % 2 === 0)
-            };
-        }*/
+
+      // If user is signed in then redirect back home
+      if ($scope.authentication.user) $location.path('/main/tab/home/food');
+
+        $scope.login = function () {
+            $location.path('/main/tab/home/food');
+        };
 
         $scope.carouselIndex = 0;
-
-        /*function addSlides(target, qty) {
-            for (var i=0; i < qty; i++) {
-                target.push(getSlide(target));
-            }
-        }
-        // 1st ngRepeat demo
-        $scope.slides = [];
-        addSlides($scope.slides, 3);*/
         $scope.slides = [1,2,3,4];
-        
+
+        $scope.init = function() {
+
+        };
+
+        $scope.signin = function() {
+          console.log($scope.credentials);
+          $http.post('/auth/signin', $scope.credentials).success(function(response) {
+            // If successful we assign the response to the global user model
+            $scope.authentication.user = response;
+
+            // And redirect to the index page
+            $location.path('/main/tab/home/food');
+          }).error(function(response) {
+            $scope.error = response.message;
+          });
+        };
     }
 ]);
