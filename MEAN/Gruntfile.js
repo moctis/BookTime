@@ -148,7 +148,7 @@ module.exports = function (grunt) {
 		                expand: true,
 		                cwd: 'public',
 		                src: ['**'],
-		                dest: '../phonegap/www' 
+		                dest: '../phonegap/www'
 		            }
                 ],
                 updateOnly: true
@@ -161,7 +161,7 @@ module.exports = function (grunt) {
 		                expand: true,
 		                cwd: 'public',
 		                src: ['**'],
-		                dest: '../phonegap/www' 
+		                dest: '../phonegap/www'
 		            }
                 ]
             }
@@ -171,11 +171,11 @@ module.exports = function (grunt) {
                 srcPrefix: 'bower_components',
                 destPrefix: 'public/lib'
             },
-            scripts: { 
+            scripts: {
                 files: {
                     'angular': 'angular/angular.*',
                     'angular-animate': 'angular-animate/angular-animate.*',
-                    'angular-bootstrap': 'angular-bootstrap/ui-bootstrap-tpls.*', 
+                    'angular-bootstrap': 'angular-bootstrap/ui-bootstrap-tpls.*',
                     'angular-cookies': 'angular-cookies/angular-cookies.*',
                     'angular-mocks': 'angular-mocks/angular-mocks.*',
                     'angular-resource': 'angular-resource/angular-resource.*',
@@ -185,22 +185,23 @@ module.exports = function (grunt) {
                     'angular-ui-utils': 'angular-ui-utils/ui-utils*',
                     'bootstrap': 'bootstrap/dist',
                     'jquery': 'jquery/dist',
+                    //'angular-carousel': 'angular-carousel/dist',
                 }
-            },             
-            css: { 
-                files: {                    
+            },
+            css: {
+                files: {
                     'Font-Awesome/css': 'Font-Awesome/css'
                 }
-            },              
+            },
             fonts: {
-                files: {                    
+                files: {
                     'Font-Awesome/fonts': 'Font-Awesome/fonts'
                 }
-            }, 
+            },
         }
     });
 
-    // Load NPM tasks 
+    // Load NPM tasks
     require('load-grunt-tasks')(grunt);
 
     // Making grunt default to force in order not to break the project.

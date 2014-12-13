@@ -15,11 +15,11 @@ module.exports = {
 		    css: [
                 'public/lib/bootstrap/css/bootstrap.css',
 				'public/lib/bootstrap/css/bootstrap-theme.css',
-				'public/lib/ionic/css/ionic.css', 
+				'public/lib/ionic/css/ionic.css',
 				'public/lib/Font-Awesome/css/font-awesome.css',
 				'public/lib/angular-carousel/angular-carousel.css', //woody
-				'public/lib/others/others.css' 
-			], 
+				'public/lib/others/others.css'
+			],
 		    js: [
 //                'public/lib/jquery/jquery.js',
                 'public/lib/ionic/js/ionic.bundle.js',
@@ -31,12 +31,12 @@ module.exports = {
 //				'public/lib/ionic/js/ionic-angular.js',
 
 				'public/lib/angular-resource/angular-resource.js',
-				'public/lib/angular-cookies/angular-cookies.js', 
-				'public/lib/angular-touch/angular-touch.js', 
+				'public/lib/angular-cookies/angular-cookies.js',
+				'public/lib/angular-touch/angular-touch.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-				'public/lib/angular-carousel/angular-carousel.js' //woody
-				//'public/lib/others/angular.ratings.js'
+				'public/lib/angular-carousel/angular-carousel.js', //woody
+				'public/lib/others/angular.ratings.js'
 			]
 		},
 		css: [
