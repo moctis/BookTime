@@ -2,7 +2,7 @@
 }
 
     .section-food .shop, .section-food .shop .item-content {
-        padding: 0;        
+        padding: 0;
     }
 
         .section-food .shop img {
@@ -14,7 +14,7 @@
     .section-food .details {
         height: 66px;
         display: block;
-        padding: 8px;        
+        padding: 8px;
     }
 
     .section-food .shop {
@@ -42,12 +42,12 @@
             position: relative;
             float: right;
             top: 0;
-            
+
         }
 
             .section-food .shop .booked i {
                 height: 76px;
-            
+
                 width: 90px;
 }
   .section-food .shop .booked span {
@@ -68,7 +68,7 @@
     .section-food .details {
         height: 66px;
         display: block;
-        padding: 8px;        
+        padding: 8px;
     }
 
 
@@ -94,18 +94,17 @@
             position: relative;
             float: right;
             top: 0;
-            
+
         }
 
-            .section-food .shop .booked i {
+        .section-food .shop .booked i {
                 height: 76px;
-            
                 width: 90px;
         }
         .section-food .shop .booked span {
                 position: absolute;
-                top: 44px;
-                right: 0;
+                top: 88px;
+                right: 10px;
                 font-size: 30px;
         }
 
