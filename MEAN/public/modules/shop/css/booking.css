@@ -8,6 +8,19 @@
     background-color: white;       
 }
 
+.section-booking .title {
+    line-height: 30px;
+    height: 30px;
+    font-size: 20px;    
+    color: white;         
+    font-weight: 600;       
+}
+
+.section-booking .item {
+    font-size: 12px;
+    line-height: 14px;
+}
+
 .section-booking img {
     width: 64px;
     height: 58px;
@@ -79,9 +92,17 @@
             line-height: 40px;
         }        
 
+    .section-booking .title {
+        line-height: 30px;
+        height: 30px;
+        font-size: 35px;    
+        color: white;         
+        font-weight: 600;       
+    }
+
     .section-booking .item {
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 28px;
+        line-height: 28px;
     }
 
     .section-booking img {
