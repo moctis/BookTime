@@ -5,10 +5,12 @@ angular.module('core').controller('SidemenuController', [
     function ($scope, $interval, $state) {
 
         $scope.profile = [];
-        $scope.profile.name = 'Pony Somrattanach';
+        $scope.profile.name = window.user.diaplayName;
         $scope.profile.img = 'res/screen/share/2x/profile.png';
         $scope.profile.booked = 15;
         $scope.profile.favorites = 245;
+
+
 
         $scope.menus = [
             { label: 'HOME', icon: 'fa-home', state: 'main.tab.home.food' },
@@ -20,7 +22,7 @@ angular.module('core').controller('SidemenuController', [
             { label: 'MY FAVORITES', icon: 'fa-star-o', page: 'modules/home/views/home.client.view.html' },
             { label: 'SETTINGS', icon: 'fa-gear', state: 'main.tab.settings' },
             /*{ label: 'ABOUT BOOKTIME', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-about' },*/
-            { label: 'SIGN OUT', icon: 'fa-sign-out', page: 'modules/home/views/home.client.view.html', className: 'menu-signout' }
+            { label: 'SIGN OUT', icon: 'fa-sign-out', state: 'signout', className: 'menu-signout' }
         ];
 
         $scope.showDetail = function ($index) {

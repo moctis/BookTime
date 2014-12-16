@@ -8,6 +8,19 @@
     background-color: white;       
 }
 
+.section-booking .title {
+    line-height: 30px;
+    height: 30px;
+    font-size: 20px;    
+    color: white;         
+    font-weight: 600;       
+}
+
+.section-booking .item {
+    font-size: 12px;
+    line-height: 14px;
+}
+
 .section-booking img {
     width: 64px;
     height: 58px;
@@ -17,13 +30,15 @@
 }
 
 .section-booking .details {
-    /* font-size: 10px; */
+    font-size: 10px;
+    line-height: 12px;
     padding-top: 1em;
     padding-left: 1em;
 }
 
     .section-booking .details .name {
         font-size: 28px;
+        line-height: 30px;
     }
 
     .section-booking .details .lastBooked-distance {
@@ -71,7 +86,54 @@
     @media only screen and (min-device-width: 680px) {
         .section-booking .modal {                                
             margin-top: -100px;
-            margin-left: -100px;
+            margin-left: -120px;
+            width: 80%;
+            font-size: 25px;
+            line-height: 40px;
         }        
+
+    .section-booking .title {
+        line-height: 30px;
+        height: 30px;
+        font-size: 35px;    
+        color: white;         
+        font-weight: 600;       
+    }
+
+    .section-booking .item {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .section-booking img {
+        width: 128px;
+        height: 116px;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    .section-booking .booking .item-input {
+        font-size: 40px;
+    }
+
+    .section-booking .booking .input-label {
+        font-size: 40px;
+    }
+
+    .section-booking .details {
+        font-size: 35px;
+        line-height: 40px;
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+    
+    .section-booking .details .name {
+        font-size: 48px;
+        line-height: 50px;
+    }
+
+    .section-booking .details .lastBooked-distance {
+        font-size: 25px;
+    }
         
     }

@@ -107,7 +107,7 @@ slide > img {
 }
 
 .view-front .item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated {  
-  background-color: black; 
+  /*background-color: black; */
 }
 
 .view-front button.login{

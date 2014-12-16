@@ -30,5 +30,12 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
 				$scope.error = response.message;
 			});
 		};
+		$scope.signout = function() {
+			/*$http.post('/auth/singout').success(function(response) {
+				$location.path('/');
+			}).error(function(response) {
+				$scope.error = response.message;
+			});*/
+		};
 	}
 ]);
