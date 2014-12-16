@@ -2,8 +2,8 @@
 }
 
 .section-shop img {
-    width: 320px;
-    height: 245px;
+    width: 100%;
+    height: auto;
 }
 
 .row + .row-photos {
@@ -148,7 +148,7 @@
     background: whitesmoke;
     margin-bottom: 16px;
 }
-.section-shop .card-comment .message{ 
+.section-shop .card-comment .message{
     background: white;
     border-radius: 20px;
     padding: 10px;
@@ -162,11 +162,6 @@
     }
 
     /*below is just copy*/
-    .section-shop img {
-        width: 320px;
-        height: 245px;
-    }
-
     .row + .row-photos {
         margin-top: -50px;
     }
@@ -192,8 +187,8 @@
     }
 
     .section-shop .details {
-        font-size: 25px;
-        line-height: 36px;
+        font-size: 35px;
+        line-height: 60px;
     }
 
         .section-shop .details .name {
@@ -201,7 +196,7 @@
         }
 
         .section-shop .details .lastBooked-distance {
-            font-size: 28px;
+            font-size: 20px;
         }
 
 
@@ -310,11 +305,10 @@
         background: whitesmoke;
         margin-bottom: 16px;
     }
-    .section-shop .card-comment .message{ 
+    .section-shop .card-comment .message{
         background: white;
         border-radius: 20px;
         padding: 10px;
         margin: 4px;
-    }    
+    }
 }
-

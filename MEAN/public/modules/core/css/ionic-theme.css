@@ -6,7 +6,7 @@ bottom: 0;
 left: 0;
 width: 100%;
 height: 100%;
-    
+
 background-color: white;
 overflow: hidden;
 }
@@ -18,7 +18,7 @@ right: 0;
 bottom: 0;
 left: 0;
 width: 100%;
-height: 100%;    
+height: 100%;
 background-color: white;
 overflow: hidden;
 }
@@ -30,6 +30,7 @@ overflow: hidden;
     background: #fae4a3;
     color: #f47822;
 }
+ 
 
     .bar.bar-booktime .title {
         color: #f47822;
@@ -86,11 +87,11 @@ overflow: hidden;
         }
 
 .bar-header {
-    top: 60px;    
+    top: 60px;
 }
 
 .modal .bar-header {
-    top: 0;    
+    top: 0;
 }
 
 .tabs-booktime > .tabs, .tabs.tabs-booktime {
@@ -144,6 +145,7 @@ overflow: hidden;
 
 .platform-ios.platform-browser:not(.fullscreen) .has-tabs-top {
     top: 90px;
+    bottom: 47px;
 }
 
 .platform-ios.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
@@ -199,7 +201,7 @@ overflow: hidden;
 /*=======================================================*/
 
 .scroll-content .has-tabs-top{
-    margin-bottom: 49px;    
+    margin-bottom: 49px;
 }
 
 
@@ -217,7 +219,7 @@ padding-top: 0;
 
 
 .menu.menu-booktime {
-    background-color: #646464;     
+    background-color: #646464;
 }
 
 .menu-item {
@@ -231,11 +233,11 @@ padding-top: 0;
 
 
 .menu.menu-booktime .bar-header {
-    z-index: 0; 
+    z-index: 0;
 }
 
 .menu .scroll-content {
-    
+
 }
 
 @media only screen and (min-device-width: 680px) {
@@ -244,27 +246,33 @@ padding-top: 0;
         top: 128px;
         height: 100px;
     }
+
+    .bar-footer {        
+        background-color: white;
+        min-height: 100px;
+    }
+
     .bar.bar-booktime .title {
         font-size: 50px;
         overflow: visible;
     }
 
-    .bar.bar-booktime .button-clear.button-clear {        
+    .bar.bar-booktime .button-clear.button-clear {
         font-size: 30px;
     }
 
 
     .has-header {
-        top: 200px; 
-    }       
+        top: 200px;
+    }
 
     .menu.menu-booktime {
-        background-color: #646464;    
-        width: 300px;
-    }   
+        background-color: #646464;
+        width: 500px;
+    }
 
     .menu-item.item{
-        font-size: 25px;        
+        font-size: 25px;
     }
 
     .tabs-booktime > .tabs, .tabs.tabs-booktime {
@@ -272,13 +280,17 @@ padding-top: 0;
     }
 
     .tab-item {
-        font-size: 30px;   
-        max-width: 600px 
+        font-size: 30px;
+        max-width: 600px
     }
 
     .tab-item .icon {
-        zoom: 2.5; 
-    }    
+        zoom: 2.5;
+    }
+
+    .bar .title {
+        font-size: 30px;
+    }
 
     /*==================== for android ===================*/
     .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) {
@@ -303,7 +315,7 @@ padding-top: 0;
         top: 130px;
     }
 
-    .platform-android.platform-browser:not(.fullscreen) .has-header, .platform-android.platform-browser:not(.fullscreen) .bar-subheader {        
+    .platform-android.platform-browser:not(.fullscreen) .has-header, .platform-android.platform-browser:not(.fullscreen) .bar-subheader {
         top: 90px;
     }
 
@@ -313,6 +325,7 @@ padding-top: 0;
 
     .platform-android.platform-browser:not(.fullscreen) .has-tabs-top {
         top: 207px;
+        bottom: 108px;
     }
 
     .platform-android.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
@@ -322,7 +335,6 @@ padding-top: 0;
     .platform-android.platform-browser.status-bar-hide {
         margin-bottom: 20px;
     }
-    /*=======================================================*/    
+    /*=======================================================*/
 
 }
-
