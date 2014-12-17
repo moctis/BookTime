@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('core').controller('SidemenuController', [
-  '$scope', '$interval', '$state',
-  function($scope, $interval, $state) {
+  '$scope', '$interval', '$state', '$location',
+  function($scope, $interval, $state, $location) {
 
     $scope.profile = [];
     $scope.profile.name = window.user.diaplayName;
@@ -47,7 +47,7 @@ angular.module('core').controller('SidemenuController', [
       {
         label: 'SIGN OUT',
         icon: 'fa-sign-out',
-        state: 'signout',
+        url: '/auth/signout',
         className: 'menu-signout'
       }
     ];
@@ -58,6 +58,8 @@ angular.module('core').controller('SidemenuController', [
         $state.go(selectedMenu.state, null, {
           reload: true
         });
+      else if (selectedMenu.url !== undefined)
+        $location.path(selectedMenu.url);
       else
         alert(selectedMenu.label);
     };
