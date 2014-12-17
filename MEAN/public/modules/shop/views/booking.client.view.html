@@ -1,92 +1,93 @@
 <section data-ng-controller="BookingController" class="section-booking">
-    <ion-modal-view>
-        <ion-header-bar class="background-orange">
-            <h1 class="title">BOOKING</h1>
-            <div class="buttons">
-                <div class="button button-clear" ng-click="closeModal()"><span class="icon ion-close"></span></div>
-            </div>
-        </ion-header-bar>
-        <ion-content has-header="false" padding="true">
+  <ion-modal-view>
+    <ion-header-bar class="background-orange">
+      <h1 class="title">BOOKING</h1>
+      <div class="buttons">
+        <div class="button button-clear" ng-click="closeModal()"><span class="icon ion-close"></span>
+        </div>
+      </div>
+    </ion-header-bar>
+    <ion-content has-header="false" padding="true">
 
-            <div class="row ">
-                <div class="col-25">
-                    <img src="res/shops/1/main.jpg">
-                </div>
-                <div class="col-75 details">
-                    <span class="row name">{{it.name}}xxxxx</span>
-                    <span class="row address">{{it.address}}</span>
-                    <span class="row address">{{it.address2}}</span>
-                    <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
-                    <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
-                </div>
-            </div>
-            <div class="row booking">
-                <div class="col-90">
-                    <div class="list">
-                        <label class="item item-input item-select">
-                            <div class="input-label">&nbsp;</div>
-                            <select>
-                                <option ng-repeat="n in [9,10,11,12,13,14]">Tue {{n}} June 2014</option>
-                            </select>
-                        </label>
-                        <label class="item item-input item-select">
-                            <div class="input-label">&nbsp;</div>
-                            <select>
-                                <option ng-repeat="n in [7,8,9,10,11,12]">{{n}} pm</option>
-                            </select>
-                        </label>
-                        <label class="item item-input item-select">
-                            <div class="input-label"> &nbsp;</div>
-                            <select>
-                                <option ng-repeat="n in [1,2,3,4,5,6,7]">{{n}} people</option>
-                            </select>
-                        </label>
-                    </div>
+      <div class="row ">
+        <div class="col-25">
+          <img src="res/shops/1/main.jpg">
+        </div>
+        <div class="col-75 details">
+          <span class="row name">{{it.name}}xxxxx</span>
+          <span class="row address">{{it.address}}</span>
+          <span class="row address">{{it.address2}}</span>
+          <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
+          <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
+        </div>
+      </div>
+      <div class="row booking">
+        <div class="col-90">
+          <div class="list">
+            <label class="item item-input item-select">
+              <div class="input-label">&nbsp;</div>
+              <select>
+                <option ng-repeat="n in [9,10,11,12,13,14]">Tue {{n}} June 2014</option>
+              </select>
+            </label>
+            <label class="item item-input item-select">
+              <div class="input-label">&nbsp;</div>
+              <select>
+                <option ng-repeat="n in [7,8,9,10,11,12]">{{n}} pm</option>
+              </select>
+            </label>
+            <label class="item item-input item-select">
+              <div class="input-label"> &nbsp;</div>
+              <select>
+                <option ng-repeat="n in [1,2,3,4,5,6,7]">{{n}} people</option>
+              </select>
+            </label>
+          </div>
 
-                    <div class="row deal ">
-                        <div class="col">
-                            <div class="card card-deal">
-                                <div class="item item-divider background-orange">
-                                    HOT DEAL - COME 4 PAY 3 all you can eat at only 799bath
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row comment">
-                        <div class="col">
-                            <div class="row">
-                                <span>Please enter any additional requests or information that you wish to notify the place about:</span>
-                                {{commantRemain}}
-                            </div>
-                            <div class="row">
-                                <textarea cols="40" rows="8" ng-model="comment"></textarea>
-                            </div>
-                            <div class="row">
-                                <span>Remaining characters: {{commantRemain}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        &nbsp;
-                    </div>
+          <div class="row deal ">
+            <div class="col">
+              <div class="card card-deal">
+                <div class="item item-divider background-orange">
+                  HOT DEAL - COME 4 PAY 3 all you can eat at only 799bath
                 </div>
-            </div>
-            <div class="row ">
-              <div class="col text-center">
-                <br/><br/>
               </div>
             </div>
-
           </div>
-        </ion-content>
-        <ion-footer-bar class="bar col">
-          <div class="text-center">
-          <button class="button button-icon button-small booktime-button-bookme2" ng-click="closeModal()">
 
-          </button>
+          <div class="row comment">
+            <div class="col">
+              <div class="row">
+                <span>Please enter any additional requests or information that you wish to notify the place about:</span>                {{commantRemain}}
+              </div>
+              <div class="row">
+                <textarea cols="40" rows="8" ng-model="comment"></textarea>
+              </div>
+              <div class="row">
+                <span>Remaining characters: {{commantRemain}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            &nbsp;
+          </div>
         </div>
-        </ion-footer-bar>
-    </ion-modal-view>
+      </div>
+      <div class="row ">
+        <div class="col text-center">
+          <br/>
+          <br/>
+        </div>
+      </div>
+
+      </div>
+    </ion-content>
+    <ion-footer-bar class="bar col">
+      <div class="text-center">
+        <button class="button button-icon button-small booktime-button-bookme2" ng-click="closeModal()">
+
+        </button>
+      </div>
+    </ion-footer-bar>
+  </ion-modal-view>
 
 </section>

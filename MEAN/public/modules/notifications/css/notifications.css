@@ -1,20 +1,16 @@
 .section-notifications .item {
-    border: none;
+  border: none;
 }
-
-    .section-notifications .item.item-text-wrap {
-        padding: 0;
-    }
-
-
+.section-notifications .item.item-text-wrap {
+  padding: 0;
+}
 .section-notifications .status {
-    padding: 0px;
+  padding: 0px;
 }
-
 .section-notifications img {
-    width: 64px;
-    height: 58px;
-    display: block;
-    margin: 12px;
-    float: left;
+  width: 64px;
+  height: 58px;
+  display: block;
+  margin: 12px;
+  float: left;
 }
