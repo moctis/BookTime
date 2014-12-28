@@ -1,126 +1,106 @@
-.content {
-    margin-top: 50px;
-}
-
-.undecorated-link:hover {
-    text-decoration: none;
-}
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
-}
-
-.ng-invalid.ng-dirty {
-    border-color: #FA787E;
-}
-
-.ng-valid.ng-dirty {
-    border-color: #78FA89;
-}
-
-section {
-    height: 100%;
-}
-
-body {
-    background: white;
-    color: black;
-}
-
-.full-screen {
-}
-
 @import url(menu.css);
-
+.content {
+  margin-top: 50px;
+}
+.undecorated-link:hover {
+  text-decoration: none;
+}
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
+}
+section {
+  height: 100%;
+}
+body {
+  background: white;
+  color: black;
+}
 .mainToolbar {
-    display: block;
-    background: black;
-    height: 38px;
-    margin-top: 22px;
+  display: block;
+  background: black;
+  height: 38px;
+  margin-top: 22px;
 }
-
-    .mainToolbar .booktime-bars {
-        margin-left: 11px;
-    }
-
-    .mainToolbar .booktime-search {
-        margin-left: 2px;
-    }
-
-    .mainToolbar .booktime-logo {
-        margin-right: 8px;
-    }
-
-
+.mainToolbar .booktime-bars {
+  margin-left: 11px;
+}
+.mainToolbar .booktime-search {
+  margin-left: 2px;
+}
+.mainToolbar .booktime-logo {
+  margin-right: 8px;
+}
 .mock .mockup {
-    width: 100%;
-    height: 100%;
-    position: fixed;
+  width: 100%;
+  height: 100%;
+  position: fixed;
 }
-
-    .mock .mockup img {
-        width: 100%;
-        height: auto;
-    }
-
-    .mock .mockup:before {
-        content: 'MOCKUP';
-        position: fixed;
-        -ms-opacity: 0.1;
-        opacity: 0.1;
-        font-size: 90px;
-        border: dotted 5px black;
-        -webkit-transform: rotate(70deg) translate(145px, 127px);
-        -moz-transform: rotate(70deg) translate(145px, 127px);
-        -ms-transform: rotate(70deg) translate(145px, 127px);
-        -o-transform: rotate(70deg) translate(145px, 127px);
-        transform: rotate(70deg) translate(145px, 127px);
-        padding: 32px 10px;
-    }
-
-
+.mock .mockup img {
+  width: 100%;
+  height: auto;
+}
+.mock .mockup:before {
+  content: 'MOCKUP';
+  position: fixed;
+  -ms-opacity: 0.1;
+  opacity: 0.1;
+  font-size: 90px;
+  border: dotted 5px black;
+  -webkit-transform: rotate(70deg) translate(145px, 127px);
+  -moz-transform: rotate(70deg) translate(145px, 127px);
+  -ms-transform: rotate(70deg) translate(145px, 127px);
+  -o-transform: rotate(70deg) translate(145px, 127px);
+  transform: rotate(70deg) translate(145px, 127px);
+  padding: 32px 10px;
+}
 .fade-bar {
-    height: 20px;
-    width: 100%;
-    position: fixed;
-    z-index: 9999;
-    opacity: 0;
-    background-color: #000;
+  height: 20px;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  background-color: #000;
 }
-
 .relative {
-    position: relative;
+  position: relative;
 }
-
-
 .font-size-80per {
-    font-size: 0.8em;
-    line-height: 0.85em;
+  font-size: 0.8em;
+  line-height: 0.85em;
 }
 .font-size-90per {
-    font-size: 0.9em;
-    line-height: 0.95em;
+  font-size: 0.9em;
+  line-height: 0.95em;
 }
 .font-size-110per {
-    font-size: 1.1em;
-    line-height: 1.15em;
+  font-size: 1.1em;
+  line-height: 1.15em;
 }
 .font-size-120per {
-    font-size: 1.2em;
-    line-height: 1.25em;
+  font-size: 1.2em;
+  line-height: 1.25em;
 }
 .font-size-130per {
-    font-size: 1.3em;
-    line-height: 1.35em;
+  font-size: 1.3em;
+  line-height: 1.35em;
 }
 .font-size-140per {
-    font-size: 1.4em;
-    line-height: 1.45em;
+  font-size: 1.4em;
+  line-height: 1.45em;
 }
-
 @media only screen and (min-device-width: 680px) {
-    body {
-        font-size: 25px;
-    }
+  body {
+    font-size: 25px;
+  }
 }
-
