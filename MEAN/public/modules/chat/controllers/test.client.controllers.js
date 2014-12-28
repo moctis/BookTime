@@ -9,6 +9,7 @@ angular.module('chat').controller('TestController', [
 
     $scope.name = 'moctis';
     $scope.age = 33;
+    $scope.xx = ApplicationConfiguration.server;
 
     $scope.add = function(a, b) {
       return ($scope.age * 1) + a + b;
@@ -17,6 +18,7 @@ angular.module('chat').controller('TestController', [
     $scope.hello = function() {
       $scope.name = 'woody';
       $scope.age = 55;
-    }
+    };
+
   }
 ]);
