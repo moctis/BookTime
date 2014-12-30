@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('core').controller('SidemenuController', [
-  '$scope', '$interval', '$state', '$location', 'Authentication',
-  function($scope, $interval, $state, $location, Authentication) {
-    console.log('authentication', Authentication.user);
-
+  '$scope', '$interval', '$state', '$location',
+  function($scope, $interval, $state, $location) {
     $scope.profile = [];
     $scope.profile.name = window.user.diaplayName;
     $scope.profile.img = 'res/screen/share/2x/profile.png';
