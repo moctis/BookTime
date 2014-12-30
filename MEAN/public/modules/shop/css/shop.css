@@ -1,4 +1,4 @@
-.section-shop div {} .section-shop img {
+.section-shop img {
   width: 100%;
   height: auto;
 }
@@ -96,7 +96,7 @@
   padding: 4px;
 }
 .section-shop .card-review {
-  margin: 0px;
+  margin: 0;
 }
 .section-shop .card-review .item-text-wrap {
   padding: 0;
@@ -109,7 +109,7 @@
   width: fill-available;
   height: fill-available;
 }
-.section-shop .card-comment .user-info .name {} .section-shop .card-comment {
+.section-shop .card-comment {
   margin: 0;
   background: whitesmoke;
   margin-bottom: 16px;
@@ -222,7 +222,7 @@
     padding: 4px;
   }
   .section-shop .card-review {
-    margin: 0px;
+    margin: 0;
   }
   .section-shop .card-review .item-text-wrap {
     padding: 0;
@@ -235,7 +235,7 @@
     width: fill-available;
     height: fill-available;
   }
-  .section-shop .card-comment .user-info .name {} .section-shop .card-comment {
+  .section-shop .card-comment {
     margin: 0;
     background: whitesmoke;
     margin-bottom: 16px;

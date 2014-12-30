@@ -39,19 +39,21 @@
   background-color: #f00;
 }
 .view-front .row {
-  margin-right: 0px;
-  margin-left: 0px;
+  margin-right: 0;
+  margin-left: 0;
 }
 .view-front .col-xs-12,
 .view-front .col-sm-12,
 .view-front .col-md-12,
 .view-front .col-lg-12 {
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-right: 0;
+  padding-left: 0;
 }
+/*
 .view-front .pannel-float li {
-  /*padding-bottom: 10px;*/
-}
+  /*padding-bottom: 10px;
+}*/
+
 .view-front .pannel-float li .btn {
   width: 80%;
 }
@@ -59,15 +61,8 @@
   border: 2px dotted blue;
   margin: -1px -1px;
 }
-.view-front .pannel-float .login {
-  /*border: 2px dotted blue;     */
-}
 .view-front .pannel-float {
   position: absolute;
-  /*width: 100%;
-  height: 100%;*/
-  /* top: 85%; */
-  
   bottom: 25%;
   left: 18%;
   width: 64%;
@@ -78,7 +73,7 @@ slide {
   float: left;
   width: 100%;
   height: 100%;
-  vertical-align: top;
+  /*vertical-align: top;   can't use with display:block*/
 }
 slide > img {
   width: 100%;
@@ -89,14 +84,16 @@ slide > img {
   border: none;
   margin: 0;
 }
+/*
 .view-front .item.active,
 .item.activated,
 .item-complex.active .item-content,
 .item-complex.activated .item-content,
 .item .item-content.active,
 .item .item-content.activated {
-  /*background-color: black; */
-}
+  background-color: black;
+}*/
+
 .view-front button.login {
   width: 100%;
   background-color: #339a96;
@@ -179,8 +176,8 @@ input[type="color"] {
     bottom: 15%;
   }
   .view-front button.login {
-    border: 0px;
-    margin: 0px 0px;
+    border: 0;
+    margin: 0;
     color: #fff;
     background-color: #339a96;
     padding: 20px 40px;
