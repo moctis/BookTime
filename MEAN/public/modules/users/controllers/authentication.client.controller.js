@@ -3,15 +3,15 @@
 angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
   function($scope, $http, $location, Authentication) {
     $scope.authentication = Authentication;
-
-    $scope.credentials = {
-      firstName: 'sit',
-      lastName: 'sit',
-      email: 'sit@sit.com',
-      username: 'sit' + (new Date()).getSeconds(),
-      password: 'sitsitsitsit'
-    };
-
+    /*
+        $scope.credentials = {
+          firstName: 'sit',
+          lastName: 'sit',
+          email: 'sit@sit.com',
+          username: 'sit' + (new Date()).getSeconds(),
+          password: 'sitsitsitsit'
+        };
+    */
     // If user is signed in then redirect back home
     if ($scope.authentication.user) $location.path('/');
 
@@ -39,12 +39,12 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
       });
     };
     $scope.signout = function() {
-      $http.post(ApplicationConfiguration.server + '/auth/singout').success(function(response) {
+      $http.get(ApplicationConfiguration.server + '/auth/signout').success(function(response) {
         console.log('success', response);
         $location.path('/');
       }).error(function(response) {
         $scope.error = response.message;
-        console.log('error', response);
+        console.log('error');
       });
     };
   }

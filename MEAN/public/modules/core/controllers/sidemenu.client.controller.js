@@ -1,13 +1,20 @@
 'use strict';
 
 angular.module('core').controller('SidemenuController', [
-  '$scope', '$interval', '$state', '$location',
-  function($scope, $interval, $state, $location) {
+  '$scope', '$interval', '$state', '$location', 'Authorization',
+  function($scope, $interval, $state, $location, Authorization) {
     $scope.profile = [];
     $scope.profile.name = window.user.diaplayName;
     $scope.profile.img = 'res/screen/share/2x/profile.png';
     $scope.profile.booked = 15;
     $scope.profile.favorites = 245;
+
+    var x = Authorization;
+    x.me().success(function(response) {
+      $scope.user = response;
+      console.log('response', response);
+      $scope.profile.name = $scope.user.displayName;
+    });
 
     $scope.menus = [{
         label: 'HOME',
@@ -46,7 +53,7 @@ angular.module('core').controller('SidemenuController', [
       {
         label: 'SIGN OUT',
         icon: 'fa-sign-out',
-        url: '/auth/signout',
+        state: 'signout',
         className: 'menu-signout'
       }
     ];
@@ -70,19 +77,19 @@ angular.module('core').controller('SidemenuController', [
       }
       return '';
     };
-
-    var i = 0;
-    var stop = $interval(function() {
-      i = (i + 1) % 2;
-      $scope.profile.booked = Math.round(Math.random() * 20);
-      $scope.profile.img = ['res/screen/share/2x/profile.png', 'res/screen/share/2x/profile-pic.png'][i];
-      $scope.profile.name = ['Pony Somrattanach', 'Pooony Sooomrattanach'][i];
-      $scope.profile.favorites = Math.round(Math.random() * 5000);
-    }, 5000);
+    /*
+        var i = 0;
+        var stop = $interval(function() {
+          i = (i + 1) % 2;
+          $scope.profile.booked = Math.round(Math.random() * 20);
+          $scope.profile.img = ['res/screen/share/2x/profile.png', 'res/screen/share/2x/profile-pic.png'][i];
+          $scope.profile.name = ['Pony Somrattanach', 'Pooony Sooomrattanach'][i];
+          $scope.profile.favorites = Math.round(Math.random() * 5000);
+        }, 5000);
 
     $scope.$on('$destroy', function() {
       $interval.cancel(stop);
       stop = undefined;
-    });
+    });    */
   }
 ]);

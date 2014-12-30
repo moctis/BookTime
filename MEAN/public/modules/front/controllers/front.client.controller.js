@@ -2,18 +2,22 @@
 
 
 angular.module('front').controller('frontController', [
-  '$scope', '$location', '$http', 'Authentication',
-  function($scope, $location, $http, Authentication) {
+  '$scope', '$location', '$http', 'Authorization',
+  function($scope, $location, $http, Authorization) {
     $scope.credentials = {
       username: '',
       password: ''
     };
 
-    $scope.authentication = Authentication;
+    Authorization.me().success(function(response) {
+      console.log('Authorization.me()', response, response === null, response === undefined);
+      if (response.username)
+        $location.path('/main/tab/home/food');
+    });
 
 
     // If user is signed in then redirect back home
-    if ($scope.authentication.user) $location.path('/main/tab/home/food');
+    //if ($scope.authentication.user) $location.path('/main/tab/home/food');
 
     $scope.login = function() {
       $location.path('/main/tab/home/food');
@@ -28,19 +32,9 @@ angular.module('front').controller('frontController', [
 
     $scope.signin = function() {
       console.log($scope.credentials);
-
-      //ref: https://gist.github.com/kkurni/4618210
-
-      var $apihost = 'http://localhost:3003';
-      $http.post($apihost + '/auth/signin', $scope.credentials, {
-        withCredentials: true,
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded;'
-        }
-      }).success(function(response) {
+      $http.post(ApplicationConfiguration.server + '/auth/signin', $scope.credentials).success(function(response) {
         // If successful we assign the response to the global user model
-        $scope.authentication.user = response;
-
+        //$scope.authentication.user = response;
         // And redirect to the index page
         $location.path('/main/tab/home/food');
       }).error(function(response) {

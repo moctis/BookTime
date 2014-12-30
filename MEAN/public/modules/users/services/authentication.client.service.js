@@ -9,7 +9,6 @@ angular.module('users').factory('Authentication', [
       user: window.user
     };
 
-
     return _this._data;
   }
 ]);
