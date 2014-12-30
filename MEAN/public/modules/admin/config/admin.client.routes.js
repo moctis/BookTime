@@ -17,6 +17,14 @@ angular.module('admin').config([
           templateUrl: 'modules/admin/views/shop-list.client.view.html'
         }
       }
+    }).
+    state('admin.shops-create', {
+      url: '/create',
+      views: {
+        'adminContent': {
+          templateUrl: 'modules/admin/views/shop-create.client.view.html'
+        }
+      }
     });
   }
 ]);
