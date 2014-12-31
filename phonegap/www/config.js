@@ -31,6 +31,6 @@ var ApplicationConfiguration = (function() {
     applicationModuleName: applicationModuleName,
     applicationModuleVendorDependencies: applicationModuleVendorDependencies,
     registerModule: registerModule,
-    server: 'http://localhost:3003'
+    server: 'http://192.168.1.115:3003'    // don't put  / on tail
   };
 })();
