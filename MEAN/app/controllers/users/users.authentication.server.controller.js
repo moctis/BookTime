@@ -32,6 +32,8 @@ exports.signup = function(req, res) {
       });
     } else {
       // Remove sensitive data before login
+
+      //console.log('signup saved', user);
       user.password = undefined;
       user.salt = undefined;
 
@@ -50,14 +52,14 @@ exports.signup = function(req, res) {
  * Signin after passport authentication
  */
 exports.signin = function(req, res, next) {
-  console.log('signin', req.body);
+  // console.log('signin', req.body);
 
   passport.authenticate('local', function(err, user, info) {
     if (err || !user) {
       res.status(400).send(info);
     } else {
 
-      console.log('user', user);
+      //console.log('user', user);
       user.token = user._id;
       user.save(function(err) {
         if (err) {
