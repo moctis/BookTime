@@ -52,5 +52,9 @@ exports.update = function(req, res) {
  * Send User
  */
 exports.me = function(req, res) {
+  // ensure remove sensitive data
+  req.user._id = undefined;
+  req.user.password = undefined;
+  req.user.salt = undefined;
   res.jsonp(req.user || null);
 };

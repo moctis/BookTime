@@ -40,11 +40,11 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
     };
     $scope.signout = function() {
       $http.get(ApplicationConfiguration.server + '/auth/signout').success(function(response) {
-        console.log('success', response);
+        //console.log('success', response);
         $location.path('/');
       }).error(function(response) {
         $scope.error = response.message;
-        console.log('error');
+        //console.log('error');
       });
     };
   }

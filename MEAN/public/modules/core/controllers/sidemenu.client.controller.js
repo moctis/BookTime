@@ -1,20 +1,17 @@
 'use strict';
 
 angular.module('core').controller('SidemenuController', [
-  '$scope', '$interval', '$state', '$location', 'Authorization',
-  function($scope, $interval, $state, $location, Authorization) {
+  '$scope', '$interval', '$state', '$location', 'Authentication',
+  function($scope, $interval, $state, $location, Authentication) {
+
+    $scope.user = Authentication;
+
+    
     $scope.profile = [];
-    $scope.profile.name = window.user.diaplayName;
+    $scope.profile.name = $scope.user.diaplayName;
     $scope.profile.img = 'res/screen/share/2x/profile.png';
     $scope.profile.booked = 15;
     $scope.profile.favorites = 245;
-
-    var x = Authorization;
-    x.me().success(function(response) {
-      $scope.user = response;
-      console.log('response', response);
-      $scope.profile.name = $scope.user.displayName;
-    });
 
     $scope.menus = [{
         label: 'HOME',
