@@ -6,7 +6,7 @@ angular.module('users').factory('Authentication', ['$cookieStore',
     var $this = this;
 
     $this.user = $cookieStore.get('user');
-    $this.errorMessage = null;
+    $this.errorMessage = undefined;
 
     console.log('Authentication', $this.user);
 
@@ -21,7 +21,7 @@ angular.module('users').factory('Authentication', ['$cookieStore',
     };
 
     $this.removeUser = function() {
-      $this.user = null;
+      $this.user = undefined;
       $cookieStore.remove('user');
     };
 

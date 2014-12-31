@@ -3,6 +3,7 @@
 angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
   function($scope, $http, $location, Authentication) {
     $scope.authentication = Authentication;
+    if ($scope.authentication.user) $location.path('/');
     /*
         $scope.credentials = {
           firstName: 'sit',
@@ -13,7 +14,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
         };
     */
     // If user is signed in then redirect back home
-    if ($scope.authentication.user) $location.path('/');
+
 
     $scope.signup = function() {
       $http.post(ApplicationConfiguration.server + '/auth/signup', $scope.credentials).success(function(response) {
@@ -39,8 +40,10 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
       });
     };
     $scope.signout = function() {
+
       $http.get(ApplicationConfiguration.server + '/auth/signout').success(function(response) {
         //console.log('success', response);
+        $scope.authentication.removeUser();
         $location.path('/');
       }).error(function(response) {
         $scope.error = response.message;

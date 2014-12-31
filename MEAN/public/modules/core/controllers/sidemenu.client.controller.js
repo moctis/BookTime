@@ -3,12 +3,10 @@
 angular.module('core').controller('SidemenuController', [
   '$scope', '$interval', '$state', '$location', 'Authentication',
   function($scope, $interval, $state, $location, Authentication) {
+    $scope.user = Authentication.user;
 
-    $scope.user = Authentication;
-
-    
     $scope.profile = [];
-    $scope.profile.name = $scope.user.diaplayName;
+    $scope.profile.name = $scope.user.displayName;
     $scope.profile.img = 'res/screen/share/2x/profile.png';
     $scope.profile.booked = 15;
     $scope.profile.favorites = 245;

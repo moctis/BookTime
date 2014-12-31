@@ -88,12 +88,12 @@ module.exports = function(db) {
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     res.header('Access-Control-Allow-Credentials', 'true');
-    if ('OPTIONS' == req.method) {
+    if ('OPTIONS' === req.method) {
       res.send(200);
     }
     else {
       next();
-    } 
+    }
   };
   app.use(allowCrossDomain);
 

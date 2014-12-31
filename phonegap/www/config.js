@@ -5,14 +5,14 @@ var ApplicationConfiguration = (function() {
   // Init module configuration options
   var applicationModuleName = 'booktime';
   var applicationModuleVendorDependencies = [
-    //        'ngResource',
-    //        'ngCookies',
+    'ngResource',
+    'ngCookies',
     'ngAnimate',
     'ngTouch',
     'ngSanitize',
-    //        'ui.router',
+    'ui.router',
     'ui.bootstrap',
-    //        'ui.utils',
+    'ui.utils',
     'ratings',
     'angular-carousel', //woody
     'ionic'
