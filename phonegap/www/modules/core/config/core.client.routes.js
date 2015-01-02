@@ -2,13 +2,23 @@
 
 //Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+  function($stateProvider, $urlRouterProvider ) {
 
-    var checkLoggedIn = function($q, $timeout, $http, $location, Authentication) {
+    var checkLoggedIn2 = function(Authentication, $api) {  
+      Authentication.checkLoggedIn();
+    };
+
+    var checkLoggedIn = function($q, $timeout, $http, $location, Authentication, $api) {
       // Initialize a new promise
       var deferred = $q.defer();
       var user = Authentication.user;
-      console.log('checkLoggedIn - Authentication', user);
+
+      $api.test('core.route');
+
+      console.log('checkLoggedIn - Authentication xxx', user);
+
+      console.log(Authentication.checkLoggedIn);
+
 
       // Make an AJAX call to check if the user is logged in
       $http.get(ApplicationConfiguration.server + '/users/me?access_token=' + user.token)
@@ -37,7 +47,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       abstract: true,
       templateUrl: 'modules/core/views/main.client.view.html',
       resolve : {
-        checkLoggedIn : checkLoggedIn
+        checkLoggedIn : checkLoggedIn2
       }
     }).state('main.tab', {
       url: '/tab',

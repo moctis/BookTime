@@ -61,6 +61,11 @@ module.exports = function(db) {
   app.set('view engine', 'server.view.html');
   app.set('views', './app/views');
 
+
+  // Setting the app router and static folder
+  app.use(express.static(path.resolve('./public')));
+
+
   // Environment dependent middleware
   if (process.env.NODE_ENV === 'development') {
     // Enable logger (morgan)
@@ -86,10 +91,10 @@ module.exports = function(db) {
   var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    res.header('Access-Control-Allow-Headers', 'Content-Type,authorization');
     res.header('Access-Control-Allow-Credentials', 'true');
     if ('OPTIONS' === req.method) {
-      res.send(200);
+      res.status(200).end();
     }
     else {
       next();
@@ -124,9 +129,6 @@ module.exports = function(db) {
   app.use(helmet.nosniff());
   app.use(helmet.ienoopen());
   app.disable('x-powered-by');
-
-  // Setting the app router and static folder
-  app.use(express.static(path.resolve('./public')));
 
   // Globbing routing files
   config.getGlobbedFiles('./app/routes/**/*.js').forEach(function(routePath) {
