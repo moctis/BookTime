@@ -24,4 +24,17 @@ module.exports = function(app) {
   app.param('shopId', shops.shopByID);
 
 
+
+  // Shop- Owner Routes
+  app.route('/api/shops-owner')
+  .get(authenticate, users.requiresLogin, shops.list)
+  .post(authenticate, users.requiresLogin, shops.create);
+
+  app.route('/api/shops-owner/:shopId')
+  .get(authenticate, users.requiresLogin, shops.read)
+  .put(authenticate, users.requiresLogin, shops.hasAuthorization, shops.update)
+  .delete(authenticate, users.requiresLogin, shops.hasAuthorization, shops.delete);
+
+
+
 };
