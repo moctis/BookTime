@@ -2,8 +2,8 @@
 
 // Authentication service for user variables
 angular.module('users').factory('Authentication', ['$cookieStore', '$timeout', '$q',
-  '$http', '$location', '$api',
-  function($cookieStore, $timeout, $q, $http, $location, $api) {
+  '$http', '$location', '$api', '$window',
+  function($cookieStore, $timeout, $q, $http, $location, $api, $window) {
     var $this = this;
 
     $this.user = $cookieStore.get('user');
@@ -11,7 +11,7 @@ angular.module('users').factory('Authentication', ['$cookieStore', '$timeout', '
 
 
     $this.isSignedIn = function() {
-      return !!this.user;
+      return !!$window.sessionStorage.token;
     };
 
     $this.hasRole = function(role) {
@@ -21,36 +21,18 @@ angular.module('users').factory('Authentication', ['$cookieStore', '$timeout', '
     $this.setUser = function(user) {
       $this.errorMessage = null;
       $this.user = user;
-      $http.defaults.headers.common.authorization = 'Bearer ' + user.token;
+      $window.sessionStorage.token = user.token;
       $cookieStore.put('user', user);
     };
 
     $this.checkLoggedIn = function() {
-
-      console.log('AuthenticationService.checkLoggedIn', $this.user.username);
-
-      var deferred = $q.defer();
-
+      console.log('AuthenticationService.checkLoggedIn', $this.user.username); 
       // Make an AJAX call to check if the user is logged in
-      $api.get('/users/me')
-        .success(function(user) {
-        // Not Authenticated
-        console.log('/user/me', user);
-        if (user === 'Unauthorized') {
-          $timeout(deferred.reject);
-          $location.url('/login');
-        }
-
-        // Authenticated
-        else {
-          console.log('resolve');
-          $timeout(deferred.resolve);
-        }
-      });
-      return deferred.promise;
+      $api.get('/users/me');
     };
 
     $this.removeUser = function() {
+      delete $window.sessionStorage.token;
       $this.user = undefined;
       $cookieStore.remove('user');
     };
