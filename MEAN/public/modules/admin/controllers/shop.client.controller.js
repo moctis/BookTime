@@ -29,5 +29,27 @@ angular.module('admin').controller('AdminShopController', [
     }
 
 
+    $scope.remove = function(shop) {
+      if (shop) {
+        shop.$remove();
+
+        for (var i in $scope.shops) {
+          if ($scope.shops[i] === shop) {
+            $scope.shops.splice(i, 1);
+          }
+        }
+        console.log('removed');
+      } else {
+        $scope.shop.$remove(function() {
+          $location.path('/admin/shops');
+        });
+      }
+    };
+
+    // Find all shops
+    $scope.find = function() {
+      $scope.shops = AdminShops.query();
+    };
+
   }
 ]);
