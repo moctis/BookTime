@@ -2,8 +2,8 @@
 
 
 angular.module('admin').controller('AdminShopController', [
-  '$scope', '$interval', '$state', '$location', 'Shops',
-  function($scope, $interval, $state, $location, Shops) {
+  '$scope', '$interval', '$state', '$location', 'AdminShops',
+  function($scope, $interval, $state, $location, AdminShops) {
     $scope.shop = {};
 
     $scope.init = function() {
@@ -15,17 +15,13 @@ angular.module('admin').controller('AdminShopController', [
     // Save the new shop
     $scope.save = function(isValid) {
       if (isValid) {
-
-        var shop = new Shops($scope.shop);
-
+        var shop = new AdminShops($scope.shop);
         shop.$save(function(response) {
           console.log('response', response);
           $location.path('/shop-list');
         }, function(error) {
-          console.log('error', error.status);
+          console.log('error', error.status, error.statusText); 
         });
-
-
       }
       else {
           $scope.submitted = true;

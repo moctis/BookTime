@@ -15,6 +15,7 @@ var ApplicationConfiguration = (function() {
     'ui.utils',
     'ratings',
     'angular-carousel', //woody
+    'mgcrea.ngStrap',
     'ionic'
   ];
 

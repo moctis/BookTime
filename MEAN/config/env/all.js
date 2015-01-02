@@ -36,6 +36,7 @@ module.exports = {
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/angular-carousel/angular-carousel.js', //woody
+				'public/lib/angular-strap/angular-strap.js', 
 				'public/lib/others/angular.ratings.js'
 			]
 		},

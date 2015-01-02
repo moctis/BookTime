@@ -2,10 +2,10 @@
   <ion-view title="Create Shop" left-buttons="leftButtons">
     <ion-content class="has-tabs-top" padding="false">
     <form name="createForm" class="form-horizontal" role="form"  data-ng-submit="save(createForm.$valid)"  >
-      <div class="list">
+      <div class="list list-inset">
         <label class="item item-input">
           <span class="input-label">Name</span>
-          <input type="text" required data-ng-model="shop.name">
+          <input name="name" data-ng-model="shop.name" type="text" required >
         </label>
         <label class="item item-input">
           <span class="input-label">Address</span>
