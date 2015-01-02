@@ -18,9 +18,9 @@ angular.module('admin').controller('AdminShopController', [
         var shop = new AdminShops($scope.shop);
         shop.$save(function(response) {
           console.log('response', response);
-          $location.path('/shop-list');
+          $location.path('/admin/shops');
         }, function(error) {
-          console.log('error', error.status, error.statusText); 
+          console.log('error', error.status, error.statusText);
         });
       }
       else {

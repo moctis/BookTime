@@ -125,6 +125,8 @@ UserSchema.methods.authenticate = function(password) {
 	return this.password === this.hashPassword(password);
 };
 
+ 
+
 /**
  * Find possible not used username
  */
