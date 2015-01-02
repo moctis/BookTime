@@ -3,7 +3,7 @@
 angular.module('core').controller('SidemenuController', [
   '$scope', '$interval', '$state', '$location', 'Authentication',
   function($scope, $interval, $state, $location, Authentication) {
-    $scope.user = Authentication.user; 
+    $scope.user = Authentication.user;
 
     $scope.profile = [];
     $scope.profile.name = $scope.user.displayName;
@@ -52,6 +52,17 @@ angular.module('core').controller('SidemenuController', [
         className: 'menu-signout'
       }
     ];
+
+    var isAdmin = Authentication.hasRole('admin');
+
+    if (isAdmin) {
+      $scope.menus.push({
+        label: 'ADMIN',
+        icon: 'fa-gear',
+        state: 'admin.shops'
+      });
+    };
+
 
     $scope.showDetail = function($index) {
       var selectedMenu = $scope.menus[$index];

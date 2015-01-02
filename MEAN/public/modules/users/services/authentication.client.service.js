@@ -14,6 +14,10 @@ angular.module('users').factory('Authentication', ['$cookieStore', '$timeout',
       return !!this.user;
     };
 
+    $this.hasRole = function(role) {
+      return true; //TODO: check admin role
+    }
+
     $this.setUser = function(user) {
       $this.errorMessage = null;
       $this.user = user;
