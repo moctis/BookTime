@@ -3,7 +3,7 @@
 angular.module('core').controller('SidemenuController', [
   '$scope', '$interval', '$state', '$location', 'Authentication',
   function($scope, $interval, $state, $location, Authentication) {
-    $scope.user = Authentication.user;
+    $scope.user = Authentication.user; 
 
     $scope.profile = [];
     $scope.profile.name = $scope.user.displayName;

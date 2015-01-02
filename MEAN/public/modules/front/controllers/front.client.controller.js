@@ -5,11 +5,13 @@ angular.module('front').controller('frontController', [
   '$scope', '$location', '$http', 'Authentication',
   function($scope, $location, $http, Authentication) {
     $scope.authentication = Authentication;
-    if ($scope.authentication.user) $location.path('/main/tab/home/food');
+    //if ($scope.authentication.user !== undefined) $location.path('/main/tab/home/food');
+     
+
 
     $scope.credentials = {
-      username: '',
-      password: ''
+      username: 'sitthidate',
+      password: 'sitcomsitcom'
     };
 
 
@@ -28,7 +30,7 @@ angular.module('front').controller('frontController', [
       console.log($scope.credentials);
       $http.post(ApplicationConfiguration.server + '/auth/signin', $scope.credentials)
       .success(function(response) {
-        console.log('response', response);
+        console.log('login success--', response);
         $scope.authentication.setUser(response);
 
         // If successful we assign the response to the global user model
