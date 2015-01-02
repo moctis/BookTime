@@ -2,10 +2,12 @@
 
 
 angular.module('admin').controller('AdminController', [
-  '$scope', '$interval', '$state', '$location',
-  function($scope, $interval, $state, $location) {
+  '$scope', '$interval', '$state', '$location', 'Authentication',
+  function($scope, $interval, $state, $location, Authentication) {
+    $scope.user = Authentication.user || {};
+
     $scope.profile = [];
-    $scope.profile.name = window.user.diaplayName;
+    $scope.profile.name = $scope.user.displayName;
     $scope.profile.img = 'res/screen/share/2x/profile.png';
     $scope.profile.booked = 15;
     $scope.profile.favorites = 245;
@@ -41,18 +43,5 @@ angular.module('admin').controller('AdminController', [
       return '';
     };
 
-    var i = 0;
-    var stop = $interval(function() {
-      i = (i + 1) % 2;
-      $scope.profile.booked = Math.round(Math.random() * 20);
-      $scope.profile.img = ['res/screen/share/2x/profile.png', 'res/screen/share/2x/profile-pic.png'][i];
-      $scope.profile.name = ['Pony Somrattanach', 'Pooony Sooomrattanach'][i];
-      $scope.profile.favorites = Math.round(Math.random() * 5000);
-    }, 5000);
-
-    $scope.$on('$destroy', function() {
-      $interval.cancel(stop);
-      stop = undefined;
-    });
   }
 ]);
