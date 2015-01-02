@@ -1,24 +1,35 @@
-<section data-ng-controller="ShopController" data-ng="init()">
+<section data-ng-controller="AdminShopController" data-ng-init="init()">
   <ion-view title="Create Shop" left-buttons="leftButtons">
     <ion-content class="has-tabs-top" padding="false">
-
+    <form name="createForm" class="form-horizontal" role="form"  data-ng-submit="save(createForm.$valid)"  >
       <div class="list">
         <label class="item item-input">
-          <span class="input-label">Username</span>
-          <input type="text">
+          <span class="input-label">Name</span>
+          <input type="text" required data-ng-model="shop.name">
         </label>
         <label class="item item-input">
-          <span class="input-label">Password</span>
-          <input type="password">
+          <span class="input-label">Address</span>
+          <input type="text" data-ng-model="shop.address">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Address2</span>
+          <input type="text" data-ng-model="shop.address2">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Operation Time</span>
+          <input type="text" data-ng-model="shop.operationTime">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Detail</span>
+          <textarea data-ng-model="shop.detail">
+          </textarea>
         </label>
       </div>
 
-
-
       <div class="padding">
-        <button class="button button-block button-assertive">Submit</button>
+        <input type="submit" class="button button-block button-assertive"   value="Save"></button>
       </div>
-
+    </form>
     </ion-content>
   </ion-view>
 </section>
