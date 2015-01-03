@@ -4,7 +4,8 @@
 angular.module('front').controller('frontController', [
   '$scope', '$location', '$http', 'Authentication', '$api',
   function($scope, $location, $http, Authentication, $api) {
-    var homeLocal = '/main/tab/home/food';
+    var homeLocal = '/main/tab/home/list/food';
+    //homeLocal = '/main/tab/schedule';
 
     $scope.authentication = Authentication;
     //if ($scope.authentication.user !== undefined) $location.path('/main/tab/home/food');
