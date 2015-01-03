@@ -1,0 +1,30 @@
+<section data-ng-controller="ShopOwnerController" data-ng-init="init()">
+  <ion-view title="Create Shop" left-buttons="leftButtons">
+    <ion-content class="has-tabs-top" padding="false">
+    <form name="createForm" class="form-horizontal" role="form"  data-ng-submit="save(createForm.$valid)"  >
+      <div class="list">
+        <label class="item item-input">
+          <input name="name" data-ng-model="shop.name" type="text" placeholder="Name" required >
+        </label>
+        <label class="item item-input">
+          <input type="text" data-ng-model="shop.address" placeholder="Address">
+        </label>
+        <label class="item item-input">
+          <input type="text" data-ng-model="shop.address2" placeholder="Address2">
+        </label>
+        <label class="item item-input">
+          <input type="text" data-ng-model="shop.operationTime" placeholder="Operation Time">
+        </label>
+        <label class="item item-input">
+          <textarea data-ng-model="shop.detail"  placeholder="Detail" rows="5">
+          </textarea>
+        </label>
+      </div>
+
+      <div class="padding">
+        <input type="submit" class="button button-block button-assertive"   value="Save"></button>
+      </div>
+    </form>
+    </ion-content>
+  </ion-view>
+</section>

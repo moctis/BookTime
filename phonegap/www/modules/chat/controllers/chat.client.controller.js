@@ -2,8 +2,8 @@
 
 
 angular.module('chat').controller('ChatController', [
-    '$scope', '$location',
-    function($scope, $location) {
-               
-    }
+  '$scope', '$location',
+  function($scope, $location) {
+
+  }
 ]);
