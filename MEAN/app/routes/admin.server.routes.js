@@ -36,5 +36,14 @@ module.exports = function(app) {
   .delete(authenticate, users.requiresLogin, shops.hasAuthorization, shops.delete);
 
 
+  // Shop-list Routes
+  app.route('/api/shops/food')
+  .get(authenticate, users.requiresLogin, shops.list); //TODO: list food
+
+  app.route('/api/shops/service')
+  .get(authenticate, users.requiresLogin, shops.list); //TODO: list services
+
+  app.route('/api/shops/hilight')
+  .get(authenticate, users.requiresLogin, shops.list);;  //TODO: list hilight
 
 };
