@@ -43,6 +43,23 @@ var ShopSchema = new Schema({
 	owner: {
 		type: Schema.ObjectId,
 		ref: 'User'
+	},
+	catalog: {
+		type: String,
+		default: 'unknow',
+		trim: true
+	},
+	comments: {
+		type: Number,
+		default: 0
+	},
+	booked: {
+		type: Number,
+		default: 0
+	},
+	rank : {
+		type: Number,
+		default: 0
 	}
 });
 

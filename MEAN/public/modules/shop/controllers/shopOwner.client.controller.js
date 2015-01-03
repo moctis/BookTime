@@ -19,8 +19,8 @@ function($scope, $interval, $state, $stateParams, $location, ShopOwners ) {
       lastBooked: ['45min ago', '10sec ago', '10days ago'].random(),
       catalog: ['Pet Care', 'Dessert/Bakery', 'Cinema'].random(),
       distance: ['2.4km away', '14km away', '0.4km away'].random(),
-      booked: ['3.4k', '200', '15k'].random(),
-      comments: ['224', '5', '11', '35'].random(),
+      booked: [3400, 200, 1523].random(),
+      comments: [224, 5, 11, 35].random(),
       operationTime: ['TUE-SON 10am-11pm'].random(),
       image: basepath + ['main.jpg'].random(),
       albums: [

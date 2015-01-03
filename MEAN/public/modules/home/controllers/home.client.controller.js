@@ -9,7 +9,7 @@ angular.module('home').controller('HomeController', ['$scope', '$rootScope', 'Sh
 			$scope.mock = function() {
 				return {
 					id: ['1', '2', '3'].random(),
-					name: ['Bangkok Shokudo','Sushi Masa', 'Staw wery'].random(),
+					name: '@' + ['Bangkok Shokudo','Sushi Masa', 'Staw wery'].random(),
 					rank:[3,4,5].random(),
 					catalog: ['Pet Care', 'Dessert/Bakery', 'Cinema'].random(),
 					distance: ['2.4km away', '14km away', '0.4km away'].random(),
@@ -20,14 +20,10 @@ angular.module('home').controller('HomeController', ['$scope', '$rootScope', 'Sh
 			};
 
 	    $scope.mocData = function (items) {
-
-
 	        var newItems = [$scope.mock(), $scope.mock()];
 	        angular.forEach(newItems, function (item) {
 	            items.push(item);
 	        });
 	    };
-
-		
 	}
 ]);
