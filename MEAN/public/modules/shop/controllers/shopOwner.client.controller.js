@@ -2,8 +2,8 @@
 
 
 angular.module('admin').controller('ShopOwnerController', [
-'$scope', '$interval', '$state', '$location', 'ShopOwners' ,
-function($scope, $interval, $state, $location, ShopOwners ) {
+'$scope', '$interval', '$state', '$stateParams', '$location', 'ShopOwners' ,
+function($scope, $interval, $state, $stateParams, $location, ShopOwners ) {
   $scope.shop = {};
 
   var mock = function() {
@@ -73,15 +73,32 @@ function($scope, $interval, $state, $location, ShopOwners ) {
       console.log('removed');
     } else {
       $scope.shop.$remove(function() {
-        $location.path('/main/tab/owner/list');
+        $state.go('^.list');
         //navBarCtrl.back();
       });
     }
   };
 
+  $scope.update = function() {
+    var shop = $scope.shop;
+
+    shop.$update(function() {
+      $state.go('^.list');
+    }, function(errorResponse) {
+      $scope.error = errorResponse.data.message;
+    });
+  };
+
+
   // Find all shops
   $scope.find = function() {
     $scope.shops = ShopOwners.query();
+  };
+
+  $scope.findOne = function() {
+    $scope.shop = ShopOwners.get({
+      shopId: $stateParams.shopId
+    });
   };
 
 }

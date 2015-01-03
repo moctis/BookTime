@@ -39,7 +39,7 @@ exports.read = function(req, res) {
 exports.update = function(req, res) {
 	var shop = req.shop;
 
-	article = _.extend(shop, req.body);
+	shop = _.extend(shop, req.body);
 
 	shop.save(function(err) {
 		if (err) {
