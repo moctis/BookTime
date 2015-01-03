@@ -14,7 +14,7 @@ angular.module('core').controller('SidemenuController', [
     $scope.menus = [{
         label: 'HOME',
         icon: 'fa-home',
-        state: 'main.tab.home.food'
+        state: 'main.tab.home.list.food'
       }, {
         label: 'SEARCH',
         icon: 'fa-search',

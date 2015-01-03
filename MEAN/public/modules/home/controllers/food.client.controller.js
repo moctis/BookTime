@@ -11,8 +11,9 @@ angular.module('home').controller('FoodController', ['$scope', 'ShopsApi',
 
 				angular.forEach(items, function (item) {
 					var moc = $scope.mock();
+					item._id = item._id || moc.id;
 					item.distance = item.distance || moc.distance;
-					item.image = item.image || moc.image; 
+					item.image = item.image || moc.image;
 				});
 			});
  		};

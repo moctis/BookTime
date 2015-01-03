@@ -1,4 +1,4 @@
-<section data-ng-controller="ShopController" class="section-shop ">
+<section data-ng-controller="ShopController" class="section-shop" data-ng-init="findOne()">
   <ion-view title="Suan Kularb"  >
     <ion-nav-buttons side="right">
       <button class="button button-clear button-booktime">Share</button>
@@ -62,11 +62,7 @@
       </div>
       <div class="card card-shop-detail">
         <div class="item item-text-wrap">
-          Recognised for many years as one of the best Thai Restaurants in Bangkok, Suan Kularb is not your everyday local eatery.
-          This is the kind of place to invite your discerning friends or when you want to impress visitors who think they
-          have tried it all before. With its understated luxury, this beautiful restaurant and its small garden hidden in
-          a narrow street off Pahonyothin 5 perfectly deserves its reputation as one of 10 best restaurants in Bangkok recommended
-          by Bangkok Post.
+          {{it.detail}}
         </div>
       </div>
       <div class="card card-shop-service">

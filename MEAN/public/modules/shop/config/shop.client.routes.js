@@ -11,7 +11,7 @@ angular.module('shop').config(['$stateProvider',
       })
 
       .state('main.tab.home.shop', {
-        url: '/shop',
+        url: '/shop/:shopId',
         views: {
           'home-list': {
             templateUrl: 'modules/shop/views/shop.client.view.html'

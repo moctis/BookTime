@@ -23,6 +23,11 @@ function($scope, $interval, $state, $stateParams, $location, ShopOwners ) {
       comments: [224, 5, 11, 35].random(),
       operationTime: ['TUE-SON 10am-11pm'].random(),
       image: basepath + ['main.jpg'].random(),
+      detail:'Recognised for many years as one of the best Thai Restaurants in Bangkok, Suan Kularb is not your everyday local eatery.'
+        +'This is the kind of place to invite your discerning friends or when you want to impress visitors who think they'
+        +'have tried it all before. With its understated luxury, this beautiful restaurant and its small garden hidden in'
+        +'a narrow street off Pahonyothin 5 perfectly deserves its reputation as one of 10 best restaurants in Bangkok recommended'
+        +'by Bangkok Post.',
       albums: [
       basepath + 'a1.jpg',
       basepath + 'a2.jpg',

@@ -2,7 +2,7 @@
     <ion-view hide-nav-bar="true">
         <ion-content has-header="false" padding="false">
             <ion-list class="list-shops">
-                <ion-item class="shop" ng-repeat="it in items" href="#!/main/tab/home/shop">
+                <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop({shopId:it._id})">
                     <img src="{{it.image}}"/>
                     <div class="details">
                         <span class="booked">
