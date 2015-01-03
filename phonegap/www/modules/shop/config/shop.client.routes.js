@@ -43,6 +43,10 @@ angular.module('shop').config(['$stateProvider',
     state('main.tab.owner.create', {
       url: '/create',
       templateUrl: 'modules/shop/views/shop-create.client.view.html'
+    }).
+    state('main.tab.owner.edit', {
+      url: '/:shopId/edit',
+      templateUrl: 'modules/shop/views/shop-edit.client.view.html'
     });
   }
 ]);
