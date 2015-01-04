@@ -266,11 +266,9 @@ padding-top: 0;
         top: 200px;
     }
 
-
     .menu.menu-booktime {
         background-color: #646464;
-         zoom: 1.5;
-        /*width: 500px;*/
+        width: 500px;
     }
 
     .menu-item.item{
