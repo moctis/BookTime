@@ -1,0 +1,118 @@
+<div data-ng-controller="ReportController" data-ng-init="init()">
+  <form name="puzzleForm" class="form-horizontal" role="form" novalidate>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Report Winner</h3>
+
+      </div>
+      <div class="panel-body">
+        <div class="pull-left">
+          <a class="btn btn-default" href="/admin/reportCsv">Export CSV</a>
+          <button type="button" class="btn btn-default" ui-sref="config">Close</button>
+        </div>
+        <table class="table table-bordered table-report">
+          <tr>
+            <th>Answer</th>
+            <th>Catalog</th>
+            <th>Level</th>
+            <th>Launch Date</th>
+            <th>Card Number</th>
+            <th>Approval</th>
+            <th>Receipt Date/Time</th>
+            <th>Name/surname</th>
+            <th>phone</th>
+            <th>email</th>
+            <th>win time</th>
+            <th>amount</th>
+          </tr>
+          <tr>
+            <th style="padding:0;">
+              <input ng-model="search.answer" style="width:60px" />
+            </th>
+            <th style="padding:0;">
+              <select id="catalog" data-ng-model="search.catalog" ng-change="filter()" style="width:100%;">
+                <option value="">(top {{pageSize}})</option>
+                <option>Shopping</option>
+                <option>Travel</option>
+                <option>Dining</option>
+                <option>Life style</option>
+              </select>
+            </th>
+
+            <th style="padding:0;">
+              <select id="level" data-ng-model="search.level" ng-change="filter()" style="width:100%;">
+                <option value="">(top {{pageSize}})</option>
+                <option value="1">1: OMG!</option>
+                <option value="2">2: WOW!</option>
+                <option value="3">3: SURPRISE!!</option>
+              </select>
+            </th>
+            <th style="padding:0;">
+              <input ng-model="search.launchDate" style="width:10em;" />
+            </th>
+            <th style="padding:0;">
+              <input ng-model="search.cardNumber" style="width:8em;" />
+            </th>
+            <th style="padding:0;">
+              <input ng-model="search.approvalCode" style="width:5em;" />
+            </th>
+            <th style="padding:0;">
+              <input ng-model="search.name" style="width:5em;" />
+              <input ng-model="search.surname" style="width:5em;" />
+            </th>
+            <th style="padding:0;">
+              <input ng-model="search.receiptDate" style="width:5em;" />
+              <input ng-model="search.receiptTime" style="width:5em;" />
+            </th>
+            <th style="padding:0;">
+              <input ng-model="search.phone" style="width:8em;" />
+            </th>
+            <th style="padding:0;">
+              <input ng-model="search.email" style="width:10em;" />
+            </th>
+            <th style="padding:0;">
+              <input ng-model="search.winTime" style="width:10em;" />
+            </th>
+            <th style="padding:0;">
+              &nbsp;
+            </th>
+          </tr>
+
+
+          <tr ng-repeat="it in datas | filter:search:strict | orderBy:['catalog','level','status','launchDate','order'] | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <td>{{it.answer}}</td>
+            <td>{{it.catalog}}</td>
+            <td>{{it.level}}</td>
+            <td>{{it.launchDate}}</td>
+            <td>{{it.winner.cardNumber}}</td>
+            <td>{{it.winner.approvalCode}}</td>
+            <td>{{it.winner.receiptDate}} {{it.winner.receiptTime}}</td>
+            <td>{{it.winner.name}} {{it.winner.surname}}</td>
+            <td>{{it.winner.phone}}</td>
+            <td>{{it.winner.email}}</td>
+            <td>{{it.winTime}}</td>
+            <td>{{it.winner.amount}}</td>
+          </tr>
+        </table>
+        <div>
+          page size:
+          <select data-ng-model="pageSize">
+            <option value="20" select>20</option>
+            <option>50</option>
+            <option>100</option>
+            <option value="9999">show all</option>
+          </select>
+          <button class="btn btn-default btn-xs" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+            Previous
+          </button>
+          {{currentPage+1}}/{{numberOfPages()}}
+          <button class="btn btn-default btn-xs" ng-disabled="currentPage >= numberOfPages() - 1" ng-click="currentPage=currentPage+1">
+            Next
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>

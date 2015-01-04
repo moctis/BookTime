@@ -30,14 +30,14 @@
   /* make it center */
 }
 .section-booking .booking .list {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .section-booking .booking .item-input {
   border-radius: 10px;
   margin: 10px 17px;
 }
 .section-booking .booking .input-label {
-  width: 0px;
+  width: 0;
 }
 .section-booking .booking .item-select select {
   width: 100%;

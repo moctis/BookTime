@@ -2,14 +2,22 @@
 
 //Setting up route
 angular.module('core').config(['$stateProvider', '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+  function($stateProvider, $urlRouterProvider ) {
+
+    var checkLoggedIn = function(Authentication, $api) {
+      Authentication.checkLoggedIn();
+    };
+
     $urlRouterProvider.otherwise('/front');
     // Core state routing
     $stateProvider.
     state('main', {
       url: '/main',
       abstract: true,
-      templateUrl: 'modules/core/views/main.client.view.html'
+      templateUrl: 'modules/core/views/main.client.view.html',
+      resolve : {
+        checkLoggedIn : checkLoggedIn
+      }
     }).state('main.tab', {
       url: '/tab',
       abstract: true,

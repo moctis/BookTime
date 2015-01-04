@@ -3,12 +3,21 @@
 angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
   function($scope, $http, $location, Authentication) {
     $scope.authentication = Authentication;
-
-    // If user is signed in then redirect back home
     if ($scope.authentication.user) $location.path('/');
+    /*
+        $scope.credentials = {
+          firstName: 'sit',
+          lastName: 'sit',
+          email: 'sit@sit.com',
+          username: 'sit' + (new Date()).getSeconds(),
+          password: 'sitsitsitsit'
+        };
+    */
+    // If user is signed in then redirect back home
+
 
     $scope.signup = function() {
-      $http.post('/auth/signup', $scope.credentials).success(function(response) {
+      $http.post(ApplicationConfiguration.server + '/auth/signup', $scope.credentials).success(function(response) {
         // If successful we assign the response to the global user model
         $scope.authentication.user = response;
 
@@ -20,8 +29,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
     };
 
     $scope.signin = function() {
-      var $apihost = 'ttet/';
-      $http.post($apihost + '/auth/signin', $scope.credentials).success(function(response) {
+      $http.post(ApplicationConfiguration.server + '/auth/signin', $scope.credentials).success(function(response) {
         // If successful we assign the response to the global user model
         $scope.authentication.user = response;
 
@@ -32,11 +40,15 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
       });
     };
     $scope.signout = function() {
-      /*$http.post('/auth/singout').success(function(response) {
-				$location.path('/');
-			}).error(function(response) {
-				$scope.error = response.message;
-			});*/
+
+      $http.get(ApplicationConfiguration.server + '/auth/signout').success(function(response) {
+        //console.log('success', response);
+        $scope.authentication.removeUser();
+        $location.path('/');
+      }).error(function(response) {
+        $scope.error = response.message;
+        //console.log('error');
+      });
     };
   }
 ]);

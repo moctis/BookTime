@@ -1,8 +1,8 @@
-<section data-ng-controller="FoodController" class="section-food">
+<section data-ng-controller="FoodController" class="section-food" data-ng-init="find()">
     <ion-view hide-nav-bar="true">
         <ion-content has-header="false" padding="false">
             <ion-list class="list-shops">
-                <ion-item class="shop" ng-repeat="it in items" href="#!/main/tab/shop">
+                <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop({shopId:it._id})">
                     <img src="{{it.image}}"/>
                     <div class="details">
                         <span class="booked">

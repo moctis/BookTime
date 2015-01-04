@@ -5,6 +5,7 @@
  */
 var _ = require('lodash'),
 	mongoose = require('mongoose'),
+	passport = require('passport'),
 	User = mongoose.model('User');
 
 /**
@@ -24,7 +25,7 @@ exports.userByID = function(req, res, next, id) {
 /**
  * Require login routing middleware
  */
-exports.requiresLogin = function(req, res, next) {
+exports.requiresLogin = function(req, res, next) { 
 	if (!req.isAuthenticated()) {
 		return res.status(401).send({
 			message: 'User is not logged in'

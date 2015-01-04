@@ -3,12 +3,12 @@
 /**
  * Module dependencies.
  */
-var _ = require('lodash'),
+var //_ = require('lodash'),
   errorHandler = require('../errors'),
   mongoose = require('mongoose'),
   passport = require('passport'),
   User = mongoose.model('User');
-
+require('lodash');
 /**
  * Signup
  */
@@ -18,7 +18,7 @@ exports.signup = function(req, res) {
 
   // Init Variables
   var user = new User(req.body);
-  var message = null;
+  //var message = null;
 
   // Add missing user fields
   user.provider = 'local';
@@ -32,6 +32,8 @@ exports.signup = function(req, res) {
       });
     } else {
       // Remove sensitive data before login
+
+      //console.log('signup saved', user);
       user.password = undefined;
       user.salt = undefined;
 
@@ -50,21 +52,32 @@ exports.signup = function(req, res) {
  * Signin after passport authentication
  */
 exports.signin = function(req, res, next) {
+  // console.log('signin', req.body);
+
   passport.authenticate('local', function(err, user, info) {
     if (err || !user) {
-      console.log('xxx', err, user);
       res.status(400).send(info);
     } else {
-      // Remove sensitive data before login
-      user.password = undefined;
-      user.salt = undefined;
 
-      req.login(user, function(err) {
-        console.log('login', err, user);
+      //console.log('user', user);
+      user.token = user._id;
+      user.save(function(err) {
         if (err) {
-          res.status(400).send(err);
+          return res.status(400).send({
+            message: errorHandler.getErrorMessage(err)
+          });
         } else {
-          res.jsonp(user);
+          // Remove sensitive data before login
+          user.password = undefined;
+          user.salt = undefined;
+
+          req.login(user, function(err) {
+            if (err) {
+              res.status(400).send(err);
+            } else {
+              res.jsonp(user);
+            }
+          });
         }
       });
     }
@@ -86,11 +99,11 @@ exports.oauthCallback = function(strategy) {
   return function(req, res, next) {
     passport.authenticate(strategy, function(err, user, redirectURL) {
       if (err || !user) {
-        return res.redirect('/#!/signin');
+        return res.redirect('/#!/'); //signin
       }
       req.login(user, function(err) {
         if (err) {
-          return res.redirect('/#!/signin');
+          return res.redirect('/#!/'); //signin
         }
 
         return res.redirect(redirectURL || '/');

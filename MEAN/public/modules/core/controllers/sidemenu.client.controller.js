@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('core').controller('SidemenuController', [
-  '$scope', '$interval', '$state', '$location',
-  function($scope, $interval, $state, $location) {
+  '$scope', '$interval', '$state', '$location', 'Authentication', '$api',
+  function($scope, $interval, $state, $location, Authentication, $api) {
+    $scope.user = Authentication.user || {};
 
     $scope.profile = [];
-    $scope.profile.name = window.user.diaplayName;
+    $scope.profile.name = $scope.user.displayName;
     $scope.profile.img = 'res/screen/share/2x/profile.png';
     $scope.profile.booked = 15;
     $scope.profile.favorites = 245;
@@ -13,7 +14,7 @@ angular.module('core').controller('SidemenuController', [
     $scope.menus = [{
         label: 'HOME',
         icon: 'fa-home',
-        state: 'main.tab.home.food'
+        state: 'main.tab.home.list.food'
       }, {
         label: 'SEARCH',
         icon: 'fa-search',
@@ -47,10 +48,21 @@ angular.module('core').controller('SidemenuController', [
       {
         label: 'SIGN OUT',
         icon: 'fa-sign-out',
-        url: '/auth/signout',
+        state: 'signout',
         className: 'menu-signout'
       }
     ];
+
+    var isAdmin = Authentication.hasRole('admin');
+
+    if (isAdmin) {
+      $scope.menus.push({
+        label: 'ADMIN',
+        icon: 'fa-gear',
+        state: 'admin.shops'
+      });
+    };
+
 
     $scope.showDetail = function($index) {
       var selectedMenu = $scope.menus[$index];
@@ -71,19 +83,19 @@ angular.module('core').controller('SidemenuController', [
       }
       return '';
     };
-
-    var i = 0;
-    var stop = $interval(function() {
-      i = (i + 1) % 2;
-      $scope.profile.booked = Math.round(Math.random() * 20);
-      $scope.profile.img = ['res/screen/share/2x/profile.png', 'res/screen/share/2x/profile-pic.png'][i];
-      $scope.profile.name = ['Pony Somrattanach', 'Pooony Sooomrattanach'][i];
-      $scope.profile.favorites = Math.round(Math.random() * 5000);
-    }, 5000);
+    /*
+        var i = 0;
+        var stop = $interval(function() {
+          i = (i + 1) % 2;
+          $scope.profile.booked = Math.round(Math.random() * 20);
+          $scope.profile.img = ['res/screen/share/2x/profile.png', 'res/screen/share/2x/profile-pic.png'][i];
+          $scope.profile.name = ['Pony Somrattanach', 'Pooony Sooomrattanach'][i];
+          $scope.profile.favorites = Math.round(Math.random() * 5000);
+        }, 5000);
 
     $scope.$on('$destroy', function() {
       $interval.cancel(stop);
       stop = undefined;
-    });
+    });    */
   }
 ]);

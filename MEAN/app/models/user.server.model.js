@@ -82,6 +82,9 @@ var UserSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
+	token: {
+		type:String
+	},
 	/* For reset password */
 	resetPasswordToken: {
 		type: String
@@ -91,15 +94,15 @@ var UserSchema = new Schema({
   	}
 });
 
+
 /**
  * Hook a pre save method to hash the password
  */
 UserSchema.pre('save', function(next) {
-	if (this.password && this.password.length > 6) {
-		this.salt = new Buffer(crypto.randomBytes(16).toString('base64'), 'base64');
+	if (this.password && this.password.length > 6 && this.password.length < 88) {
+		this.salt = crypto.randomBytes(16).toString('base64');
 		this.password = this.hashPassword(this.password);
 	}
-
 	next();
 });
 
@@ -118,8 +121,11 @@ UserSchema.methods.hashPassword = function(password) {
  * Create instance method for authenticating user
  */
 UserSchema.methods.authenticate = function(password) {
+	// console.log('authenticate', this.password ,this.hashPassword(password));
 	return this.password === this.hashPassword(password);
 };
+
+ 
 
 /**
  * Find possible not used username
