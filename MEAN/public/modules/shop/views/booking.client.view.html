@@ -1,4 +1,4 @@
-<section data-ng-controller="BookingController" class="section-booking">
+<section data-ng-controller="BookingController" class="section-booking" data-ng-init="init()">
   <ion-modal-view>
     <ion-header-bar class="background-orange">
       <h1 class="title">BOOKING</h1>
@@ -15,7 +15,7 @@
           <img src="res/shops/1/main.jpg">
         </div>
         <div class="col-75 details">
-          <span class="row name">{{it.name}}xxxxx</span>
+          <span class="row name">{{it.name}}</span>
           <span class="row address">{{it.address}}</span>
           <span class="row address">{{it.address2}}</span>
           <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
@@ -27,20 +27,20 @@
           <div class="list">
             <label class="item item-input item-select">
               <div class="input-label">&nbsp;</div>
-              <select>
-                <option ng-repeat="n in [9,10,11,12,13,14]">Tue {{n}} June 2014</option>
+              <select data-ng-model="booking.date">
+                <option ng-repeat="it in bookDates" value="{{it.value}}">{{it.text}}</option>
               </select>
             </label>
             <label class="item item-input item-select">
               <div class="input-label">&nbsp;</div>
-              <select>
-                <option ng-repeat="n in [7,8,9,10,11,12]">{{n}} pm</option>
+              <select data-ng-model="booking.time">
+                <option ng-repeat="it in bookTimes" value="{{it.value}}">{{it.text}}</option>
               </select>
             </label>
             <label class="item item-input item-select">
               <div class="input-label"> &nbsp;</div>
-              <select>
-                <option ng-repeat="n in [1,2,3,4,5,6,7]">{{n}} people</option>
+              <select data-ng-model="booking.person">
+                <option ng-repeat="n in persons">{{n}} people</option>
               </select>
             </label>
           </div>
@@ -61,10 +61,10 @@
                 <span>Please enter any additional requests or information that you wish to notify the place about:</span> {{commantRemain}}
               </div>
               <div class="row">
-                <textarea cols="40" rows="8" ng-model="comment"></textarea>
+                <textarea cols="40" rows="8" data-ng-model="booking.comment"></textarea>
               </div>
               <div class="row">
-                <span>Remaining characters: {{commantRemain}}</span>
+                <span>Remaining characters: {{140-booking.comment.length}}</span>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@
     </ion-content>
     <ion-footer-bar class="bar col">
       <div class="text-center">
-        <button class="button button-icon button-small booktime-button-bookme2" ng-click="closeModal()">
+        <button class="button button-icon button-small booktime-button-bookme2" ng-click="doBooking()">
 
         </button>
       </div>
