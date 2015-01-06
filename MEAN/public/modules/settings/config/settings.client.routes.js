@@ -1,4 +1,3 @@
-﻿
 'use strict';
 
 // Setting up route

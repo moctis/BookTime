@@ -1,4 +1,3 @@
-﻿
 'use strict';
 
 angular.module('shop').controller('ShopController', [
@@ -49,15 +48,15 @@ angular.module('shop').controller('ShopController', [
         operationTime: ['TUE-SON 10am-11pm'].random(),
         image: basepath + ['main.jpg'].random(),
         albums: [
-        basepath + 'a1.jpg',
-        basepath + 'a2.jpg',
-        basepath + 'a3.jpg',
-        basepath + 'a4.jpg',
-        basepath + 'a5.jpg',
-        basepath + 'a6.jpg',
-        basepath + 'a7.jpg',
-        basepath + 'a8.jpg',
-        basepath + 'a9.jpg'
+          basepath + 'a1.jpg',
+          basepath + 'a2.jpg',
+          basepath + 'a3.jpg',
+          basepath + 'a4.jpg',
+          basepath + 'a5.jpg',
+          basepath + 'a6.jpg',
+          basepath + 'a7.jpg',
+          basepath + 'a8.jpg',
+          basepath + 'a9.jpg'
         ]
       };
     };

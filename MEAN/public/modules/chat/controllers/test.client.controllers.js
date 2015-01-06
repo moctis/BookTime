@@ -6,7 +6,10 @@ angular.module('chat').controller('TestController', [
   function($scope, $location, $cookieStore) {
 
     console.log('hello');
-    $scope.user = {name:'xxxx',phone:'122344'};
+    $scope.user = {
+      name: 'xxxx',
+      phone: '122344'
+    };
 
     $scope.name = 'moctis';
     $scope.age = 33;

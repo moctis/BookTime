@@ -8,7 +8,9 @@ var passport = require('passport');
 module.exports = function(app) {
   // User Routes
   var users = require('../../app/controllers/users');
-  var hasToken =  passport.authenticate('bearer', { session: false });
+  var hasToken = passport.authenticate('bearer', {
+    session: false
+  });
 
 
   // Setting up the users profile api

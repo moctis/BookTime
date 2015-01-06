@@ -1,22 +1,24 @@
 <section data-ng-controller="ServicesController" class="section-service" data-ng-init="find()">
-    <ion-view hide-nav-bar="true">
-        <ion-content has-header="false" padding="false">
-            <ion-list class="list-shops">
-                <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop({shopId:it._id})">
-                    <img src="{{it.image}}">
-                    <div class="details">
-                        <span class="booked">
-                            <i class="booktime-bookmark-empty"></i><br />
-                            <i class="booktime-button-bookme"></i>
-                        </span>
-                        <span class="name">{{it.name}} <i class="booktime-icon-champion"></i></span>
-                        <span class="rank">{{it.rank}}</span>
-                        <span class="catalog">{{it.catalog}}</span>
-                        <span class="booked-comments">{{it.booked}} Booked here | {{it.comments}} comments</span>
-                        <span class="distance">{{it.distance}}</span>
-                    </div>
-                </ion-item>
-            </ion-list>
-        </ion-content>
-    </ion-view>
+  <ion-view hide-nav-bar="true">
+    <ion-content has-header="false" padding="false">
+      <ion-list class="list-shops">
+        <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop({shopId:it._id})">
+          <img src="{{it.image}}">
+          <div class="details">
+            <span class="booked">
+              <i class="booktime-bookmark-empty"></i>
+              <br />
+              <i class="booktime-button-bookme"></i>
+            </span>
+            <span class="name">{{it.name}} <i class="booktime-icon-champion"></i>
+            </span>
+            <span class="rank">{{it.rank}}</span>
+            <span class="catalog">{{it.catalog}}</span>
+            <span class="booked-comments">{{it.booked}} Booked here | {{it.comments}} comments</span>
+            <span class="distance">{{it.distance}}</span>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-view>
 </section>

@@ -15,17 +15,14 @@
   vertical-align: top;
   line-height: 30px;
 }
-.tabs-home a:hover,
-.tabs-home a:focus,
-.tabs-home .tab-item-active {
+.tabs-home a:hover, .tabs-home a:focus, .tabs-home .tab-item-active {
   color: #e45b17;
 }
 .shop-list {
   border: none;
   padding: 0;
 }
-.shop-list:first-child,
-.shop-list:last-child {
+.shop-list:first-child, .shop-list:last-child {
   padding-left: 0;
 }
 .shop-image {
