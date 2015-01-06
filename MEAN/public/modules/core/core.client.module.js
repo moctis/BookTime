@@ -3,7 +3,7 @@
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');
 
-angular.module('core').service('Authenticationxx', ['$http', '$cookieStore',
+angular.module('core').service('Authenticationxx', ['$http','$cookieStore',
   function($http, $cookieStore) {
     //Example of Authentication
     // https://github.com/pablodenadai/cors-restful-api/blob/master/client/app/scripts/authentication/AuthenticationModel.js

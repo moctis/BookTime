@@ -2,13 +2,13 @@
 
 
 angular.module('template').controller('templateController', [
-  '$scope', 'templateService',
+    '$scope', 'templateService',
 
-  function($scope, TemplateService) {
-    //console.log('Users ', Users);
-    //$scope.templateService = new TemplateService();
+    function($scope, TemplateService) {
+        //console.log('Users ', Users);
+        //$scope.templateService = new TemplateService();
 
-    $scope.helloMessage = 'Hello World';
-    //$scope.data = $scope.templateService.getData(4);
-  }
+        $scope.helloMessage = 'Hello World';
+        //$scope.data = $scope.templateService.getData(4);
+    }
 ]);

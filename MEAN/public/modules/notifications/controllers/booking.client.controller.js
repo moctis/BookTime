@@ -1,3 +1,4 @@
+﻿
 'use strict';
 
 angular.module('notifications').controller('Booking2Controller', [

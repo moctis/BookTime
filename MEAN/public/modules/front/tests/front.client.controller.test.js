@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-  describe('frontController', function() {
-
-  });
+    describe('frontController', function () {
+		 
+	});
 })();

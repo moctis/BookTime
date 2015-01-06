@@ -1,5 +1,6 @@
 'use strict';
 
+
 angular.module('notifications').controller('NotificationsController', [
   '$scope', '$location', '$ionicModal',
   function($scope, $location, $ionicModal) {

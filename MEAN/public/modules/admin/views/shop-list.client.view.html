@@ -5,14 +5,14 @@
     </ion-nav-buttons>
     <ion-content class="has-tabs-top" padding="false">
       <ion-list class="list-shops">
-        <ion-item class="shop item-button-right" ng-repeat="it in shops">
-          <a data-ng-href="#!/admin/shops/{{id._id}}">
+        <ion-item class="shop item-button-right" ng-repeat="it in shops"  >
+            <a data-ng-href="#!/admin/shops/{{id._id}}">
             <span class="name">{{it.name}}</span>
             <span class="catalog">{{it.catalog}}</span>
           </a>
-          <button class="button button-assertive" data-ng-click="remove(it)">
-            <i class="icon ion-trash-a"></i>
-          </button>
+            <button class="button button-assertive" data-ng-click="remove(it)">
+              <i class="icon ion-trash-a"></i>
+            </button>
         </ion-item>
       </ion-list>
     </ion-content>

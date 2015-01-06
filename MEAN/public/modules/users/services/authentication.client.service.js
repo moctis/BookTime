@@ -26,7 +26,7 @@ angular.module('users').factory('Authentication', ['$cookieStore', '$timeout', '
     };
 
     $this.checkLoggedIn = function() {
-      console.log('AuthenticationService.checkLoggedIn', $this.user.username);
+      console.log('AuthenticationService.checkLoggedIn', $this.user.username); 
       // Make an AJAX call to check if the user is logged in
       $api.get('/users/me');
     };
@@ -38,9 +38,9 @@ angular.module('users').factory('Authentication', ['$cookieStore', '$timeout', '
     };
 
     return {
-      user: $this.user,
-      setUser: $this.setUser,
-      hasRole: $this.hasRole,
+      user : $this.user,
+      setUser : $this.setUser,
+      hasRole : $this.hasRole,
       removeUser: $this.removeUser,
       isSignedIn: $this.isSignedIn,
       checkLoggedIn: $this.checkLoggedIn
