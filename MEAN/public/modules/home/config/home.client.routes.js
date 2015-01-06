@@ -13,24 +13,33 @@ angular.module('home').config(['$stateProvider',
           templateUrl: 'modules/home/views/home.client.view.html'
         }
       }
-    }).
-    state('main.tab.home.food', {
+    })
+    .state('main.tab.home.list', {
+      url: '/list',
+      views: {
+        'home-list': {
+          templateUrl: 'modules/home/views/list.client.view.html'
+        }
+      }
+
+    })
+    .state('main.tab.home.list.food', {
       url: '/food',
       views: {
         'food-tab': {
           templateUrl: 'modules/home/views/food.client.view.html'
         }
       }
-    }).
-    state('main.tab.home.recommend', {
+    })
+    .state('main.tab.home.list.recommend', {
       url: '/recommend',
       views: {
         'recommend-tab': {
           templateUrl: 'modules/home/views/recommend.client.view.html'
         }
       }
-    }).
-    state('main.tab.home.services', {
+    })
+    .state('main.tab.home.list.services', {
       url: '/services',
       views: {
         'services-tab': {
@@ -38,5 +47,7 @@ angular.module('home').config(['$stateProvider',
         }
       }
     });
+
+
   }
 ]);

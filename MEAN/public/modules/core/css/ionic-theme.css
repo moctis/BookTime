@@ -1,280 +1,340 @@
-.pane {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  overflow: hidden;
-}
-.view {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  overflow: hidden;
-}
-.bar.bar-booktime {
-  border-color: #f4f1e8;
-  /*background: #f4f1e8;*/
-  
-  background: #fae4a3;
-  color: #f47822;
-}
-.bar.bar-booktime .title {
-  color: #f47822;
-  font-size: 18px;
-}
-.bar.bar-booktime .button-clear.button-clear {
-  color: #f47822;
-  font-size: 14px;
-}
-.bar.bar-booktime .buttons span {
-  width: 100%;
-}
-.tabs-booktime a:hover,
-.tabs-booktime a:focus {
-  color: white;
-  text-decoration: none;
-}
-.button.button-booktime.button-clear {
-  /*border-color: #000;*/
-  
-  background: none;
-  box-shadow: none;
-  color: #f47822;
-  font-size: 15px;
-}
-.button.button-third.button-clear {
-  width: 33.33%;
-  border-color: #000;
-  background: none;
-  box-shadow: none;
-  color: #f47822;
-  font-size: 15px;
-}
-.bar {
-  padding: 0;
-}
-.bar .title {
-  line-height: 30px;
-  height: 30px;
-}
-.bar .title + .button:last-child,
-.bar > .button + .button:last-child,
-.bar > .button.pull-right,
-.bar .buttons.pull-right,
-.bar .title + .buttons {
-  top: 0;
-  position: absolute;
-  right: 5px;
-  bottom: 0;
-  line-height: 30px;
-}
-.bar-header {
-  top: 60px;
-}
-.modal .bar-header {
-  top: 0;
-}
-.tabs-booktime > .tabs,
-.tabs.tabs-booktime {
-  background: #F47822;
-  background: -moz-linear-gradient(top, #f47822 0%, #ef5323 99%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F47822), color-stop(99%, #EF5323));
-  background: -webkit-linear-gradient(top, #F47822 0%, #EF5323 99%);
-  background: -o-linear-gradient(top, #f47822 0%, #ef5323 99%);
-  background: -ms-linear-gradient(top, #f47822 0%, #ef5323 99%);
-  background: linear-gradient(to bottom, #F47822 0%, #EF5323 99%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f47822', endColorstr='#ef5323', GradientType=0);
-  color: #fff;
-}
-.tabs-booktime > .tabs .tab-item .badge,
-.tabs.tabs-booktime .tab-item .badge {
-  background-color: #fff;
-  color: #f47822;
-}
-.platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) {
-  height: 30px;
-}
-.platform-ios.platform-browser:not(.fullscreen) .modal .bar-header {
-  top: 20px;
-  height: 30px;
-}
-.platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-  margin-top: 60px !important;
-}
-.platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
-  margin-top: 0;
-}
-.platform-ios.platform-browser:not(.fullscreen) .tabs-top > .tabs,
-.platform-ios.platform-browser:not(.fullscreen) .tabs.tabs-top {
-  top: 60px;
-}
-.platform-ios.platform-browser:not(.fullscreen) .has-header,
-.platform-ios.platform-browser:not(.fullscreen) .bar-subheader {
-  /*top: 90px;*/
-  
-  top: 50px;
-}
-.platform-ios.platform-browser:not(.fullscreen) .has-subheader {
-  top: 108px;
-}
-.platform-ios.platform-browser:not(.fullscreen) .has-tabs-top {
-  top: 90px;
-  bottom: 47px;
-}
-.platform-ios.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
-  top: 157px;
-}
-.platform-ios.platform-browser.status-bar-hide {
-  margin-bottom: 20px;
-}
-/*==================== for android ===================*/
+.pane  {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
 
+background-color: white;
+overflow: hidden;
+}
+
+.view {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: white;
+overflow: hidden;
+}
+
+
+.bar.bar-booktime {
+    border-color: #f4f1e8;
+    /*background: #f4f1e8;*/
+    background: #fae4a3;
+    color: #f47822;
+}
+ 
+
+    .bar.bar-booktime .title {
+        color: #f47822;
+        font-size: 18px;
+    }
+
+    .bar.bar-booktime .button-clear.button-clear {
+        color: #f47822;
+        font-size: 14px;
+    }
+
+    .bar.bar-booktime .buttons span {
+        width: 100%;
+    }
+
+.tabs-booktime a:hover, .tabs-booktime a:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.button.button-booktime.button-clear {
+    border-color: rgba(0, 0, 0, 0);
+    background: none;
+    box-shadow: none;
+    color: #f47822;
+    font-size: 15px;
+}
+
+.button.button-third.button-clear {
+    width: 33.33%;
+    border-color: rgba(0, 0, 0, 0);
+    background: none;
+    box-shadow: none;
+    color: #f47822;
+    font-size: 15px;
+}
+
+.bar {
+    padding: 0;
+}
+
+    .bar .title {
+        line-height: 30px;
+        height: 30px;
+    }
+
+
+        .bar .title + .button:last-child, .bar > .button + .button:last-child, .bar > .button.pull-right, .bar .buttons.pull-right, .bar .title + .buttons {
+            top: 0;
+            position: absolute;
+            right: 5px;
+            bottom: 0;
+            line-height: 30px;
+        }
+
+.bar-header {
+    top: 60px;
+}
+
+.modal .bar-header {
+    top: 0;
+}
+
+.tabs-booktime > .tabs, .tabs.tabs-booktime {
+    background: #F47822;
+    background: -moz-linear-gradient(top, #f47822 0%, #ef5323 99%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F47822), color-stop(99%,#EF5323));
+    background: -webkit-linear-gradient(top, #F47822 0%,#EF5323 99%);
+    background: -o-linear-gradient(top, #f47822 0%,#ef5323 99%);
+    background: -ms-linear-gradient(top, #f47822 0%,#ef5323 99%);
+    background: linear-gradient(to bottom, #F47822 0%,#EF5323 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f47822', endColorstr='#ef5323',GradientType=0 );
+    color: #fff;
+}
+
+    .tabs-booktime > .tabs .tab-item .badge, .tabs.tabs-booktime .tab-item .badge {
+        background-color: #fff;
+        color: #f47822;
+    }
+
+
+
+.platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) {
+    height: 30px;
+}
+
+.platform-ios.platform-browser:not(.fullscreen) .modal .bar-header {
+    top: 20px;
+    height: 30px;
+}
+
+    .platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
+        margin-top: 60px !important;
+    }
+
+    .platform-ios.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+        margin-top: 0px;
+    }
+
+.platform-ios.platform-browser:not(.fullscreen) .tabs-top > .tabs, .platform-ios.platform-browser:not(.fullscreen) .tabs.tabs-top {
+    top: 60px;
+}
+
+.platform-ios.platform-browser:not(.fullscreen) .has-header, .platform-ios.platform-browser:not(.fullscreen) .bar-subheader {
+    /*top: 90px;*/
+    top: 50px;
+}
+
+.platform-ios.platform-browser:not(.fullscreen) .has-subheader {
+    top: 108px;
+}
+
+.platform-ios.platform-browser:not(.fullscreen) .has-tabs-top {
+    top: 90px;
+    bottom: 47px;
+}
+
+.platform-ios.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
+    top: 157px;
+}
+
+.platform-ios.platform-browser.status-bar-hide {
+    margin-bottom: 20px;
+}
+
+/*==================== for android ===================*/
 .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) {
-  height: 30px;
+    height: 30px;
 }
+
 .platform-android.platform-browser:not(.fullscreen) .modal .bar-header {
-  top: 20px;
-  height: 30px;
+    top: 20px;
+    height: 30px;
 }
-.platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-  margin-top: 60px !important;
+
+    .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
+        margin-top: 60px !important;
+    }
+
+    .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+        margin-top: 0px;
+    }
+
+.platform-android.platform-browser:not(.fullscreen) .tabs-top > .tabs, .platform-android.platform-browser:not(.fullscreen) .tabs.tabs-top {
+    top: 60px;
 }
-.platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
-  margin-top: 0;
+
+.platform-android.platform-browser:not(.fullscreen) .has-header, .platform-android.platform-browser:not(.fullscreen) .bar-subheader {
+    /*top: 90px;*/
+    top: 50px;
 }
-.platform-android.platform-browser:not(.fullscreen) .tabs-top > .tabs,
-.platform-android.platform-browser:not(.fullscreen) .tabs.tabs-top {
-  top: 60px;
-}
-.platform-android.platform-browser:not(.fullscreen) .has-header,
-.platform-android.platform-browser:not(.fullscreen) .bar-subheader {
-  /*top: 90px;*/
-  
-  top: 50px;
-}
+
 .platform-android.platform-browser:not(.fullscreen) .has-subheader {
-  top: 108px;
+    top: 108px;
 }
+
 .platform-android.platform-browser:not(.fullscreen) .has-tabs-top {
-  top: 90px;
+    top: 90px;
 }
+
 .platform-android.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
-  top: 157px;
+    top: 157px;
 }
+
 .platform-android.platform-browser.status-bar-hide {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 /*=======================================================*/
 
-.scroll-content .has-tabs-top {
-  margin-bottom: 49px;
+.scroll-content .has-tabs-top{
+    margin-bottom: 49px;
 }
+
+
 .row + .row {
-  margin-top: 0;
-  padding-top: 0;
+margin-top: 0;
+padding-top: 0;
 }
+
+
 .background-orange {
-  background-color: #F47822;
-  color: white;
+    background-color: #F47822;
+    color: white;
 }
+
+
+
 .menu.menu-booktime {
-  background-color: #646464;
-}
-.menu-item {
-  color: #f4f1e8;
-  background-color: #222222;
-  display: block;
-  border-top: 2px solid #646464;
-  border-bottom: 2px solid #646464;
-  padding: 8px;
-}
-.menu.menu-booktime .bar-header {
-  z-index: 0;
-}
-@media only screen and (min-device-width: 680px) {
-  .bar-header {
-    top: 128px;
-    height: 100px;
-  }
-  .bar-footer {
-    background-color: white;
-    min-height: 100px;
-  }
-  .bar.bar-booktime .title {
-    font-size: 50px;
-    overflow: visible;
-  }
-  .bar.bar-booktime .button-clear.button-clear {
-    font-size: 30px;
-  }
-  .has-header {
-    top: 200px;
-  }
-  .menu.menu-booktime {
     background-color: #646464;
-    width: 500px;
-  }
-  .menu-item.item {
-    font-size: 25px;
-  }
-  .tabs-booktime > .tabs,
-  .tabs.tabs-booktime {
-    height: 110px;
-  }
-  .tab-item {
-    font-size: 30px;
-    max-width: 600px
-  }
-  .tab-item .icon {
-    zoom: 2.5;
-  }
-  .bar .title {
-    font-size: 30px;
-  }
-  /*==================== for android ===================*/
-  
-  .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) {
-    height: 70px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .modal .bar-header {
-    top: 20px;
-    height: 70px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-    margin-top: 100px !important;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
-    margin-top: 20px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .tabs-top > .tabs,
-  .platform-android.platform-browser:not(.fullscreen) .tabs.tabs-top {
-    top: 130px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .has-header,
-  .platform-android.platform-browser:not(.fullscreen) .bar-subheader {
-    top: 90px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .has-subheader {
-    top: 148px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .has-tabs-top {
-    top: 207px;
-    bottom: 108px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
-    top: 207px;
-  }
-  .platform-android.platform-browser.status-bar-hide {
-    margin-bottom: 20px;
-  }
-  /*=======================================================*/
+}
+
+.menu-item {
+    color: #f4f1e8;
+    background-color: #222222;
+    display: block;
+    border-top: 2px solid #646464;
+    border-bottom: 2px solid #646464;
+    padding: 8px;
+}
+
+
+.menu.menu-booktime .bar-header {
+    z-index: 0;
+}
+
+.menu .scroll-content {
+
+}
+
+@media only screen and (min-device-width: 680px) {
+
+    .bar-header {
+        top: 128px;
+        height: 100px;
+    }
+
+    .bar-footer {        
+        background-color: white;
+        min-height: 100px;
+    }
+
+    .bar.bar-booktime .title {
+        font-size: 50px;
+        overflow: visible;
+    }
+
+    .bar.bar-booktime .button-clear.button-clear {
+        font-size: 30px;
+    }
+
+
+    .has-header {
+        top: 200px;
+    }
+
+    .menu.menu-booktime {
+        background-color: #646464;
+        width: 500px;
+    }
+
+    .menu-item.item{
+        font-size: 25px;
+    }
+
+    .tabs-booktime > .tabs, .tabs.tabs-booktime {
+        height: 110px;
+    }
+
+    .tab-item {
+        font-size: 30px;
+        max-width: 600px
+    }
+
+    .tab-item .icon {
+        zoom: 2.5;
+    }
+
+    .bar .title {
+        font-size: 30px;
+    }
+
+    /*==================== for android ===================*/
+    .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) {
+        height: 70px;
+    }
+
+
+    .platform-android.platform-browser:not(.fullscreen) .modal .bar-header {
+        top: 20px;
+        height: 70px;
+    }
+
+        .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
+            margin-top: 100px !important;
+        }
+
+        .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
+            margin-top: 20px;
+        }
+
+    .platform-android.platform-browser:not(.fullscreen) .tabs-top > .tabs, .platform-android.platform-browser:not(.fullscreen) .tabs.tabs-top {
+        top: 130px;
+    }
+
+    .platform-android.platform-browser:not(.fullscreen) .has-header, .platform-android.platform-browser:not(.fullscreen) .bar-subheader {
+        top: 90px;
+    }
+
+    .platform-android.platform-browser:not(.fullscreen) .has-subheader {
+        top: 148px;
+    }
+
+    .platform-android.platform-browser:not(.fullscreen) .has-tabs-top {
+        top: 207px;
+        bottom: 108px;
+    }
+
+    .platform-android.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
+        top: 207px;
+    }
+
+    .platform-android.platform-browser.status-bar-hide {
+        margin-bottom: 20px;
+    }
+    /*=======================================================*/
+
 }

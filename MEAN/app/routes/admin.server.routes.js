@@ -37,13 +37,10 @@ module.exports = function(app) {
 
 
   // Shop-list Routes
-  app.route('/api/shops/food')
-  .get(authenticate, users.requiresLogin, shops.list); //TODO: list food
+  app.route('/api/shops')
+  .get(authenticate, users.requiresLogin, shops.list); //TODO: list food,servie,higlight
 
-  app.route('/api/shops/service')
-  .get(authenticate, users.requiresLogin, shops.list); //TODO: list services
-
-  app.route('/api/shops/hilight')
-  .get(authenticate, users.requiresLogin, shops.list);;  //TODO: list hilight
+  app.route('/api/shops/:shopId')
+  .get(authenticate, users.requiresLogin, shops.read);
 
 };
