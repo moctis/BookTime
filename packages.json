@@ -1,0 +1,15 @@
+'packages': [
+  'atom-beautify'
+  'atom-jshint'
+  'atom-prettify'
+  'color-picker'
+  'csslint'
+  'git-history'
+  'jshint'
+  'linter-csslint'
+  'merge-conflicts'
+  'package-sync'
+  'preview-tabs'
+  'task-list'
+  'todo-list'
+]

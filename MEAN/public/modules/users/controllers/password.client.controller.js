@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location', 'Authentication',
+angular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location',
+  'Authentication',
   function($scope, $stateParams, $http, $location, Authentication) {
     $scope.authentication = Authentication;
 
@@ -27,16 +28,17 @@ angular.module('users').controller('PasswordController', ['$scope', '$stateParam
     $scope.resetUserPassword = function() {
       $scope.success = $scope.error = null;
 
-      $http.post(ApplicationConfiguration.server + '/auth/reset/' + $stateParams.token, $scope.passwordDetails).success(function(response) {
-        // If successful show success message and clear form
-        $scope.passwordDetails = null;
+      $http.post(ApplicationConfiguration.server + '/auth/reset/' + $stateParams.token, $scope.passwordDetails).success(
+        function(response) {
+          // If successful show success message and clear form
+          $scope.passwordDetails = null;
 
-        // Attach user profile
-        Authentication.user = response;
+          // Attach user profile
+          Authentication.user = response;
 
-        // And redirect to the index page
-        $location.path('/password/reset/success');
-      }).error(function(response) {
+          // And redirect to the index page
+          $location.path('/password/reset/success');
+        }).error(function(response) {
         $scope.error = response.message;
       });
     };

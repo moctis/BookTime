@@ -95,8 +95,7 @@ module.exports = function(db) {
     res.header('Access-Control-Allow-Credentials', 'true');
     if ('OPTIONS' === req.method) {
       res.status(200).end();
-    }
-    else {
+    } else {
       next();
     }
   };

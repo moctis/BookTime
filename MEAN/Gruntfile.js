@@ -159,12 +159,10 @@ module.exports = function(grunt) {
           cwd: 'public',
           src: ['**'],
           dest: '../phonegap/www'
-        },
-      {
-        src: ['public/index-phonegap.html'],
-        dest: '../phonegap/www/index.html'
-      }
-        ]
+        }, {
+          src: ['public/index-phonegap.html'],
+          dest: '../phonegap/www/index.html'
+        }]
       }
     },
     bowercopy: {
