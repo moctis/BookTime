@@ -61,8 +61,8 @@ angular.module('admin').controller('ShopOwnerController', [
         });
       } else {
         $scope.submitted = true;
-      };
-    }
+      }
+    };
 
 
     $scope.remove = function(shop) {

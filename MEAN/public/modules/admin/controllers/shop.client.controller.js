@@ -54,8 +54,8 @@ angular.module('admin').controller('AdminShopController', [
         });
       } else {
         $scope.submitted = true;
-      };
-    }
+      }
+    };
 
 
     $scope.remove = function(shop) {

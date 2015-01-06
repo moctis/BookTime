@@ -5,7 +5,7 @@
  */
 var _ = require('lodash'),
   mongoose = require('mongoose'),
-  passport = require('passport'),
+  //passport = require('passport'),
   User = mongoose.model('User');
 
 /**
