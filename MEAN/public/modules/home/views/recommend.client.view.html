@@ -12,7 +12,9 @@
             </span>
             <span class="name">{{it.name}} <i class="booktime-icon-champion"></i>
             </span>
-            <span class="rank">{{it.rank}}</span>
+            <span class="rank">
+              <angular-ratings ng-model="it.rank"></angular-ratings>
+            </span>
             <span class="catalog">{{it.catalog}}</span>
             <span class="booked-comments">{{it.booked}} Booked here | {{it.comments}} comments</span>
             <span class="distance">{{it.distance}}</span>
