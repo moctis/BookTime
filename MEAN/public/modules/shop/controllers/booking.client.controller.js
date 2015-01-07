@@ -5,7 +5,7 @@ angular.module('shop').controller('BookingController', [
   function($scope, $ionicModal) {
 
     var maxPerson = 15;
-    var maxDate = 15;
+    var maxDate = 7 * 2;
 
     $scope.modal = $ionicModal;
     $scope.booking = {};
