@@ -4,6 +4,11 @@
       <form name="createForm" class="form-horizontal" role="form" data-ng-submit="update(createForm.$valid)">
         <div class="list">
           <label class="item item-input">
+            <div class="displayed-photo">
+              <img src="res/shops/1/main.jpg" style="width:30%;" id="myImage" />
+            </div>
+          </label>
+          <label class="item item-input">
             <input name="name" data-ng-model="shop.name" type="text" placeholder="Name" required>
           </label>
           <label class="item item-input">
@@ -32,6 +37,10 @@
           <button class="button button-assertive" data-ng-click="remove(it)">
             <i class="icon ion-trash-a"></i>
           </button>
+
+          <a class="button button-stable" data-ng-click="editImage()">
+            <i class="icon ion-images"></i>
+          </a>
         </div>
       </form>
     </ion-content>

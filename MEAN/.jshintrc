@@ -73,6 +73,7 @@
 		// Custom Globals
 		"globals": {
 			"angular"     : true,
+			"moment"		  : false,
 			"define"      : false,
 			"require"     : false,
 			"exports"     : false,

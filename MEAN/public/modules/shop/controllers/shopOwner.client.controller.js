@@ -2,8 +2,8 @@
 
 
 angular.module('admin').controller('ShopOwnerController', [
-  '$scope', '$interval', '$state', '$stateParams', '$location', 'ShopOwners',
-  function($scope, $interval, $state, $stateParams, $location, ShopOwners) {
+  '$scope', '$interval', '$state', '$stateParams', '$location', 'ShopOwners', '$ionicModal',
+  function($scope, $interval, $state, $stateParams, $location, ShopOwners, $ionicModal) {
     $scope.shop = {};
 
     var mock = function() {
@@ -102,6 +102,35 @@ angular.module('admin').controller('ShopOwnerController', [
     $scope.findOne = function() {
       $scope.shop = ShopOwners.get({
         shopId: $stateParams.shopId
+      });
+    };
+
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+    };
+
+    $scope.editImage = function() {
+      //$scope.modal.show();
+      console.log('edit Image');
+
+      var options = {
+        quality: 50,
+        destinationType: Camera.DestinationType.DATA_URL,
+        sourceType: Camera.PictureSourceType.CAMERA,
+        allowEdit: true,
+        encodingType: Camera.EncodingType.JPEG,
+        targetWidth: 100,
+        targetHeight: 100,
+        popoverOptions: CameraPopoverOptions,
+        saveToPhotoAlbum: false
+      };
+
+      $cordovaCamera.getPicture(options).then(function(imageData) {
+        var image = document.getElementById('myImage');
+        image.src = 'data:image/jpeg;base64,' + imageData;
+        console.log('getPicture', imageData);
+      }, function(err) {
+        // error
       });
     };
 

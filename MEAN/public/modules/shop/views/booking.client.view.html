@@ -40,7 +40,7 @@
             <label class="item item-input item-select">
               <div class="input-label"> &nbsp;</div>
               <select data-ng-model="booking.person">
-                <option ng-repeat="n in persons">{{n}} people</option>
+                <option ng-repeat="n in persons" value="{{it.value}}">{{it.text}}</option>
               </select>
             </label>
           </div>

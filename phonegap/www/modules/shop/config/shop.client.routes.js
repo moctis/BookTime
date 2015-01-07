@@ -52,6 +52,11 @@ angular.module('shop').config(['$stateProvider',
     .state('main.tab.owner.edit', {
       url: '/:shopId/edit',
       templateUrl: 'modules/shop/views/shop-edit.client.view.html'
+    })
+
+    .state('main.tab.owner.image', {
+      url: '/:shopId/image',
+      templateUrl: 'modules/shop/views/shop-image.client.view.html'
     });
   }
 ]);

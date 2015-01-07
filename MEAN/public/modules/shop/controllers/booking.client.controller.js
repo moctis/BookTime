@@ -25,21 +25,29 @@ angular.module('shop').controller('BookingController', [
           text: moment().add(i, 'days').format('ddd DD MMMM YYYY')
         });
       }
+      $scope.booking.date = $scope.bookDates[0].value;
 
       // Time
       $scope.bookTimes = [];
-      for (j = 0; j <= 1; j += 1)
+      for (j = 0; j <= 1; j += 1) {
         for (i = 1; i <= 12; i += 1) {
           $scope.bookTimes.push({
             value: i,
             text: i + (j === 0 ? ' AM' : ' PM')
           });
         }
+      }
+      $scope.booking.time = $scope.bookTimes[0].value;
 
       // Person
       $scope.persons = [];
-      for (i = 1; i <= maxPerson; i += 1)
-        $scope.persons.push(i);
+      for (i = 1; i <= maxPerson; i += 1) {
+        $scope.persons.push({
+          value: i,
+          text: i + (i <= 0 ? ' person' : ' persons')
+        });
+      }
+      $scope.booking.person = $scope.persons[0].value;
 
     };
 
