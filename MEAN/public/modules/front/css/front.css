@@ -58,7 +58,7 @@
 }
 .view-front .pannel-float {
   position: absolute;
-  bottom: 25%;
+  bottom: 18%;
   left: 18%;
   width: 64%;
 }
@@ -136,6 +136,14 @@ slide > img {
   font-size: 14px;
   border-radius: 3px;
 }
+
+.forgot a {
+  color: #fff;  
+  line-height: 40px;
+  text-decoration: none;
+}
+
+
 @media only screen and (min-device-width: 680px) {
   .view-front .carousel-indicators {
     top: 50px;
@@ -155,7 +163,7 @@ slide > img {
     /*spacing*/
   }
   .view-front .pannel-float {
-    bottom: 25%;
+    bottom: 20%;
   } 
   .view-front button.login {
     padding: 20px 40px;
