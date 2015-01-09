@@ -1,69 +1,70 @@
-<section data-ng-controller="Booking2Controller" class="section-booking">
-    <ion-modal-view>
-        <ion-header-bar class="background-orange">
-            <h1 class="title">BOOKING</h1>
-            <div class="buttons">
-                <div class="button button-clear" ng-click="closeModal()"><span class="icon ion-close"></span></div>
-            </div>
-        </ion-header-bar>
-        <ion-content has-header="false" padding="true">
-            <div class="row ">
-                <div class="col-25">
-                    <img src="res/shops/1/main.jpg">
-                </div>
-                <div class="col-75 details">
-                    <span class="row name">{{it.name}}xxxxx</span>
-                    <span class="row address">{{it.address}}</span>
-                    <span class="row address">{{it.address2}}</span>
-                    <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
-                    <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
-                </div>
-            </div>
-            <div class="row booking">
-                <div class="col-90">
+<section data-ng-controller="BookedController" class="section-booking">
+  <ion-modal-view>
+    <ion-header-bar class="background-orange">
+      <h1 class="title">BOOKING</h1>
+      <div class="buttons">
+        <div class="button button-clear" ng-click="closeBooked()">
+          <span class="icon ion-close"></span>
+        </div>
+      </div>
+    </ion-header-bar>
+    <ion-content has-header="false" padding="true">
+      <div class="row ">
+        <div class="col-25">
+          <img src="res/shops/1/main.jpg">
+        </div>
+        <div class="col-75 details">
+          <span class="row name">{{it.name}}xxxxx</span>
+          <span class="row address">{{it.address}}</span>
+          <span class="row address">{{it.address2}}</span>
+          <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
+          <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
+        </div>
+      </div>
+      <div class="row booking">
+        <div class="col-90">
 
-                    <div class="row">
-                        <div class="col font-size-130per">
-                            Booking Status <i class="icon booktime-pending"></i>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col font-size-130per">
-                            Your Booking Details
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col font-size-130per">
-                            Friday 13 June 2014
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            5 people at 8.00pm (Restaurant)
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col font-size-130per">
-                            Additional Requests:
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            VIP room
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col col-center">
-                            <button class="button button-icon button-small booktime-close" ng-click="closeModal()"></button>
-                        </div>
-                    </div>
-                </div>
+          <div class="row">
+            <div class="col font-size-130per">
+              Booking Status <i class="icon booktime-pending"></i>
             </div>
-            <!--<div class="bar bar-footer">
+          </div>
+          <div class="row">
+            <div class="col font-size-130per">
+              Your Booking Details
+            </div>
+          </div>
+          <div class="row">
+            <div class="col font-size-130per">
+              Friday 13 June 2014
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              5 people at 8.00pm (Restaurant)
+            </div>
+          </div>
+          <div class="row">
+            <div class="col font-size-130per">
+              Additional Requests:
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              VIP room
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-center">
+              <button class="button button-icon button-small booktime-close" ng-click="closeBooked()"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="bar bar-footer">
                 <button class="button button-icon button-small booktime-close" ng-click="closeModal()"></button>
             </div>-->
-        </ion-content>
-    </ion-modal-view>
+    </ion-content>
+  </ion-modal-view>
 
 </section>
-

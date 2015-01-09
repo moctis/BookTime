@@ -5,10 +5,15 @@ angular.module('shop').config(['$stateProvider',
   function($stateProvider) {
     // Shop state routing
     $stateProvider
-      .state('booking', {
+      .state('main.tab.home.shop.booking', {
         url: '/booking',
         templateUrl: 'modules/shop/views/booking.client.view.html'
       })
+
+    .state('main.tab.home.shop.booked', {
+      url: '/booked',
+      templateUrl: 'modules/shop/views/booked.client.view.html'
+    })
 
     .state('main.tab.home.shop', {
       url: '/shop/:shopId',

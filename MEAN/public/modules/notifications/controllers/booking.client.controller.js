@@ -1,14 +1,11 @@
-﻿
 'use strict';
 
-angular.module('notifications').controller('Booking2Controller', [
+angular.module('notifications').controller('BookedController', [
   '$scope', '$ionicModal',
   function($scope, $ionicModal) {
     $scope.modal = $ionicModal;
 
-    $scope.closeModal = function() {
-      $scope.modal.hide();
-    };
+
 
     $scope.getData = function() {
       var basepath = 'res/shops/1/';

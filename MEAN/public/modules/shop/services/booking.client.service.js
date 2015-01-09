@@ -1,10 +1,10 @@
 'use strict';
 
 // Users service used for communicating with the users REST endpoint
-angular.module('shop').factory('ShopOwners', ['$resource', '$api',
+angular.module('shop').factory('Bookings', ['$resource', '$api',
   function($resource, $api) {
-    return $resource($api.action('/api/shops-owner/:shopId'), {
-      shopId: '@_id'
+    return $resource($api.action('/api/bookings/:bookingId'), {
+      bookingId: '@_id'
     }, {
       update: {
         method: 'PUT'

@@ -1,13 +1,12 @@
 'use strict';
 
 angular.module('shop').controller('BookingController', [
-  '$scope', '$ionicModal',
-  function($scope, $ionicModal) {
+  '$scope', 'Bookings', '$state',
+  function($scope, Bookings, $state) {
 
     var maxPerson = 15;
     var maxDate = 7 * 2;
 
-    $scope.modal = $ionicModal;
     $scope.booking = {};
     $scope.bookDates = [];
     $scope.bookTimes = [];
@@ -52,9 +51,28 @@ angular.module('shop').controller('BookingController', [
     };
 
 
-    $scope.doBooking = function() {
-      $scope.booking.shopId = $scope.it._id;
-      console.log('booking', $scope.booking);
+    $scope.doBooking = function(isValid) {
+      if (isValid) {
+        $scope.booking.shopId = $scope.it._id;
+        //console.log('booking', $scope.booking);
+
+        var booking = new Bookings();
+        booking.$save(function(response) {
+          $scope.close();
+          $scope.gotBooking();
+        });
+      } else {
+        $scope.submitted = true;
+      }
+    };
+
+    $scope.close = function() {
+      $scope.modal.hide();
+    };
+
+
+    $scope.closeBooked = function() {
+      $scope.modalBooked.hide();
     };
 
   }
