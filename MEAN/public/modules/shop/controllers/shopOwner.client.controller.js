@@ -5,11 +5,13 @@ angular.module('admin').controller('ShopOwnerController', [
   '$scope', '$interval', '$state', '$stateParams', '$location', 'ShopOwners', '$ionicModal',
   function($scope, $interval, $state, $stateParams, $location, ShopOwners, $ionicModal) {
     $scope.shop = {};
+    $scope.isUpdate = false;
 
     var mock = function() {
       var basepath = 'res/shops/1/';
       return {
         id: ['1', '2', '3'].random(),
+        enabled: true,
         name: ['Bangkok Shokudo', 'Sushi Masa', 'Staw wery'].random(),
         rank: [3, 4, 5].random(),
         address: ['162', '12/3 akemai', '23 CTW '].random() + ' ' + ['Samsennai', 'sukumvit'].random() + ' ' + [
@@ -20,7 +22,8 @@ angular.module('admin').controller('ShopOwnerController', [
         catalog: ['Pet Care', 'Dessert/Bakery', 'Cinema'].random(),
         distance: ['2.4km away', '14km away', '0.4km away'].random(),
         booked: [3400, 200, 1523].random(),
-        comments: [224, 5, 11, 35].random(),
+        reviews: [224, 5, 11, 35].random(),
+        photos: [25, 18, 2, 4].random(),
         operationTime: ['TUE-SON 10am-11pm'].random(),
         image: basepath + ['main.jpg'].random(),
         detail: 'Recognised for many years as one of the best Thai Restaurants in Bangkok, Suan Kularb is not your everyday local eatery.' +
@@ -43,9 +46,25 @@ angular.module('admin').controller('ShopOwnerController', [
     };
 
     $scope.init = function() {
-      $scope.shop = mock();
+      if ($stateParams.shopId) {
+        $scope.isUpdate = true;
+        $scope.findOne();
+      } else {
+        $scope.isUpdate = false;
+        $scope.shop = mock();
+      }
     };
 
+    $scope.createOrUpdate = function(isValid) {
+      if (isValid) {
+        if ($scope.isUpdate)
+          $scope.update();
+        else
+          $scope.save(isValid);
+      } else {
+        $scope.submitted = true;
+      }
+    };
 
     // Save the new shop
     $scope.save = function(isValid) {

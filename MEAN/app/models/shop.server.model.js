@@ -49,11 +49,15 @@ var ShopSchema = new Schema({
     default: 'unknow',
     trim: true
   },
-  comments: {
+  reviews: {
     type: Number,
     default: 0
   },
   booked: {
+    type: Number,
+    default: 0
+  },
+  photos: {
     type: Number,
     default: 0
   },
