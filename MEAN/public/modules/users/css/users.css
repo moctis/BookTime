@@ -18,3 +18,12 @@
 .section-user .undecorated-link img {
 		width: 18%;
 }
+
+img.logo {
+	width:100%;
+	padding: 10px 0px;
+}
+
+.section-user .left-inner-addon input {
+	padding-left: 10px;
+}
