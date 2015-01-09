@@ -61,8 +61,7 @@ angular.module('core').controller('SidemenuController', [
         icon: 'fa-gear',
         state: 'admin.shops'
       });
-    };
-
+    }
 
     $scope.showDetail = function($index) {
       var selectedMenu = $scope.menus[$index];

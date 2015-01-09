@@ -43,8 +43,7 @@
   display: block;
   z-index: 1;
 }
-.card-shop-detail,
-.card-shop-detail div {
+.card-shop-detail, .card-shop-detail div {
   font-size: 0.8em;
   line-height: 16px;
   background-color: #ececec;
@@ -62,8 +61,7 @@
   background-color: #F47822;
   color: white;
 }
-.card-shop-service img,
-.card-shop-service img:first-child {
+.card-shop-service img, .card-shop-service img:first-child {
   width: 40px;
   height: 40px;
 }
@@ -72,8 +70,7 @@
   left: 20px;
   top: 120px;
 }
-.card-shop-service > .item.item-divider,
-.card-review > .item.item-divider {
+.card-shop-service > .item.item-divider, .card-review > .item.item-divider {
   padding: 8px;
   background-color: #F47822;
   color: white;
@@ -81,8 +78,7 @@
 .card-shop-service h2 {
   color: #F47822;
 }
-.card-shop-service .item-thumbnail-left,
-.card-shop-service .item-thumbnail-left .item-content {
+.card-shop-service .item-thumbnail-left, .card-shop-service .item-thumbnail-left .item-content {
   padding-left: 60px;
 }
 .section-shop .albums .albums-thumbnail {
@@ -169,8 +165,7 @@
     display: block;
     z-index: 1;
   }
-  .card-shop-detail,
-  .card-shop-detail div {
+  .card-shop-detail, .card-shop-detail div {
     font-size: 1em;
     line-height: 36px;
     background-color: #ececec;
@@ -188,8 +183,7 @@
     background-color: #F47822;
     color: white;
   }
-  .card-shop-service img,
-  .card-shop-service img:first-child {
+  .card-shop-service img, .card-shop-service img:first-child {
     width: 40px;
     height: 40px;
   }
@@ -198,8 +192,7 @@
     left: 20px;
     top: 120px;
   }
-  .card-shop-service > .item.item-divider,
-  .card-review > .item.item-divider {
+  .card-shop-service > .item.item-divider, .card-review > .item.item-divider {
     padding: 8px;
     background-color: #F47822;
     color: white;
@@ -207,8 +200,7 @@
   .card-shop-service h2 {
     color: #F47822;
   }
-  .card-shop-service .item-thumbnail-left,
-  .card-shop-service .item-thumbnail-left .item-content {
+  .card-shop-service .item-thumbnail-left, .card-shop-service .item-thumbnail-left .item-content {
     padding-left: 60px;
   }
   .section-shop .albums .albums-thumbnail {
@@ -246,4 +238,7 @@
     padding: 10px;
     margin: 4px;
   }
+}
+.section-shop-owner .displayed-photo img {
+  width: 100%;
 }

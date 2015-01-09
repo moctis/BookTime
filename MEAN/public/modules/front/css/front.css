@@ -1,6 +1,4 @@
-.full-height .carousel-inner,
-.full-height .carousel-inner>.item,
-.full-height .carousel-inner>.item>img {
+.full-height .carousel-inner, .full-height .carousel-inner>.item, .full-height .carousel-inner>.item>img {
   height: 100%;
 }
 /*.view-front{
@@ -42,10 +40,7 @@
   margin-right: 0;
   margin-left: 0;
 }
-.view-front .col-xs-12,
-.view-front .col-sm-12,
-.view-front .col-md-12,
-.view-front .col-lg-12 {
+.view-front .col-xs-12, .view-front .col-sm-12, .view-front .col-md-12, .view-front .col-lg-12 {
   padding-right: 0;
   padding-left: 0;
 }
@@ -63,7 +58,7 @@
 }
 .view-front .pannel-float {
   position: absolute;
-  bottom: 25%;
+  bottom: 18%;
   left: 18%;
   width: 64%;
 }
@@ -95,7 +90,7 @@ slide > img {
 }*/
 
 .view-front button.login {
-  width: 100%;
+  width: 100%;  
   background-color: #339a96;
   border: 0;
   margin: 0 0;
@@ -106,15 +101,16 @@ slide > img {
   border-radius: 3px;
 }
 .view-front button.signup {
-  width: 100%;
+  width: 100%;  
   border: 0;
   margin: 5px 0;
   color: #fff;
-  background-color: #339a96;
+  background-color: #F68420;
   padding: 10px 16px;
   font-size: 12px;
   line-height: 1.33;
   border-radius: 3px;
+
 }
 .left-inner-addon {
   position: relative;
@@ -132,21 +128,7 @@ slide > img {
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-.view-front textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+.view-front textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
   padding-top: 6px;
   height: 34px;
   color: #111;
@@ -154,6 +136,14 @@ input[type="color"] {
   font-size: 14px;
   border-radius: 3px;
 }
+
+.forgot a {
+  color: #fff;  
+  line-height: 40px;
+  text-decoration: none;
+}
+
+
 @media only screen and (min-device-width: 680px) {
   .view-front .carousel-indicators {
     top: 50px;
@@ -173,18 +163,21 @@ input[type="color"] {
     /*spacing*/
   }
   .view-front .pannel-float {
-    bottom: 15%;
-  }
+    bottom: 20%;
+  } 
   .view-front button.login {
-    border: 0;
-    margin: 0;
-    color: #fff;
-    background-color: #339a96;
     padding: 20px 40px;
     font-size: 40px;
     line-height: 1.33;
     border-radius: 10px;
   }
+  .view-front button.signup {
+    margin: 10px 0;
+    padding: 20px 40px;
+    font-size: 40px;
+    line-height: 1.33;
+    border-radius: 10px;
+  }  
   .left-inner-addon {
     position: relative;
     padding-bottom: 25px;
@@ -202,21 +195,7 @@ input[type="color"] {
     border-bottom-left-radius: 10px;
     font-size: 50px;
   }
-  .view-front textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="url"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="color"] {
+  .view-front textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
     height: 92px;
     font-size: 30px;
   }

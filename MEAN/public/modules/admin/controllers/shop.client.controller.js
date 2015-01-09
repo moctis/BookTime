@@ -12,9 +12,9 @@ angular.module('admin').controller('AdminShopController', [
         id: ['1', '2', '3'].random(),
         name: ['Bangkok Shokudo', 'Sushi Masa', 'Staw wery'].random(),
         rank: [3, 4, 5].random(),
-        address: ['162', '12/3 akemai', '23 CTW '].random() + ' '
-          + ['Samsennai', 'sukumvit'].random() + ' '  
-          + ['Phyathai','Wattna', 'Donmung'].random(),
+        address: ['162', '12/3 akemai', '23 CTW '].random() + ' ' + ['Samsennai', 'sukumvit'].random() + ' ' + [
+          'Phyathai', 'Wattna', 'Donmung'
+        ].random(),
         address2: ['Bangkok Thailand 10400'].random(),
         lastBooked: ['45min ago', '10sec ago', '10days ago'].random(),
         catalog: ['Pet Care', 'Dessert/Bakery', 'Cinema'].random(),
@@ -23,7 +23,7 @@ angular.module('admin').controller('AdminShopController', [
         comments: ['224', '5', '11', '35'].random(),
         operationTime: ['TUE-SON 10am-11pm'].random(),
         image: basepath + ['main.jpg'].random(),
-          albums: [
+        albums: [
           basepath + 'a1.jpg',
           basepath + 'a2.jpg',
           basepath + 'a3.jpg',
@@ -52,11 +52,10 @@ angular.module('admin').controller('AdminShopController', [
         }, function(error) {
           console.log('error', error.status, error.statusText);
         });
+      } else {
+        $scope.submitted = true;
       }
-      else {
-          $scope.submitted = true;
-      };
-    }
+    };
 
 
     $scope.remove = function(shop) {

@@ -1,5 +1,4 @@
- .section-food .shop,
- .section-food .shop .item-content {
+ .section-food .shop, .section-food .shop .item-content {
    padding: 0;
  }
  .section-food .shop img {

@@ -7,8 +7,7 @@
   top: 20%;
   width: 100%;
 }
-.chat-receive,
-.chat-mine {
+.chat-receive, .chat-mine {
   padding: 4px 10px;
   margin-bottom: 10px;
   border-radius: 12px;

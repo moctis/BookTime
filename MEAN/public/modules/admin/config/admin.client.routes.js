@@ -7,24 +7,24 @@ angular.module('admin').config([
 
     $stateProvider.
     state('admin', {
-      url: '/admin',
-      templateUrl: 'modules/admin/views/admin.client.view.html'
-    }).
-    state('admin.shops', {
-      url: '/shops',
-      views: {
-        'adminContent': {
-          templateUrl: 'modules/admin/views/shop-list.client.view.html'
+        url: '/admin',
+        templateUrl: 'modules/admin/views/admin.client.view.html'
+      })
+      .state('admin.shops', {
+        url: '/shops',
+        views: {
+          'adminContent': {
+            templateUrl: 'modules/admin/views/shop-list.client.view.html'
+          }
         }
-      }
-    }).
-    state('admin.shops-create', {
-      url: '/create',
-      views: {
-        'adminContent': {
-          templateUrl: 'modules/admin/views/shop-create.client.view.html'
+      })
+      .state('admin.shops-create', {
+        url: '/create',
+        views: {
+          'adminContent': {
+            templateUrl: 'modules/admin/views/shop-create.client.view.html'
+          }
         }
-      }
-    });
+      });
   }
 ]);

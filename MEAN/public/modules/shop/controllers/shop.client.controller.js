@@ -1,4 +1,3 @@
-﻿
 'use strict';
 
 angular.module('shop').controller('ShopController', [
@@ -7,6 +6,15 @@ angular.module('shop').controller('ShopController', [
 
     $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function($ionicModal) {
       $scope.modal = $ionicModal;
+    }, {
+      // Use our scope for the scope of the modal to keep it simple
+      scope: $scope,
+      // The animation we want to use for the modal entrance
+      animation: 'slide-in-up'
+    });
+
+    $ionicModal.fromTemplateUrl('modules/notifications/views/booking.client.view.html', function($ionicModal) {
+      $scope.modalBooked = $ionicModal;
     }, {
       // Use our scope for the scope of the modal to keep it simple
       scope: $scope,
@@ -49,15 +57,15 @@ angular.module('shop').controller('ShopController', [
         operationTime: ['TUE-SON 10am-11pm'].random(),
         image: basepath + ['main.jpg'].random(),
         albums: [
-        basepath + 'a1.jpg',
-        basepath + 'a2.jpg',
-        basepath + 'a3.jpg',
-        basepath + 'a4.jpg',
-        basepath + 'a5.jpg',
-        basepath + 'a6.jpg',
-        basepath + 'a7.jpg',
-        basepath + 'a8.jpg',
-        basepath + 'a9.jpg'
+          basepath + 'a1.jpg',
+          basepath + 'a2.jpg',
+          basepath + 'a3.jpg',
+          basepath + 'a4.jpg',
+          basepath + 'a5.jpg',
+          basepath + 'a6.jpg',
+          basepath + 'a7.jpg',
+          basepath + 'a8.jpg',
+          basepath + 'a9.jpg'
         ]
       };
     };
@@ -82,5 +90,10 @@ angular.module('shop').controller('ShopController', [
 
       });
     };
+
+    $scope.gotBooking = function() {
+      $scope.modalBooked.show();
+    };
+
   }
 ]);

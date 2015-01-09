@@ -26,7 +26,7 @@ angular.module('front').controller('frontController', [
     $scope.init = function() {
       if (Authentication.isSignedIn()) {
         $location.path(homeLocal);
-      };
+      }
     };
 
     $scope.signin = function() {

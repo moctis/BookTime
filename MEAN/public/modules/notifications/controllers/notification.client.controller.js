@@ -1,6 +1,5 @@
 'use strict';
 
-
 angular.module('notifications').controller('NotificationsController', [
   '$scope', '$location', '$ionicModal',
   function($scope, $location, $ionicModal) {
@@ -34,7 +33,7 @@ angular.module('notifications').controller('NotificationsController', [
     };
 
     $ionicModal.fromTemplateUrl('modules/notifications/views/booking.client.view.html', function($ionicModal) {
-      $scope.modal = $ionicModal;
+      $scope.modalMooked = $ionicModal;
     }, {
       // Use our scope for the scope of the modal to keep it simple
       scope: $scope,
@@ -44,9 +43,13 @@ angular.module('notifications').controller('NotificationsController', [
 
     $scope.viewBooking = function() {
       console.log($scope.modal);
-      $scope.modal.show();
+      $scope.modalMooked.show();
     };
 
     $scope.getData();
+
+    $scope.closeModal = function() {
+      $scope.modalMooked.close();
+    };
   }
 ]);
