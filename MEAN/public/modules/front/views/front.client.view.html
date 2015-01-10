@@ -20,7 +20,7 @@
           <button ng-click="signin()" class="login">LOG IN</button>
           <button ui-sref='signup' class="signup">SIGN UP</button>
           <div class="text-center forgot"><a href="/#!/forgot">Forgot Password?</a></div>
-          <div data-ng-if="error">{{error}}</div>
+          <div data-ng-if="error" class="text-center text-danger"><strong>{{error}}</strong></div>          
         </div>
       </form>
     </li>
