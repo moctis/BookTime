@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-<head ng-app="booktime" class="fullscreen">
+  <head ng-app="booktime" class="fullscreen">
     <title>{{title}}</title>
     <!-- General META -->
     <meta charset="utf-8">
@@ -30,16 +30,15 @@
     <link href="/modules/core/img/brand/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <!--Application CSS Files-->
     {% for cssFile in cssFiles %}
-    <link rel="stylesheet" href="{{cssFile}}">
-    {% endfor %}
+    <link rel="stylesheet" href="{{cssFile}}"> {% endfor %}
 
     <!-- HTML5 Shim -->
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-</head>
+  </head>
 
-<body class="ng-cloak mock" useragentdetect>
+  <body class="ng-cloak mock" useragentdetect>
     <!-- <section class="content">
         <section class="container">
      -->
@@ -47,20 +46,23 @@
     <!-- 	</section>
     </section>	 -->
     <!--Embedding The User Object-->
-    <script type="text/javascript">
-        var user = {{ user | json | safe }};
-    </script>
+
+    <!--script type="text/javascript">
+      var user = {
+        {
+          user | json | safe
+        }
+      };
+    </script -->
 
     <!--Application JavaScript Files-->
     {% for jsFile in jsFiles %}
     <script type="text/javascript" src="{{jsFile}}"></script>
-    {% endfor %}
-
-    {% if process.env.NODE_ENV === 'development' %}
+    {% endfor %} {% if process.env.NODE_ENV === 'development' %}
     <!--Livereload script rendered -->
     <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
 
     {% endif %}
-</body>
+  </body>
 
 </html>

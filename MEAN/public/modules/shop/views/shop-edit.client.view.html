@@ -65,7 +65,7 @@
               {{shop.catalog}}
               <i class="icon ion-ios7-arrow-right"></i>
             </a>
-            <a class="item item-input item-icon-right">
+            <a class="item item-input item-icon-right" ng-href="#!/main/tab/owner/{{shop._id}}/listservice">
               <span class="input-label">Add/Edit Services</span>
               <i class="icon ion-ios7-arrow-right"></i>
             </a>
@@ -73,7 +73,6 @@
 
         <div class="padding">
           <input type="submit" class="button button-block button-balanced" value="Save Change" />
-          </button>
         </div>
         <div class="padding" data-ng-show="isUpdate">
           <button class="button button-assertive" data-ng-click="remove(it)">

@@ -59,6 +59,16 @@ angular.module('shop').config(['$stateProvider',
       templateUrl: 'modules/shop/views/shop-edit.client.view.html'
     })
 
+    .state('main.tab.owner.listservice', {
+      url: '/:shopId/listservice',
+      templateUrl: 'modules/shop/views/shop-listservice.client.view.html'
+    })
+
+    .state('main.tab.owner.updateservice', {
+      url: '/:shopId/updateservice',
+      templateUrl: 'modules/shop/views/shop-updateservice.client.view.html'
+    })
+
     .state('main.tab.owner.image', {
       url: '/:shopId/image',
       templateUrl: 'modules/shop/views/shop-image.client.view.html'
