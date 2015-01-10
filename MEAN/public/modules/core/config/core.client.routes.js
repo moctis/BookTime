@@ -8,7 +8,14 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       Authentication.checkLoggedIn();
     };
 
-    $urlRouterProvider.otherwise('/front');
+    //$urlRouterProvider.otherwise('/front');
+
+    $urlRouterProvider
+      .when('/main', '/main/tab/home')
+      .when('/main/tab/home', '/main/tab/home/list')
+      .when('/main/tab/home/list', '/main/tab/home/list/food');
+
+
     // Core state routing
     $stateProvider.
     state('main', {

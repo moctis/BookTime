@@ -1,12 +1,12 @@
 <section data-ng-controller="ShopOwnerController" class="section-shop-owner" data-ng-init="find()">
   <ion-view title="SHOP LIST" left-buttons="leftButtons">
     <ion-nav-buttons side="right" class="bar-positive">
-      <button class="button button-clear button-booktime" ui-sref="^.edit">Create Shop</button>
+      <button class="button button-clear button-booktime" ui-sref="^.owner.edit()">Create Shop</button>
     </ion-nav-buttons>
     <ion-content class="has-tabs-top" padding="false">
       <ion-list class="list-shops">
         <ion-item class="shop item-button-right" ng-repeat="it in shops">
-          <a ui-sref="^.edit({shopId:it._id})">
+          <a ui-sref="^.owner.edit({shopId:it._id})">
             <img src="{{it.image}}">
             <div class="details">
               <span class="name">{{it.name}}

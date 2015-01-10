@@ -1,12 +1,9 @@
 'use strict';
 
 
-angular.module('admin').controller('ShopOwnerController', [
-  '$scope', '$interval', '$state', '$stateParams', '$location', 'ShopOwners', '$ionicModal',
-  function($scope, $interval, $state, $stateParams, $location, ShopOwners, $ionicModal) {
-    $scope.shop = {};
-    $scope.isUpdate = false;
-
+angular.module('settings').controller('ShopOwnerController', [
+  '$scope', '$interval', '$state', '$stateParams', '$location', 'ShopOwners', '$ionicModal', '$ionicNavBarDelegate',
+  function($scope, $interval, $state, $stateParams, $location, ShopOwners, $ionicModal, $ionicNavBarDelegate) {
     var mock = function() {
       var basepath = 'res/shops/1/';
       return {
@@ -45,7 +42,11 @@ angular.module('admin').controller('ShopOwnerController', [
       };
     };
 
+    console.log('ShopOwnerController');
     $scope.init = function() {
+      $scope.shop = {};
+      $scope.isUpdate = false;
+      console.log('ShopOwnerController.init');
       if ($stateParams.shopId) {
         $scope.isUpdate = true;
         $scope.findOne();
@@ -53,6 +54,10 @@ angular.module('admin').controller('ShopOwnerController', [
         $scope.isUpdate = false;
         $scope.shop = mock();
       }
+    };
+
+    $scope.initService = function() {
+      console.log('xxx');
     };
 
     $scope.createOrUpdate = function(isValid) {
@@ -73,7 +78,7 @@ angular.module('admin').controller('ShopOwnerController', [
         shop.$save(function(response) {
           console.log('response', response);
           //$location.path('/main/tab/owner/list');
-          $state.go('^.list');
+          $ionicNavBarDelegate.back();
 
         }, function(error) {
           console.log('error', error.status, error.statusText);
@@ -96,8 +101,7 @@ angular.module('admin').controller('ShopOwnerController', [
         console.log('removed');
       } else {
         $scope.shop.$remove(function() {
-          $state.go('^.list');
-          //navBarCtrl.back();
+          $ionicNavBarDelegate.back();
         });
       }
     };
@@ -106,7 +110,8 @@ angular.module('admin').controller('ShopOwnerController', [
       var shop = $scope.shop;
 
       shop.$update(function() {
-        $state.go('^.list');
+        $ionicNavBarDelegate.back();
+
       }, function(errorResponse) {
         $scope.error = errorResponse.data.message;
       });
@@ -136,6 +141,11 @@ angular.module('admin').controller('ShopOwnerController', [
       $scope.modal.hide();
     };
 
+    $scope.myGoBack = function() {
+      //$ionicNavBarDelegate.back();
+      console.log('goback');
+    };
+
     $scope.editImage = function() {
       //$scope.modal.show();
       console.log('edit Image');
@@ -160,6 +170,28 @@ angular.module('admin').controller('ShopOwnerController', [
         // error
       });
     };
+
+
+    $scope.editService = function() {
+      $ionicModal.fromTemplateUrl('modules/settings/views/shopOwner-service-edit.client.view.html', function(
+        $ionicModal) {
+        $scope.modal = $ionicModal;
+        $scope.modal.show();
+      }, {
+        // Use our scope for the scope of the modal to keep it simple
+        scope: $scope,
+        // The animation we want to use for the modal entrance
+        animation: 'slide-in-up'
+      });
+    };
+    $scope.closeService = function() {
+      $scope.modal.hide();
+    };
+
+    $scope.createOrUpdateService = function() {
+      $scope.modal.hide();
+    };
+
 
   }
 ]);

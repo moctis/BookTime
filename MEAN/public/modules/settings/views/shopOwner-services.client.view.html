@@ -1,18 +1,18 @@
-<section data-ng-controller="ShopOwnerController" class="section-shop-owner" data-ng-init="init()">
-  <ion-view title="Service" left-buttons="leftButtons">
+<section class="section-shop-owner">
+  <ion-view title="Service">
     <ion-content class="has-tabs-top" padding="false">
       <form name="createForm" class="form-horizontal" role="form" data-ng-submit="createOrUpdate(createForm.$valid)">
         <div class="list">
           <div class="item item-input padding">
-            <input type="submit" class="button button-block button-assertive" value="+ Add new service" />
+            <button type="submit" class="button button-block button-assertive" data-ng-click="editService()">
+              + Add new service</button>
           </div>
-
-          <a class="item item-input item-icon-right">
+          <a class="item item-input item-icon-right" data-ng-click="editService('xx')">
             <span class="input-label">Get free drink</span>
             Available mon-fri until
             <i class="icon ion-ios7-arrow-right"></i>
           </a>
-          <a class="item item-input item-icon-right">
+          <a class="item item-input item-icon-right" data-ng-click="editService('xx')">
             <span class="input-label">Come 4 pay 3 all</span>
             Get free 1 drink for ev
             <i class="icon ion-ios7-arrow-right"></i>
