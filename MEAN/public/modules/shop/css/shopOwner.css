@@ -1,0 +1,24 @@
+.section-shop-owner .shop, .section-shop-owner .shop .item-content {
+  padding: 0;
+}
+.section-shop-owner .displayed-photo img {
+  width: 100%;
+}
+.section-shop-owner .shop img {
+  width: 64px;
+  height: 58px;
+  display: block;
+  margin: 12px;
+  float: left;
+}
+.section-shop-owner .shop .booked {
+  display: block;
+  position: relative;
+  float: right;
+  top: 0;
+}
+.section-shop-owner .shop .catalog {
+  display: block;
+  font-size: 12px;
+  line-height: 12px;
+}

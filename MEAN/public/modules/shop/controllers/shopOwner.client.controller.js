@@ -115,7 +115,15 @@ angular.module('admin').controller('ShopOwnerController', [
 
     // Find all shops
     $scope.find = function() {
-      $scope.shops = ShopOwners.query();
+      ShopOwners.query(function(items) {
+        $scope.shops = items;
+
+        angular.forEach(items, function(item) {
+          var moc = mock();
+          item._id = item._id || moc.id;
+          item.image = item.image || moc.image;
+        });
+      });
     };
 
     $scope.findOne = function() {
