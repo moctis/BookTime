@@ -1,5 +1,6 @@
 .section-service .shop, .section-service .shop .item-content {
   padding: 0;
+  padding-bottom: 7px;
 }
 .section-service .shop img {
   width: 64px;
@@ -16,31 +17,66 @@
 }
 .section-service .shop .name {
   font-size: 16px;
-  line-height: 16px;
+  line-height: 20px;
+  font-weight: bold;
 }
 .section-service .shop .rank {
   display: block;
   font-size: 10px;
-  line-height: 10px;
+  line-height: 12px;
 }
 .section-service .shop .catalog {
   display: block;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 15px;
 }
 .section-service .shop .distance {
   display: block;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 15px;
+  color: #808080;
 }
 .section-service .shop .booked {
   display: block;
   position: relative;
   float: right;
   top: 0;
+  text-align: right;
 }
 .section-service .shop .booked-comments {
   display: block;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 15px;
+  color: #696969;  
+}
+
+@media only screen and (min-device-width: 680px) {
+  .section-service .shop, .section-service .shop .item-content {    
+    padding-bottom: 20px;
+  }  
+  .section-service .shop img {
+    width: 160px;
+    height: 145px;
+    margin: 25px;
+  }
+  .section-service .shop .name {
+    font-size: 36px;
+    line-height: 38px;
+  }
+  .section-service .shop .rank {    
+    font-size: 30px;
+    line-height: 32px;
+  }
+  .section-service .shop .catalog {
+    font-size: 32px;
+    line-height: 34px;
+  }  
+  .section-service .shop .distance {    
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .section-service .shop .booked-comments {
+    font-size: 32px;
+    line-height: 34px;
+  }  
 }
