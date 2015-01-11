@@ -22,3 +22,11 @@
   font-size: 12px;
   line-height: 12px;
 }
+.section-shop-owner .servicePhoto {
+  float: right;
+}
+.section-shop-owner .servicePhoto img {
+  /* width: 50%; */
+  
+  height: 120px;
+}
