@@ -14,7 +14,7 @@
           <img src="res/shops/1/main.jpg">
         </div>
         <div class="col-75 details">
-          <span class="row name">{{it.name}}xxxxx</span>
+          <span class="row name">{{it.name}}</span>
           <span class="row address">{{it.address}}</span>
           <span class="row address">{{it.address2}}</span>
           <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
@@ -23,10 +23,9 @@
       </div>
       <div class="row booking">
         <div class="col-90">
-
           <div class="row">
             <div class="col font-size-130per">
-              Booking Status <i class="icon booktime-pending"></i>
+              Booking Status <i class="icon booktime-{{booking.status}}"></i>
             </div>
           </div>
           <div class="row">
@@ -36,12 +35,12 @@
           </div>
           <div class="row">
             <div class="col font-size-130per">
-              Friday 13 June 2014
+              {{booking.bookDateTime | amDateFormat:'dddd, D MMMM YYYY'}}
             </div>
           </div>
           <div class="row">
             <div class="col">
-              5 people at 8.00pm (Restaurant)
+              {{booking.person}} people at {{booking.bookDateTime | amDateFormat:'h:mm a'}} ({{booking.shop.catalog}})
             </div>
           </div>
           <div class="row">
@@ -51,20 +50,16 @@
           </div>
           <div class="row">
             <div class="col">
-              VIP room
+              {{booking.comment}}
             </div>
           </div>
           <div class="row">
-            <div class="col col-center">
+            <div class="col text-center">
               <button class="button button-icon button-small booktime-close" ng-click="closeBooked()"></button>
             </div>
           </div>
         </div>
       </div>
-      <!--<div class="bar bar-footer">
-                <button class="button button-icon button-small booktime-close" ng-click="closeModal()"></button>
-            </div>-->
     </ion-content>
   </ion-modal-view>
-
 </section>

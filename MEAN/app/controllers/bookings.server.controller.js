@@ -73,15 +73,20 @@ exports.delete = function(req, res) {
  * List of Bookings
  */
 exports.list = function(req, res) {
-  Booking.find().sort('-created').populate('owner', 'displayName').exec(function(err, bookings) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.jsonp(bookings);
-    }
-  });
+  Booking
+    .find()
+    .sort('-created')
+    .populate('owner', 'displayName')
+    .populate('shop')
+    .exec(function(err, bookings) {
+      if (err) {
+        return res.status(400).send({
+          message: errorHandler.getErrorMessage(err)
+        });
+      } else {
+        res.jsonp(bookings);
+      }
+    });
 };
 
 /**

@@ -17,8 +17,6 @@ angular.module('home').controller('ServicesController', ['$scope', 'ShopsApi',
           item.booked = item.booked || moc.booked;
           item.image = item.image || moc.image;
           item.distance = item.distance || moc.distance;
-
-
         });
       });
     };

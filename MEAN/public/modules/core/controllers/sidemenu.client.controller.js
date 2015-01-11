@@ -22,7 +22,7 @@ angular.module('core').controller('SidemenuController', [
       }, {
         label: 'MY BOOKING',
         icon: 'fa-gear',
-        page: 'modules/home/views/home.client.view.html'
+        state: 'main.tab.notifications.myBookings'
       }, {
         label: 'SCHEDULE',
         icon: 'fa-calendar',

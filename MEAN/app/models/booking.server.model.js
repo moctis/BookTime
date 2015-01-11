@@ -14,7 +14,7 @@ var BookingSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  shopId: {
+  shop: {
     type: Schema.ObjectId,
     ref: 'Shop'
   },

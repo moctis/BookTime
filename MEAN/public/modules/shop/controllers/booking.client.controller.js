@@ -57,7 +57,7 @@ angular.module('shop').controller('BookingController', [
     $scope.doBooking = function(isValid) {
       if (isValid) {
         var booking = new Bookings();
-        booking.shopId = $scope.it._id;
+        booking.shop = $scope.it._id;
         booking.bookDateTime = moment()
           .startOf('day')
           .add($scope.booking.date, 'days')

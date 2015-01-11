@@ -8,7 +8,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
       Authentication.checkLoggedIn();
     };
 
-    //$urlRouterProvider.otherwise('/front');
+    $urlRouterProvider.otherwise('/front');
 
     $urlRouterProvider
       .when('/main', '/main/tab/home')

@@ -33,6 +33,5 @@ angular.module('shop').config(['$stateProvider',
         }
       }
     });
-
   }
 ]);
