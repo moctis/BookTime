@@ -24,8 +24,23 @@ var BookingSchema = new Schema({
   },
   status: {
     type: String,
-    default: 'PENDING'
-  }
+    default: 'pending'
+  },
+  bookDateTime: {
+    type: Date,
+    default: Date.now
+  },
+  person: {
+    type: Number,
+    default: 0
+  },
+  comment: {
+    type: String,
+    default: '(none)'
+  },
+  promotion: {
+    type: String
+  },
 });
 
 mongoose.model('Booking', BookingSchema);

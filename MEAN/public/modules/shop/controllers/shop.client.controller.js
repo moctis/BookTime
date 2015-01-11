@@ -13,7 +13,7 @@ angular.module('shop').controller('ShopController', [
       animation: 'slide-in-up'
     });
 
-    $ionicModal.fromTemplateUrl('modules/notifications/views/booking.client.view.html', function($ionicModal) {
+    $ionicModal.fromTemplateUrl('modules/shop/views/booked.client.view.html', function($ionicModal) {
       $scope.modalBooked = $ionicModal;
     }, {
       // Use our scope for the scope of the modal to keep it simple
@@ -35,6 +35,9 @@ angular.module('shop').controller('ShopController', [
       $scope.modal.hide();
     };
 
+    $scope.closeBooked = function() {
+      $scope.modalBooked.hide();
+    };
 
     $scope.getDirection = function() {
       alert('Get Direction');
@@ -91,7 +94,8 @@ angular.module('shop').controller('ShopController', [
       });
     };
 
-    $scope.gotBooking = function() {
+    $scope.gotBooking = function(booking) {
+      $scope.booking = booking;
       $scope.modalBooked.show();
     };
 

@@ -1,49 +1,68 @@
-<section data-ng-controller="BookingController" class="section-booked" data-ng-init="init()">
-  <form name="createForm" class="form-horizontal" role="form">
-    <ion-modal-view>
-      <ion-header-bar class="background-orange">
-        <h1 class="title">BOOKING</h1>
-        <div class="buttons">
-          <div class="button button-clear" ng-click="closeBooked(createForm.$valid)">
-            <span class="icon ion-close"></span>
-          </div>
+<section data-ng-controller="BookedController" class="section-booking">
+  <ion-modal-view>
+    <ion-header-bar class="background-orange">
+      <h1 class="title">BOOKING</h1>
+      <div class="buttons">
+        <div class="button button-clear" ng-click="closeBooked()">
+          <span class="icon ion-close"></span>
         </div>
-      </ion-header-bar>
-      <ion-content has-header="false" padding="true">
-        <div class="row ">
-          <div class="col">
-            <h4>BOKING REQUEST SENT</h4>
-            <p class="booked-description">
-              Thank you, but they have to confirm your request first. We will send you details in message and email as soon as confirmed
-              your booking.
-            </p>
-          </div>
+      </div>
+    </ion-header-bar>
+    <ion-content has-header="false" padding="true">
+      <div class="row ">
+        <div class="col-25">
+          <img src="res/shops/1/main.jpg">
         </div>
-        <div class="card card-shop-service">
-          <div class="item item-divider">
-            OUR SERVICES
-            <br> Select form our services below
-          </div>
-          <div class="item item-text-wrap">
-
-            <div class="col-75 details">
-              <span class="row name">{{it.name}}</span>
-              <span class="row address">{{it.address}}</span>
-              <span class="row address">{{it.address2}}</span>
-              <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
-              <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
+        <div class="col-75 details">
+          <span class="row name">{{it.name}}</span>
+          <span class="row address">{{it.address}}</span>
+          <span class="row address">{{it.address2}}</span>
+          <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
+          <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
+        </div>
+      </div>
+      <div class="row booking">
+        <div class="col-90">
+          <div class="row">
+            <div class="col font-size-130per">
+              Booking Status <i class="icon booktime-{{booking.status}}"></i>
             </div>
-
+          </div>
+          <div class="row">
+            <div class="col font-size-130per">
+              Your Booking Details
+            </div>
+          </div>
+          <div class="row">
+            <div class="col font-size-130per">
+              {{booking.bookDateTime | amDateFormat:'dddd, D MMMM YYYY'}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              {{booking.person}} people at {{booking.bookDateTime | amDateFormat:'h:mm a'}} (Restaurant)
+            </div>
+          </div>
+          <div class="row">
+            <div class="col font-size-130per">
+              Additional Requests:
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              {{booking.comment}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <button class="button button-icon button-small booktime-close" ng-click="closeBooked()"></button>
+            </div>
           </div>
         </div>
-      </ion-content>
-      <ion-footer-bar class="bar col">
-        <div class="text-center">
-          <button class="button button-icon button-small booktime-button-bookme2" ng-click="closeBooked(createForm.$valid)">
-
-          </button>
-        </div>
-      </ion-footer-bar>
-    </ion-modal-view>
-  </form>
+      </div>
+      <!--<div class="bar bar-footer">
+      <button class="button button-icon button-small booktime-close" ng-click="closeModal()"></button>
+    </div>-->
+    </ion-content>
+  </ion-modal-view>
 </section>

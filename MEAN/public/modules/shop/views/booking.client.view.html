@@ -44,17 +44,15 @@
                 </select>
               </label>
             </div>
-
             <div class="row deal ">
               <div class="col">
                 <div class="card card-deal">
                   <div class="item item-divider background-orange">
-                    HOT DEAL - COME 4 PAY 3 all you can eat at only 799bath
+                    {{booking.promotion}}
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="row comment">
               <div class="col">
                 <div class="row">
@@ -64,7 +62,7 @@
                   <textarea cols="40" rows="8" data-ng-model="booking.comment"></textarea>
                 </div>
                 <div class="row">
-                  <span>Remaining characters: {{140-booking.comment.length}}</span>
+                  <span>Remaining characters: {{200-booking.comment.length}}</span>
                 </div>
               </div>
             </div>
@@ -79,14 +77,11 @@
             <br/>
           </div>
         </div>
-
         </div>
-
       </ion-content>
       <ion-footer-bar class="bar col">
         <div class="text-center">
           <button class="button button-icon button-small booktime-button-bookme2" ng-click="doBooking(createForm.$valid)">
-
           </button>
         </div>
       </ion-footer-bar>
