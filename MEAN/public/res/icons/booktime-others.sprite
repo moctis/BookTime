@@ -25,6 +25,8 @@
   <!--The order of the <file> elements determines the order of the images in the sprite.-->
   <files>
     <file>booktime-shop-bg-left.png</file>
-    <file>booktime-shop-bg-right.png</file> 
+    <file>booktime-shop-bg-right.png</file>
+    <file>icons/booktime-button-submit.png</file>
+    <file>icons/booktime-button-addnewphoto.png</file>    
   </files>
 </sprite>

@@ -13,6 +13,20 @@
       "height": 106,
       "offsetX": 9,
       "offsetY": 0
+    },
+    {
+      "name": "/res/icons/icons/booktime-button-submit.png",
+      "width": 193,
+      "height": 57,
+      "offsetX": 226,
+      "offsetY": 0
+    },
+    {
+      "name": "/res/icons/icons/booktime-button-addnewphoto.png",
+      "width": 208,
+      "height": 208,
+      "offsetX": 419,
+      "offsetY": 0
     }
   ]
 }

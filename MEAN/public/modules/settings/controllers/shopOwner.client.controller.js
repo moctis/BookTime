@@ -4,6 +4,20 @@
 angular.module('settings').controller('ShopOwnerController', [
   '$scope', '$interval', '$state', '$stateParams', '$location', 'ShopOwners', '$ionicModal', '$ionicNavBarDelegate',
   function($scope, $interval, $state, $stateParams, $location, ShopOwners, $ionicModal, $ionicNavBarDelegate) {
+
+    var mocService = function() {
+      return {
+        id: ['1', '2', '3'].random(),
+        title: ['COME 4 PAY 3 all you can eat menu at only 799 baht', 'GET FREE DRINK every Mon-Thu'].random(),
+        detail: [
+          'Available Mon-Fri until 15th August 2014, subject to availability. Dishes from a set menu and subject to change.' +
+          'Includes VAT, excludes service.',
+          'Get free 1 drink for every 500 baht order. Available Mon-Thu from 2pm to 5pm until 15 th August 2014,' +
+          'subject to availability. Dishes from a set menu and subject to change. Includes VAT, excludes service.'
+        ].random(),
+      };
+    };
+
     var mock = function() {
       var basepath = 'res/shops/1/';
       return {
@@ -38,13 +52,15 @@ angular.module('settings').controller('ShopOwnerController', [
           basepath + 'a7.jpg',
           basepath + 'a8.jpg',
           basepath + 'a9.jpg'
-        ]
+        ],
+        services: [mocService(), mocService(), mocService()]
       };
     };
 
     console.log('ShopOwnerController');
     $scope.init = function() {
       $scope.shop = {};
+      $scope.currentService = {};
       $scope.isUpdate = false;
       console.log('ShopOwnerController.init');
       if ($stateParams.shopId) {
@@ -132,8 +148,12 @@ angular.module('settings').controller('ShopOwnerController', [
     };
 
     $scope.findOne = function() {
-      $scope.shop = ShopOwners.get({
+      ShopOwners.get({
         shopId: $stateParams.shopId
+      }, function(shop) {
+        var moc = mock();
+        $scope.shop = shop;
+        $scope.shop.services = $scope.shop.services || moc.services;
       });
     };
 
@@ -172,7 +192,14 @@ angular.module('settings').controller('ShopOwnerController', [
     };
 
 
-    $scope.editService = function() {
+    $scope.editService = function(service) {
+      if (service === undefined) {
+        service = mocService();
+        $scope.shop.services.push(service);
+      }
+      $scope.currentService = service;
+
+
       $ionicModal.fromTemplateUrl('modules/settings/views/shopOwner-service-edit.client.view.html', function(
         $ionicModal) {
         $scope.modal = $ionicModal;
@@ -184,6 +211,13 @@ angular.module('settings').controller('ShopOwnerController', [
         animation: 'slide-in-up'
       });
     };
+
+    $scope.removeService = function() {
+      var idx = $scope.shop.services.indexOf($scope.currentService);
+      $scope.shop.services.splice(idx, 1);
+      $scope.modal.hide();
+    };
+
     $scope.closeService = function() {
       $scope.modal.hide();
     };
@@ -191,7 +225,5 @@ angular.module('settings').controller('ShopOwnerController', [
     $scope.createOrUpdateService = function() {
       $scope.modal.hide();
     };
-
-
   }
 ]);

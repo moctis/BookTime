@@ -7,14 +7,8 @@
             <button type="submit" class="button button-block button-assertive" data-ng-click="editService()">
               + Add new service</button>
           </div>
-          <a class="item item-input item-icon-right" data-ng-click="editService('xx')">
-            <span class="input-label">Get free drink</span>
-            Available mon-fri until
-            <i class="icon ion-ios7-arrow-right"></i>
-          </a>
-          <a class="item item-input item-icon-right" data-ng-click="editService('xx')">
-            <span class="input-label">Come 4 pay 3 all</span>
-            Get free 1 drink for ev
+          <a class="item item-input item-icon-right" data-ng-repeat="it2 in shop.services" data-ng-click="editService(it2)">
+            <span class="input-label">{{it2.title}}</span>
             <i class="icon ion-ios7-arrow-right"></i>
           </a>
         </div>

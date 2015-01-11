@@ -13,11 +13,11 @@
         <div class="list">
           <label class="item item-input item-stacked-label">
             <span class="input-label">Title</span>
-            <input type="text" placeholder="Come 4 PAY 3" />
+            <input type="text" data-ng-model="currentService.title" />
           </label>
           <label class="item item-input item-stacked-label">
             <span class="input-label">Service Details</span>
-            <textarea data-ng-model="shop.detail" rows="8"></textarea>
+            <textarea data-ng-model="shop.detail" rows="8" data-ng-mode="currentService.detail"></textarea>
           </label>
           <label class="item item-input item-stacked-label">
             <span class="input-label">Service/Promotion period</span>
@@ -26,8 +26,11 @@
         </div>
       </ion-content>
       <ion-footer-bar class="bar col">
-        <div class="padding">
-          <input type="submit" class="button button-block button-balanced" value="Save Change" />
+        <div class="text-center">
+          <button button class="button button-icon button-small booktime-button-submit"></button>
+          <button class="button button-assertive pull-right" data-ng-click="removeService()">
+            <i class="icon ion-trash-a"></i>
+          </button>
         </div>
       </ion-footer-bar>
     </ion-modal-view>

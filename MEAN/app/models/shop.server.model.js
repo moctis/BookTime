@@ -64,7 +64,11 @@ var ShopSchema = new Schema({
   rank: {
     type: Number,
     default: 0
-  }
+  },
+  services: [{
+    title: String,
+    detail: String
+  }]
 });
 
 mongoose.model('Shop', ShopSchema);
