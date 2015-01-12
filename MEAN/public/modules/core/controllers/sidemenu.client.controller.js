@@ -28,8 +28,8 @@ angular.module('core').controller('SidemenuController', [
         icon: 'fa-calendar',
         state: 'main.tab.schedule'
       }, {
-        label: 'CHAT',
-        icon: 'fa-comments',
+        label: 'BOOKTIME',
+        icon: 'fa-clock-o',
         state: 'main.tab.chat'
       }, {
         label: 'NOTIFICATIONS',
