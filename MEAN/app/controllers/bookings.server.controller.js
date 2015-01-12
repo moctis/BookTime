@@ -6,6 +6,7 @@
 var mongoose = require('mongoose'),
   errorHandler = require('./errors'),
   Booking = mongoose.model('Booking'),
+  Shop = mongoose.model('Shop'),
   _ = require('lodash');
 
 /**
@@ -69,24 +70,37 @@ exports.delete = function(req, res) {
   });
 };
 
+
 /**
  * List of Bookings
  */
 exports.list = function(req, res) {
-  Booking
-    .find()
-    .sort('-created')
-    .populate('owner', 'displayName')
-    .populate('shop')
-    .exec(function(err, bookings) {
-      if (err) {
-        return res.status(400).send({
-          message: errorHandler.getErrorMessage(err)
-        });
-      } else {
-        res.jsonp(bookings);
-      }
-    });
+  Shop.findShopIdByShopOwner(req.user._id, function(err, shopIds) {
+    // list booking by Shop Owner or  booker 
+
+    Booking
+      .find({
+        $or: [{
+          owner: req.user._id
+        }, {
+          shop: {
+            $in: shopIds
+          }
+        }]
+      })
+      .populate('owner', '_id,displayName')
+      .populate('shop')
+      .sort('-created')
+      .exec(function(err, bookings) {
+        if (err) {
+          return res.status(400).send({
+            message: errorHandler.getErrorMessage(err)
+          });
+        } else {
+          res.jsonp(bookings);
+        }
+      });
+  });
 };
 
 /**

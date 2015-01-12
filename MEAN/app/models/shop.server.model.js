@@ -71,4 +71,13 @@ var ShopSchema = new Schema({
   }]
 });
 
+
+ShopSchema.statics.findShopIdByShopOwner = function(id, cb) {
+  this.find({
+      owner: id
+    }, '_id')
+    .exec(cb);
+};
+
+
 mongoose.model('Shop', ShopSchema);
