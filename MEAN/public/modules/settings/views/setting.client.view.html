@@ -3,31 +3,31 @@
     <ion-nav-buttons side="right" class="bar-positive"> <a class="button button-clear button-booktime" href="#!/main/tab/home/food">Close</a> </ion-nav-buttons>
     <ion-content class="has-tabs-top" padding="false">
       <ion-list show-delete="shouldShowDelete">
-        <div class="item item-icon-right" href="#">
+        <ion-item class="item-icon-right" href="#">
           Booker Profile
           <i class="icon ion-ios7-arrow-right"></i>
-        </div>
-        <div class="item item-icon-right" ui-sref="^.owners">
+        </ion-item>
+        <ion-item class="item-icon-right" ui-sref="^.owners">
           Shop owner Profile
           <i class="icon ion-ios7-arrow-right"></i>
-        </div>
-        <div class="item item-divider"></div>
+        </ion-item>
+        <ion-item class="item-divider"></ion-item>
         <ion-toggle ng-model="userSetting.notificationsEnabled" toggle-class="toggle-balanced">
           Notificaions
         </ion-toggle>
-        <div class="item item-icon-right" ui-sref="^.privacy">
+        <ion-item class="item-icon-right" ui-sref="^.privacy">
           Privacy
           <i class="icon ion-ios7-arrow-right"></i>
-        </div>
-        <div class="item item-divider"></div>
-        <div class="item item-icon-right" ui-sref="^.help">
+        </ion-item>
+        <ion-item class="item-divider"></ion-item>
+        <ion-item class="item-icon-right" ui-sref="^.help">
           Help
           <i class="icon ion-ios7-arrow-right"></i>
-        </div>
-        <div class="item item-icon-right" ui-sref="^.about">
+        </ion-item>
+        <ion-item class="item-icon-right" ui-sref="^.about">
           About BOOKTIME
           <i class="icon ion-ios7-arrow-right"></i>
-        </div>
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-view>
