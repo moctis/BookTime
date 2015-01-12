@@ -56,7 +56,24 @@ angular.module('settings').config([
     .state('main.tab.owner.edit.image', {
       url: '/image',
       templateUrl: 'modules/settings/views/shop-image.client.view.html'
-    });
+    })
+
+    .state('main.tab.settings.privacy', {
+      url: '/privacy',
+      templateUrl: 'modules/settings/views/privacy.client.view.html'
+    })
+
+    .state('main.tab.settings.help', {
+      url: '/help',
+      templateUrl: 'modules/settings/views/help.client.view.html'
+    })
+
+    .state('main.tab.settings.about', {
+      url: '/about',
+      templateUrl: 'modules/settings/views/about.client.view.html'
+    })
+
+    ;
 
   }
 ]);
