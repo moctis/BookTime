@@ -9,7 +9,7 @@ angular.module('home').controller('FoodController', ['$scope', 'ShopsApi',
         terms: 'food'
       }, function(items) {
         $scope.items = items;
-        $scope.mocData($scope.items);
+        // $scope.mocData($scope.items);
 
         angular.forEach(items, function(item) {
           var moc = $scope.mock();

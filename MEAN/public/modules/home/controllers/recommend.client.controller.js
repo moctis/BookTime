@@ -9,7 +9,7 @@ angular.module('home').controller('RecommendController', ['$scope', 'ShopsApi',
         terms: 'hilight'
       }, function(items) {
         $scope.items = items;
-        $scope.mocData($scope.items);
+        // scope.mocData($scope.items);
 
         angular.forEach(items, function(item) {
           var moc = $scope.mock();
