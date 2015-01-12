@@ -61,7 +61,7 @@ var ShopSchema = new Schema({
     type: Number,
     default: 0
   },
-  rank: {
+  loves: {
     type: Number,
     default: 0
   },

@@ -20,7 +20,7 @@
   line-height: 20px;
   font-weight: bold;
 }
-.section-service .shop .rank {
+.section-service .shop .loves {
   display: block;
   font-size: 10px;
   line-height: 12px;
@@ -47,13 +47,12 @@
   display: block;
   font-size: 12px;
   line-height: 15px;
-  color: #696969;  
+  color: #696969;
 }
-
 @media only screen and (min-device-width: 680px) {
-  .section-service .shop, .section-service .shop .item-content {    
+  .section-service .shop, .section-service .shop .item-content {
     padding-bottom: 20px;
-  }  
+  }
   .section-service .shop img {
     width: 160px;
     height: 145px;
@@ -63,20 +62,20 @@
     font-size: 36px;
     line-height: 38px;
   }
-  .section-service .shop .rank {    
+  .section-service .shop .rank {
     font-size: 30px;
     line-height: 32px;
   }
   .section-service .shop .catalog {
     font-size: 32px;
     line-height: 34px;
-  }  
-  .section-service .shop .distance {    
+  }
+  .section-service .shop .distance {
     font-size: 32px;
     line-height: 34px;
   }
   .section-service .shop .booked-comments {
     font-size: 32px;
     line-height: 34px;
-  }  
+  }
 }

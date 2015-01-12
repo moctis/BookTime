@@ -24,7 +24,7 @@ angular.module('settings').controller('ShopOwnerController', [
         id: ['1', '2', '3'].random(),
         enabled: true,
         name: ['Bangkok Shokudo', 'Sushi Masa', 'Staw wery'].random(),
-        rank: [3, 4, 5].random(),
+        loves: [358, 4568, 5006].random(),
         address: ['162', '12/3 akemai', '23 CTW '].random() + ' ' + ['Samsennai', 'sukumvit'].random() + ' ' + [
           'Phyathai', 'Wattna', 'Donmung'
         ].random(),

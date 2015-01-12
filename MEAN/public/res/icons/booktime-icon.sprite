@@ -29,7 +29,7 @@
     <file>booktime-icon-operationtime.png</file>
     <file>booktime-service-uncheck.png</file>
     <file>booktime-service-check.png</file>
-    <file>booktime-service-check.png</file>
-
+    <file>booktime-icon-heart-love.png</file>
+    <file>booktime-icon-heart-notlove.png</file>
   </files>
 </sprite>

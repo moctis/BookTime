@@ -31,3 +31,15 @@
 	height: 48px;
 	background: url('booktime-icon.png') -156px 0;
 }
+@mixin sprite-booktime-icon-heart-love() {
+/* You may have to set 'display: block' */
+	width: 32px;
+	height: 32px;
+	background: url('booktime-icon.png') -204px 0;
+}
+@mixin sprite-booktime-icon-heart-notlove() {
+/* You may have to set 'display: block' */
+	width: 32px;
+	height: 32px;
+	background: url('booktime-icon.png') -236px 0;
+}
