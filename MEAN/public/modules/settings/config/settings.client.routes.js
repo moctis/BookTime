@@ -18,14 +18,20 @@ angular.module('settings').config([
       .state('main.tab.settings.menu', {
         url: '',
         templateUrl: 'modules/settings/views/setting.client.view.html'
-      });
+      })
+
+    // Booker Profile
+    .state('main.tab.settings.bookerProfile', {
+      url: '/bookerProfile',
+      templateUrl: 'modules/settings/views/bookerProfile.client.view.html'
+    })
+
 
     // Shop Owner
-    $stateProvider
-      .state('main.tab.settings.owners', {
-        url: '/owners',
-        templateUrl: 'modules/settings/views/shopOwners.client.view.html'
-      })
+    .state('main.tab.settings.owners', {
+      url: '/owners',
+      templateUrl: 'modules/settings/views/shopOwners.client.view.html'
+    })
 
     .state('main.tab.settings.owner', {
       url: '/owners/:shopId',
@@ -46,7 +52,6 @@ angular.module('settings').config([
       url: '/services/:serviceId',
       templateUrl: 'modules/settings/views/shopOwner-service-edit.client.view.html'
     })
-
 
     .state('main.tab.settings.shopOwner.localtion', {
       url: '/localtion',
