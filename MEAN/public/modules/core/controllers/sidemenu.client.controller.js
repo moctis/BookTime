@@ -19,11 +19,11 @@ angular.module('core').controller('SidemenuController', [
         label: 'SEARCH',
         icon: 'fa-search',
         page: 'modules/home/views/home.client.view.html'
-      }, {
+      },/* {
         label: 'MY BOOKING',
         icon: 'fa-gear',
         state: 'main.tab.notifications.myBookings'
-      }, {
+      },*/ {
         label: 'SCHEDULE',
         icon: 'fa-calendar',
         state: 'main.tab.schedule'
@@ -34,7 +34,7 @@ angular.module('core').controller('SidemenuController', [
       }, {
         label: 'NOTIFICATIONS',
         icon: 'fa-exclamation-circle',
-        state: 'main.tab.notifications'
+        state: 'main.tab.notifications.list'
       }, {
         label: 'MY FAVORITES',
         icon: 'fa-star-o',
@@ -42,7 +42,7 @@ angular.module('core').controller('SidemenuController', [
       }, {
         label: 'SETTINGS',
         icon: 'fa-gear',
-        state: 'main.tab.settings'
+        state: 'main.tab.settings.menu'
       },
       /*{ label: 'ABOUT BOOKTIME', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-about' },*/
       {
