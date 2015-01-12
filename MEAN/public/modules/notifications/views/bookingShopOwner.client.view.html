@@ -47,20 +47,25 @@
               {{booking.comment}}
             </div>
           </div>
-          <div class="row statusCommand">
-            <div class="col-50 text-center">
-              <button class="button button-icon booktime-accept"></button>
-            </div>
-            <div class="col-50 text-center">
-              <button class="button button-icon booktime-decline"></button>
+          <div class="row">
+            <div class="col font-size-130per">
+              Booking Status <i class="icon booktime-{{booking.status}}"></i>
             </div>
           </div>
           <div class="row statusCommand">
             <div class="col-50 text-center">
-              <button class="button button-icon booktime-waitingqueue"></button>
+              <button class="button button-icon booktime-accept" data-ng-show="showCommand('accept')" data-ng-click="command('confirm')"></button>
             </div>
             <div class="col-50 text-center">
-              <button class="button button-icon booktime-viewcalendar"></button>
+              <button class="button button-icon booktime-decline" data-ng-show="showCommand('decline')" data-ng-click="command('declined')"></button>
+            </div>
+          </div>
+          <div class="row statusCommand">
+            <div class="col-50 text-center">
+              <button class="button button-icon booktime-waitingqueue" data-ng-show="showCommand('waitingqueue')" data-ng-click="command('waitingqueue')"></button>
+            </div>
+            <div class="col-50 text-center">
+              <button class="button button-icon booktime-viewcalendar" data-ng-show="showCommand('viewcalendar')"></button>
             </div>
           </div>
           <div class="row">

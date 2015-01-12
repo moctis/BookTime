@@ -88,7 +88,7 @@ exports.list = function(req, res) {
           }
         }]
       })
-      .populate('owner', '_id displayName')
+      .populate('owner', 'displayName')
       .populate('shop')
       .sort('-created')
       .exec(function(err, bookings) {
@@ -107,19 +107,23 @@ exports.list = function(req, res) {
  * Booking middleware
  */
 exports.bookingByID = function(req, res, next, id) {
-  Booking.findById(id).populate('owner', 'displayName').exec(function(err, booking) {
-    if (err) return next(err);
-    if (!booking) return next(new Error('Failed to load booking ' + id));
-    req.booking = booking;
-    next();
-  });
+  Booking
+    .findById(id)
+    .populate('owner', 'displayName')
+    .populate('shop', 'owner')
+    .exec(function(err, booking) {
+      if (err) return next(err);
+      if (!booking) return next(new Error('Failed to load booking ' + id));
+      req.booking = booking;
+      next();
+    });
 };
 
 /**
  * Booking authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
-  if (req.booking.owner.id !== req.user.id) {
+  if (!req.booking.owner._id.equals(req.user._id) && !req.booking.shop.owner.equals(req.user._id)) {
     return res.status(403).send({
       message: 'User is not authorized'
     });

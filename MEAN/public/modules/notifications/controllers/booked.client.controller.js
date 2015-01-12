@@ -1,11 +1,9 @@
 'use strict';
 
 angular.module('notifications').controller('BookedController', [
-  '$scope', '$ionicModal',
-  function($scope, $ionicModal) {
+  '$scope', '$ionicModal', 'Bookings',
+  function($scope, $ionicModal, Bookings) {
     $scope.modal = $ionicModal;
-
-
 
     $scope.getData = function() {
       var basepath = 'res/shops/1/';
@@ -41,6 +39,21 @@ angular.module('notifications').controller('BookedController', [
     };
 
     //$scope.getData();
+    $scope.command = function(arg) {
+      console.log('command', arg);
+      var updateBooking = new Bookings();
+      updateBooking._id = $scope.booking._id;
+      updateBooking.status = arg;
+      updateBooking.$update(function(response) {
+        $scope.booking.status = arg;
+      }, function(error) {
+        //TODO: response error message.
+      });
+    };
+
+    $scope.showCommand = function(arg) {
+      return true;
+    };
 
   }
 ]);

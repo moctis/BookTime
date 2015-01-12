@@ -6034,10 +6034,10 @@ progress {
   border-color: transparent;
   background: none; }
   .button-icon.button.active, .button-icon.button.activated {
-    border-color: transparent;
-    background: none;
-    box-shadow: none;
-    opacity: 0.3; }
+    /* border-color: transparent; */
+    /* background: none; */
+    /* box-shadow: none; */
+    /* opacity: 0.3; */ }
   .button-icon .icon:before, .button-icon.icon:before {
     font-size: 32px; }
 
