@@ -7,7 +7,7 @@ angular.module('core').controller('SidemenuController', [
 
     $scope.profile = [];
     $scope.profile.name = $scope.user.displayName;
-    $scope.profile.img = 'res/screen/share/2x/profile.png';
+    $scope.profile.img = 'res/screen/share/2x/profile-pic.png';
     $scope.profile.booked = 15;
     $scope.profile.favorites = 245;
 
@@ -19,11 +19,13 @@ angular.module('core').controller('SidemenuController', [
         label: 'SEARCH',
         icon: 'fa-search',
         page: 'modules/home/views/home.client.view.html'
-      },/* {
-        label: 'MY BOOKING',
-        icon: 'fa-gear',
-        state: 'main.tab.notifications.myBookings'
-      },*/ {
+      },
+      /* {
+              label: 'MY BOOKING',
+              icon: 'fa-gear',
+              state: 'main.tab.notifications.myBookings'
+            },*/
+      {
         label: 'SCHEDULE',
         icon: 'fa-calendar',
         state: 'main.tab.schedule'

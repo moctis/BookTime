@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('notifications').controller('NotificationsController', [
-  '$scope', '$location', '$ionicModal', 'Bookings',
-  function($scope, $location, $ionicModal, Bookings) {
+  '$scope', '$location', '$ionicModal', 'Bookings', 'Authentication',
+  function($scope, $location, $ionicModal, Bookings, Authentication) {
 
 
 
@@ -34,8 +34,18 @@ angular.module('notifications').controller('NotificationsController', [
       return 'booktime-' + status;
     };
 
-    $ionicModal.fromTemplateUrl('modules/notifications/views/booking.client.view.html', function($ionicModal) {
-      $scope.modalBooking = $ionicModal;
+    $ionicModal.fromTemplateUrl('modules/notifications/views/bookingOwner.client.view.html', function($ionicModal) {
+      $scope.modalBookingOwner = $ionicModal;
+    }, {
+      // Use our scope for the scope of the modal to keep it simple
+      scope: $scope,
+      // The animation we want to use for the modal entrance
+      animation: 'slide-in-up'
+    });
+
+    $ionicModal.fromTemplateUrl('modules/notifications/views/bookingShopOwner.client.view.html', function(
+      $ionicModal) {
+      $scope.modalShopOwner = $ionicModal;
     }, {
       // Use our scope for the scope of the modal to keep it simple
       scope: $scope,
@@ -44,14 +54,24 @@ angular.module('notifications').controller('NotificationsController', [
     });
 
     $scope.viewBooking = function(booking) {
+
+
+      booking.currentUser = Authentication.user._id;
+
       $scope.booking = booking;
-      $scope.modalBooking.show();
+
+      console.log('viewBooking', booking);
+
+      if (booking.isBookingOwner)
+        $scope.modalBookingOwner.show();
+      if (booking.isShopOwner)
+        $scope.modalShopOwner.show();
     };
 
     $scope.closeBooked = function() {
-      $scope.modalBooking.hide();
+      $scope.modalBookingOwner.hide();
+      $scope.modalShopOwner.hide();
     };
-
 
     $scope.findMyBookings = function() {
       Bookings.query({
@@ -61,12 +81,13 @@ angular.module('notifications').controller('NotificationsController', [
         $scope.items = [];
         angular.forEach(items, function(item) {
           var moc = mock();
-          item.image = item.image || moc.image;
+          item.isBookingOwner = item.owner._id === Authentication.user._id;
+          item.isShopOwner = item.shop.owner === Authentication.user._id;
+
+          item.image = item.image || (item.isShopOwner ? 'res/screen/share/2x/profile-pic.png' : moc.image);
           $scope.items.push(item);
         });
       });
-
-
     };
   }
 ]);

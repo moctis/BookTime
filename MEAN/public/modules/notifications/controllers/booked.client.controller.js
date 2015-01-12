@@ -40,7 +40,7 @@ angular.module('notifications').controller('BookedController', [
       $scope.it = mock();
     };
 
-    $scope.getData();
+    //$scope.getData();
 
   }
 ]);

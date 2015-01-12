@@ -76,7 +76,7 @@ exports.delete = function(req, res) {
  */
 exports.list = function(req, res) {
   Shop.findShopIdByShopOwner(req.user._id, function(err, shopIds) {
-    // list booking by Shop Owner or  booker 
+    // list booking by Shop Owner or  booker
 
     Booking
       .find({
@@ -88,7 +88,7 @@ exports.list = function(req, res) {
           }
         }]
       })
-      .populate('owner', '_id,displayName')
+      .populate('owner', '_id displayName')
       .populate('shop')
       .sort('-created')
       .exec(function(err, bookings) {

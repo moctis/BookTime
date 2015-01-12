@@ -19,14 +19,6 @@ angular.module('notifications').config([
       .state('main.tab.notifications.list', {
         url: '',
         templateUrl: 'modules/notifications/views/notifications.client.view.html'
-      })
-
-
-    .state('main.tab.notifications.myBookings', {
-      url: '/myBookings',
-      templateUrl: 'modules/notifications/views/mybookings.client.view.html',
-    })
-
-    ;
+      });
   }
 ]);
