@@ -18,7 +18,8 @@ var ApplicationConfiguration = (function() {
     'mgcrea.ngStrap',
     'ionic',
     'ngCordova',
-    'angularMoment'
+    'angularMoment',
+    'angularFileUpload'
   ];
 
   // Add a new vertical module

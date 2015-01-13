@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('shop').controller('ShopController', [
-  '$scope', '$ionicModal', '$stateParams', 'ShopsApi',
-  function($scope, $ionicModal, $stateParams, ShopsApi) {
+  '$scope', '$timeout', '$ionicModal', '$upload', '$stateParams', 'ShopsApi', 'FileUploader',
+  function($scope, $timeout, $ionicModal, $upload, $stateParams, ShopsApi, FileUploader) {
 
     $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function($ionicModal) {
       $scope.modal = $ionicModal;
@@ -22,7 +22,7 @@ angular.module('shop').controller('ShopController', [
       animation: 'slide-in-up'
     });
 
-    /* $scope.comment = "test comment";
+    /* $scope.comment = 'test comment';
     $scope.commantRemain = $scope.maxlen = 400;
 
     $scope.commentChanged = function() {
@@ -99,5 +99,8 @@ angular.module('shop').controller('ShopController', [
       $scope.modalBooked.show();
     };
 
+    var uploader = $scope.uploader = new FileUploader({
+      url: 'upload.php'
+    });
   }
 ]);

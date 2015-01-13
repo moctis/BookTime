@@ -32,6 +32,13 @@ angular.module('shop').config(['$stateProvider',
 
         }
       }
-    });
+    })
+
+    .state('imagesTest', {
+      url: '/imagesTest',
+      templateUrl: 'modules/shop/views/images.client.view.html', 
+    })
+
+    ;
   }
 ]);
