@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('shop').controller('ShopController', [
-  '$scope', '$timeout', '$ionicModal', '$upload', '$stateParams', 'ShopsApi', 'FileUploader',
-  function($scope, $timeout, $ionicModal, $upload, $stateParams, ShopsApi, FileUploader) {
+  '$scope', '$timeout', '$ionicModal', '$upload', '$stateParams', 'ShopsApi',  
+  function($scope, $timeout, $ionicModal, $upload, $stateParams, ShopsApi ) {
 
     $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function($ionicModal) {
       $scope.modal = $ionicModal;
@@ -99,8 +99,8 @@ angular.module('shop').controller('ShopController', [
       $scope.modalBooked.show();
     };
 
-    var uploader = $scope.uploader = new FileUploader({
-      url: 'upload.php'
-    });
+    //var uploader = $scope.uploader = new FileUploader({
+    //  url: 'upload.php'
+    //});
   }
 ]);

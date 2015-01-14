@@ -1,4 +1,4 @@
-<section data-ng-controller="BookedController" class="section-booking">
+<section data-ng-controller="BookedController" class="section-notifications">
   <ion-modal-view>
     <ion-header-bar class="background-orange">
       <h1 class="title">BOOKING</h1>
@@ -22,19 +22,19 @@
       </div>
       <div class="row booking">
         <div class="col-90">
-          <div class="row">
-            <div class="col font-size-130per">
+          <div class="row underline">
+            <div class="col font-size-100per">
               {{booking.owner.displayName}} has sent you a booking request
             </div>
           </div>
           <div class="row">
-            <div class="col font-size-130per">
+            <div class="col font-size-130per orange">
               {{booking.bookDateTime | amDateFormat:'dddd, D MMMM YYYY'}}
             </div>
           </div>
-          <div class="row">
+          <div class="row underline">
             <div class="col">
-              {{booking.person}} people at {{booking.bookDateTime | amDateFormat:'h:mm a'}} ({{booking.shop.catalog}})
+              {{booking.person}} people at <span class="orange">{{booking.bookDateTime | amDateFormat:'h:mm a'}} </span> ({{booking.shop.catalog}})
             </div>
           </div>
           <div class="row">
@@ -42,29 +42,30 @@
               Additional Requests:
             </div>
           </div>
-          <div class="row">
+          <div class="row underline">
             <div class="col">
               {{booking.comment}}
             </div>
           </div>
-          <div class="row">
+          <div class="row underline">
             <div class="col font-size-130per">
               Booking Status <i class="icon booktime-{{booking.status}}"></i>
             </div>
           </div>
-          <div class="row statusCommand">
-            <div class="col-50 text-center">
+          <br/>
+          <div class="row">
+            <div class="col-50 statusCommand">
               <button class="button button-icon booktime-accept" data-ng-show="showCommand('accept')" data-ng-click="command('confirm')"></button>
             </div>
-            <div class="col-50 text-center">
+            <div class="col-50 statusCommand">
               <button class="button button-icon booktime-decline" data-ng-show="showCommand('decline')" data-ng-click="command('declined')"></button>
             </div>
           </div>
-          <div class="row statusCommand">
-            <div class="col-50 text-center">
+          <div class="row">
+            <div class="col-50 statusCommand">
               <button class="button button-icon booktime-waitingqueue" data-ng-show="showCommand('waitingqueue')" data-ng-click="command('waitingqueue')"></button>
             </div>
-            <div class="col-50 text-center">
+            <div class="col-50 statusCommand">
               <button class="button button-icon booktime-viewcalendar" data-ng-show="showCommand('viewcalendar')"></button>
             </div>
           </div>
