@@ -7,7 +7,26 @@
       <a class="button button-clear button-booktime" href="#!/main/tab/home/food">Close</a>
     </ion-nav-buttons>
     <ion-content has-header="true" class="has-tabs-top" padding="false">
-      <div class="item item-text-wrap">
+
+      <ion-list class="list-notifications">
+        <ion-item class="notification" ng-repeat="it in items" ng-click="viewBooking(it)">
+          <div class="col-25">
+            <img src="{{it.image}}"/>
+          </div>          
+          <div class="col-75">
+            <span class="displayName" data-ng-show="it.isBookingOwner">{{it.shop.name}}</span>
+            <span class="displayName" data-ng-show="it.isShopOwner">{{it.owner.displayName}}</span>
+            <span class="time">{{it.bookDateTime | amDateFormat:'dddd, D MMMM YYYY'}}
+                  <br/> {{it.person}} people at {{it.bookDateTime | amDateFormat:'h:mm a'}} ({{it.shop.catalog}})
+            </span>
+            <span class="status">
+              <button class="button button-icon button-small pull-right booktime-{{it.status}}" ng-click="modal.show()"></button>            
+          </span>
+          </div>
+        </ion-item>
+      </ion-list>
+
+      <!--<div class="item item-text-wrap">
         <div class="list">
           <div class="item item-thumbnail-left row" ng-repeat="it in items" ng-click="viewBooking(it)">
             <div class="col-25">
@@ -28,7 +47,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
+
+
     </ion-content>
   </ion-view>
 </section>
