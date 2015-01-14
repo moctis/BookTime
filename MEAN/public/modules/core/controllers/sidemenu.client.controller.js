@@ -65,6 +65,12 @@ angular.module('core').controller('SidemenuController', [
       });
     }
 
+    $scope.menus.push({
+      label: 'imagesTest',
+      icon: 'fa-gear',
+      state: 'imagesTest'
+    });
+
     $scope.showDetail = function($index) {
       var selectedMenu = $scope.menus[$index];
       if (selectedMenu.state !== undefined)

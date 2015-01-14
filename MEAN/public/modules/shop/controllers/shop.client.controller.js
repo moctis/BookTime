@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('shop').controller('ShopController', [
-  '$scope', '$timeout', '$ionicModal', '$upload', '$stateParams', 'ShopsApi', 'FileUploader',
-  function($scope, $timeout, $ionicModal, $upload, $stateParams, ShopsApi, FileUploader) {
+  '$scope', '$timeout', '$ionicModal', '$upload', '$stateParams', 'ShopsApi', '$cordovaCamera',
+  '$cordovaFileTransfer', '$api',
+  function($scope, $timeout, $ionicModal, $upload, $stateParams, ShopsApi, $cordovaCamera, $cordovaFileTransfer,
+    $api) {
 
     $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function($ionicModal) {
       $scope.modal = $ionicModal;
@@ -99,8 +101,39 @@ angular.module('shop').controller('ShopController', [
       $scope.modalBooked.show();
     };
 
-    var uploader = $scope.uploader = new FileUploader({
-      url: 'upload.php'
-    });
+
+    //-------------------
+    $scope.takePicture = function() {
+      var options = {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI,
+        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+      };
+
+      // udpate camera image directive
+      $cordovaCamera.getPicture(options).then(function(imageURI) {
+        $scope.cameraimage = imageURI;
+
+        var options2 = {
+
+        };
+        $cordovaFileTransfer
+          .upload($api.action('/api/shops/images'), imageURI, options2)
+          .then(function(result) {
+            // Success!
+            console.log('transfer success', result);
+          }, function(err) {
+            // Error
+            console.log('transfer error', err);
+          }, function(progress) {
+            // constant progress updates
+            console.log('transfer progress', progress);
+          });
+
+      }, function(err) {
+        console.log('Failed because: ' + message);
+      });
+    };
+
   }
 ]);

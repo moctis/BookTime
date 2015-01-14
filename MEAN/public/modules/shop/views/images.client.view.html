@@ -1,40 +1,19 @@
-<section data-ng-controller="ShopController" >
-  <form name="myForm">
-    <fieldset><legend>Upload on form submit</legend>
-      Username: <input type="text" name="userName" ng-model="username" size="48" required>
-      <i ng-show="myForm.userName.$error.required">*required</i><br>
-      Profile Picture: <input type="file" ng-file-select ng-model="picFile" name="file" accept="image/*"
-      ng-file-change="generateThumb(picFile[0], $files)" required>
-      <i ng-show="myForm.file.$error.required">*required</i>
-      <br/>
-
-      <button ng-disabled="!myForm.$valid" ng-click="uploadPic(picFile)">Submit</button>
-      <div  style="width:50px;">
-      <img ng-show="picFile[0].dataUrl != null" ng-src="{{picFile[0].dataUrl}}" class="img-responsive" >
+<section data-ng-controller="ShopController">
+  <ion-view title="Camera">
+    <ion-content>
+      <div class="card">
+        <div class="item item-divider">
+          Take a picture
+        </div>
+        <div class="item item-image">
+          <img class="item" ng-src="{{cameraimage}}" style="height: 350px;" /> {{cameraimage}}
+        </div>
       </div>
-      <span class="progress" ng-show="picFile[0].progress >= 0">
-        <div style="width:{{picFile[0].progress}}%" ng-bind="picFile[0].progress + '%'"></div>
-      </span>
-      <span ng-show="picFile[0].result">Upload Successful</span>
-    </fieldset>
-    <br/>
-
-
-    <input type="file" nv-file-select="" uploader="uploader" multiple />
-
-
-  </form>
-  <fieldset><legend>Upload right away</legend>
-    <div class="up-buttons">
-      <div ng-file-select ng-model="files" class="upload-button"
-      ng-file-change="upload(files)" ng-multiple="false" ng-accept="'image/*,application/pdf'" tabindex="0">Attach an Image or PDF</div><br/>
-      <button ng-file-select ng-model="files" ng-multiple="true">Attach Any File</button>
-    </div>
-    <div ng-file-drop ng-file-select ng-model="files" class="drop-box"
-    drag-over-class="{accept:'dragover', reject:'dragover-err', delay:100}"
-    ng-multiple="true" allow-dir="true" accept="image/*,*pdf">
-    Drop Images or PDFs<div>here</div>
-  </div>
-  <div ng-no-file-drop class="drop-box">File Farg&Drop not supported on your browser</div>
-</fieldset>
+      <div class="padding">
+        <button class="button button-block button-positive" ng-click="takePicture()">
+          Take Photo
+        </button>
+      </div>
+    </ion-content>
+  </ion-view>
 </section>
