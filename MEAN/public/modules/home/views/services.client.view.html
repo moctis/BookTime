@@ -3,8 +3,10 @@
     <ion-content has-header="false" padding="false">
       <ion-list class="list-shops">
         <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop({shopId:it._id})">
-          <img src="{{it.image}}">
-          <div class="details">
+          <div class="col-25">
+            <img src="{{it.image}}">
+          </div>          
+          <div class="col-75">
             <span class="booked">
               <i class="booktime-bookmark-empty"></i>
               <br />

@@ -1,7 +1,8 @@
 .section-service .shop, .section-service .shop .item-content {
   padding: 0;
-  padding-bottom: 7px;
+  padding-bottom: 10px;
 }
+
 .section-service .shop img {
   width: 64px;
   height: 58px;
@@ -9,12 +10,17 @@
   margin: 12px;
   float: left;
 }
-.section-service .details {
+
+.section-service .shop .col-75 {
+  max-width: 100%;
+}
+
+/*.section-service .details {
   margin-left: 20px;
   height: 66px;
   display: block;
   padding: 8px;
-}
+}*/
 .section-service .shop .name {
   font-size: 16px;
   line-height: 20px;
@@ -22,8 +28,8 @@
 }
 .section-service .shop .loves {
   display: block;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 12px;
+  line-height: 15px;
 }
 .section-service .shop .catalog {
   display: block;
@@ -63,9 +69,13 @@
     line-height: 38px;
   }
   .section-service .shop .rank {
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .section-service .shop .loves {    
     font-size: 30px;
     line-height: 32px;
-  }
+  }  
   .section-service .shop .catalog {
     font-size: 32px;
     line-height: 34px;
