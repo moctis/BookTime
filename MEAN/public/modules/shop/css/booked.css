@@ -1,1 +1,169 @@
-.section-booked {}
+.section-booked .thick {
+	padding-top: 5px;
+	font-weight: bold;
+}
+.section-booked .booking-rounded-box {
+  padding: 5px 0 0 0; 
+  background: #f47822;
+	border: 2px solid #f47822;
+  border-radius: 15px;
+  width: 95%;
+}
+.section-booked .booking-title {
+	color: white;
+	padding:10px;
+}
+.section-booked .booking-detail {
+	background: white;
+	padding:10px;
+	border:solid #f47822;
+	border-width:2px 0 0 0;
+	border-bottom-left-radius: 13px;
+	border-bottom-right-radius: 13px;
+}
+.section-booked .row {
+    /*margin-left: 10px;    */
+}
+
+.section-booked .font-size-80per {
+  font-size: 0.8em;
+  line-height: 1.15em;
+}
+.section-booked .font-size-90per {
+  font-size: 0.9em;
+  line-height: 1.25em;
+}
+.section-booked .font-size-110per {
+  font-size: 1.1em;
+  line-height: 1.45em;
+}
+.section-booked .font-size-120per {
+  font-size: 1.2em;
+  line-height: 1.55em;
+}
+.section-booked .font-size-130per {
+  font-size: 1.3em;
+  line-height: 1.65em;
+}
+.section-booked .font-size-140per {
+  font-size: 1.4em;
+  line-height: 1.75em;
+}
+.section-booked .underline {
+  border-bottom: solid 1px #c0c0c0;
+  padding-bottom: 5px;
+}
+
+.section-booked .orange{
+  color: #F47822;
+}
+
+.section-booked .modal {
+  background: none;
+  width: 90%;
+  margin: auto;
+}
+.section-booked .scroll-content {
+  background-color: white;
+}
+.section-booked .title {
+  line-height: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
+}
+.section-booked .item {
+  font-size: 12px;
+  line-height: 14px;
+}
+.section-booked img {
+  margin-top: 10px;
+}
+.section-booked .details {
+  font-size: 10px;
+  line-height: 12px;
+  padding-top: 1em;
+  padding-left: 1em;
+  background-color: white;
+}
+.section-booked .details .name {
+  font-size: 28px;
+  line-height: 30px;
+}
+.section-booked .details .lastBooked-distance {
+  font-size: 8px;
+}
+.section-booked .booking> div {
+  margin: 0 auto;
+  /* make it center */
+}
+.section-booked .booking .list {
+  margin-bottom: 0;
+}
+.section-booked .booking .item-input {
+  border-radius: 10px;
+  margin: 10px 17px;
+}
+.section-booked .booking .input-label {
+  width: 0;
+}
+.section-booked .booking .item-select select {
+  width: 100%;
+  max-width: 100%;
+  direction: inherit;
+  text-align: center;
+}
+.section-booked .card-deal .item-divider {
+  white-space: inherit;
+  text-overflow: none;
+  overflow: inherit;
+}
+.section-booked .comment textarea {
+  border: solid 1px black;
+}
+@media only screen and (min-device-width: 680px) {
+  .section-booked .modal {
+    margin-top: -100px;
+    margin-left: -120px;
+    width: 80%;
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .section-booked .title {
+    line-height: 30px;
+    height: 30px;
+    font-size: 35px;
+    color: white;
+    font-weight: 600;
+  }
+  .section-booked .item {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .section-booked img {
+    width: 128px;
+    height: 116px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  .section-booked .booking .item-input {
+    font-size: 40px;
+  }
+  .section-booked .booking .input-label {
+    font-size: 40px;
+  }
+  .section-booked .details {
+    font-size: 35px;
+    line-height: 40px;
+    padding-top: 1em;
+    padding-left: 1em;
+  }
+  .section-booked .details .name {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  .section-booked .details .lastBooked-distance {
+    font-size: 25px;
+  }
+}

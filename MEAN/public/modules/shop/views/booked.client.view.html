@@ -1,4 +1,4 @@
-<section data-ng-controller="BookedController" class="section-booking">
+<section data-ng-controller="BookedController" class="section-booked">
   <ion-modal-view>
     <ion-header-bar class="background-orange">
       <h1 class="title">BOOKING</h1>
@@ -9,50 +9,44 @@
       </div>
     </ion-header-bar>
     <ion-content has-header="false" padding="true">
-      <div class="row ">
-        <div class="col-25">
-          <img src="res/shops/1/main.jpg">
+      <div class="row booking">
+        <div class="col-10">
+          <img src="res/icons/icons/icon-tickgreen.png">
         </div>
-        <div class="col-75 details">
-          <span class="row name">{{it.name}}</span>
-          <span class="row address">{{it.address}}</span>
-          <span class="row address">{{it.address2}}</span>
-          <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
-          <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
+        <div class="col-75">
+          <div class="font-size-110per thick">BOOKING REQUEST SENT</div>
+          <div class="font-size-90per">Thank you, but they have to confirm your request first. We will send you details in message and email as soon as they confirmed you booking.</div>
+          <br/> 
         </div>
       </div>
       <div class="row booking">
-        <div class="col-90">
-          <div class="row">
-            <div class="col font-size-130per">
-              Booking Status <i class="icon booktime-{{booking.status}}"></i>
+        <div class="col-90">          
+          <div class="booking-rounded-box">
+            <div class="booking-title font-size-120per">
+              Your booking details
+            </div>
+            <div class="booking-detail">
+              <span class="row date font-size-110per orange"> {{booking.bookDateTime | amDateFormat:'dddd, D MMMM YYYY'}}</span>
+              <span class="row name font-size-100per thick">{{it.name}}</span>
+              <span class="row address font-size-80per">{{it.address}}</span>
+              <span class="row address font-size-80per">{{it.address2}}</span>
+              <!--<span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
+              <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>-->
+              <span class="row address font-size-80per underline">{{booking.person}} people at &nbsp;<span class="orange">{{booking.bookDateTime | amDateFormat:'h:mm a'}}</span> &nbsp;(Restaurant)</span>
+
+              <span class="row font-size-100per thick">Booked Service:</span>
+              <span class="row font-size-80per underline">(none)</span>              
+
+              <span class="row font-size-100per thick">Additional Requests:</span>
+              <span class="row font-size-80per">{{booking.comment}}</span>                
             </div>
           </div>
-          <div class="row">
-            <div class="col font-size-130per">
-              Your Booking Details
-            </div>
-          </div>
-          <div class="row">
-            <div class="col font-size-130per">
-              {{booking.bookDateTime | amDateFormat:'dddd, D MMMM YYYY'}}
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              {{booking.person}} people at {{booking.bookDateTime | amDateFormat:'h:mm a'}} (Restaurant)
-            </div>
-          </div>
-          <div class="row">
-            <div class="col font-size-130per">
-              Additional Requests:
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              {{booking.comment}}
-            </div>
-          </div>
+
+        </div>        
+      </div>    
+
+      <div class="row">
+        <div class="col-90">          
           <div class="row">
             <div class="col text-center">
               <button class="button button-icon button-small booktime-close" ng-click="closeBooked()"></button>
