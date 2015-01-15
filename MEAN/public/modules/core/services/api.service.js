@@ -14,6 +14,10 @@ angular.module('core').factory('$api', ['$cookieStore', '$http',
       return ApplicationConfiguration.server + url; //+ "?access_token=" +getToken() ;
     };
 
+    var actionWithToken = function(url) {
+      return ApplicationConfiguration.server + url + '?access_token=' + getToken();
+    };
+
     var getToken = function() {
       return ($cookieStore.get('user') || {}).token;
     };
@@ -37,6 +41,7 @@ angular.module('core').factory('$api', ['$cookieStore', '$http',
     return {
       test: test,
       action: action,
+      actionWithToken: actionWithToken,
       headerToken: headerToken,
       get: get,
       post: post,

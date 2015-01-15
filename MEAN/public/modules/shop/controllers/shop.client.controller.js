@@ -118,7 +118,7 @@ angular.module('shop').controller('ShopController', [
 
         };
         $cordovaFileTransfer
-          .upload($api.action('/api/shops/images'), imageURI, options2)
+          .upload($api.actionWithToken('/api/shops/images'), imageURI, options2)
           .then(function(result) {
             // Success!
             console.log('transfer success', result);

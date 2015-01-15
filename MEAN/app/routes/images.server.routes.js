@@ -7,7 +7,11 @@ var passport = require('passport'),
   users = require('../../app/controllers/users'),
   images = require('../../app/controllers/images'),
   multiparty = require('connect-multiparty'),
-  multipartyMiddleware = multiparty();
+  path = require('path'),
+  rootPath = path.normalize(__dirname + '/../../images/'),
+  multipartyMiddleware = multiparty({
+    uploadDir: rootPath
+  });
 
 module.exports = function(app) {
   var authenticate = passport.authenticate('bearer', {

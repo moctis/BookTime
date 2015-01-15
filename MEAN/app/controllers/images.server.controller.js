@@ -112,9 +112,12 @@ exports.hasAuthorization = function(req, res, next) {
 exports.uploadFile = function(req, res, next) {
   // We are able to access req.files.file thanks to
   // the multiparty middleware
-  var file = req.files.file;
-  console.log('uploadFile');
+  console.log('uploadFile:', req.files.file.path);
   console.log(req.files);
 
-  next();
+
+
+  res.jsonp({
+    result: 'OK'
+  });
 };
