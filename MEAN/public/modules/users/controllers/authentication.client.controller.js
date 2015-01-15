@@ -39,15 +39,18 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
         $scope.error = response.message;
       });
     };
-    $scope.signout = function() {
 
+    $scope.signout = function() {
+      console.log('signout');
       $http.get(ApplicationConfiguration.server + '/auth/signout').success(function(response) {
-        //console.log('success', response);
+        console.log('success', response);
         $scope.authentication.removeUser();
         $location.path('/');
       }).error(function(response) {
+        console.log('error', response);
         $scope.error = response.message;
-        //console.log('error');
+        $scope.authentication.removeUser();
+        $location.path('/');
       });
     };
   }

@@ -1,0 +1,43 @@
+<section data-ng-controller="ShopOwnerController" class="section-shop-owner" data-ng-init="initService()">
+  <form name="createForm" class="form-horizontal" role="form" data-ng-submit="createOrUpdateService(createForm.$valid)">
+    <ion-modal-view>
+      <ion-header-bar class="background-orange">
+        <h1 class="title">SERVICE</h1>
+        <div class="buttons">
+          <div class="button button-clear" ng-click="closeService(createForm.$valid)">
+            <span class="icon ion-close"></span>
+          </div>
+        </div>
+      </ion-header-bar>
+      <ion-content has-header="false" padding="true">
+        <div class="list">
+          <div class="item">
+            <div class="servicePhoto">
+              <img src="res/icons/icons/booktime-button-addnewphoto.png" />
+            </div>
+          </div>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Title</span>
+            <input type="text" data-ng-model="currentService.title" />
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Service Details</span>
+            <textarea data-ng-model="shop.detail" rows="8" data-ng-mode="currentService.detail"></textarea>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Service/Promotion period</span>
+            <textarea data-ng-model="shop.detail" rows="8"></textarea>
+          </label>
+        </div>
+      </ion-content>
+      <ion-footer-bar class="bar col">
+        <div class="text-center">
+          <button button class="button button-icon button-small booktime-button-submit"></button>
+          <button class="button button-assertive pull-right" data-ng-click="removeService()">
+            <i class="icon ion-trash-a"></i>
+          </button>
+        </div>
+      </ion-footer-bar>
+    </ion-modal-view>
+  </form>
+</section>

@@ -34,6 +34,20 @@
       "height": 48,
       "offsetX": 156,
       "offsetY": 0
+    },
+    {
+      "name": "/res/icons/booktime-icon-heart-love.png",
+      "width": 32,
+      "height": 32,
+      "offsetX": 204,
+      "offsetY": 0
+    },
+    {
+      "name": "/res/icons/booktime-icon-heart-notlove.png",
+      "width": 32,
+      "height": 32,
+      "offsetX": 236,
+      "offsetY": 0
     }
   ]
 }

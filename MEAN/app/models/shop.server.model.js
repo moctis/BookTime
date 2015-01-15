@@ -61,10 +61,23 @@ var ShopSchema = new Schema({
     type: Number,
     default: 0
   },
-  rank: {
+  loves: {
     type: Number,
     default: 0
-  }
+  },
+  services: [{
+    title: String,
+    detail: String
+  }]
 });
+
+
+ShopSchema.statics.findShopIdByShopOwner = function(id, cb) {
+  this.find({
+      owner: id
+    }, '_id')
+    .exec(cb);
+};
+
 
 mongoose.model('Shop', ShopSchema);

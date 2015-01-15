@@ -7,7 +7,7 @@ angular.module('core').controller('SidemenuController', [
 
     $scope.profile = [];
     $scope.profile.name = $scope.user.displayName;
-    $scope.profile.img = 'res/screen/share/2x/profile.png';
+    $scope.profile.img = 'res/screen/share/2x/profile-pic.png';
     $scope.profile.booked = 15;
     $scope.profile.favorites = 245;
 
@@ -19,22 +19,24 @@ angular.module('core').controller('SidemenuController', [
         label: 'SEARCH',
         icon: 'fa-search',
         page: 'modules/home/views/home.client.view.html'
-      }, {
-        label: 'MY BOOKING',
-        icon: 'fa-gear',
-        page: 'modules/home/views/home.client.view.html'
-      }, {
+      },
+      /* {
+              label: 'MY BOOKING',
+              icon: 'fa-gear',
+              state: 'main.tab.notifications.myBookings'
+            },*/
+      {
         label: 'SCHEDULE',
         icon: 'fa-calendar',
         state: 'main.tab.schedule'
       }, {
-        label: 'CHAT',
-        icon: 'fa-comments',
+        label: 'BOOKTIME',
+        icon: 'fa-clock-o',
         state: 'main.tab.chat'
       }, {
         label: 'NOTIFICATIONS',
         icon: 'fa-exclamation-circle',
-        state: 'main.tab.notifications'
+        state: 'main.tab.notifications.list'
       }, {
         label: 'MY FAVORITES',
         icon: 'fa-star-o',
@@ -42,7 +44,7 @@ angular.module('core').controller('SidemenuController', [
       }, {
         label: 'SETTINGS',
         icon: 'fa-gear',
-        state: 'main.tab.settings'
+        state: 'main.tab.settings.menu'
       },
       /*{ label: 'ABOUT BOOKTIME', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-about' },*/
       {
@@ -62,6 +64,12 @@ angular.module('core').controller('SidemenuController', [
         state: 'admin.shops'
       });
     }
+
+    $scope.menus.push({
+      label: 'imagesTest',
+      icon: 'fa-gear',
+      state: 'imagesTest'
+    });
 
     $scope.showDetail = function($index) {
       var selectedMenu = $scope.menus[$index];

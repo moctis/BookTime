@@ -4,7 +4,7 @@
 angular.module('home').controller('HomeController', ['$scope', '$rootScope', 'ShopsApi',
   function($scope, $rootScope, ShopsApi) {
     $rootScope.$on('$viewHistory.historyChange', function(e, data) {
-      console.log('$viewHistory.historyChange', e, data);
+      //console.log('$viewHistory.historyChange', e, data);
       /*console.log(e.targetScope.$viewHistory.backView.stateName,e.targetScope.$viewHistory.backView.historyId,
 				e.targetScope.$viewHistory.currentView.stateName,e.targetScope.$viewHistory.currentView.historyId
 			);*/

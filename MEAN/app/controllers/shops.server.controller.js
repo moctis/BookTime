@@ -100,7 +100,7 @@ exports.shopByID = function(req, res, next, id) {
  * Shop authorization middleware
  */
 exports.hasAuthorization = function(req, res, next) {
-  if (req.shop.owner.id !== req.user.id) {
+  if (!req.shop.owner._id.equals(req.user._id)) {
     return res.status(403).send({
       message: 'User is not authorized'
     });

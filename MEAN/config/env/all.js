@@ -38,8 +38,12 @@ module.exports = {
         'public/lib/angular-carousel/angular-carousel.js', //woody
         'public/lib/angular-strap/angular-strap.js',
         'public/lib/moment/moment.js',
+        'public/lib/angular-moment/angular-moment.js',
         'public/lib/ngcordova/ng-cordova.js',
-        'public/lib/others/angular.ratings.js'
+        'public/cordova.js',
+        'public/lib/others/angular.ratings.js',
+        'public/lib/ng-file-upload/angular-file-upload-shim.js',
+        'public/lib/ng-file-upload/angular-file-upload.min.js'
       ]
     },
     css: [

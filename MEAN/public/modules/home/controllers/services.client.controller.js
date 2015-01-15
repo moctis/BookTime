@@ -9,7 +9,7 @@ angular.module('home').controller('ServicesController', ['$scope', 'ShopsApi',
         terms: 'service'
       }, function(items) {
         $scope.items = items;
-        $scope.mocData($scope.items);
+        // $scope.mocData($scope.items);
 
         angular.forEach(items, function(item) {
           var moc = $scope.mock();
@@ -17,8 +17,6 @@ angular.module('home').controller('ServicesController', ['$scope', 'ShopsApi',
           item.booked = item.booked || moc.booked;
           item.image = item.image || moc.image;
           item.distance = item.distance || moc.distance;
-
-
         });
       });
     };

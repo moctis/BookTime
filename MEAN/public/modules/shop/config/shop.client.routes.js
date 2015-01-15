@@ -34,34 +34,11 @@ angular.module('shop').config(['$stateProvider',
       }
     })
 
-    .state('main.tab.owner', {
-      url: '/owner',
-      abstract: true,
-      views: {
-        'settings-tab': {
-          template: '<ui-view/>'
-        }
-      }
+    .state('imagesTest', {
+      url: '/imagesTest',
+      templateUrl: 'modules/shop/views/images.client.view.html', 
     })
 
-    .state('main.tab.owner.list', {
-      url: '/list',
-      templateUrl: 'modules/shop/views/shop-list-own.client.view.html'
-    })
-
-    .state('main.tab.owner.create', {
-      url: '/create',
-      templateUrl: 'modules/shop/views/shop-create.client.view.html'
-    })
-
-    .state('main.tab.owner.edit', {
-      url: '/:shopId/edit',
-      templateUrl: 'modules/shop/views/shop-edit.client.view.html'
-    })
-
-    .state('main.tab.owner.image', {
-      url: '/:shopId/image',
-      templateUrl: 'modules/shop/views/shop-image.client.view.html'
-    });
+    ;
   }
 ]);

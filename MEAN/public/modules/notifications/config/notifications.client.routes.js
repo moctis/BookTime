@@ -8,11 +8,17 @@ angular.module('notifications').config([
     $stateProvider
       .state('main.tab.notifications', {
         url: '/notifications',
+        abstract: true,
         views: {
           'notifications-tab': {
-            templateUrl: 'modules/notifications/views/notifications.client.view.html'
+            template: '<ion-nav-view></ion-nav-view>'
           }
         }
+
+      })
+      .state('main.tab.notifications.list', {
+        url: '',
+        templateUrl: 'modules/notifications/views/notifications.client.view.html'
       });
   }
 ]);

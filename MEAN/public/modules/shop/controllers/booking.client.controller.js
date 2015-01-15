@@ -48,19 +48,32 @@ angular.module('shop').controller('BookingController', [
       }
       $scope.booking.person = $scope.persons[0].value;
 
+      // Promotion
+      $scope.booking.promotion = 'HOT DEAL - COME 4 PAY 3 all you can eat at only 799bath';
+
     };
 
 
     $scope.doBooking = function(isValid) {
       if (isValid) {
-        $scope.booking.shopId = $scope.it._id;
-        //console.log('booking', $scope.booking);
-
         var booking = new Bookings();
+        booking.shop = $scope.it._id;
+        booking.bookDateTime = moment()
+          .startOf('day')
+          .add($scope.booking.date, 'days')
+          .add($scope.booking.time, 'hours')
+          ._d;
+        booking.person = $scope.booking.person;
+        booking.comment = $scope.booking.comment;
+
+        console.log('booking', booking);
+
         booking.$save(function(response) {
+          console.log('saved booking', response);
           $scope.close();
-          $scope.gotBooking();
+          $scope.gotBooking(response);
         });
+
       } else {
         $scope.submitted = true;
       }

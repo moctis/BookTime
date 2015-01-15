@@ -1,0 +1,77 @@
+<ion-view title="Shop Owner">
+  <ion-content class="has-tabs-top" padding="false">
+    <ion-list>
+      <div>
+        <div class="displayed-photo">
+          <img src="res/shops/1/main.jpg" class="img-responsive" alt="shop profile image" />
+        </div>
+      </div>
+      <div class="item item-input" data-ng-show="isUpdate">
+        <div class="col-33 text-center">
+          {{shop.booked}}
+          <br/>booked
+        </div>
+        <div class="col-33 text-center">
+          {{shop.reviews}}
+          <br/>reviews
+        </div>
+        <div class="col-33 text-center">
+          {{shop.photos}}
+          <br/>photo posts
+        </div>
+      </div>
+      <ion-toggle ng-model="shop.enabled" toggle-class="toggle-balanced" data-ng-show="isUpdate">Status</ion-toggle>
+      <label class="item item-input">
+        <span class="input-label">Name</span>
+        <input name="name" data-ng-model="shop.name" type="text" required />
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Description</span>
+        <textarea data-ng-model="shop.detail" rows="8">
+        </textarea>
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Address</span>
+        <input type="text" data-ng-model="shop.address" />
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Address2</span>
+        <input type="text" data-ng-model="shop.address2" />
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Phone Number</span>
+        <input type="text" data-ng-model="shop.phone" />
+      </label>
+      <ion-item class="item-input item-icon-right">
+        <span class="input-label">Operation Time</span>
+        {{shop.operationTime}}
+        <i class="icon ion-ios7-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item-input item-icon-right">
+        <span class="input-label">Add photos</span>
+        <i class="icon ion-ios7-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item-input item-icon-right">
+        <span class="input-label">Add location</span>
+        <i class="icon ion-ios7-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item-input item-icon-right">
+        <span class="input-label">Category</span>
+        {{shop.catalog}}
+        <i class="icon ion-ios7-arrow-right"></i>
+      </ion-item>
+      <ion-item class="item-icon-right" data-ui-sref="^.services">
+        <span class="input-label">Add/Edit Services</span>
+        <i class="icon ion-ios7-arrow-right"></i>
+      </ion-item>
+    </ion-list>
+    <div class="padding">
+      <input type="submit" class="button button-block button-balanced" value="Save Change" />
+    </div>
+    <div class="padding" data-ng-show="isUpdate">
+      <button class="button button-assertive" data-ng-click="remove(it)">
+        <i class="icon ion-trash-a"></i>
+      </button>
+    </div>
+  </ion-content>
+</ion-view>

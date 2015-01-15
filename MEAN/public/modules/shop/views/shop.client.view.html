@@ -4,14 +4,12 @@
       <button class="button button-clear button-booktime">Share</button>
     </ion-nav-buttons>
     <ion-content class="has-tabs-top" padding="false">
-
       <div class="row">
         <div class="displayed-photo">
           <img src="res/shops/1/main.jpg" />
         </div>
       </div>
       <div class="row row-photos relative">
-
         <div class="photos-albums">
           <div class="photo-small col-25" ng-repeat="p in it.albums|limitTo:4">
             <a href="#!/main/tab/album">
@@ -31,7 +29,6 @@
           </a>
         </div>
       </div>
-
       <div class="details">
         <div class="row">
           <div class="col">
@@ -40,14 +37,13 @@
         </div>
         <div class="row">
           <div class="col ">
-            <span class="row rank">
-              <angular-ratings ng-model="it.rank"></angular-ratings>
+            <span class="row love">
+              <i class="booktime-icon-heart-notlove"></i> {{it.loves}}
             </span>
             <span class="row address">{{it.address}}</span>
             <span class="row address">{{it.address2}}</span>
             <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
             <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
-
             <div class="row row-bottom commands">
               <button class="button button-icon button-small booktime-button-tofavorite" ng-click="modal.show()"></button>
               <button class="button button-icon button-small booktime-button-call" ng-click="getDirection()"></button>
@@ -67,47 +63,19 @@
           {{it.detail}}
         </div>
       </div>
-      <div class="card card-shop-service">
+      <div class="card card-shop-service" data-ng-show="it.services">
         <div class="item item-divider">
           OUR SERVICES
           <br /> Select form our services below
         </div>
         <div class="item item-text-wrap">
           <div class="list">
-            <a class="item item-thumbnail-left" href="#">
+            <div class="item item-thumbnail-left" data-ng-repeat="service in it.services">
               <img src="/img/docs/siamese-dream.jpg" />
               <i class="booktime-service-uncheck"></i>
-              <h2>COME 4 PAY 3 all you can eat menu at only 799 baht</h2>
-              <p>Available Mon-Fri until 15th August 2014, subject to availability. Dishes from a set menu and subject to change.
-                Includes VAT, excludes service.</p>
-            </a>
-
-            <a class="item item-thumbnail-left" href="#">
-              <img src="/img/docs/nevermind.jpg" />
-              <i class="booktime-service-check"></i>
-              <h2>GET FREE DRINK every Mon-Thu</h2>
-              <p>
-                Get free 1 drink for every 500 baht order. Available Mon-Thu from 2pm to 5pm until 15 th August 2014, subject to availability.
-                Dishes from a set menu and subject to change. Includes VAT, excludes service.
-              </p>
-            </a>
-            <a class="item item-thumbnail-left" href="#">
-              <img src="/img/docs/siamese-dream.jpg" />
-              <i class="booktime-service-uncheck"></i>
-              <h2>COME 4 PAY 3 all you can eat menu at only 799 baht</h2>
-              <p>Available Mon-Fri until 15th August 2014, subject to availability. Dishes from a set menu and subject to change.
-                Includes VAT, excludes service.</p>
-            </a>
-
-            <a class="item item-thumbnail-left" href="#">
-              <img src="/img/docs/nevermind.jpg" />
-              <i class="booktime-service-uncheck"></i>
-              <h2>GET FREE DRINK every Mon-Thu</h2>
-              <p>
-                Get free 1 drink for every 500 baht order. Available Mon-Thu from 2pm to 5pm until 15 th August 2014, subject to availability.
-                Dishes from a set menu and subject to change. Includes VAT, excludes service.
-              </p>
-            </a>
+              <h2>{{service.title}}</h2>
+              <p>{{service.detail}}</p>
+            </div>
           </div>
         </div>
       </div>

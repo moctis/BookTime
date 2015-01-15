@@ -1,0 +1,10 @@
+.section-booker-profile .shop, .section-booker-profile .shop .item-content {
+  padding: 0;
+}
+.section-booker-profile .item-profile-photo {
+  display: block;
+  text-align: center;
+}
+.section-booker-profile .item-profile-photo .layout {
+  display: inline-block;
+}

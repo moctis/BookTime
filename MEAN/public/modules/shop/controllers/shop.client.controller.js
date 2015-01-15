@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('shop').controller('ShopController', [
-  '$scope', '$ionicModal', '$stateParams', 'ShopsApi',
-  function($scope, $ionicModal, $stateParams, ShopsApi) {
+  '$scope', '$timeout', '$ionicModal', '$upload', '$stateParams', 'ShopsApi', '$cordovaCamera',
+  '$cordovaFileTransfer', '$api',
+  function($scope, $timeout, $ionicModal, $upload, $stateParams, ShopsApi, $cordovaCamera, $cordovaFileTransfer,
+    $api) {
 
     $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function($ionicModal) {
       $scope.modal = $ionicModal;
@@ -13,7 +15,7 @@ angular.module('shop').controller('ShopController', [
       animation: 'slide-in-up'
     });
 
-    $ionicModal.fromTemplateUrl('modules/notifications/views/booking.client.view.html', function($ionicModal) {
+    $ionicModal.fromTemplateUrl('modules/shop/views/booked.client.view.html', function($ionicModal) {
       $scope.modalBooked = $ionicModal;
     }, {
       // Use our scope for the scope of the modal to keep it simple
@@ -22,7 +24,7 @@ angular.module('shop').controller('ShopController', [
       animation: 'slide-in-up'
     });
 
-    /* $scope.comment = "test comment";
+    /* $scope.comment = 'test comment';
     $scope.commantRemain = $scope.maxlen = 400;
 
     $scope.commentChanged = function() {
@@ -35,6 +37,9 @@ angular.module('shop').controller('ShopController', [
       $scope.modal.hide();
     };
 
+    $scope.closeBooked = function() {
+      $scope.modalBooked.hide();
+    };
 
     $scope.getDirection = function() {
       alert('Get Direction');
@@ -91,8 +96,43 @@ angular.module('shop').controller('ShopController', [
       });
     };
 
-    $scope.gotBooking = function() {
+    $scope.gotBooking = function(booking) {
+      $scope.booking = booking;
       $scope.modalBooked.show();
+    };
+
+
+    //-------------------
+    $scope.takePicture = function() {
+      var options = {
+        quality: 50,
+        destinationType: Camera.DestinationType.FILE_URI,
+        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
+      };
+
+      // udpate camera image directive
+      $cordovaCamera.getPicture(options).then(function(imageURI) {
+        $scope.cameraimage = imageURI;
+
+        var options2 = {
+
+        };
+        $cordovaFileTransfer
+          .upload($api.actionWithToken('/api/shops/images'), imageURI, options2)
+          .then(function(result) {
+            // Success!
+            console.log('transfer success', result);
+          }, function(err) {
+            // Error
+            console.log('transfer error', err);
+          }, function(progress) {
+            // constant progress updates
+            console.log('transfer progress', progress);
+          });
+
+      }, function(err) {
+        console.log('Failed because: ' + message);
+      });
     };
 
   }

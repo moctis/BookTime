@@ -8,6 +8,13 @@ angular.module('shop').factory('Bookings', ['$resource', '$api',
     }, {
       update: {
         method: 'PUT'
+      },
+      query: {
+        method: 'GET',
+        params: {
+          types: 'types'
+        },
+        isArray: true
       }
     });
   }

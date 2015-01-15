@@ -3,8 +3,10 @@
     <ion-content has-header="false" padding="false">
       <ion-list class="list-shops">
         <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop({shopId:it._id})">
-          <img src="{{it.image}}">
-          <div class="details">
+          <div class="col-25">
+            <img src="{{it.image}}">
+          </div>       
+          <div class="col-75">
             <span class="booked">
               <i class="booktime-bookmark-empty"></i>
               <br />
@@ -12,8 +14,8 @@
             </span>
             <span class="name">{{it.name}} <i class="booktime-icon-champion"></i>
             </span>
-            <span class="rank">
-              <angular-ratings ng-model="it.rank"></angular-ratings>
+            <span class="loves">
+              <i class="booktime-icon-heart-notlove"></i> {{it.loves}}
             </span>
             <span class="catalog">{{it.catalog}}</span>
             <span class="booked-comments">{{it.booked}} Booked here | {{it.reviews}} reviews</span>

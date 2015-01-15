@@ -18,6 +18,8 @@ var ApplicationConfiguration = (function() {
     'mgcrea.ngStrap',
     'ionic',
     'ngCordova',
+    'angularMoment',
+    'angularFileUpload'
   ];
 
   // Add a new vertical module
@@ -33,6 +35,7 @@ var ApplicationConfiguration = (function() {
     applicationModuleName: applicationModuleName,
     applicationModuleVendorDependencies: applicationModuleVendorDependencies,
     registerModule: registerModule,
-    server: 'http://booktimeserver.local:3003' // don't put  / on tail
+    //server: 'http://booktimeserver.local:3003' // don't put  / on tail
+    server: 'http://192.168.1.115:3003' // don't put  / on tail
   };
 })();
