@@ -9,29 +9,16 @@ angular.module('shop').controller('ShopController', [
     $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function($ionicModal) {
       $scope.modal = $ionicModal;
     }, {
-      // Use our scope for the scope of the modal to keep it simple
       scope: $scope,
-      // The animation we want to use for the modal entrance
       animation: 'slide-in-up'
     });
 
     $ionicModal.fromTemplateUrl('modules/shop/views/booked.client.view.html', function($ionicModal) {
       $scope.modalBooked = $ionicModal;
     }, {
-      // Use our scope for the scope of the modal to keep it simple
       scope: $scope,
-      // The animation we want to use for the modal entrance
       animation: 'slide-in-up'
     });
-
-    /* $scope.comment = 'test comment';
-    $scope.commantRemain = $scope.maxlen = 400;
-
-    $scope.commentChanged = function() {
-
-        $scope.commantRemain =  $scope.maxlen - $scope.comment.length;
-        console.log($scope.comment, $scope.commantRemain );
-    }; */
 
     $scope.closeModal = function() {
       $scope.modal.hide();
@@ -44,7 +31,6 @@ angular.module('shop').controller('ShopController', [
     $scope.getDirection = function() {
       alert('Get Direction');
     };
-
 
     var mock = function() {
       var basepath = 'res/shops/1/';
@@ -91,10 +77,12 @@ angular.module('shop').controller('ShopController', [
         shop.albums = shop.albums || moc.albums;
         shop.image = shop.image || moc.image;
         $scope.it = shop;
-
-
       });
     };
+
+    $scope.initAlbums = function() {
+      console.log('initAlbums');
+    }
 
     $scope.gotBooking = function(booking) {
       $scope.booking = booking;

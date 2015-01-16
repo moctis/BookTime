@@ -2,10 +2,10 @@
   <ion-view hide-nav-bar="true">
     <ion-content has-header="false" padding="false">
       <ion-list class="list-shops">
-        <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop({shopId:it._id})">
+        <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop.detail({shopId:it._id})">
           <div class="col-25">
             <img src="{{it.image}}">
-          </div>       
+          </div>
           <div class="col-75">
             <span class="booked">
               <i class="booktime-bookmark-empty"></i>

@@ -8,7 +8,7 @@ var passport = require('passport'),
   images = require('../../app/controllers/images'),
   multiparty = require('connect-multiparty'),
   path = require('path'),
-  rootPath = path.normalize(__dirname + '/../../images/'),
+  rootPath = path.normalize(__dirname + '/../../../images/'),
   multipartyMiddleware = multiparty({
     uploadDir: rootPath
   });

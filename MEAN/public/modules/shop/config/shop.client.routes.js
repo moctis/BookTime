@@ -17,6 +17,7 @@ angular.module('shop').config(['$stateProvider',
 
     .state('main.tab.home.shop', {
       url: '/shop/:shopId',
+      abstract: true,
       views: {
         'home-list': {
           templateUrl: 'modules/shop/views/shop.client.view.html'
@@ -24,19 +25,19 @@ angular.module('shop').config(['$stateProvider',
       }
     })
 
-    .state('main.tab.album', {
-      url: '/album',
-      views: {
-        'home-tab': {
-          templateUrl: 'modules/shop/views/album.client.view.html',
+    .state('main.tab.home.shop.detail', {
+      url: '',
+      templateUrl: 'modules/shop/views/shop-detail.client.view.html'
+    })
 
-        }
-      }
+    .state('main.tab.home.shop.album', {
+      url: '/album',
+      templateUrl: 'modules/shop/views/shop-album.client.view.html',
     })
 
     .state('imagesTest', {
       url: '/imagesTest',
-      templateUrl: 'modules/shop/views/images.client.view.html', 
+      templateUrl: 'modules/shop/views/images.client.view.html',
     })
 
     ;
