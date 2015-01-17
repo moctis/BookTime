@@ -54,9 +54,7 @@ angular.module('shop').controller('ShopController', [
           basepath + 'a4.jpg',
           basepath + 'a5.jpg',
           basepath + 'a6.jpg',
-          basepath + 'a7.jpg',
-          basepath + 'a8.jpg',
-          basepath + 'a9.jpg'
+          basepath + 'a7.jpg'
         ]
       };
     };
@@ -72,6 +70,7 @@ angular.module('shop').controller('ShopController', [
         shopId: $stateParams.shopId
       }, function(shop) {
         var moc = mock();
+        console.log('shop', shop);
         shop.lastBooked = shop.lastBooked || moc.lastBooked;
         shop.distance = shop.distance || moc.distance;
         shop.albums = shop.albums || moc.albums;
@@ -79,6 +78,7 @@ angular.module('shop').controller('ShopController', [
         $scope.it = shop;
       });
     };
+
 
     $scope.initAlbums = function() {
       console.log('initAlbums');
@@ -91,7 +91,8 @@ angular.module('shop').controller('ShopController', [
 
 
     //-------------------
-    $scope.takePicture = function() {
+    $scope.takePicture = function(_id) {
+      console.log('takePicture ' + _id);
       var options = {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI,
@@ -106,7 +107,7 @@ angular.module('shop').controller('ShopController', [
 
         };
         $cordovaFileTransfer
-          .upload($api.actionWithToken('/api/shops/images'), imageURI, options2)
+          .upload($api.actionWithToken('/api/shops/' + _id + '/albums'), imageURI, options2)
           .then(function(result) {
             // Success!
             console.log('transfer success', result);
@@ -123,5 +124,8 @@ angular.module('shop').controller('ShopController', [
       });
     };
 
+    $scope.imgSrc = function(_id) {
+      return $api.actionWithToken('/api/images/' + _id);
+    };
   }
 ]);

@@ -13,7 +13,7 @@
         <div class="photos-albums">
           <div class="photo-small col-25" ng-repeat="p in it.albums|limitTo:4">
             <a data-ui-sref="^.album">
-              <img src="{{p}}">
+              <img src="{{imgSrc(p)}}">
             </a>
           </div>
         </div>

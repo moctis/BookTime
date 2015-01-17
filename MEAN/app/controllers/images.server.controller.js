@@ -6,6 +6,9 @@
 var mongoose = require('mongoose'),
   errorHandler = require('./errors'),
   Image = mongoose.model('Image'),
+  fs = require('fs'),
+  config = require('../../config/config'),
+  path = require('path'),
   _ = require('lodash');
 
 /**
@@ -31,6 +34,23 @@ exports.create = function(req, res) {
  */
 exports.read = function(req, res) {
   res.jsonp(req.image);
+};
+
+exports.readFull = function(req, res) {
+  var image = req.image;
+
+  //res.jsonp(req.image);
+  res.contentType('image/jpeg');
+
+  var storePath = path.normalize(config.imagesPath + image.path);
+
+  if (!fs.existsSync(storePath)) {
+    res.status(400).send('Image is not found:');
+  } else {
+    var data1 = fs.readFileSync(storePath);
+    res.send(data1);
+  }
+
 };
 
 /**
@@ -88,12 +108,15 @@ exports.list = function(req, res) {
  * image middleware
  */
 exports.findByID = function(req, res, next, id) {
-  Image.findById(id).populate('owner', '').exec(function(err, image) {
-    if (err) return next(err);
-    if (!image) return next(new Error('Failed to load image ' + id));
-    req.image = image;
-    next();
-  });
+  Image
+    .findById(id)
+    .populate('owner', 'displayName')
+    .exec(function(err, image) {
+      if (err) return next(err);
+      if (!image) return next(new Error('Failed to load image ' + id));
+      req.image = image;
+      next();
+    });
 };
 
 /**
@@ -109,15 +132,47 @@ exports.hasAuthorization = function(req, res, next) {
 };
 
 
-exports.uploadFile = function(req, res, next) {
+exports.uploadAlbums = function(req, res, next) {
   // We are able to access req.files.file thanks to
   // the multiparty middleware
-  console.log('uploadFile:', req.files.file.path);
-  console.log(req.files);
+  var image = new Image();
 
+  image.path = image._id;
+  image.owner = req.user;
+  image.shopId = req.shop._id;
 
+  var storePath = path.normalize(config.imagesPath + image.path);
+  fs.rename(req.files.file.path, storePath);
+  image.save(function(err) {
+    if (err) {
+      return res.status(400).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    } else {
+      console.log(req.files);
+      console.log(image);
 
-  res.jsonp({
-    result: 'OK'
+      var shop = req.shop;
+      shop.albums = shop.albums || [];
+      shop.albums.push(image);
+
+      shop.save(function(err) {
+        if (err) {
+          return res.status(400).send({
+            message: errorHandler.getErrorMessage(err)
+          });
+        } else {
+          return res.jsonp(image);
+        }
+      });
+
+    }
   });
+};
+
+exports.nocache = function(req, res, next) {
+  res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+  res.header('Expires', '-1');
+  res.header('Pragma', 'no-cache');
+  next();
 };

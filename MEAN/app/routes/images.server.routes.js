@@ -19,14 +19,17 @@ module.exports = function(app) {
   });
 
   app.route('/api/shops/images')
-    .post(authenticate, users.requiresLogin, multipartyMiddleware, images.uploadFile);
+    .post(authenticate, users.requiresLogin, multipartyMiddleware, images.uploadAlbums);
 
+  app.route('/api/images/:imageId')
+    .get(images.readFull);
 
-  app.route('/api/shops/images/:imageId')
-    .get(authenticate, users.requiresLogin, images.read)
-    .post(authenticate, users.requiresLogin, images.hasAuthorization, images.create)
-    .put(authenticate, users.requiresLogin, images.hasAuthorization, images.update)
-    .delete(authenticate, users.requiresLogin, images.hasAuthorization, images.delete);
+  app.route('/api/shops/:shopId/albums')
+    .post(authenticate, users.requiresLogin, multipartyMiddleware, images.uploadAlbums);
+  /*.get(authenticate, users.requiresLogin, images.read)
+  .post(authenticate, users.requiresLogin, images.hasAuthorization, images.create)
+  .put(authenticate, users.requiresLogin, images.hasAuthorization, images.update)
+  .delete(authenticate, users.requiresLogin, images.hasAuthorization, images.delete);*/
 
 
   app.param('imageId', images.findByID);

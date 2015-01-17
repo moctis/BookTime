@@ -5,8 +5,11 @@
         <div class="row albums-thumbnail">
           <div class="col-33 thumbnail" ng-repeat="p in it.albums">
             <a href="#" class="">
-              <img src="{{p}}" alt="no photo">
+              <img src="{{imgSrc(p)}}" class="img-responsive img-rounded" />
             </a>
+          </div>
+          <div class="col-33 thumbnail" data-ng-click="takePicture(it._id)">
+            <img src="res/icons/icons/booktime-button-addnewphoto.png" class="img-responsive img-rounded" />
           </div>
         </div>
       </div>

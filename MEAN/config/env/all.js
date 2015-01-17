@@ -1,5 +1,7 @@
 'use strict';
 
+var path = require('path');
+
 module.exports = {
   app: {
     title: 'Booktime',
@@ -10,6 +12,7 @@ module.exports = {
   templateEngine: 'swig',
   sessionSecret: 'MEAN',
   sessionCollection: 'sessions',
+  imagesPath: path.normalize(__dirname + '/../../../images/'),
   assets: {
     lib: {
       css: [
