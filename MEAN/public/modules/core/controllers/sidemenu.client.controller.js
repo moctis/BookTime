@@ -66,9 +66,9 @@ angular.module('core').controller('SidemenuController', [
     }
 
     $scope.menus.push({
-      label: 'imagesTest',
+      label: 'Test',
       icon: 'fa-gear',
-      state: 'imagesTest'
+      state: 'main.tab.test'
     });
 
     $scope.showDetail = function($index) {

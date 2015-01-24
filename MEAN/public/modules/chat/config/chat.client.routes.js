@@ -6,9 +6,13 @@ angular.module('core').config([
   function($stateProvider, $urlRouterProvider) {
 
     $stateProvider.
-    state('test', {
+    state('main.tab.test', {
         url: '/test',
-        templateUrl: 'modules/chat/views/test.client.view.html'
+        views: {
+          'chat-tab': {
+            templateUrl: 'modules/chat/views/test.client.view.html'
+          }
+        }
       })
       .state('main.tab.chat', {
         url: '/chat',

@@ -24,10 +24,11 @@ module.exports = {
         'public/lib/others/others.css'
       ],
       js: [
-        //                'public/lib/jquery/jquery.js',
+
         'public/lib/ionic/js/ionic.bundle.js',
         //                'public/lib/ionic/js/ionic.js',
         //				'public/lib/angular/angular.js',
+        'public/lib/jquery/jquery.js',
         'public/lib/angular-animate/angular-animate.js',
         'public/lib/angular-sanitize/angular-sanitize.js',
         //				'public/lib/angular-ui-router/angular-ui-router.js',

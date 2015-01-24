@@ -1,7 +1,6 @@
 fieldset {
   border: 0;
 }
-
 .pane {
   position: absolute;
   top: 0;
@@ -60,6 +59,9 @@ fieldset {
   box-shadow: none;
   color: #f47822;
   font-size: 15px;
+}
+.bar-mainheader {
+  z-index: 15;
 }
 .bar {
   padding: 0;
@@ -192,8 +194,7 @@ fieldset {
 .menu.menu-booktime .bar-header {
   z-index: 0;
 }
-.menu .scroll-content {} 
-@media only screen and (min-device-width: 680px) {
+.menu .scroll-content {} @media only screen and (min-device-width: 680px) {
   .has-tabs-top .item {
     font-size: 40px;
     padding: 40px;
