@@ -82,7 +82,7 @@ angular.module('shop').controller('ShopController', [
 
     $scope.initAlbums = function() {
       console.log('initAlbums');
-    }
+    };
 
     $scope.gotBooking = function(booking) {
       $scope.booking = booking;
@@ -93,6 +93,12 @@ angular.module('shop').controller('ShopController', [
     //-------------------
     $scope.takePicture = function(_id) {
       console.log('takePicture ' + _id);
+
+      if (Camera === undefined) {
+        $scope.filePicker();
+        return;
+      };
+
       var options = {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI,
@@ -120,8 +126,18 @@ angular.module('shop').controller('ShopController', [
           });
 
       }, function(err) {
-        console.log('Failed because: ' + message);
+        console.log('Failed because: ' + err);
       });
+    };
+
+    $scope.filePicker = function() {
+      $ionicModal.fromTemplateUrl('modules/shop/views/filepicker.client.view.html', function($ionicModal) {
+        $scope.modalFile = $ionicModal;
+      }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+      });
+
     };
 
     $scope.imgSrc = function(_id) {

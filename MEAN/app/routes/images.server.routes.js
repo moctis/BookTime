@@ -22,7 +22,7 @@ module.exports = function(app) {
     .post(authenticate, users.requiresLogin, multipartyMiddleware, images.uploadAlbums);
 
   app.route('/api/images/:imageId')
-    .get(images.readFull);
+    .get(images.processImage, images.outputImage);
 
   app.route('/api/shops/:shopId/albums')
     .post(authenticate, users.requiresLogin, multipartyMiddleware, images.uploadAlbums);

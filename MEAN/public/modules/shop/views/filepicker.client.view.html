@@ -1,0 +1,84 @@
+<section class="section-shop">
+  <ion-view title="Suan Kularb">
+    <ion-nav-buttons side="right">
+      <button class="button button-clear button-booktime">Share</button>
+    </ion-nav-buttons>
+    <ion-content class="has-tabs-top" padding="false">
+      <div class="row">
+        <div class="displayed-photo">
+          <img src="res/shops/1/main.jpg" />
+        </div>
+      </div>
+      <div class="row row-photos relative">
+        <div class="photos-albums">
+          <div class="photo-small col-25" ng-repeat="p in it.albums|limitTo:4">
+            <a data-ui-sref="^.album">
+              <img src="{{imgSrc(p)}}">
+            </a>
+          </div>
+        </div>
+        <div class="photos-reviews">
+          <a data-ui-sref="^.album">
+            <div class="photos-reviews-bg"></div>
+            <div class="row">
+              <div class="col">{{it.photos}} Photos</div>
+            </div>
+            <div class="row">
+              <div class="col">{{it.reviews}} Reviews</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="details">
+        <div class="row">
+          <div class="col">
+            <span class="row name">{{it.name}}</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col ">
+            <span class="row love">
+              <i class="booktime-icon-heart-notlove"></i> {{it.loves}}
+            </span>
+            <span class="row address">{{it.address}}</span>
+            <span class="row address">{{it.address2}}</span>
+            <span class="row lastBooked-distance">Last booked {{it.lastBooked}} / {{it.distance}}</span>
+            <span class="row operationTime"><i class="booktime-icon-operationtime"></i>{{it.operationTime}}</span>
+            <div class="row row-bottom commands">
+              <button class="button button-icon button-small booktime-button-tofavorite" ng-click="modal.show()"></button>
+              <button class="button button-icon button-small booktime-button-call" ng-click="getDirection()"></button>
+              <button class="button button-icon button-small booktime-button-chat" ng-click="getDirection()"></button>
+            </div>
+          </div>
+          <div class="col-40 main-commands">
+            <button class="button button-icon button-small booktime-button-bookme2" ng-click="modal.show()"></button>
+            <br />
+            <button class="button button-icon button-small booktime-button-getdirection" ng-click="getDirection()"></button>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="card card-shop-detail">
+        <div class="item item-text-wrap">
+          {{it.detail}}
+        </div>
+      </div>
+      <div class="card card-shop-service" data-ng-show="it.services">
+        <div class="item item-divider">
+          OUR SERVICES
+          <br /> Select form our services below
+        </div>
+        <div class="item item-text-wrap">
+          <div class="list">
+            <div class="item item-thumbnail-left" data-ng-repeat="service in it.services">
+              <img src="/img/docs/siamese-dream.jpg" />
+              <i class="booktime-service-uncheck"></i>
+              <h2>{{service.title}}</h2>
+              <p>{{service.detail}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-content>
+  </ion-view>
+</section>

@@ -9,7 +9,8 @@ var mongoose = require('mongoose'),
   fs = require('fs'),
   config = require('../../config/config'),
   path = require('path'),
-  _ = require('lodash');
+  _ = require('lodash'),
+  gm = require('gm');
 
 /**
  * Create a image
@@ -36,21 +37,29 @@ exports.read = function(req, res) {
   res.jsonp(req.image);
 };
 
-exports.readFull = function(req, res) {
+exports.processImage = function(req, res, next) {
   var image = req.image;
+  var source = path.normalize(config.imagesPath + image.path);
+  req.outputImage = source + '_thumb';
 
-  //res.jsonp(req.image);
+  gm(source)
+    .resize(200, 200)
+    .autoOrient()
+    .write(req.outputImage, function(err) {
+      if (!err) console.log(' hooray! ');
+
+      next();
+    });
+};
+
+exports.outputImage = function(req, res) {
   res.contentType('image/jpeg');
-
-  var storePath = path.normalize(config.imagesPath + image.path);
-
-  if (!fs.existsSync(storePath)) {
+  if (!fs.existsSync(req.outputImage)) {
     res.status(400).send('Image is not found:');
   } else {
-    var data1 = fs.readFileSync(storePath);
+    var data1 = fs.readFileSync(req.outputImage);
     res.send(data1);
   }
-
 };
 
 /**

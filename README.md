@@ -76,6 +76,9 @@ After run `setx` command, it need to restart cmd.exe
 0. etc
  - http://www.dragsponsive.com/
  - http://www.responsivewebmobile.com/app/webroot/rwm_slide_panel/#
+0. image manipulation
+ - npm install imagemagick
+ - https://github.com/rsms/node-imagemagick
 
 
 -http://blog.credera.com/technology-insights/microsoft-solutions/modern-web-development-best-practices-powered-grunt-js-part-2-diving/
