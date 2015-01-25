@@ -15,8 +15,8 @@ angular.module('core').controller('HeadController', [
     $scope.toggleSearch = function() {
       $scope.showSearch = !$scope.showSearch;
 
-      var searchScreen = $state.current.name === 'main.tab.home.list.food';
-      if (!searchScreen) {
+      var atSearchScreen = $state.current.name === 'main.tab.home.list.food';
+      if (!atSearchScreen) {
         $state.go('main.tab.home.list.food');
         $scope.showSearch = true;
       } else {

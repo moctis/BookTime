@@ -2,16 +2,18 @@
   <ul rn-carousel rn-carousel-buffered rn-carousel-index="carouselIndex" class="carousel1">
     <li ng-class="id-1">
       <form>
-        <img src="res/screen/share/2x/login.png" class="full-width full-height" />
+        <div style="display:block;position:absolute;">
+          <img src="res/screen/share/2x/login.png" class="full-width full-height" />
+        </div>
         <div class="pannel-float">
           <div class="left-inner-addon text-left">
             <i class="glyphicon glyphicon-envelope"></i>
             <input type="text" class="form-control" id="InputEmail" placeholder="USERNAME" data-ng-model="credentials.username" />
           </div>
           <!--div class="left-inner-addon text-left">
-                  <i class="glyphicon glyphicon-earphone"></i>
-                  <input type="tel" class="form-control" id="InputPhone" placeholder="PHONE NUMBER">
-              </div-->
+          <i class="glyphicon glyphicon-earphone"></i>
+          <input type="tel" class="form-control" id="InputPhone" placeholder="PHONE NUMBER">
+        </div-->
           <div class="left-inner-addon text-left">
             <i class="glyphicon glyphicon-log-in"></i>
             <input type="password" class="form-control" id="InputPassword" placeholder="PASSWORD" data-ng-model="credentials.password"
@@ -19,8 +21,11 @@
           </div>
           <button ng-click="signin()" class="login">LOG IN</button>
           <button ui-sref='signup' class="signup">SIGN UP</button>
-          <div class="text-center forgot"><a href="/#!/forgot">Forgot Password?</a></div>
-          <div data-ng-if="error" class="text-center text-danger"><strong>{{error}}</strong></div>          
+          <div class="text-center forgot"><a href="/#!/forgot">Forgot Password?</a>
+          </div>
+          <div data-ng-if="error" class="text-center text-danger">
+            <strong>{{error}}</strong>
+          </div>
         </div>
       </form>
     </li>

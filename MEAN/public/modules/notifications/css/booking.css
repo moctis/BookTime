@@ -17,6 +17,12 @@
   font-size: 12px;
   line-height: 14px;
 }
+@media only screen and (min-device-width: 680px) {
+  .section-notifications .item {
+    width: 50%;
+    display: inline-block;
+  }
+}
 .section-notifications img {
   width: 64px;
   height: 58px;
@@ -32,12 +38,12 @@
   font-size: 10px;
   line-height: 12px;
   padding-top: 1em;
-  padding-right: 1em;    
+  padding-right: 1em;
 }
 .section-notifications .myShop-details .name {
   font-size: 28px;
   line-height: 30px;
-  float: right;  
+  float: right;
 }
 .section-notifications .myShop-details .address {
   float: right;
@@ -48,15 +54,12 @@
 .section-notifications .myShop-details .lastBooked-distance {
   font-size: 8px;
 }
-
 .section-notifications .underline {
   border-bottom: solid 1px #c0c0c0;
 }
-
-.section-notifications .orange{
+.section-notifications .orange {
   color: #F47822;
 }
-
 .section-notifications .details {
   font-size: 10px;
   line-height: 12px;
@@ -70,7 +73,6 @@
 .section-notifications .details .lastBooked-distance {
   font-size: 8px;
 }
-
 .section-notifications .booking> div {
   margin: auto;
   /* make it center */
@@ -98,69 +100,4 @@
 }
 .section-notifications .comment textarea {
   border: solid 1px black;
-}
-@media only screen and (min-device-width: 680px) {
-  .section-notifications .modal {
-    margin-top: -100px;
-    margin-left: -120px;
-    width: 80%;
-    font-size: 25px;
-    line-height: 40px;
-  }
-  .section-notifications .title {
-    line-height: 30px;
-    height: 30px;
-    font-size: 35px;
-    color: white;
-    font-weight: 600;
-  }
-  .section-notifications .item {
-    font-size: 28px;
-    line-height: 28px;
-  }
-  .section-notifications img {
-    width: 128px;
-    height: 116px;
-    margin-left: 50px;
-    margin-top: 50px;
-  }
-  .section-notifications .booking .item-input {
-    font-size: 40px;
-  }
-  .section-notifications .booking .input-label {
-    font-size: 40px;
-  }
-  .section-notifications .details {
-    font-size: 35px;
-    line-height: 40px;
-    padding-top: 1em;
-    padding-left: 1em;
-  }
-  .section-notifications .details .name {
-    font-size: 48px;
-    line-height: 50px;
-  }
-  .section-notifications .details .lastBooked-distance {
-    font-size: 25px;
-  }
-
-  .section-notifications .myShop-details {
-    padding-right: 2em;    
-  }
-  .section-notifications .myShop-details .name {
-    font-size: 48px;
-    line-height: 50px;
-  }
-  .section-notifications .myShop-details .address {
-    font-size: 25px;
-    line-height: 28px;
-  }
-  .section-notifications .myShop-details .operationTime {
-    font-size: 25px;
-    line-height: 28px;
-  }
-  .section-notifications .myShop-details .lastBooked-distance {
-    font-size: 25px;
-    line-height: 28px;
-  }  
 }

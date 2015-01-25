@@ -27,133 +27,133 @@
 }
 @mixin sprite-booktime-bookmark-empty() {
 /* You may have to set 'display: block' */
-	width: 42px;
-	height: 42px;
+	width: 40px;
+	height: 40px;
 	background: url('booktime.png') -450px 0;
 }
 @mixin sprite-booktime-button-bookme() {
 /* You may have to set 'display: block' */
-	width: 130px;
-	height: 42px;
-	background: url('booktime.png') -492px 0;
+	width: 124px;
+	height: 36px;
+	background: url('booktime.png') -490px 0;
 }
 @mixin sprite-booktime-button-bookme2() {
 /* You may have to set 'display: block' */
-	width: 194px;
-	height: 60px;
-	background: url('booktime.png') -622px 0;
+	width: 189px;
+	height: 59px;
+	background: url('booktime.png') -614px 0;
 }
 @mixin sprite-booktime-button-getdirection() {
 /* You may have to set 'display: block' */
-	width: 194px;
-	height: 60px;
-	background: url('booktime.png') -816px 0;
+	width: 189px;
+	height: 59px;
+	background: url('booktime.png') -803px 0;
 }
 @mixin sprite-booktime-button-tofavorite() {
 /* You may have to set 'display: block' */
-	width: 158px;
-	height: 39px;
-	background: url('booktime.png') -1010px 0;
+	width: 159px;
+	height: 41px;
+	background: url('booktime.png') -992px 0;
 }
 @mixin sprite-booktime-button-call() {
 /* You may have to set 'display: block' */
-	width: 54px;
-	height: 24px;
-	background: url('booktime.png') -1168px 0;
+	width: 52px;
+	height: 22px;
+	background: url('booktime.png') -1151px 0;
 }
 @mixin sprite-booktime-button-chat() {
 /* You may have to set 'display: block' */
-	width: 66px;
-	height: 24px;
-	background: url('booktime.png') -1222px 0;
+	width: 64px;
+	height: 23px;
+	background: url('booktime.png') -1203px 0;
 }
 @mixin sprite-booktime-accept-active() {
 /* You may have to set 'display: block' */
 	width: 181px;
 	height: 46px;
-	background: url('booktime.png') -1288px 0;
+	background: url('booktime.png') -1267px 0;
 }
 @mixin sprite-booktime-accept() {
 /* You may have to set 'display: block' */
 	width: 181px;
 	height: 46px;
-	background: url('booktime.png') -1469px 0;
+	background: url('booktime.png') -1448px 0;
 }
 @mixin sprite-booktime-close() {
 /* You may have to set 'display: block' */
 	width: 194px;
 	height: 56px;
-	background: url('booktime.png') -1650px 0;
+	background: url('booktime.png') -1629px 0;
 }
 @mixin sprite-booktime-close-active() {
 /* You may have to set 'display: block' */
 	width: 194px;
 	height: 56px;
-	background: url('booktime.png') -1844px 0;
+	background: url('booktime.png') -1823px 0;
 }
 @mixin sprite-booktime-confirm() {
 /* You may have to set 'display: block' */
 	width: 180px;
 	height: 46px;
-	background: url('booktime.png') -2038px 0;
+	background: url('booktime.png') -2017px 0;
 }
 @mixin sprite-booktime-decline-active() {
 /* You may have to set 'display: block' */
 	width: 181px;
 	height: 46px;
-	background: url('booktime.png') -2218px 0;
+	background: url('booktime.png') -2197px 0;
 }
 @mixin sprite-booktime-decline() {
 /* You may have to set 'display: block' */
 	width: 181px;
 	height: 46px;
-	background: url('booktime.png') -2399px 0;
+	background: url('booktime.png') -2378px 0;
 }
 @mixin sprite-booktime-declined() {
 /* You may have to set 'display: block' */
 	width: 180px;
 	height: 47px;
-	background: url('booktime.png') -2580px 0;
+	background: url('booktime.png') -2559px 0;
 }
 @mixin sprite-booktime-sendmessage-active() {
 /* You may have to set 'display: block' */
 	width: 136px;
 	height: 27px;
-	background: url('booktime.png') -2760px 0;
+	background: url('booktime.png') -2739px 0;
 }
 @mixin sprite-booktime-sendmessage() {
 /* You may have to set 'display: block' */
 	width: 136px;
 	height: 27px;
-	background: url('booktime.png') -2896px 0;
+	background: url('booktime.png') -2875px 0;
 }
 @mixin sprite-booktime-viewcalendar-active() {
 /* You may have to set 'display: block' */
 	width: 182px;
 	height: 47px;
-	background: url('booktime.png') -3032px 0;
+	background: url('booktime.png') -3011px 0;
 }
 @mixin sprite-booktime-viewcalendar() {
 /* You may have to set 'display: block' */
 	width: 182px;
 	height: 47px;
-	background: url('booktime.png') -3214px 0;
+	background: url('booktime.png') -3193px 0;
 }
 @mixin sprite-booktime-waitingqueue-active() {
 /* You may have to set 'display: block' */
 	width: 181px;
 	height: 46px;
-	background: url('booktime.png') -3396px 0;
+	background: url('booktime.png') -3375px 0;
 }
 @mixin sprite-booktime-waitingqueue() {
 /* You may have to set 'display: block' */
 	width: 181px;
 	height: 46px;
-	background: url('booktime.png') -3577px 0;
+	background: url('booktime.png') -3556px 0;
 }
 @mixin sprite-booktime-pending() {
 /* You may have to set 'display: block' */
 	width: 181px;
 	height: 47px;
-	background: url('booktime.png') -3758px 0;
+	background: url('booktime.png') -3737px 0;
 }

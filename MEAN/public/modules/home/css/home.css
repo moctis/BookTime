@@ -46,6 +46,12 @@
   position: relative;
   display: block;
 }
+@media only screen and (min-device-width: 680px) {
+  .shop {
+    display: inline-block;
+    width: 50%;
+  }
+}
 .shop-name {
   line-height: 21px;
   font-size: 21.5px;
@@ -77,13 +83,4 @@
 .shop-right {
   float: right;
   width: 45px;
-}
-@media only screen and (min-device-width: 680px) {
-  .tabs-home .tabs {
-    height: 80px;
-    vertical-align: middle;
-  }
-  .tabs-home .tabs .tab-title {
-    vertical-align: bottom;
-  }
 }

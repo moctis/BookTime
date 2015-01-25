@@ -1,5 +1,5 @@
 .section-notifications .notification, .section-notifications .notification .item-content {
-  padding: 5px 3px;  
+  padding: 5px 3px;
 }
 .section-notifications .notification img {
   width: 64px;
@@ -11,7 +11,7 @@
 .section-notifications .notification .col-75 {
   max-width: 100%;
 }
-.section-notifications .notification .status button{
+.section-notifications .notification .status button {
   margin-top: 10px;
 }
 .section-notifications .notification .displayName {
@@ -24,22 +24,4 @@
   font-size: 12px;
   line-height: 15px;
   color: #808080;
-}
-@media only screen and (min-device-width: 680px) {
-  .section-notifications .notification, .section-notifications .notification .item-content {
-    padding-bottom: 20px;
-  }
-  .section-notifications .notification img {
-    width: 160px;
-    height: 145px;
-    margin: 25px;
-  }
-  .section-notifications .notification .displayName {
-    font-size: 36px;
-    line-height: 38px;
-  }
-  .section-notifications .notification .time {
-    font-size: 32px;
-    line-height: 34px;
-  }
 }
