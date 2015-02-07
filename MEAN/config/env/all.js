@@ -29,6 +29,7 @@ module.exports = {
         //                'public/lib/ionic/js/ionic.js',
         //				'public/lib/angular/angular.js',
         'public/lib/jquery/jquery.js',
+        'public/lib/jquery-ui/ui/jquery-ui.js',
         'public/lib/angular-animate/angular-animate.js',
         'public/lib/angular-sanitize/angular-sanitize.js',
         //				'public/lib/angular-ui-router/angular-ui-router.js',
@@ -47,7 +48,10 @@ module.exports = {
         'public/cordova.js',
         'public/lib/others/angular.ratings.js',
         'public/lib/ng-file-upload/angular-file-upload-shim.js',
-        'public/lib/ng-file-upload/angular-file-upload.min.js'
+        'public/lib/ng-file-upload/angular-file-upload.min.js',
+        'public/lib/angular-ui-calendar/calendar.js',
+        'public/lib/fullcalendar/fullcalendar.js',
+        'public/lib/fullcalendar/gcal.js'
       ]
     },
     css: [

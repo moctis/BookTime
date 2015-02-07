@@ -2,9 +2,16 @@
   <ion-view title="SCHEDULE" left-buttons="leftButtons">
     <ion-content class="has-tabs-top" has-header="true" padding="false">
       <a ui-sref="!main.tab.home.food">Go To Party</a>
-      <div class="mockup">
+      <!--<div class="mockup">
         <img src="res/screen/share/2x/08_schedule2-month.png" />
-      </div>
+      </div>-->  
+      <div select="renderCalender('myCalendar');"></div>       
+		<div class="btn-group">
+                                    <button class="btn btn-success" ng-click="changeView('agendaDay', 'myCalendar')">AgendaDay</button>
+                                    <button class="btn btn-success" ng-click="changeView('agendaWeek', 'myCalendar')">AgendaWeek</button>
+                                    <button class="btn btn-success" ng-click="changeView('month', 'myCalendar')">Month</button>
+                                </div>      	
+      <div ui-calendar="uiConfig.calendar" calendar="myCalendar" class="span8 calendar" ng-model="eventSources"></div>
     </ion-content>
   </ion-view>
 </section>
