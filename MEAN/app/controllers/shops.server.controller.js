@@ -18,7 +18,8 @@ exports.create = function(req, res) {
   shop.save(function(err) {
     if (err) {
       return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
+        message: errorHandler.getErrorMessage(err),
+        err: err
       });
     } else {
       res.jsonp(shop);
