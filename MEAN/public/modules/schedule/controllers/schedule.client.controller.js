@@ -1,21 +1,21 @@
 'use strict';
 
 angular.module('schedules').controller('ScheduleController', [
-  '$scope', '$location',
-  function($scope, $location, uiCalendarConfig) {
-  	//alert("hello");    
+  '$scope', '$timeout', '$locale',
+  function($scope, $timeout, $locale, uiCalendarConfig) {  	
   	var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();  	    
 
-    $scope.changeTo = 'Hungarian';
+    $scope.changeTo = 'English';
     /* event source that pulls from google.com */
     $scope.eventSource = {
             url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
             className: 'gcal-event',           // an option!
-            currentTimezone: 'America/Chicago' // an option!
+            currentTimezone: 'Bangkok' // an option!
     };
+
     /* event source that contains custom events on the scope */
     $scope.events = [
       {title: 'All Day Event',start: new Date(y, m, 1)},
@@ -23,8 +23,10 @@ angular.module('schedules').controller('ScheduleController', [
       {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
       {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
       {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-      {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
+      {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'},
+      {title: 'valentine', start: new Date(y, 1, 14),end: new Date(y, 1, 14)}
     ];
+
     /* event source that calls a function on every view switch */
     $scope.eventsF = function (start, end, timezone, callback) {
       var s = new Date(start).getTime() / 1000;
@@ -45,7 +47,8 @@ angular.module('schedules').controller('ScheduleController', [
     };
     /* alert on eventClick */
     $scope.alertOnEventClick = function( date, jsEvent, view){
-        $scope.alertMessage = (date.title + ' was clicked ');
+        //$scope.alertMessage = (date.title + ' was clicked ');
+        alert(date.title + ' was clicked ');
     };
     /* alert on Drop */
      $scope.alertOnDrop = function(event, delta, revertFunc, jsEvent, ui, view){
@@ -82,14 +85,14 @@ angular.module('schedules').controller('ScheduleController', [
       $scope.events.splice(index,1);
     };
     /* Change View */
-    $scope.changeView = function(view,calendar) {
+    $scope.changeView = function(view,calendar) {        
       uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
     };
     /* Change View */
     $scope.renderCalender = function(calendar) {
       if(uiCalendarConfig.calendars[calendar]){
         uiCalendarConfig.calendars[calendar].fullCalendar('render');
-      }
+      }      
     };
      /* Render Tooltip */
     $scope.eventRender = function( event, element, view ) { 
@@ -103,14 +106,15 @@ angular.module('schedules').controller('ScheduleController', [
         height: 450,
         editable: true,
         header:{
-          left: 'title',
-          center: '',
-          right: 'today prev,next'
+          left: 'prev',
+          center: 'title',
+          right: 'next'
+          //right: 'today prev,next'
         },
         eventClick: $scope.alertOnEventClick,
         eventDrop: $scope.alertOnDrop,
         eventResize: $scope.alertOnResize,
-        eventRender: $scope.eventRender
+        //eventRender: $scope.eventRender
       }
     };
 
@@ -118,7 +122,7 @@ angular.module('schedules').controller('ScheduleController', [
       if($scope.changeTo === 'Hungarian'){
         $scope.uiConfig.calendar.dayNames = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek", "Szombat"];
         $scope.uiConfig.calendar.dayNamesShort = ["Vas", "Hét", "Kedd", "Sze", "Csüt", "Pén", "Szo"];
-        $scope.changeTo= 'English';
+        $scope.changeTo = 'English';
       } else {
         $scope.uiConfig.calendar.dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         $scope.uiConfig.calendar.dayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -126,10 +130,8 @@ angular.module('schedules').controller('ScheduleController', [
       }
     };
     /* event sources array*/
-    $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
-    $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
-
-    //alert(date);
+    //$scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];    
+    $scope.eventSources = [$scope.events];
     
   }
 ]);
