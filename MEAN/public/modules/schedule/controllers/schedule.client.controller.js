@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('schedules').controller('ScheduleController', [
-  '$scope', '$timeout', '$locale',
+  '$scope', '$timeout', '$locale', 'uiCalendarConfig',
   function($scope, $timeout, $locale, uiCalendarConfig) {
     var date = new Date();
     var d = date.getDate();
