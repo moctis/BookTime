@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('schedules').controller('ScheduleController', [
-  '$scope', '$timeout', '$locale', 'uiCalendarConfig',
-  function($scope, $timeout, $locale, uiCalendarConfig) {
+  '$scope', '$timeout', '$locale', 'uiCalendarConfig', '$compile',
+  function($scope, $timeout, $locale, uiCalendarConfig, $compile) {
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
@@ -11,7 +11,7 @@ angular.module('schedules').controller('ScheduleController', [
     $scope.changeTo = 'English';
     /* event source that pulls from google.com */
     $scope.eventSource = {
-      url: "http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic",
+      url: 'http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic',
       className: 'gcal-event', // an option!
       currentTimezone: 'Bangkok' // an option!
     };
@@ -58,7 +58,7 @@ angular.module('schedules').controller('ScheduleController', [
       var events = [{
         title: 'Feed Me ' + m,
         start: s + (50000),
-        end: s + (100000),
+        end: e + (100000),
         allDay: false,
         className: ['customFeed']
       }];
@@ -163,21 +163,6 @@ angular.module('schedules').controller('ScheduleController', [
       }
     };
 
-    $scope.changeLang = function() {
-      if ($scope.changeTo === 'Hungarian') {
-        $scope.uiConfig.calendar.dayNames = ["Vasárnap", "Hétfő", "Kedd", "Szerda", "Csütörtök", "Péntek",
-          "Szombat"
-        ];
-        $scope.uiConfig.calendar.dayNamesShort = ["Vas", "Hét", "Kedd", "Sze", "Csüt", "Pén", "Szo"];
-        $scope.changeTo = 'English';
-      } else {
-        $scope.uiConfig.calendar.dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
-          "Saturday"
-        ];
-        $scope.uiConfig.calendar.dayNamesShort = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        $scope.changeTo = 'Hungarian';
-      }
-    };
     /* event sources array*/
     //$scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
     $scope.eventSources = [$scope.events];
