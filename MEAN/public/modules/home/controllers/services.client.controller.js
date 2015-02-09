@@ -4,9 +4,12 @@ angular.module('home').controller('ServicesController', ['$scope', 'ShopsApi',
   function($scope, ShopsApi) {
     // Services controller logic
     // ...
+    $scope.searchInput = '';
+
     $scope.find = function() {
       ShopsApi.query({
-        terms: 'service'
+        terms: 'service',
+        q: $scope.searchInput
       }, function(items) {
         $scope.items = items;
         // $scope.mocData($scope.items);
@@ -20,5 +23,10 @@ angular.module('home').controller('ServicesController', ['$scope', 'ShopsApi',
         });
       });
     };
+
+    $scope.$on('searchChange', function(event, args) {
+      $scope.searchInput = args.searchInput;
+      $scope.find();
+    });
   }
 ]);

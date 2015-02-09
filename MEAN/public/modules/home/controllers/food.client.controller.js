@@ -4,9 +4,12 @@ angular.module('home').controller('FoodController', ['$scope', 'ShopsApi',
   function($scope, ShopsApi) {
     // Food controller logic
     // ...
+    $scope.searchInput = '';
+
     $scope.find = function() {
       ShopsApi.query({
-        terms: 'food'
+        terms: 'food',
+        q: $scope.searchInput
       }, function(items) {
         $scope.items = items;
         // $scope.mocData($scope.items);
@@ -19,5 +22,10 @@ angular.module('home').controller('FoodController', ['$scope', 'ShopsApi',
         });
       });
     };
+
+    $scope.$on('searchChange', function(event, args) {
+      $scope.searchInput = args.searchInput;
+      $scope.find();
+    });
   }
 ]);

@@ -74,15 +74,25 @@ exports.delete = function(req, res) {
  * List of Shops
  */
 exports.list = function(req, res) {
-  Shop.find().sort('-created').populate('owner', 'displayName').exec(function(err, shops) {
-    if (err) {
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      res.jsonp(shops);
-    }
-  });
+  //console.log('req', req.query);  got   req {q: 'xx', terms: 'food' }
+  console.log('q', req.query.q);
+  Shop
+    .find()
+    .where({
+      name: {
+        '$regex': req.query.q,
+        '$options': 'i'
+      }
+    })
+    .sort('-created').populate('owner', 'displayName').exec(function(err, shops) {
+      if (err) {
+        return res.status(400).send({
+          message: errorHandler.getErrorMessage(err)
+        });
+      } else {
+        res.jsonp(shops);
+      }
+    });
 };
 
 /**

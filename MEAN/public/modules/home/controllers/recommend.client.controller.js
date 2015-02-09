@@ -4,9 +4,12 @@ angular.module('home').controller('RecommendController', ['$scope', 'ShopsApi',
   function($scope, ShopsApi) {
     // Recommend controller logic
     // ...
+    $scope.searchInput = '';
+
     $scope.find = function() {
       ShopsApi.query({
-        terms: 'hilight'
+        terms: 'hilight',
+        q: $scope.searchInput
       }, function(items) {
         $scope.items = items;
         // scope.mocData($scope.items);
@@ -22,5 +25,10 @@ angular.module('home').controller('RecommendController', ['$scope', 'ShopsApi',
         });
       });
     };
+
+    $scope.$on('searchChange', function(event, args) {
+      $scope.searchInput = args.searchInput;
+      $scope.find();
+    });
   }
 ]);
