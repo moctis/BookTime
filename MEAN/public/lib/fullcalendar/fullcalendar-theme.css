@@ -1,0 +1,54 @@
+.fc-toolbar {
+	margin-bottom: 0;
+	background: linear-gradient(#f8f8f8, #b2b2b2);	
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: 25px;
+}
+
+.fc-toolbar h2 {
+	color: #f47822;
+	font-size: 18px;
+}
+
+
+.fc button {
+	height: 20px;
+	width: 20px;
+}
+
+.fc-state-default.fc-corner-left { 
+	border-radius: 50%;	
+}
+
+.fc-state-default.fc-corner-right { 
+	border-radius: 50%;
+}
+
+.fc button .fc-icon {
+	top: 0;
+	margin: 0 0 0 -3px;
+	color: white;
+	height: 20px;
+	line-height: 20px;
+	font-size: 18px;
+	vertical-align: top;
+}
+
+.fc-state-default {
+	background-image: none;
+	background-color: #f47822;
+	border: 0;
+}
+
+.fc-toolbar .fc-left {	
+	padding-left: 10px;
+}
+
+.fc-toolbar .fc-right {	
+	padding-right: 10px;
+}
+
+.fc td.fc-today {
+	background: #FBC9A7;
+}

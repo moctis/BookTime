@@ -3,16 +3,16 @@
     <ion-content class="has-tabs-top" has-header="true" padding="false">    
       <div class="row row-menu">
         <div class="col-33">
-          <button class="btn btn-schedule" ng-click="changeView('agendaDay', 'myCalendar')">TODAY</button>
+          <button class="buttons btn-schedule" ng-click="changeView('agendaDay', 'myCalendar')">TODAY</button>
         </div>
         <div class="col-33">
-          <button class="btn btn-schedule" ng-click="changeView('agendaWeek', 'myCalendar')">WEEK</button>
+          <button class="buttons btn-schedule" ng-click="changeView('agendaWeek', 'myCalendar')">WEEK</button>
         </div>
         <div class="col-33">
-          <button class="btn btn-schedule" ng-click="changeView('month', 'myCalendar')">MONTH</button>
+          <button class="buttons btn-schedule" ng-click="changeView('month', 'myCalendar')">MONTH</button>
         </div>        
       </div>      
-      <div class="row row-calendar">
+      <div class="row" style="width=100%;">
         <div ui-calendar="uiConfig.calendar" calendar="myCalendar" class="calendar" ng-model="eventSources"></div>
       </div>
     </ion-content>

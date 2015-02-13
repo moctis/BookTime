@@ -22,6 +22,7 @@ module.exports = {
         'public/lib/Font-Awesome/css/font-awesome.css',
         'public/lib/angular-carousel/angular-carousel.css', //woody
         'public/lib/fullcalendar/fullcalendar.css', //woody
+        'public/lib/fullcalendar/fullcalendar-theme.css', //woody
         'public/lib/others/others.css'
       ],
       js: [

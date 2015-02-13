@@ -2,50 +2,13 @@
 	border: 0;
 	border-radius: 0;  
 	width: 100%;
-	background-color: transparent;
-
+	background-color: transparent;	
 }
 
-.section-schedule .row-menu {
-  background-color: #f8f8f8;  
-  color: #444;  
-}
-
-.section-schedule .calendar h2 {
-	color: #f47822;
-	font-size: 18px;
-}
-
-.section-schedule .calendar .fc-toolbar {
-	margin-bottom: 0;
-	background: linear-gradient(#f8f8f8, #b2b2b2);	
-}
-
-.section-schedule .calendar .fc-toolbar .fc-center {
-	vertical-align: -webkit-baseline-middle;
-}
-
-.section-schedule .calendar .fc-button {
-	width: 2.1em;
-}
-
-.section-schedule .calendar .fc-state-default { /* non-theme */	
-}
-
-.section-schedule .calendar .fc-state-default.fc-corner-left { /* non-theme */
-	border-radius: 50%;	
-}
-
-.section-schedule .calendar .fc-state-default.fc-corner-right { /* non-theme */
-	border-radius: 50%;
-}
-
-.section-schedule .calendar .fc-icon { /* non-theme */
-	color: white;
-}
-
-.section-schedule .calendar .fc-state-default {
-	background-image: none;
-	background-color: #f47822;
-	border: 0;
+.section-schedule .row-menu {  
+  background: linear-gradient(#ffffff, #dedede);
+  color: #444; 
+  height: 30px;
+  width: 100%;
+  padding-top: 5px;
 }
