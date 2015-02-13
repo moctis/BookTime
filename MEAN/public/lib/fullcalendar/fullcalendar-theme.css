@@ -8,7 +8,7 @@
 
 .fc-toolbar h2 {
 	color: #f47822;
-	font-size: 18px;
+	font-size: 18px;	
 }
 
 
@@ -39,6 +39,12 @@
 	background-image: none;
 	background-color: #f47822;
 	border: 0;
+}
+
+.fc-toolbar .fc-center {
+	margin-left: auto;
+	margin-right: auto;    
+    white-space: nowrap;
 }
 
 .fc-toolbar .fc-left {	

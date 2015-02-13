@@ -121,6 +121,7 @@ slide > img {
 .left-inner-addon i {
   position: absolute;
   padding: 8px 10px;
+  height: 33px;  
   pointer-events: none;
   background-color: #e2e0e0;
   color: #b2b2b2;
@@ -142,4 +143,8 @@ slide > img {
 }
 ul[rn-carousel], ul[rn-carousel-buffered] > li {
   height: 100%;
+}
+
+.glyphicon {
+  font-size: medium;  
 }
