@@ -1,0 +1,14 @@
+.btn-schedule {
+	border: 0;
+	border-radius: 0;  
+	width: 100%;
+	background-color: transparent;	
+}
+
+.section-schedule .row-menu {  
+  background: linear-gradient(#ffffff, #dedede);
+  color: #444; 
+  height: 30px;
+  width: 100%;
+  padding-top: 5px;
+}

@@ -1,32 +1,55 @@
-﻿<section data-ng-controller="NotificationsController" class="section-notifications">
-    <ion-view title="NOTIFICATIONS" left-buttons="leftButtons">
-        <ion-nav-buttons side="left" class="bar-positive">
-            <button class="button button-clear button-booktime">Edit</button>
-        </ion-nav-buttons>
-        <ion-nav-buttons side="right" class="bar-positive">
-            <button class="button button-clear button-booktime">Close</button>
-        </ion-nav-buttons>
-        <ion-content has-header="true" class="has-tabs-top" padding="false"> 
-            <div class="item item-text-wrap">
-                <div class="list">
-                    <div class="item item-thumbnail-left row" ng-repeat="it in items" ng-click="viewBooking()">
-                        <div class="col-25"><img src="{{it.image}}" /></div>
-                        <div class="col-75">
-                            <div class="row">
-                                <div class="col">
-                                    <strong>{{it.name}}</strong> message you. The shop will close on Monday"
-                                </div>
-                            </div>
-                            <div class="font-size-80per">
-                                Yesterday at 9.30am
-                                <button class="button button-icon button-small  pull-right"
-                                        ng-class="statusClass(it.status)"
-                                        ng-click="modal.show()"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section data-ng-controller="NotificationsController" class="section-notifications" data-ng-init="findMyBookings()">
+  <ion-view title="NOTIFICATIONS" left-buttons="leftButtons">
+    <ion-nav-buttons side="left" class="bar-positive">
+      <button class="button button-clear button-booktime">Edit</button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right" class="bar-positive">
+      <a class="button button-clear button-booktime" href="#!/main/tab/home/food">Close</a>
+    </ion-nav-buttons>
+    <ion-content has-header="true" class="has-tabs-top" padding="false">
+
+      <ion-list class="list-notifications">
+        <ion-item class="notification" ng-repeat="it in items" ng-click="viewBooking(it)">
+          <div class="col-25">
+            <img src="{{it.image}}"/>
+          </div>          
+          <div class="col-75">
+            <span class="displayName" data-ng-show="it.isBookingOwner">{{it.shop.name}}</span>
+            <span class="displayName" data-ng-show="it.isShopOwner">{{it.owner.displayName}}</span>
+            <span class="time">{{it.bookDateTime | amDateFormat:'dddd, D MMMM YYYY'}}
+                  <br/> {{it.person}} people at {{it.bookDateTime | amDateFormat:'h:mm a'}} ({{it.shop.catalog}})
+            </span>
+            <span class="status">
+              <button class="button button-icon button-small pull-right booktime-{{it.status}}" ng-click="modal.show()"></button>            
+          </span>
+          </div>
+        </ion-item>
+      </ion-list>
+
+      <!--<div class="item item-text-wrap">
+        <div class="list">
+          <div class="item item-thumbnail-left row" ng-repeat="it in items" ng-click="viewBooking(it)">
+            <div class="col-25">
+              <img src="{{it.image}}" />
             </div>
-        </ion-content>
-    </ion-view>
+            <div class="col-75">
+              <div class="row">
+                <div class="col">
+                  <span class="displayName" data-ng-show="it.isBookingOwner">{{it.shop.name}}</span>
+                  <span class="displayName" data-ng-show="it.isShopOwner">{{it.owner.displayName}}</span>
+                </div>
+              </div>
+              <div class="font-size-80per">
+                <span class="time">{{it.bookDateTime | amDateFormat:'dddd, D MMMM YYYY'}}
+                  <br/> {{it.person}} people at {{it.bookDateTime | amDateFormat:'h:mm a'}} ({{it.shop.catalog}})</span>
+                <button class="button button-icon button-small pull-right booktime-{{it.status}}" ng-click="modal.show()"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+
+    </ion-content>
+  </ion-view>
 </section>

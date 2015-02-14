@@ -1,21 +1,22 @@
-<section data-ng-controller="FoodController" class="section-food">
-    <ion-view hide-nav-bar="true">
-        <ion-content has-header="false" padding="false">
-            <ion-list class="list-shops">
-                <ion-item class="shop" ng-repeat="it in items" href="#!/main/tab/shop">
-                    <img src="{{it.image}}"/>
-                    <div class="details">
-                        <span class="booked">
-                            <i class="booktime-booked"></i>
-                            <span>{{it.booked}}</span>
-                        </span>
-                        <span class="name">{{it.name}}</span>
-                        <span class="rank">{{it.rank}}</span>
-                        <span class="distance">{{it.distance}}</span>
-                    </div>
-                </ion-item>
-            </ion-list>
-        </ion-content>
-    </ion-view>
-
+<section data-ng-controller="FoodController" class="section-food" data-ng-init="find()">
+  <ion-view hide-nav-bar="true">
+    <ion-content has-header="false" padding="false">
+      <ion-list class="list-shops">
+        <ion-item class="shop" ng-repeat="it in items" ui-sref="main.tab.home.shop.detail({shopId:it._id})">
+          <img src="{{it.image}}" />
+          <div class="details">
+            <span class="booked">
+              <i class="booktime-booked"></i>
+              <span>{{it.booked}}</span>
+            </span>
+            <span class="name">{{it.name}}</span>
+            <span class="loves">
+              <i class="booktime-icon-heart-notlove"></i> {{it.loves}}
+            </span>
+            <span class="distance">{{it.distance}}</span>
+          </div>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-view>
 </section>

@@ -1,38 +1,52 @@
 {
   "images": [
     {
-      "name": "/res/icons/booktime-icon-champion.png",
-      "width": 42,
-      "height": 42,
+      "name": "/res/icons/icons/booktime-icon-champion.png",
+      "width": 40,
+      "height": 40,
       "offsetX": 0,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-icon-hot.png",
-      "width": 42,
-      "height": 42,
-      "offsetX": 42,
+      "name": "/res/icons/icons/booktime-icon-hot.png",
+      "width": 32,
+      "height": 32,
+      "offsetX": 40,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-icon-operationtime.png",
+      "name": "/res/icons/icons/booktime-icon-operationtime.png",
       "width": 24,
       "height": 24,
-      "offsetX": 84,
+      "offsetX": 72,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-service-uncheck.png",
+      "name": "/res/icons/icons/booktime-service-uncheck.png",
       "width": 48,
       "height": 48,
-      "offsetX": 108,
+      "offsetX": 96,
       "offsetY": 0
     },
     {
-      "name": "/res/icons/booktime-service-check.png",
+      "name": "/res/icons/icons/booktime-service-check.png",
       "width": 48,
       "height": 48,
-      "offsetX": 156,
+      "offsetX": 144,
+      "offsetY": 0
+    },
+    {
+      "name": "/res/icons/icons/booktime-icon-heart-love.png",
+      "width": 32,
+      "height": 32,
+      "offsetX": 192,
+      "offsetY": 0
+    },
+    {
+      "name": "/res/icons/icons/booktime-icon-heart-notlove.png",
+      "width": 32,
+      "height": 32,
+      "offsetX": 224,
       "offsetY": 0
     }
   ]

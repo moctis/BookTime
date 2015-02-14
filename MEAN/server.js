@@ -2,9 +2,11 @@
 /**
  * Module dependencies.
  */
-var init = require('./config/init')(),
-	config = require('./config/config'),
-	mongoose = require('mongoose');
+//var init = require('./config/init')(),
+require('./config/init')();
+var config = require('./config/config'),
+  mongoose = require('mongoose');
+
 
 /**
  * Main application entry file.
@@ -13,10 +15,10 @@ var init = require('./config/init')(),
 
 // Bootstrap db connection
 var db = mongoose.connect(config.db, function(err) {
-	if (err) {
-		console.error('\x1b[31m', 'Could not connect to MongoDB!');
-		console.log(err);
-	}
+  if (err) {
+    console.error('\x1b[31m', 'Could not connect to MongoDB!');
+    console.log(err);
+  }
 });
 
 // Init the express application
@@ -29,7 +31,8 @@ require('./config/passport')();
 app.listen(config.port);
 
 // Expose app
-exports = module.exports = app;
+//exports = module.exports = app;
+module.exports = app;
 
 // Logging initialization
 console.log('MEAN.JS application started on port ' + config.port);

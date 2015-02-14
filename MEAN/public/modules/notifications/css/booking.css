@@ -1,71 +1,103 @@
-.section-booking .modal {
-    background: none;
-    width: 90%; 
-     margin: auto;
+.section-notifications .modal {
+  background: none;
+  width: 90%;
+  margin: auto;
 }
-
-.section-booking .scroll-content {
-    background-color: white;
-    
-   
+.section-notifications .scroll-content {
+  background-color: white;
 }
-
-.section-booking img {
-    width: 64px;
-    height: 58px;
-    display: block;
-    margin: 12px;
-    float: left;
+.section-notifications .title {
+  line-height: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  font-weight: 600;
 }
-
-.section-booking .details {
-    /* font-size: 10px; */
-    padding-top: 1em;
-    padding-left: 1em;
+.section-notifications .item {
+  font-size: 12px;
+  line-height: 14px;
 }
-
-    .section-booking .details .name {
-        font-size: 28px;
-    }
-
-    .section-booking .details .lastBooked-distance {
-        font-size: 8px;
-    }
-
-
-.section-booking .booking {
+@media only screen and (min-device-width: 680px) {
+  .section-notifications .item {
+    width: 50%;
+    display: inline-block;
+  }
 }
-    .section-booking .booking> div {
-        margin: auto; /* make it center */
-    }
-
-    .section-booking .booking .list {
-        margin-bottom: 0px;
-    }
-
-    .section-booking .booking .item-input {
-        border-radius: 10px;
-        margin: 10px 17px;
-    }
-
-    .section-booking .booking .input-label {
-        width: 0px;
-    }
-
-    .section-booking .booking .item-select select {
-        width: 100%;
-        max-width: 100%;
-        direction: inherit;
-        text-align: center;
-    }
-
-
-    .section-booking  .card-deal .item-divider{
-        white-space: inherit;
-        text-overflow: none;
-        overflow: inherit;
-    }
-
-    .section-booking  .comment textarea{
-        border: solid 1px black;
-    }
+.section-notifications img {
+  width: 64px;
+  height: 58px;
+  display: block;
+  margin: 12px;
+  float: left;
+}
+.section-notifications .statusCommand {
+  padding: 5px 0px;
+  text-align: center;
+}
+.section-notifications .myShop-details {
+  font-size: 10px;
+  line-height: 12px;
+  padding-top: 1em;
+  padding-right: 1em;
+}
+.section-notifications .myShop-details .name {
+  font-size: 28px;
+  line-height: 30px;
+  float: right;
+}
+.section-notifications .myShop-details .address {
+  float: right;
+}
+.section-notifications .myShop-details .operationTime {
+  float: right;
+}
+.section-notifications .myShop-details .lastBooked-distance {
+  font-size: 8px;
+}
+.section-notifications .underline {
+  border-bottom: solid 1px #c0c0c0;
+}
+.section-notifications .orange {
+  color: #F47822;
+}
+.section-notifications .details {
+  font-size: 10px;
+  line-height: 12px;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+.section-notifications .details .name {
+  font-size: 28px;
+  line-height: 30px;
+}
+.section-notifications .details .lastBooked-distance {
+  font-size: 8px;
+}
+.section-notifications .booking> div {
+  margin: auto;
+  /* make it center */
+}
+.section-notifications .booking .list {
+  margin-bottom: 0;
+}
+.section-notifications .booking .item-input {
+  border-radius: 10px;
+  margin: 10px 17px;
+}
+.section-notifications .booking .input-label {
+  width: 0;
+}
+.section-notifications .booking .item-select select {
+  width: 100%;
+  max-width: 100%;
+  direction: inherit;
+  text-align: center;
+}
+.section-notifications .card-deal .item-divider {
+  white-space: inherit;
+  text-overflow: none;
+  overflow: inherit;
+}
+.section-notifications .comment textarea {
+  border: solid 1px black;
+}

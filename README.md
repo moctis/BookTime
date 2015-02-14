@@ -45,10 +45,10 @@ After run `setx` command, it need to restart cmd.exe
 0. Instan MongoDB
  - [Get from MongoDB - Downloads](http://www.mongodb.org/downloads)
 0. Clone 'BookTime' from github
- - 
+ -
 0. Install MongoDB
  - [Get MongoDB](http://www.mongodb.org/)
-0. Install Grunt 
+0. Install Grunt
  - `npm install -g grunt-cli`
  - run grunt => Drive:\GitHub\BookTime\MEAN>grunt แล้วเปิด http://localhost:3003/ ที่ browser
  - คำสั่ง grunt copy จะ copy จาก MEAN\public ไป phonegap\web
@@ -67,7 +67,7 @@ After run `setx` command, it need to restart cmd.exe
  - ดู rount ทุกอัน /config เช่น ..modules/font/config
  - ดู css  ทุกอัน /config เช่น ..modules/font/css
  - ไฟล์รูป D:\GitHub\BookTime\MEAN\public\res\screen\share\2x
- 
+
 0. Angular-carousel
  - เนื่องจากคำนวณ 3DTransform ระหว่าง slide ซึ่งต่างจากของ angular-boostrap ทำให้การแสดงผลดู continous
  - [on git] (https://github.com/revolunet/angular-carousel)
@@ -76,3 +76,9 @@ After run `setx` command, it need to restart cmd.exe
 0. etc
  - http://www.dragsponsive.com/
  - http://www.responsivewebmobile.com/app/webroot/rwm_slide_panel/#
+0. image manipulation
+ - npm install imagemagick
+ - https://github.com/rsms/node-imagemagick
+
+
+-http://blog.credera.com/technology-insights/microsoft-solutions/modern-web-development-best-practices-powered-grunt-js-part-2-diving/

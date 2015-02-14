@@ -1,20 +1,27 @@
-.section-notifications .item {
-    border: none;
+.section-notifications .notification, .section-notifications .notification .item-content {
+  padding: 5px 3px;
 }
-
-    .section-notifications .item.item-text-wrap {
-        padding: 0;
-    }
-
-
-.section-notifications .status {
-    padding: 0px;
+.section-notifications .notification img {
+  width: 64px;
+  height: 58px;
+  display: block;
+  margin: 12px;
+  float: left;
 }
-
-.section-notifications img {
-    width: 64px;
-    height: 58px;
-    display: block;
-    margin: 12px;
-    float: left;
+.section-notifications .notification .col-75 {
+  max-width: 100%;
+}
+.section-notifications .notification .status button {
+  margin-top: 10px;
+}
+.section-notifications .notification .displayName {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+}
+.section-notifications .notification .time {
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  color: #808080;
 }

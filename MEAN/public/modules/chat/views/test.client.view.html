@@ -1,11 +1,16 @@
 <section data-ng-controller="TestController">
-
-{{name+name}}<br/>
-{{age}}<br/>
-{{add(2,3)}}
-
-<br/>
-<input type="text" ng-model="age"/>
-<button data-ng-click="hello()" class="btn btn-default">Hello()</button>
-
+  <ion-view title="TEST">
+    <ion-content has-header="true" class="has-tabs-top" padding="false">
+      <ul>
+        <li>
+          <b>body class : </b>{{bodyClass}} </li>
+        <li>
+          <b>width  : </b>{{screenWidth}}</li>
+        <li>
+          <b>PPI  : </b>{{getPPI()}}</li>
+        <li>
+          <b>Device Pixel Ratio  : </b>{{getDevicePixelRatio()}}</li>
+      </ul>
+    </ion-content>
+  </ion-view>
 </section>

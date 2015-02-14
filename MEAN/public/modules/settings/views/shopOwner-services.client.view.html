@@ -1,0 +1,18 @@
+<section class="section-shop-owner">
+  <ion-view title="Service">
+    <ion-content class="has-tabs-top" padding="false">
+      <form name="createForm" class="form-horizontal" role="form" data-ng-submit="createOrUpdate(createForm.$valid)">
+        <div class="list">
+          <div class="item item-input padding">
+            <button type="submit" class="button button-block button-assertive" data-ng-click="editService()">
+              + Add new service</button>
+          </div>
+          <a class="item item-input item-icon-right" data-ng-repeat="it2 in shop.services" data-ng-click="editService(it2)">
+            <span class="input-label">{{it2.title}}</span>
+            <i class="icon ion-ios7-arrow-right"></i>
+          </a>
+        </div>
+      </form>
+    </ion-content>
+  </ion-view>
+</section>

@@ -1,4 +1,4 @@
-/*
+﻿/*
 This is an example of how to use the image sprite in your own CSS files
 */
 .booktime-shop-bg-left {
@@ -11,7 +11,17 @@ This is an example of how to use the image sprite in your own CSS files
 /* You may have to set 'display: block' */
 	width: 217px;
 	height: 106px;
-	
-
-	/* background: url('booktime-others.png') -9px 0; */
+	background: url('booktime-others.png') -9px 0;
+}
+.booktime-button-submit {
+/* You may have to set 'display: block' */
+	width: 193px;
+	height: 57px;
+	background: url('booktime-others.png') -226px 0;
+}
+.booktime-button-addnewphoto {
+/* You may have to set 'display: block' */
+	width: 208px;
+	height: 208px;
+	background: url('booktime-others.png') -419px 0;
 }
