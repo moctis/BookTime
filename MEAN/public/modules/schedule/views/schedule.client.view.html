@@ -1,6 +1,6 @@
-<section data-ng-controller="ScheduleController" class="section-schedule">
+<section data-ng-controller="ScheduleController" class="section-schedule" data-ng-init="init()">
   <ion-view title="SCHEDULE" left-buttons="leftButtons">
-    <ion-content class="has-tabs-top" has-header="true" padding="false">    
+    <ion-content class="has-tabs-top" has-header="true" padding="false">
       <div class="row row-menu">
         <div class="col-33">
           <button class="buttons btn-schedule" ng-click="changeView('agendaDay', 'myCalendar')">TODAY</button>
@@ -10,8 +10,8 @@
         </div>
         <div class="col-33">
           <button class="buttons btn-schedule" ng-click="changeView('month', 'myCalendar')">MONTH</button>
-        </div>        
-      </div>      
+        </div>
+      </div>
       <div class="row">
         <div ui-calendar="uiConfig.calendar" calendar="myCalendar" class="calendar" ng-model="eventSources"></div>
       </div>
