@@ -98,3 +98,26 @@ body {
     font-size: 25px;
   }
 }
+.searchPannel {
+  display: none;
+  height: 50px;
+  background: #EEE;
+  border-bottom: 4px solid #888;
+  z-index: 20;
+}
+.searchPannel.list-inset {
+  margin: 5px 0 0 0;
+}
+.searching .searchPannel {
+  display: block;
+}
+.searchPannel.list-inset .item-search {
+  border-color: #FFA500;
+  margin: 4px;
+  border-radius: 43px;
+  padding: 0 0 0 16px
+}
+.searchPannel.list-inset .item-search input {
+  padding-right: 20px;
+  padding-top: 0;
+}

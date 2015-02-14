@@ -57,10 +57,14 @@ var ShopSchema = new Schema({
     type: Number,
     default: 0
   },
-  photos: {
+  photoCount: {
     type: Number,
     default: 0
   },
+  albums: [{
+    type: Schema.ObjectId,
+    ref: 'image'
+  }],
   loves: {
     type: Number,
     default: 0
@@ -68,7 +72,7 @@ var ShopSchema = new Schema({
   services: [{
     title: String,
     detail: String
-  }]
+  }],
 });
 
 

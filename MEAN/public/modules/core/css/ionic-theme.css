@@ -1,7 +1,6 @@
 fieldset {
   border: 0;
 }
-
 .pane {
   position: absolute;
   top: 0;
@@ -60,6 +59,9 @@ fieldset {
   box-shadow: none;
   color: #f47822;
   font-size: 15px;
+}
+.bar-mainheader {
+  z-index: 15;
 }
 .bar {
   padding: 0;
@@ -192,83 +194,4 @@ fieldset {
 .menu.menu-booktime .bar-header {
   z-index: 0;
 }
-.menu .scroll-content {} 
-@media only screen and (min-device-width: 680px) {
-  .has-tabs-top .item {
-    font-size: 40px;
-    padding: 40px;
-  }
-  .bar-header {
-    top: 128px;
-    height: 100px;
-  }
-  .bar-footer {
-    background-color: white;
-    min-height: 100px;
-  }
-  .bar.bar-booktime .title {
-    font-size: 50px;
-    overflow: visible;
-  }
-  .bar.bar-booktime .button-clear.button-clear {
-    font-size: 30px;
-  }
-  .has-header {
-    top: 200px;
-  }
-  .menu.menu-booktime {
-    background-color: #646464;
-    width: 500px;
-  }
-  .menu-item.item {
-    font-size: 25px;
-  }
-  .tabs-booktime > .tabs, .tabs.tabs-booktime {
-    height: 110px;
-  }
-  .tab-item {
-    font-size: 30px;
-    max-width: 600px
-  }
-  .tab-item .icon {
-    zoom: 2.5;
-  }
-  .bar .title {
-    font-size: 30px;
-  }
-  /*==================== for android ===================*/
-  
-  .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) {
-    height: 70px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .modal .bar-header {
-    top: 20px;
-    height: 70px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-    margin-top: 100px !important;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
-    margin-top: 20px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .tabs-top > .tabs, .platform-android.platform-browser:not(.fullscreen) .tabs.tabs-top {
-    top: 130px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .has-header, .platform-android.platform-browser:not(.fullscreen) .bar-subheader {
-    top: 90px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .has-subheader {
-    top: 148px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .has-tabs-top {
-    top: 207px;
-    bottom: 108px;
-  }
-  .platform-android.platform-browser:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
-    top: 207px;
-  }
-  .platform-android.platform-browser.status-bar-hide {
-    margin-bottom: 20px;
-  }
-  /*=======================================================*/
-}
+.menu .scroll-content {}

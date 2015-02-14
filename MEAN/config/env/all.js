@@ -1,5 +1,7 @@
 'use strict';
 
+var path = require('path');
+
 module.exports = {
   app: {
     title: 'Booktime',
@@ -10,6 +12,7 @@ module.exports = {
   templateEngine: 'swig',
   sessionSecret: 'MEAN',
   sessionCollection: 'sessions',
+  imagesPath: path.normalize(__dirname + '/../../../images/'),
   assets: {
     lib: {
       css: [
@@ -18,13 +21,17 @@ module.exports = {
         'public/lib/ionic/css/ionic.css',
         'public/lib/Font-Awesome/css/font-awesome.css',
         'public/lib/angular-carousel/angular-carousel.css', //woody
+        'public/lib/fullcalendar/fullcalendar.css', //woody
+        'public/lib/fullcalendar/fullcalendar-theme.css', //woody
         'public/lib/others/others.css'
       ],
       js: [
-        //                'public/lib/jquery/jquery.js',
+
         'public/lib/ionic/js/ionic.bundle.js',
         //                'public/lib/ionic/js/ionic.js',
         //				'public/lib/angular/angular.js',
+        'public/lib/jquery/jquery.js',
+        'public/lib/jquery-ui/ui/jquery-ui.js',
         'public/lib/angular-animate/angular-animate.js',
         'public/lib/angular-sanitize/angular-sanitize.js',
         //				'public/lib/angular-ui-router/angular-ui-router.js',
@@ -43,7 +50,9 @@ module.exports = {
         'public/cordova.js',
         'public/lib/others/angular.ratings.js',
         'public/lib/ng-file-upload/angular-file-upload-shim.js',
-        'public/lib/ng-file-upload/angular-file-upload.min.js'
+        'public/lib/ng-file-upload/angular-file-upload.min.js',        
+        'public/lib/fullcalendar/fullcalendar.js',        
+        'public/lib/angular-ui-calendar/calendar.js'
       ]
     },
     css: [

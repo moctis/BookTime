@@ -7,14 +7,16 @@ var passport = require('passport');
 
 module.exports = function(app) {
   // User Routes
-  var users = require('../../app/controllers/users');
+  var users = require('../../app/controllers/users'),
+    util = require('../../app/controllers/utils');
+
   var hasToken = passport.authenticate('bearer', {
     session: false
   });
 
 
   // Setting up the users profile api
-  app.route('/users/me').get(hasToken, users.me);
+  app.route('/users/me').get(hasToken, util.nocache, users.me);
   app.route('/users').put(users.update);
   app.route('/users/accounts').delete(users.removeOAuthProvider);
 

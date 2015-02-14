@@ -43,7 +43,10 @@
     "passport-local": "~1.0.0",
     "passport-twitter": "~1.0.2",
     "swig": "~1.4.1",
-    "topcoat": "~0.7.5"
+    "topcoat": "~0.7.5",
+    "easyimage": "~1.1.1",
+    "gm": "~1.17.0",
+    "imagemagick": "~0.1.3"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

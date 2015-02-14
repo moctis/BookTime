@@ -103,6 +103,32 @@ exports.list = function(req, res) {
   });
 };
 
+exports.schedule = function(req, res) {
+  Shop.findShopIdByShopOwner(req.user._id, function(err, shopIds) {
+    // list booking by Shop Owner or  booker
+    Booking
+      .find({
+        $or: [{
+          owner: req.user._id
+        }, {
+          shop: {
+            $in: shopIds
+          }
+        }]
+      }, 'bookDateTime shop')
+      .populate('shop', 'name')
+      .sort('-created')
+      .exec(function(err, bookings) {
+        if (err) {
+          return res.status(400).send({
+            message: errorHandler.getErrorMessage(err)
+          });
+        } else {
+          res.jsonp(bookings);
+        }
+      });
+  });
+};
 /**
  * Booking middleware
  */

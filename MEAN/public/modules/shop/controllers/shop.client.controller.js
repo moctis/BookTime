@@ -9,29 +9,16 @@ angular.module('shop').controller('ShopController', [
     $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function($ionicModal) {
       $scope.modal = $ionicModal;
     }, {
-      // Use our scope for the scope of the modal to keep it simple
       scope: $scope,
-      // The animation we want to use for the modal entrance
       animation: 'slide-in-up'
     });
 
     $ionicModal.fromTemplateUrl('modules/shop/views/booked.client.view.html', function($ionicModal) {
       $scope.modalBooked = $ionicModal;
     }, {
-      // Use our scope for the scope of the modal to keep it simple
       scope: $scope,
-      // The animation we want to use for the modal entrance
       animation: 'slide-in-up'
     });
-
-    /* $scope.comment = 'test comment';
-    $scope.commantRemain = $scope.maxlen = 400;
-
-    $scope.commentChanged = function() {
-
-        $scope.commantRemain =  $scope.maxlen - $scope.comment.length;
-        console.log($scope.comment, $scope.commantRemain );
-    }; */
 
     $scope.closeModal = function() {
       $scope.modal.hide();
@@ -44,7 +31,6 @@ angular.module('shop').controller('ShopController', [
     $scope.getDirection = function() {
       alert('Get Direction');
     };
-
 
     var mock = function() {
       var basepath = 'res/shops/1/';
@@ -68,9 +54,7 @@ angular.module('shop').controller('ShopController', [
           basepath + 'a4.jpg',
           basepath + 'a5.jpg',
           basepath + 'a6.jpg',
-          basepath + 'a7.jpg',
-          basepath + 'a8.jpg',
-          basepath + 'a9.jpg'
+          basepath + 'a7.jpg'
         ]
       };
     };
@@ -86,14 +70,18 @@ angular.module('shop').controller('ShopController', [
         shopId: $stateParams.shopId
       }, function(shop) {
         var moc = mock();
+        console.log('shop', shop);
         shop.lastBooked = shop.lastBooked || moc.lastBooked;
         shop.distance = shop.distance || moc.distance;
         shop.albums = shop.albums || moc.albums;
         shop.image = shop.image || moc.image;
         $scope.it = shop;
-
-
       });
+    };
+
+
+    $scope.initAlbums = function() {
+      console.log('initAlbums');
     };
 
     $scope.gotBooking = function(booking) {
@@ -103,7 +91,14 @@ angular.module('shop').controller('ShopController', [
 
 
     //-------------------
-    $scope.takePicture = function() {
+    $scope.takePicture = function(_id) {
+      console.log('takePicture ' + _id);
+
+      if (Camera === undefined) {
+        $scope.filePicker();
+        return;
+      };
+
       var options = {
         quality: 50,
         destinationType: Camera.DestinationType.FILE_URI,
@@ -118,7 +113,7 @@ angular.module('shop').controller('ShopController', [
 
         };
         $cordovaFileTransfer
-          .upload($api.actionWithToken('/api/shops/images'), imageURI, options2)
+          .upload($api.actionWithToken('/api/shops/' + _id + '/albums'), imageURI, options2)
           .then(function(result) {
             // Success!
             console.log('transfer success', result);
@@ -131,9 +126,22 @@ angular.module('shop').controller('ShopController', [
           });
 
       }, function(err) {
-        console.log('Failed because: ' + message);
+        console.log('Failed because: ' + err);
       });
     };
 
+    $scope.filePicker = function() {
+      $ionicModal.fromTemplateUrl('modules/shop/views/filepicker.client.view.html', function($ionicModal) {
+        $scope.modalFile = $ionicModal;
+      }, {
+        scope: $scope,
+        animation: 'slide-in-up'
+      });
+
+    };
+
+    $scope.imgSrc = function(_id) {
+      return $api.actionWithToken('/api/images/' + _id);
+    };
   }
 ]);
