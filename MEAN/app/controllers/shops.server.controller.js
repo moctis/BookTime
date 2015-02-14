@@ -95,6 +95,27 @@ exports.list = function(req, res) {
     });
 };
 
+
+/**
+ * List of Shops
+ */
+exports.listOwner = function(req, res) {
+  Shop
+    .find()
+    .where({
+      owner: req.user._id
+    })
+    .sort('-created').populate('owner', 'displayName').exec(function(err, shops) {
+      if (err) {
+        return res.status(400).send({
+          message: errorHandler.getErrorMessage(err)
+        });
+      } else {
+        res.jsonp(shops);
+      }
+    });
+};
+
 /**
  * Shop middleware
  */

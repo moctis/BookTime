@@ -29,7 +29,7 @@ module.exports = function(app) {
 
   // Shop- Owner Routes
   app.route('/api/shops-owner')
-    .get(authenticate, users.requiresLogin, shops.list)
+    .get(authenticate, users.requiresLogin, shops.listOwner)
     .post(authenticate, users.requiresLogin, shops.create);
 
   app.route('/api/shops-owner/:shopId')
