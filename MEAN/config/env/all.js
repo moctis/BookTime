@@ -46,12 +46,12 @@ module.exports = {
         'public/lib/angular-strap/angular-strap.js',
         'public/lib/moment/moment.js',
         'public/lib/angular-moment/angular-moment.js',
-        'public/lib/ngcordova/ng-cordova.js',
+        'public/lib/ngCordova/ng-cordova.js',
         'public/cordova.js',
         'public/lib/others/angular.ratings.js',
         'public/lib/ng-file-upload/angular-file-upload-shim.js',
-        'public/lib/ng-file-upload/angular-file-upload.min.js',        
-        'public/lib/fullcalendar/fullcalendar.js',        
+        'public/lib/ng-file-upload/angular-file-upload.min.js',
+        'public/lib/fullcalendar/fullcalendar.js',
         'public/lib/angular-ui-calendar/calendar.js'
       ]
     },
