@@ -36,7 +36,7 @@ var ApplicationConfiguration = (function() {
     applicationModuleName: applicationModuleName,
     applicationModuleVendorDependencies: applicationModuleVendorDependencies,
     registerModule: registerModule,
-    server: 'http://booktimeserver.local:3003' // don't put  / on tail
-    //server: 'http://192.168.1.115:3003' // don't put  / on tail
+    server: 'http://103.13.30.64:3003' // don't put  / on tail
+      //server: 'http://192.168.1.115:3003' // don't put  / on tail
   };
 })();
