@@ -33,11 +33,11 @@ angular.module('schedules').controller('ScheduleController', [
               //start: new Date(y, m, 2)
           });
         });
-        $scope.addEvent();
+        //$scope.addEvent();
         $scope.eventSources = [$scope.events];
-        console.log('uiCalendarConfig.calendars.myCalendar.', uiCalendarConfig.calendars.myCalendar);
+        //console.log('uiCalendarConfig.calendars.myCalendar.', uiCalendarConfig.calendars.myCalendar);
         uiCalendarConfig.calendars.myCalendar.fullCalendar('refetchEvents');
-        uiCalendarConfig.calendars.myCalendar.fullCalendar('render');
+        //uiCalendarConfig.calendars.myCalendar.fullCalendar('render');
       });
     };
 
@@ -109,7 +109,7 @@ angular.module('schedules').controller('ScheduleController', [
     };
     /* Render Tooltip */
     $scope.eventRender = function(event, element, view) {
-      console.log('eventRender', event);
+      //console.log('eventRender', event);
       element.attr({
         'tooltip': event.title,
         'tooltip-append-to-body': true
