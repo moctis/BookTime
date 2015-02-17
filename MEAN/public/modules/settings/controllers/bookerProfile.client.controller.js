@@ -9,10 +9,11 @@ angular.module('settings').controller('BookerProfileController', [
 
     var mock = function() {
       console.log(Authentication.user);
+      var user = Authentication.user();
       return {
         id: ['1', '2', '3'].random(),
-        displayName: Authentication.user.displayName,
-        email: Authentication.user.email,
+        displayName: user.displayName,
+        email: user.email,
         booked: [3400, 200, 1523].random(),
         reviews: [224, 5, 11, 35].random(),
         photos: [25, 18, 2, 4].random(),
