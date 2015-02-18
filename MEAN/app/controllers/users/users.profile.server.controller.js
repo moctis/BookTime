@@ -56,5 +56,6 @@ exports.me = function(req, res) {
   req.user._id = undefined;
   req.user.password = undefined;
   req.user.salt = undefined;
+  console.log('me ' + req.user.displayName);
   res.jsonp(req.user || null);
 };

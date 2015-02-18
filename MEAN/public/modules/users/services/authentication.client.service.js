@@ -19,6 +19,7 @@ angular.module('users').factory('Authentication', ['$cookieStore', '$timeout', '
     };
 
     $this.setUser = function(user) {
+      console.log('setUser ' + user.displayName);
       $this.errorMessage = null;
       $this.user = user;
       $window.sessionStorage.token = user.token;
@@ -38,7 +39,9 @@ angular.module('users').factory('Authentication', ['$cookieStore', '$timeout', '
     };
 
     return {
-      user: $this.user,
+      user: function() {
+        return $this.user;
+      },
       setUser: $this.setUser,
       hasRole: $this.hasRole,
       removeUser: $this.removeUser,
