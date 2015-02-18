@@ -3,7 +3,9 @@
 
 angular.module('settings').controller('ShopOwnerController', [
   '$scope', '$interval', '$state', '$stateParams', '$location', 'ShopOwners', '$ionicModal', '$ionicNavBarDelegate',
-  function($scope, $interval, $state, $stateParams, $location, ShopOwners, $ionicModal, $ionicNavBarDelegate) {
+  'PhotoService',
+  function($scope, $interval, $state, $stateParams, $location, ShopOwners, $ionicModal, $ionicNavBarDelegate,
+    PhotoService) {
 
     var mocService = function() {
       return {
@@ -42,17 +44,6 @@ angular.module('settings').controller('ShopOwnerController', [
           'have tried it all before. With its understated luxury, this beautiful restaurant and its small garden hidden in' +
           'a narrow street off Pahonyothin 5 perfectly deserves its reputation as one of 10 best restaurants in Bangkok recommended' +
           'by Bangkok Post.',
-        /*albums: [
-          basepath + 'a1.jpg',
-          basepath + 'a2.jpg',
-          basepath + 'a3.jpg',
-          basepath + 'a4.jpg',
-          basepath + 'a5.jpg',
-          basepath + 'a6.jpg',
-          basepath + 'a7.jpg',
-          basepath + 'a8.jpg',
-          basepath + 'a9.jpg'
-        ],*/
         services: [mocService(), mocService(), mocService()]
       };
     };
@@ -224,6 +215,10 @@ angular.module('settings').controller('ShopOwnerController', [
 
     $scope.createOrUpdateService = function() {
       $scope.modal.hide();
+    };
+
+    $scope.takePicture = function(_id) {
+      PhotoService.takePicture(_id);
     };
   }
 ]);
