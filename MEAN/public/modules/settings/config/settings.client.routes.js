@@ -43,6 +43,11 @@ angular.module('settings').config([
       templateUrl: 'modules/settings/views/shopOwner-edit.client.view.html'
     })
 
+    .state('main.tab.settings.owner.photos', {
+      url: '/photos',
+      templateUrl: 'modules/settings/views/shopOwner-photo.client.view.html'
+    })
+
     .state('main.tab.settings.owner.services', {
       url: '/services',
       templateUrl: 'modules/settings/views/shopOwner-services.client.view.html'

@@ -3,7 +3,7 @@
 angular.module('notifications').controller('NotificationsController', [
   '$scope', '$location', '$ionicModal', 'Bookings', 'Authentication',
   function($scope, $location, $ionicModal, Bookings, Authentication) {
-
+    $scope.currentUser = {};
 
 
     var basepath = 'res/shops/';
@@ -54,16 +54,14 @@ angular.module('notifications').controller('NotificationsController', [
     });
 
     $scope.viewBooking = function(booking) {
-
-
-      booking.currentUser = Authentication.user._id;
-
       $scope.booking = booking;
-
+      $scope.currentUser = Authentication.user();
+      booking.currentUser = $scope.currentUser._id;
       console.log('viewBooking', booking);
 
       if (booking.isBookingOwner)
         $scope.modalBookingOwner.show();
+
       if (booking.isShopOwner)
         $scope.modalShopOwner.show();
     };
@@ -74,6 +72,7 @@ angular.module('notifications').controller('NotificationsController', [
     };
 
     $scope.findMyBookings = function() {
+      $scope.currentUser = Authentication.user();
       Bookings.query({
         terms: 'myBooking'
       }, function(items) {
@@ -81,8 +80,11 @@ angular.module('notifications').controller('NotificationsController', [
         $scope.items = [];
         angular.forEach(items, function(item) {
           var moc = mock();
-          item.isBookingOwner = item.owner._id === Authentication.user._id;
-          item.isShopOwner = item.shop.owner === Authentication.user._id;
+          if (item.owner !== null)
+            item.isBookingOwner = item.owner._id === $scope.currentUser._id;
+
+          if (item.shop !== null)
+            item.isShopOwner = item.shop.owner === $scope.currentUser._id;
 
           item.image = item.image || (item.isShopOwner ? 'res/screen/share/2x/profile-pic.png' : moc.image);
           $scope.items.push(item);
