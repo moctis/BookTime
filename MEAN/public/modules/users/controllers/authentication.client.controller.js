@@ -3,23 +3,14 @@
 angular.module('users').controller('AuthenticationController', ['$scope', '$http', '$location', 'Authentication',
   function($scope, $http, $location, Authentication) {
     $scope.authentication = Authentication;
-    if ($scope.authentication.user) $location.path('/');
-    /*
-        $scope.credentials = {
-          firstName: 'sit',
-          lastName: 'sit',
-          email: 'sit@sit.com',
-          username: 'sit' + (new Date()).getSeconds(),
-          password: 'sitsitsitsit'
-        };
-    */
+    if ($scope.authentication.user()) $location.path('/');
     // If user is signed in then redirect back home
 
 
     $scope.signup = function() {
       $http.post(ApplicationConfiguration.server + '/auth/signup', $scope.credentials).success(function(response) {
         // If successful we assign the response to the global user model
-        $scope.authentication.user = response;
+        //$scope.authentication.setUser(response);
 
         // And redirect to the index page
         $location.path('/');
@@ -31,7 +22,7 @@ angular.module('users').controller('AuthenticationController', ['$scope', '$http
     $scope.signin = function() {
       $http.post(ApplicationConfiguration.server + '/auth/signin', $scope.credentials).success(function(response) {
         // If successful we assign the response to the global user model
-        $scope.authentication.user = response;
+        $scope.authentication.setUser(response);
 
         // And redirect to the index page
         $location.path('/');

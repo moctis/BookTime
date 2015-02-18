@@ -1,0 +1,18 @@
+<section class="section-shop-owner">
+  <ion-view title="Add Photos">
+    <ion-content class="has-tabs-top" padding="false">
+      <div class="albums">
+        <div class="row albums-thumbnail">
+          <div class="col-33 thumbnail" ng-repeat="p in shop.albums">
+            <a href="#" class="">
+              <img src="{{imgSrc(p)}}" class="img-responsive img-rounded" />
+            </a>
+          </div>
+          <div class="col-33 thumbnail" data-ng-click="takePicture(it._id)">
+            <img src="res/icons/icons/booktime-button-addnewphoto.png" class="img-responsive img-rounded" />
+          </div>
+        </div>
+      </div>
+    </ion-content>
+  </ion-view>
+</section>
