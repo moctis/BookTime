@@ -13,10 +13,15 @@ var passport = require('passport'),
     uploadDir: rootPath
   });
 
+console.log('image rooth', rootPath);
 module.exports = function(app) {
   var authenticate = passport.authenticate('bearer', {
     session: false
   });
+  var x = function(req, res, next) {
+    console.log('aa');
+    next();
+  };
 
   app.route('/api/shops/images')
     .post(authenticate, users.requiresLogin, multipartyMiddleware, images.uploadAlbums);
@@ -25,7 +30,7 @@ module.exports = function(app) {
     .get(images.processImage, images.outputImage);
 
   app.route('/api/shops/:shopId/albums')
-    .post(authenticate, users.requiresLogin, multipartyMiddleware, images.uploadAlbums);
+    .post(x, authenticate, users.requiresLogin, multipartyMiddleware, images.uploadAlbums);
   /*.get(authenticate, users.requiresLogin, images.read)
   .post(authenticate, users.requiresLogin, images.hasAuthorization, images.create)
   .put(authenticate, users.requiresLogin, images.hasAuthorization, images.update)

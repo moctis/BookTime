@@ -9,10 +9,10 @@ angular.module('shop').factory('PhotoService', ['$resource', '$api', '$cordovaCa
     $this.takePicture = function(_id) {
       console.log('takePicture ' + _id);
 
-      if (Camera === undefined) {
+      if (typeof(Camera) === 'undefined') {
         $this.filePicker();
         return;
-      };
+      }
 
       var options = {
         quality: 50,
@@ -26,9 +26,10 @@ angular.module('shop').factory('PhotoService', ['$resource', '$api', '$cordovaCa
         var options2 = {
 
         };
-
+        console.log('got ' + imageURI);
+        var trustAllHosts = true;
         $cordovaFileTransfer
-          .upload($api.actionWithToken('/api/shops/' + _id + '/albums'), imageURI, options2)
+          .upload($api.actionWithToken('/api/shops/' + _id + '/albums'), imageURI, options2, trustAllHosts)
           .then(function(result) {
             console.log('transfer success', result);
           }, function(err) {
@@ -43,13 +44,13 @@ angular.module('shop').factory('PhotoService', ['$resource', '$api', '$cordovaCa
     };
 
     $this.filePicker = function() {
-      $ionicModal.fromTemplateUrl('modules/shop/views/filepicker.client.view.html', function($ionicModal) {
+      console.log('open file Picker');
+      /*$ionicModal.fromTemplateUrl('modules/shop/views/filepicker.client.view.html', function($ionicModal) {
         $this.modalFile = $ionicModal;
       }, {
         scope: $this,
         animation: 'slide-in-up'
-      });
-
+      });*/
     };
 
     return {

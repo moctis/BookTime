@@ -149,6 +149,7 @@ exports.uploadAlbums = function(req, res, next) {
   image.path = image._id;
   image.owner = req.user;
   image.shopId = req.shop._id;
+  console.log('Uploading ' + image.path);
 
   var storePath = path.normalize(config.imagesPath + image.path);
   fs.rename(req.files.file.path, storePath);
