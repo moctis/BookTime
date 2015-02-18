@@ -2,7 +2,7 @@
 
 angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
   function($scope, $http, $location, Users, Authentication) {
-    $scope.user = Authentication.user;
+    $scope.user = Authentication.user();
 
     // If user is not signed in then redirect back home
     if (!$scope.user) $location.path('/');
@@ -18,7 +18,8 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 
     // Check if provider is already in use with current user
     $scope.isConnectedSocialAccount = function(provider) {
-      return $scope.user.provider === provider || ($scope.user.additionalProvidersData && $scope.user.additionalProvidersData[provider]);
+      return $scope.user.provider === provider || ($scope.user.additionalProvidersData && $scope.user.additionalProvidersData[
+        provider]);
     };
 
     // Remove a user social account
@@ -32,7 +33,8 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
       }).success(function(response) {
         // If successful show success message and clear form
         $scope.success = true;
-        $scope.user = Authentication.user = response;
+        $scope.user = response;
+        Authentication.setUser(response);
       }).error(function(response) {
         $scope.error = response.message;
       });
@@ -46,7 +48,7 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
 
         user.$update(function(response) {
           $scope.success = true;
-          Authentication.user = response;
+          Authentication.setUser(response);
         }, function(response) {
           $scope.error = response.data.message;
         });
@@ -59,7 +61,8 @@ angular.module('users').controller('SettingsController', ['$scope', '$http', '$l
     $scope.changeUserPassword = function() {
       $scope.success = $scope.error = null;
 
-      $http.post(ApplicationConfiguration.server + '/users/password', $scope.passwordDetails).success(function(response) {
+      $http.post(ApplicationConfiguration.server + '/users/password', $scope.passwordDetails).success(function(
+        response) {
         // If successful show success message and clear form
         $scope.success = true;
         $scope.passwordDetails = null;

@@ -8,7 +8,6 @@ angular.module('front').controller('frontController', [
     //homeLocal = '/main/tab/schedule';
 
     $scope.authentication = Authentication;
-    //if ($scope.authentication.user !== undefined) $location.path('/main/tab/home/food');
 
     $scope.credentials = {
       username: 'sitthidate',

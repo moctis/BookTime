@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="lib/ionic/css/ionic.css">
   <link rel="stylesheet" href="lib/Font-Awesome/css/font-awesome.css">
   <link rel="stylesheet" href="lib/angular-carousel/angular-carousel.css">
+  <link rel="stylesheet" href="lib/fullcalendar/fullcalendar.css">
+  <link rel="stylesheet" href="lib/fullcalendar/fullcalendar-theme.css">
   <link rel="stylesheet" href="lib/others/others.css">
   <link rel="stylesheet" href="modules/admin/css/admin.css">
   <link rel="stylesheet" href="modules/chat/css/chat.css">
@@ -47,6 +49,7 @@
   <link rel="stylesheet" href="modules/home/css/service.css">
   <link rel="stylesheet" href="modules/notifications/css/booking.css">
   <link rel="stylesheet" href="modules/notifications/css/notifications.css">
+  <link rel="stylesheet" href="modules/schedule/css/schedule.css">
   <link rel="stylesheet" href="modules/settings/css/bookerProfile.css">
   <link rel="stylesheet" href="modules/settings/css/setting.css">
   <link rel="stylesheet" href="modules/settings/css/shopOwner.css">
@@ -83,6 +86,7 @@ user | json | safe
   <!--Application JavaScript Files-->
   <script type="text/javascript" src="lib/ionic/js/ionic.bundle.js"></script>
   <script type="text/javascript" src="lib/jquery/jquery.js"></script>
+  <script type="text/javascript" src="lib/jquery-ui/ui/jquery-ui.js"></script>
   <script type="text/javascript" src="lib/angular-animate/angular-animate.js"></script>
   <script type="text/javascript" src="lib/angular-sanitize/angular-sanitize.js"></script>
   <script type="text/javascript" src="lib/angular-resource/angular-resource.js"></script>
@@ -94,10 +98,12 @@ user | json | safe
   <script type="text/javascript" src="lib/angular-strap/angular-strap.js"></script>
   <script type="text/javascript" src="lib/moment/moment.js"></script>
   <script type="text/javascript" src="lib/angular-moment/angular-moment.js"></script>
-  <script type="text/javascript" src="lib/ngcordova/ng-cordova.js"></script>
+  <script type="text/javascript" src="lib/ng-cordova/ng-cordova.js"></script>
   <script type="text/javascript" src="lib/others/angular.ratings.js"></script>
   <script type="text/javascript" src="lib/ng-file-upload/angular-file-upload-shim.js"></script>
   <script type="text/javascript" src="lib/ng-file-upload/angular-file-upload.min.js"></script>
+  <script type="text/javascript" src="lib/fullcalendar/fullcalendar.js"></script>
+  <script type="text/javascript" src="lib/angular-ui-calendar/calendar.js"></script>
   <script type="text/javascript" src="config.js"></script>
   <script type="text/javascript" src="application.js"></script>
   <script type="text/javascript" src="modules/admin/admin.module.js"></script>
@@ -139,6 +145,7 @@ user | json | safe
   <script type="text/javascript" src="modules/notifications/controllers/notification.client.controller.js"></script>
   <script type="text/javascript" src="modules/schedule/config/schedule.client.routes.js"></script>
   <script type="text/javascript" src="modules/schedule/controllers/schedule.client.controller.js"></script>
+  <script type="text/javascript" src="modules/schedule/services/schedules.client.service.js"></script>
   <script type="text/javascript" src="modules/settings/config/settings.client.routes.js"></script>
   <script type="text/javascript" src="modules/settings/controllers/bookerProfile.client.controller.js"></script>
   <script type="text/javascript" src="modules/settings/controllers/setting.client.controller.js"></script>
@@ -159,6 +166,7 @@ user | json | safe
   <script type="text/javascript" src="modules/users/services/authentication.client.service.js"></script>
   <script type="text/javascript" src="modules/users/services/users.client.service.js"></script>
   <!--Livereload script rendered -->
+  <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
 </body>
 
 </html>
