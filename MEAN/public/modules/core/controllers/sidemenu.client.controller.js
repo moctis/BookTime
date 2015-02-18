@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('core').controller('SidemenuController', [
-  '$scope', '$interval', '$state', '$location', 'Authentication', '$api',
-  function($scope, $interval, $state, $location, Authentication, $api) {
+  '$scope', '$interval', '$state', '$location', 'Authentication', '$api', '$rootScope',
+  function($scope, $interval, $state, $location, Authentication, $api, $rootScope) {
     $scope.user = Authentication.user() || {};
 
     $scope.profile = {};
@@ -10,51 +10,48 @@ angular.module('core').controller('SidemenuController', [
     $scope.profile.img = 'res/screen/share/2x/profile-pic.png';
     $scope.profile.booked = 15;
     $scope.profile.favorites = 245;
-    console.log('profile ' + $scope.profile.name);
+    // console.log('profile ' + $scope.profile.name);
+
+    $scope.toggleSearch = function() {
+      $rootScope.$broadcast('toggleSearch');
+    };
 
     $scope.menus = [{
-        label: 'HOME',
-        icon: 'fa-home',
-        state: 'main.tab.home.list.food'
-      }, {
-        label: 'SEARCH',
-        icon: 'fa-search',
-        page: 'modules/home/views/home.client.view.html'
-      },
-      /* {
-              label: 'MY BOOKING',
-              icon: 'fa-gear',
-              state: 'main.tab.notifications.myBookings'
-            },*/
-      {
-        label: 'SCHEDULE',
-        icon: 'fa-calendar',
-        state: 'main.tab.schedule'
-      }, {
-        label: 'BOOKTIME',
-        icon: 'fa-clock-o',
-        state: 'main.tab.chat'
-      }, {
-        label: 'NOTIFICATIONS',
-        icon: 'fa-exclamation-circle',
-        state: 'main.tab.notifications.list'
-      }, {
-        label: 'MY FAVORITES',
-        icon: 'fa-star-o',
-        page: 'modules/home/views/home.client.view.html'
-      }, {
-        label: 'SETTINGS',
-        icon: 'fa-gear',
-        state: 'main.tab.settings.menu'
-      },
-      /*{ label: 'ABOUT BOOKTIME', icon: 'fa-gear', page: 'modules/home/views/home.client.view.html', className: 'menu-about' },*/
-      {
-        label: 'SIGN OUT',
-        icon: 'fa-sign-out',
-        state: 'signout',
-        className: 'menu-signout'
-      }
-    ];
+      label: 'HOME',
+      icon: 'fa-home',
+      state: 'main.tab.home.list.food'
+    }, {
+      label: 'SEARCH',
+      icon: 'fa-search',
+      action: $scope.toggleSearch
+    }, {
+      label: 'SCHEDULE',
+      icon: 'fa-calendar',
+      state: 'main.tab.schedule'
+    }, {
+      label: 'BOOKTIME',
+      icon: 'fa-clock-o',
+      state: 'main.tab.chat'
+    }, {
+      label: 'NOTIFICATIONS',
+      icon: 'fa-exclamation-circle',
+      state: 'main.tab.notifications.list'
+    }, {
+      label: 'MY FAVORITES',
+      icon: 'fa-star-o',
+      page: 'modules/home/views/home.client.view.html'
+    }, {
+      label: 'SETTINGS',
+      icon: 'fa-gear',
+      state: 'main.tab.settings.menu'
+    }, {
+      label: 'SIGN OUT',
+      icon: 'fa-sign-out',
+      state: 'signout',
+      className: 'menu-signout'
+    }];
+
+
 
     var isAdmin = Authentication.hasRole('admin');
 
@@ -74,13 +71,16 @@ angular.module('core').controller('SidemenuController', [
 
     $scope.showDetail = function($index) {
       var selectedMenu = $scope.menus[$index];
+      console.log('selectedMenu', selectedMenu);
       if (selectedMenu.state !== undefined)
         $state.go(selectedMenu.state, null, {
           reload: true
         });
       else if (selectedMenu.url !== undefined)
         $location.path(selectedMenu.url);
-      else
+      else if (selectedMenu.action !== undefined) {
+        selectedMenu.action();
+      } else
         alert(selectedMenu.label);
     };
 
@@ -91,19 +91,5 @@ angular.module('core').controller('SidemenuController', [
       }
       return '';
     };
-    /*
-        var i = 0;
-        var stop = $interval(function() {
-          i = (i + 1) % 2;
-          $scope.profile.booked = Math.round(Math.random() * 20);
-          $scope.profile.img = ['res/screen/share/2x/profile.png', 'res/screen/share/2x/profile-pic.png'][i];
-          $scope.profile.name = ['Pony Somrattanach', 'Pooony Sooomrattanach'][i];
-          $scope.profile.favorites = Math.round(Math.random() * 5000);
-        }, 5000);
-
-    $scope.$on('$destroy', function() {
-      $interval.cancel(stop);
-      stop = undefined;
-    });    */
   }
 ]);

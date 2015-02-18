@@ -18,6 +18,10 @@ angular.module('core').controller('HeadController', [
       return $scope.showSearch ? 'searching' : '';
     };
 
+    $scope.$on('toggleSearch', function(event) {
+      $scope.toggleSearch();
+    });
+
     $scope.toggleSearch = function() {
       var atSearchScreen = ($state.current.name === 'main.tab.home.list.food') ||
         ($state.current.name === 'main.tab.home.list.services') ||
