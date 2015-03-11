@@ -2000,7 +2000,7 @@
         q.promise.abort = function() {
           ft.abort();
         };
-
+        console.log('ft.uploadft.upload ' + uri);
         ft.upload(filePath, uri, q.resolve, q.reject, options, trustAllHosts);
         return q.promise;
       }

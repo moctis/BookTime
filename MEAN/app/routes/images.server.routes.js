@@ -13,7 +13,7 @@ var passport = require('passport'),
     uploadDir: rootPath
   });
 
-console.log('image rooth', rootPath);
+
 module.exports = function(app) {
   var authenticate = passport.authenticate('bearer', {
     session: false

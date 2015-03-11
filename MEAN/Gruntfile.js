@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       },
       publicAll: {
         files: watchFiles.publicAll,
-        tasks: ['sync']
+        tasks: ['copy', 'clean']
       }
     },
     jshint: {
@@ -141,17 +141,6 @@ module.exports = function(grunt) {
         configFile: 'karma.conf.js'
       }
     },
-    sync: {
-      main: {
-        files: [{
-          expand: true,
-          cwd: 'public',
-          src: ['**'],
-          dest: '../phonegap/www'
-        }],
-        updateOnly: true
-      }
-    },
     copy: {
       main: {
         files: [{
@@ -159,14 +148,13 @@ module.exports = function(grunt) {
           cwd: 'public',
           src: ['**'],
           dest: '../phonegap/www'
-        },
-      {
-        src: ['public/index-phonegap.html'],
-        dest: '../phonegap/www/index.html'
-      }
-        ]
+        }, {
+          src: ['public/index-phonegap.html'],
+          dest: '../phonegap/www/index.html'
+        }]
       }
     },
+    clean: ['../phonegap/www/cordova.js'],
     bowercopy: {
       options: {
         srcPrefix: 'bower_components',

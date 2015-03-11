@@ -33,7 +33,7 @@ angular.module('shop').factory('PhotoService', ['$resource', '$api', '$cordovaCa
           .then(function(result) {
             console.log('transfer success', result);
           }, function(err) {
-            console.log('transfer error', err);
+            console.log('transfer error' + JSON.stringify(err));
           }, function(progress) {
             console.log('transfer progress', progress);
           });

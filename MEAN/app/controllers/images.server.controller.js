@@ -152,6 +152,7 @@ exports.uploadAlbums = function(req, res, next) {
   console.log('Uploading ' + image.path);
 
   var storePath = path.normalize(config.imagesPath + image.path);
+  console.log(req.files);
   fs.rename(req.files.file.path, storePath);
   image.save(function(err) {
     if (err) {

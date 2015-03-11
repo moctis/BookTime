@@ -2,9 +2,9 @@
 
 angular.module('shop').controller('ShopController', [
   '$scope', '$timeout', '$ionicModal', '$upload', '$stateParams', 'ShopsApi', '$cordovaCamera',
-  '$cordovaFileTransfer', '$api',
+  '$cordovaFileTransfer', '$api', 'PhotoService',
   function($scope, $timeout, $ionicModal, $upload, $stateParams, ShopsApi, $cordovaCamera, $cordovaFileTransfer,
-    $api) {
+    $api, PhotoService) {
 
     $ionicModal.fromTemplateUrl('modules/shop/views/booking.client.view.html', function($ionicModal) {
       $scope.modal = $ionicModal;
@@ -94,34 +94,7 @@ angular.module('shop').controller('ShopController', [
     $scope.takePicture = function(_id) {
       console.log('takePicture ' + _id);
 
-      if (Camera === undefined) {
-        $scope.filePicker();
-        return;
-      };
-
-      var options = {
-        quality: 50,
-        destinationType: Camera.DestinationType.FILE_URI,
-        sourceType: Camera.PictureSourceType.PHOTOLIBRARY
-      };
-
-      // udpate camera image directive
-      $cordovaCamera.getPicture(options).then(function(imageURI) {
-        $scope.cameraimage = imageURI;
-
-        var options2 = {
-
-        };
-        $cordovaFileTransfer
-          .upload($api.actionWithToken('/api/shops/' + _id + '/albums'), imageURI, options2, true)
-          .then(function(result) {
-            // Success!
-            console.log('transfer success', result);
-          });
-
-      }, function(err) {
-        console.log('Failed because: ' + err);
-      });
+      PhotoService.takePicture(_id);
     };
 
     $scope.filePicker = function() {
